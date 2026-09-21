@@ -1,0 +1,71 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1.2 banner Style 2
+/*----------------------------------------*/
+
+.rs-banner{
+    &-three{
+        .rs-banner-bg-thumb {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            inset-inline-end: 0;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+            @include rtl {
+                transform: rotateY(180deg);
+            }
+        }
+        .rs-banner-wrapper{
+            padding: 205px 0 205px;
+            @media #{$laptop}{
+                padding: 190px 0 190px;
+            }
+            @media #{$xl}{
+                padding: 170px 0 170px;
+            }
+            @media #{$lg}{
+                padding: 150px 0 150px;
+            }
+            @media #{$md}{
+                padding: 130px 0 130px;
+            }
+            @media #{$sm}{
+                padding: 80px 0 100px;
+            }
+        }
+        .rs-banner-border{
+            border: 3px solid var(--rs-white);
+            width: 70px;
+            margin-bottom: 25px;
+        }
+        .rs-banner-title{
+            font-size: 100px;
+            color: var(--rs-white);
+            text-transform: capitalize;
+            line-height: 1;
+            margin-bottom: 50px;
+            @media #{$laptop}{
+                font-size: 90px;
+            }
+            @media #{$xl}{
+                font-size: 80px;
+            }
+            @media #{$lg}{
+                font-size: 70px;
+            }
+            @media #{$md}{
+                font-size: 60px;
+            }
+            @media #{$sm}{
+                font-size: 50px;
+            }
+            @media #{$xs}{
+                font-size: 40px;
+            }
+        }
+    }
+}

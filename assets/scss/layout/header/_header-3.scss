@@ -1,0 +1,144 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.5.1 Header Style 3
+/*----------------------------------------*/
+
+.rs-header{
+    &-three{
+        background: #1E2023;
+        padding-inline-end: 85px;
+        padding-inline-start: 75px;
+        overflow-x: clip;
+        @media #{$laptop}{
+            padding-inline-start: 0px;
+            padding-inline-end: 0px;
+        }
+        .rs-header-inner {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 99;
+        }
+        .rs-header-logo{
+            position: relative;
+            z-index: 1;
+        }
+        .rs-header-left{
+            margin-top: -50px;
+            margin-inline-start: -90px;
+            @media #{$lg}{
+                margin-top: 0px;
+                margin-inline-start: -60px;
+            }
+            @media #{$mobile}{
+                margin-inline-start: -47px;
+            }
+        }
+        .rs-header-logo-wrapper{
+            width: 360px;
+            height: 135px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &::before{
+                background-color: var(--rs-theme-orange);
+                clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%);
+                width: 360px;
+                height: 135px;
+                content: "";
+                position: absolute;
+                @media #{$lg}{
+                    width: 300px;
+                    height: 80px;
+                }
+                @media #{$mobile}{
+                    width: 265px;
+                }
+                @include rtl {
+                transform: rotateY(-180deg);
+                }
+            }
+            @media #{$lg}{
+                width: 300px;
+                height: 80px;
+            }
+            @media #{$mobile}{
+                width: 265px;
+            }
+        }
+        .rs-header-menu{
+            margin-inline-end: auto;
+        }
+        .rs-header-right{
+            display: flex;
+              gap: 30px;
+            align-items: center;
+        }
+        .main-menu {
+            li{
+                a{
+                    padding: 34px 20px;
+                    color: var(--rs-white);
+                }
+            }
+        }
+        .rs-header-search-icon{
+            color: var(--rs-white);
+        }
+        .rs-header-search-inner{
+            top: 60px;
+        }
+        .rs-header-hamburger{
+            .bar-icon{
+                svg{
+                    path{
+                        fill: var(--rs-white);
+                    }
+                }
+            }
+        }
+        .rs-header-btn{
+            @media #{$xl}{
+                display: none;
+            }
+        }
+        .rs-sticky{
+            .rs-header-left{
+                margin-inline-start: 0px;
+                margin-top: 0;
+            }
+            .rs-header-logo-wrapper{
+                &::before{
+                    height: 100px;
+                    @media #{$laptop}{
+                        width: 300px;
+                    }
+                    @media #{$lg}{
+                        height: 90px;
+                    }
+                    @media #{$md}{
+                        height: 80px;
+                    }
+                    @media #{$mobile}{
+                        width: 260px;
+                    }
+                }
+                height: 100px;
+                @media #{$laptop}{
+                    width: 300px;
+                }
+                @media #{$lg}{
+                    height: 90px;
+                }
+                @media #{$md}{
+                    height: 80px;
+                }
+                @media #{$mobile}{
+                    width: 260px;
+                }
+            }
+        }
+    }
+}
+

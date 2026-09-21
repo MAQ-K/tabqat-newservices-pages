@@ -1,0 +1,115 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.5.1 Header Style 2
+/*----------------------------------------*/
+
+.rs-header{
+    &-two{
+        @media #{$lg}{
+            padding: 26px 0;
+        }
+        @media #{$md}{
+            padding: 21px 0;
+        }
+        &.has-border{
+            border-bottom: 1px solid rgba(255, 255, 255, 0.078);
+        }
+        .rs-header-inner {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 99;
+            padding: 0 85px;
+            @media #{$laptop}{
+                padding: 0 30px;
+            }
+            @media #{$xl}{
+                padding: 0 0px;
+            }
+        }
+        .rs-header-left{
+            position: relative;
+            padding-inline-end: 70px;
+            margin-inline-end: 30px;
+            @media #{$xl}{
+                padding-inline-end: 30px;
+                margin-inline-end: 0px;
+            }
+            @media #{$xs}{
+                padding-inline-end: 0px;
+            }
+            &::before{
+                    position: absolute;
+                    content: "";
+                    width: 1px;
+                    height: 48px;
+                    background: rgba(255, 255, 255, 0.2);
+                    inset-inline-end: 0;
+                    top: -7px;
+                    @media #{$xs}{
+                            content: none;
+                    }
+            }
+        }
+        .rs-header-menu{
+            margin-inline-end: auto;
+        }
+        .rs-header-call{
+            padding-inline-end: 15px;
+            margin-inline-end: 15px;
+            position: relative;
+            @media #{$xl}{
+                padding-inline-end: 0px;
+                margin-inline-end: 0px;
+            }
+            @media #{$xs}{
+                display: none;
+            }
+            &::before{
+                position: absolute;
+                content: "";
+                width: 1px;
+                height: 48px;
+                background: #FFFFFF36;
+                inset-inline-end: -15px;
+                top: -12px;
+            }
+            h6{
+                font-size: 16px;
+                color: var(--rs-white);
+                a{
+                    &:hover{
+                        color: var(--rs-theme-red);
+                    }
+                }
+            }
+            &.has-theme-orange{
+                h6{
+                    a{
+                        &:hover{
+                            color: var(--rs-theme-orange);
+                        }
+                    }
+                }
+            }
+        }
+        .rs-header-right{
+            display: flex;
+              gap: 30px;
+            align-items: center;
+        }
+        .rs-header-search-icon{
+            color: var(--rs-white);
+        }
+        .sidebar-toggle{
+            .bar-icon{
+                svg{
+                    path{
+                        fill: var(--rs-white);
+                    }
+                }
+            }
+        }
+    }
+}

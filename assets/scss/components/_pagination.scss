@@ -1,0 +1,118 @@
+@use '../utils' as *;
+
+/*----------------------------------------
+   Basic pagination
+-----------------------------------------*/
+
+.rs-pagination{
+   &.swiper-pagination{
+      position: unset;
+      overflow: visible;
+      font-size: unset;
+      transform: unset !important;
+      width: 100% !important;
+      .swiper-pagination-bullet{
+         width: 10px;
+         height: 10px;
+         background: #e1e6f9;
+         position: relative;
+         transform: unset;
+         opacity: unset;
+         margin: 0 13px;
+         &::before{
+            position: absolute;
+            content: "";
+            left: 50%;
+            top: 50%;
+            width: calc(100% + 20px);
+            height: calc(100% + 20px);
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-radius: 50%;
+         }
+         &.swiper-pagination-bullet-active{
+            background: var(--rs-theme-light-blue);
+            &::before{
+               border-color: var(--rs-theme-light-blue);
+               transform: translate(-50%, -50%) scale(1);
+            }
+         }
+      }
+      &.has-theme-orange{
+         .swiper-pagination-bullet{
+            &.swiper-pagination-bullet-active{
+               background: var(--rs-theme-orange);
+               &::before{
+                  border-color: var(--rs-theme-orange);
+               }
+            }
+         }
+      }
+      &.has-theme-red{
+         .swiper-pagination-bullet{
+            &.swiper-pagination-bullet-active{
+               background: var(--rs-theme-red);
+               &::before{
+                  border-color: var(--rs-theme-red);
+               }
+            }
+         }
+      }
+      &.has-theme-deep-blue{
+         .swiper-pagination-bullet{
+            &.swiper-pagination-bullet-active{
+               background: var(--rs-theme-deep-blue);
+               &::before{
+                  border-color: var(--rs-theme-deep-blue);
+               }
+            }
+         }
+      }
+      &.has-theme-green{
+         .swiper-pagination-bullet{
+            &.swiper-pagination-bullet-active{
+               background: var(--rs-theme-light-green);
+               &::before{
+                  border-color: var(--rs-theme-light-green);
+               }
+            }
+         }
+      }
+      &.has-theme-yellow{
+         .swiper-pagination-bullet{
+            &.swiper-pagination-bullet-active{
+               background: var(--rs-theme-yellow);
+               &::before{
+                  border-color: var(--rs-theme-yellow);
+               }
+            }
+         }
+      }
+   }
+}
+
+.common-pagination{
+   text-align: center;
+   margin-top: 45px;
+   ul{
+      display: inline-flex;
+      border:  1px solid #f2f2f2 ;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      li{
+         list-style: none;
+         padding-inline-start: 20px;
+         padding-inline-end: 20px;
+           line-height: 22px;
+           &:hover{
+            color: var(--rs-theme-orange);
+           }
+           .current{
+            color: var(--rs-theme-orange);
+           }
+           &:not(:last-child){
+            border-right:  1px solid #E6E6E6;
+           }
+      }
+   }
+}

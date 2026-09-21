@@ -1,0 +1,195 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1.1 banner Style 1
+/*----------------------------------------*/
+
+.rs-banner-one {
+    overflow-x: clip;
+    .rs-banner-shape{
+        position: absolute;
+        inset-inline-start: 0;
+        bottom: 0;
+        @media #{$md}{
+            display: none;
+        }
+    }
+    .rs-banner-meta-wrapper{
+        display: flex;
+        position: absolute;
+        inset-inline-start: 50px;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-90deg);
+        z-index: 2;
+        @include rtl {
+            transform: translate(50%, -50%) rotate(-90deg);
+        }
+        @media #{$md}{
+            display: none;
+        }
+    }
+    .rs-banner-contact-item{
+        display: flex;
+        align-items: center;
+        border-inline-end: 1px solid rgba(31, 31, 31, 0.15);
+        margin-inline-end: 15px;
+        padding-inline-end: 15px;
+        &:last-child{
+            border: none;
+        }
+        span{
+            color: var(--rs-black);
+        }
+        h6{
+            font-size: 16px;
+            color: var(--rs-text-primary);
+            &:hover{
+                color: var(--rs-theme-orange);
+            }
+        }
+    }
+    .rs-banner-bg-thumb {
+        position: absolute;
+        width: calc(100% - 100px);
+        height: 100%;
+        top: 0;
+        inset-inline-end: 0;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 1;
+        @media #{$md}{
+            width: 100%;
+        }
+        &::before{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.28);
+            top: 0;
+            inset-inline-start: 0;
+            z-index: -1;
+        }
+    }
+    .rs-banner-item-wrapper{
+        padding: 200px 0 190px 0;
+        @media #{$laptop}{
+            padding: 150px 0 150px 0px;
+            padding-inline-start: 150px;
+        }
+        @media #{$lg}{
+            padding: 130px 0 130px 0px;
+            padding-inline-start: 120px;
+        }
+        @media #{$md}{
+            padding: 90px 0 120px 0px;
+        }
+        @media #{$sm}{
+            padding: 70px 0 120px 0px;
+        }
+    }
+    .rs-banner-content{
+        position: relative;
+        z-index: 2;
+    }
+    .rs-banner-title{
+        color: var(--rs-white);
+        font-size: 80px;
+        line-height: 1.15;
+        text-transform: capitalize;
+        @media #{$laptop}{
+            font-size: 70px;
+        }
+        @media #{$xl}{
+            font-size: 55px;
+        }
+        @media #{$lg}{
+            font-size: 50px;
+        }
+        @media #{$sm}{
+            font-size: 40px;
+        }
+        @media #{$lg}{
+            br{
+                display: none;
+            }
+        }
+    }
+    .rs-banner-descrip{
+        max-width: 620px;
+        margin: 20px 0 40px;
+        p{
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 20px;
+            @media #{$md}{
+                font-size: 18px;
+            }
+        }
+    }
+    .rs-banner-info-btn{
+        display: flex;
+        gap: 30px 35px;
+        flex-wrap: wrap;
+        align-items: center;
+        @media #{$mobile}{
+            flex-direction: column-reverse;
+            align-items: start;
+        }
+    }
+    .rs-banner-navigation{
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        position: absolute;
+        z-index: 2;
+        inset-inline-end: 250px;
+        top: 50%;
+        transform: translateY(-50%);
+        @media #{$xl}{
+            inset-inline-end: 200px; 
+        }
+        @media #{$lg}{
+            inset-inline-end: 50px; 
+        }
+        @media #{$sm}{
+            display: none;
+        }
+        .rs-swiper-btn{
+            &:hover{
+                background: rgba(234, 85, 1, 0.4);
+            }
+        }
+    }
+    .rs-pagination.swiper-pagination {
+        position: absolute;
+        bottom: 40px;
+    }
+}
+
+// slider animation
+.rs-banner-one {
+     &.rs-swiper {
+        .swiper-slide-active{
+            .rs-banner-title,
+            .rs-banner-descrip,
+            .rs-banner-info-btn{
+               animation-fill-mode: both;
+               animation-name: fadeInUp;
+           }
+        }
+    }
+     .swiper-slide-active {
+         .rs-banner-title {
+            animation-delay: .3s;
+            animation-duration: 0.7s;
+        }
+         .rs-banner-descrip {
+            animation-delay: .5s;
+            animation-duration: 0.9s;
+        }
+         .rs-banner-info-btn {
+            animation-delay: .7s;
+            animation-duration: 1.1s;
+        }
+    }
+}

@@ -1,0 +1,159 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.2 counter
+/*----------------------------------------*/
+
+// counter new style
+
+.rs-counter {
+    &-one {
+        .rs-counter-shape{
+            position: absolute;
+            inset-inline-end: 0;
+            bottom: -90px;
+            z-index: -1;
+            @media #{$xs}{
+                display: none;
+            }
+        }
+        .rs-counter-number,
+        .prefix {
+            font-size: 115px;
+            position: relative;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            -webkit-text-stroke-width: 2px;
+            stroke-width: 2px;
+            -webkit-text-stroke-color: rgba(31, 31, 31, 0.6);
+            stroke: rgba(31, 31, 31, 0.6);
+            font-weight: 500;
+            line-height: .8;
+            @media #{$laptop}{
+                font-size: 100px;
+            }
+            @media #{$xl}{
+                font-size: 80px;
+            }
+            @media #{$lg}{
+                font-size: 70px;
+            }
+        }
+        .rs-counter-number-wrapper {
+            display: flex;
+            align-items: center;
+            padding-bottom: 25px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(31, 31, 31, 0.16);
+        }
+        .rs-counter-title {
+            font-size: 20px;
+        }
+        &.has-theme-red {
+            background: #111111;
+            .rs-counter-number,
+            .prefix {
+                -webkit-text-stroke-color: var(--rs-theme-red);
+                stroke: var(--rs-theme-red);
+            }
+            .rs-counter-title {
+                color: var(--rs-white);
+            }
+            .rs-counter-number-wrapper {
+                border-color: rgba(255, 255, 255, 0.129);
+            }
+        }
+        &.has-theme-blue{
+            .rs-counter-number,
+            .prefix {
+                font-size: 115px;
+                position: relative;
+                -webkit-text-fill-color: rgba(64, 20, 20, 0);
+                color: rgba(64, 20, 20, 0);
+                -webkit-text-stroke-width: 1px;
+                stroke-width: 1px;
+                -webkit-text-stroke-color: rgba(20, 35, 64, 0.8);
+                stroke: rgba(20, 35, 64, 0.8);
+                font-weight: 500;
+                line-height: .8;
+                @media #{$laptop}{
+                    font-size: 100px;
+                }
+                @media #{$xl}{
+                    font-size: 80px;
+                }
+                @media #{$lg}{
+                    font-size: 70px;
+                }
+            }
+        }
+        &.has-theme-green{
+            .rs-counter-number,
+            .prefix {
+                font-size: 115px;
+                position: relative;
+                -webkit-text-fill-color: transparent;
+                color: transparent;
+                -webkit-text-stroke-width: 2px;
+                stroke-width: 2px;
+                -webkit-text-stroke-color: rgba(2, 59, 74, 0.6);
+                stroke: rgba(2, 59, 74, 0.6);
+                font-weight: 500;
+                line-height: .8;
+                @media #{$laptop}{
+                    font-size: 100px;
+                }
+                @media #{$xl}{
+                    font-size: 80px;
+                }
+                @media #{$lg}{
+                    font-size: 70px;
+                }
+            }
+        }
+        .rs-counter-bg-thumb{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            inset-inline-start: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom right;
+            z-index: -1;
+        }
+        &.has-space{
+            overflow-x: clip;
+            padding-bottom: 250px;
+            .rs-counter-bg-thumb{
+                @media #{$xs}{
+                    display: none;
+                }
+            }
+        }
+    }
+
+}
+
+// elements style
+.rs-elements-counter-area{
+    &.rs-counter-one{
+        &.has-bg-orange{
+            .rs-counter-number,
+            .prefix {
+                color: var(--rs-theme-orange);
+                -webkit-text-fill-color: unset;
+                stroke: var(--rs-theme-orange);
+                -webkit-text-stroke-width: unset;
+                stroke-width: unset;
+            }
+        }
+    }
+    &.rs-about-ten{
+        .rs-about-counter-wrapper{
+            position: unset;
+            right: unset;
+            bottom: unset;
+        }
+    }
+}

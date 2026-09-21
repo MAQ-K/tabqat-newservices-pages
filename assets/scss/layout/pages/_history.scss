@@ -1,0 +1,144 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  history css
+/*----------------------------------------*/
+
+.rs-history {
+    &-one {
+        position: relative;
+        z-index: 1;
+        .rs-history-bg-thumb{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            inset-inline-start: 0;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+        .rs-history-tab {
+            display: flex;
+            justify-content: center;
+        }
+        .rs-history-tab-item {
+            display: flex;
+            gap: 30px 50px;
+            align-items: center;
+            justify-content: center;
+            @media #{$md}{
+                display:block;
+            }
+        }
+        .rs-history-tab-thumb {
+            @media #{$md}{
+                margin-bottom: 30px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .rs-history-tab {
+            .nav-link {
+                background: var(--rs-white);
+                color: var(--rs-text-primary);
+                font-weight: 500;
+                padding: 10px 60px 10px 60px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                @media #{$mobile}{
+                    width: 100%;
+                }
+                &::after {
+                    width: 100%;
+                    height: 3px;
+                    transform: scaleX(0);
+                    -webkit-transition: transform 0.5s ease;
+                    transition: transform 0.5s ease;
+                    position: absolute;
+                    content: "";
+                    inset-inline-start: -1px;
+                    top: 0;
+                    background-color: var(--rs-theme-orange);
+                    border-radius: 2px 2px 0 0;
+                }
+                &.active {
+                    color: var(--rs-theme-orange);
+                    &::after {
+                        transform: scaleX(1);
+                    }
+                }
+                &:hover {
+                    color: var(--rs-theme-orange);
+                    &::after {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+            .nav-item {
+                @media #{$mobile}{
+                    width: 100%;
+                }
+                &:not(:last-child) {
+                    .nav-link {
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 1px;
+                            height: 30px;
+                            inset-inline-end: 0;
+                            top: 50%;
+                            background: #DDDDE0;
+                            display: block;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+            }
+        }
+        .rs-history-tab-content-wrapper {
+            margin-top: 50px;
+        }
+        .rs-history-tab-content {
+            p {
+                margin-bottom: 20px;
+                margin-top: 15px;
+                max-width: 450px;
+            }
+        }
+        .rs-history-tab-anim {
+            .tab-pane.active {
+                .rs-history-tab-item {
+                    -webkit-animation: slide-down 5s ease-out;
+                    animation: slide-down 5s ease-out;
+                }
+            }
+        }
+        .rs-list-item {
+            li{
+                list-style: none;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                position: relative;
+                padding-inline-start: 40px;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 15px;
+                    width: 25px;
+                    height: 2px;
+                    background: var(--rs-theme-orange);
+                    opacity: 0.68;
+                    inset-inline-start: 0;
+                }
+            }
+        }
+    }
+}

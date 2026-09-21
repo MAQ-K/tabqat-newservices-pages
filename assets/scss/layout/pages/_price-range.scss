@@ -1,0 +1,68 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  8.16 price range CSS
+/*----------------------------------------*/
+
+.sidebar-widget-range {
+    & .noUi-horizontal {
+        height: 8px;
+    }
+    .noUi-target {
+        background: #ddd;
+        border: none;
+        box-shadow: none;
+    }
+    & .noUi-connect {
+        background: var(--rs-theme-orange);
+    }
+    & .noUi-handle {
+        border: none;
+        background: var(--rs-theme-orange);
+        cursor: default;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    & .noUi-horizontal .noUi-handle {
+        width: 16px;
+        height: 16px;
+        right: -5px;
+        top: 4px;
+        cursor: pointer;
+        transform: translateY(-50%);
+        border-radius: 50%;
+    }
+    & .noUi-handle::after, .noUi-handle::before {
+        display: none;
+    }
+    & .price-filter {
+        & input {
+            border:
+            none;
+              height: unset;
+              padding:  0;
+              color: var(--rs-text-primary);
+              font-size: 16px;
+              text-align: end;
+        }
+    }
+    .noUi-base {
+        .noUi-connects {
+            border-radius: 0;
+        }
+    }
+    &-amount{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .rs-btn{
+            background: var(--rs-theme-orange);
+            height: 44px;
+            font-size: 14px;
+            color: var(--rs-white);
+            &:hover{
+                background: rgb(255, 92, 0);
+            }
+        }
+    }
+}

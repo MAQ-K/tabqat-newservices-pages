@@ -1,0 +1,167 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.5.1 Header Style 4
+/*----------------------------------------*/
+
+.rs-header{
+    &-four{
+        .rs-sticky{
+            &.rs-header-inner{
+            }
+        }
+        .rs-header-inner {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 99;
+            padding-inline-start: 10px;
+            padding-inline-end: 10px;
+            justify-content: center;
+            gap: 10px;
+            @media #{$lg}{
+                justify-content: space-between;
+            }
+        }
+        .rs-header-logo{
+            position: relative;
+            z-index: 1;
+            .rs-header-logo-bg{
+                position: absolute;
+                content: "";
+                width: 295px;
+                height: 90px;
+                background-color: var(--rs-bg-primary);
+                top: -30px;
+                inset-inline-start: -60px;
+                z-index: -1;
+                border-radius: 10px;
+            }
+        }
+        .rs-header-logo-wrapper{
+            width: 295px;
+            height: 90px;
+            background-color: var(--rs-bg-primary);
+            // inset-inline-start: -60px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media #{$xl}{
+                width: 210px;
+            }
+            @media #{$xs}{
+                width: 100%;
+                background: transparent;
+                height: 70px;
+                justify-content: start;
+            }
+        }
+        .rs-header-left{
+            .rs-theme-social{
+                padding-inline-start: 75px;
+                gap: 15px;
+                a{
+                    font-size: 18px;
+                }
+            }
+        }
+        .rs-header-menu{
+            display: flex;
+            align-items: center;
+            background: var(--rs-bg-primary);
+            padding: 0 90px 0 50px;
+            border-radius: 10px;
+            @media #{$desktop}{
+                padding: 0 20px 0px 20px;
+            }
+            @media #{$xl}{
+                padding: 0 0px 0px 20px;
+            }
+            @media #{$lg}{
+                padding: 33px 20px 33px 20px;
+            }
+            @media #{$sm}{
+                display: none;
+            }
+        }
+        .rs-header-right{
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            background: var(--rs-bg-primary);
+            padding: 15px 45px 15px 45px;
+            border-radius: 10px;
+            @media #{$desktop}{
+                padding: 15px 25px 15px 25px;
+            }
+            @media #{$laptop}{
+                padding: 25px 35px 25px 35px;
+            }
+            @media #{$xl}{
+                padding: 25px 20px 25px 20px;
+                gap: 20px;
+            }
+            @media #{$lg}{
+                padding: 15px 15px 15px 15px;
+                gap: 20px;
+            }
+            @media #{$xs}{
+                background: transparent;
+                padding: 0;
+            }
+        }
+        .main-menu {
+            border-inline-start: 1px solid rgba(31, 31, 31, 0.07);
+            padding-inline-start: 30px;
+            margin-inline-start: 50px;
+            @media #{$large_laptop}{
+                margin-inline-start: 30px;
+            }
+            @media #{$xl}{
+                padding-inline-start: 0px;
+            }
+            li{
+                a{
+                    padding: 36px 20px;
+                    color: var(--rs-text-primary);
+                }
+            }
+        }
+        .rs-header-search-inner{
+            top: 64px;
+            @media #{$xs}{
+                top: 54px; 
+            }
+            input{
+                &:focus{
+                    border-color: var(--rs-theme-light-blue);
+                }
+            }
+            &.has-theme-green{
+                input{
+                    &:focus{
+                        border-color: var(--rs-theme-light-green);
+                    }
+                }
+            }
+        }
+        .rs-header-btn{
+            @media #{$laptop}{
+                display: none;
+            }
+            @media #{$lg}{
+                display: block;
+            }
+            @media #{$xs}{
+                display: none;
+            }
+            .rs-btn{
+                @media #{$desktop}{
+                    padding: 15px 25px;
+                }
+            }
+        }
+    }
+}
+

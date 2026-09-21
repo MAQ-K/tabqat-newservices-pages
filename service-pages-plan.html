@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-NBRW2ZDR');</script>
+        <!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service Pages Improvement Plan — Tabqat</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cairo:wght@400;600;700&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #f0f2f5; color: #1a1a2e; line-height: 1.7; font-size: 14px; }
+
+  .page { max-width: 980px; margin: 40px auto; background: #fff; border-radius: 14px; box-shadow: 0 6px 40px rgba(0,0,0,0.09); overflow: hidden; }
+
+  /* ── Cover ── */
+  .cover { background: linear-gradient(135deg, #0d1b2a 0%, #1b4332 100%); color: #fff; padding: 60px; }
+  .cover .brand { font-family: 'Cairo', sans-serif; font-size: 44px; font-weight: 700; color: #3fada2; letter-spacing: 2px; margin-bottom: 6px; }
+  .cover h1 { font-size: 22px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+  .cover .sub { font-size: 13px; color: #a8d5b5; margin-bottom: 32px; }
+  .cover .kpis { display: flex; gap: 48px; flex-wrap: wrap; }
+  .cover .kpi .n { font-size: 34px; font-weight: 800; color: #3fada2; }
+  .cover .kpi .l { font-size: 12px; color: #ccd; margin-top: 2px; }
+
+  /* ── Body ── */
+  .body { padding: 52px 60px; }
+
+  /* ── Section ── */
+  .section { margin-bottom: 52px; }
+  .sec-head { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; padding-bottom: 14px; border-bottom: 2px solid #eef2f7; }
+  .badge { border-radius: 8px; padding: 5px 14px; font-size: 11px; font-weight: 700; white-space: nowrap; letter-spacing: 0.5px; text-transform: uppercase; }
+  .badge-blue   { background: #1e3a5f; color: #7eb8f7; }
+  .badge-teal   { background: #1b4332; color: #6fcf97; }
+  .badge-orange { background: #7c2d12; color: #fdba74; }
+  .sec-head h2 { font-size: 17px; font-weight: 700; color: #0d1b2a; }
+
+  p.desc { font-size: 14px; color: #555; margin-bottom: 16px; line-height: 1.75; }
+
+  /* ── Table ── */
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 13px; }
+  th { background: #0d1b2a; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; }
+  td { padding: 11px 14px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+  tr:nth-child(even) td { background: #f8fafb; }
+  td.ar { font-family: 'Cairo', sans-serif; direction: rtl; text-align: right; }
+
+  /* ── Steps ── */
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 14px 0; }
+  .steps li { counter-increment: step; display: flex; gap: 16px; align-items: flex-start; padding: 13px 0; border-bottom: 1px solid #f3f3f3; }
+  .steps li:last-child { border-bottom: none; }
+  .steps li::before { content: counter(step); min-width: 28px; height: 28px; background: linear-gradient(135deg, #3fada2, #2f7d75); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .steps li .step-body { flex: 1; }
+  .steps li .step-title { font-weight: 600; color: #0d1b2a; margin-bottom: 3px; font-size: 13.5px; }
+  .steps li .step-desc { color: #666; font-size: 13px; }
+
+  /* ── Check list ── */
+  ul.chk { list-style: none; padding: 0; }
+  ul.chk li { padding: 8px 0; border-bottom: 1px solid #f3f3f3; font-size: 13.5px; color: #444; display: flex; gap: 10px; }
+  ul.chk li:last-child { border-bottom: none; }
+  ul.chk li::before { content: '✓'; color: #3fada2; font-weight: 700; flex-shrink: 0; }
+
+  /* ── Tags ── */
+  .tag-file { background: #e0e7ff; color: #3730a3; border-radius: 4px; padding: 2px 7px; font-size: 12px; font-family: monospace; display: inline-block; margin: 2px; }
+  .tag-new  { background: #dcfce7; color: #166534; border-radius: 4px; padding: 2px 7px; font-size: 11px; font-weight: 700; }
+  .tag-edit { background: #fef9c3; color: #854d0e; border-radius: 4px; padding: 2px 7px; font-size: 11px; font-weight: 700; }
+  .tag-seo  { background: #fee2e2; color: #991b1b; border-radius: 4px; padding: 2px 7px; font-size: 11px; font-weight: 700; }
+
+  /* ── Note ── */
+  .note { background: #fffbeb; border-right: 4px solid #f59e0b; border-radius: 6px; padding: 13px 18px; font-size: 13px; margin: 14px 0; color: #78350f; }
+  .note-blue { background: #eff6ff; border-right: 4px solid #3b82f6; border-radius: 6px; padding: 13px 18px; font-size: 13px; margin: 14px 0; color: #1e3a5f; }
+
+  /* ── Stats ── */
+  .stats { display: flex; gap: 14px; flex-wrap: wrap; margin: 16px 0; }
+  .stat { background: #f0faf7; border: 1px solid #c8ede7; border-radius: 10px; padding: 16px 22px; text-align: center; min-width: 100px; }
+  .stat .n { font-size: 26px; font-weight: 800; color: #1b4332; }
+  .stat .l { font-size: 11px; color: #555; margin-top: 2px; }
+
+  /* ── Phase banner ── */
+  .phase { background: linear-gradient(135deg, #0d1b2a, #1b4332); color: #3fada2; font-weight: 700; font-size: 13px; padding: 10px 20px; border-radius: 8px; margin: 24px 0 16px; letter-spacing: 0.5px; text-transform: uppercase; display: inline-block; }
+
+  /* ── Divider ── */
+  .divider { height: 1px; background: linear-gradient(to right, transparent, #cbd5e1, transparent); margin: 40px 0; }
+
+  /* ── Footer ── */
+  .doc-footer { background: #0d1b2a; color: #6b7280; text-align: center; padding: 22px; font-size: 12px; }
+  .doc-footer strong { color: #3fada2; }
+
+  @media print { body { background: #fff; } .page { box-shadow: none; margin: 0; border-radius: 0; } }
+</style>
+</head>
+<body>
+            <!-- Google Tag Manager (noscript) -->
+            <noscript>
+                <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBRW2ZDR"
+                    height="0" width="0" style="display:none;visibility:hidden">
+                </iframe>
+            </noscript>
+            <!-- End Google Tag Manager (noscript) -->
+
+<div class="page">
+
+<!-- ── Cover ── -->
+<div class="cover">
+  <div class="brand">طبقات</div>
+  <h1>Service Pages — Improvement Plan</h1>
+  <div class="sub">Layout rebuild + SEO implementation for all water & heat insulation pages</div>
+  <div class="kpis">
+    <div class="kpi"><div class="n">13</div><div class="l">Pages</div></div>
+    <div class="kpi"><div class="n">2</div><div class="l">Phases per page</div></div>
+    <div class="kpi"><div class="n">10</div><div class="l">SEO additions</div></div>
+    <div class="kpi"><div class="n">6</div><div class="l">Shared CSS classes</div></div>
+  </div>
+</div>
+
+<!-- ── Body ── -->
+<div class="body">
+
+
+  <!-- ── Background ── -->
+  <div class="section">
+    <div class="sec-head">
+      <span class="badge badge-blue">Background</span>
+      <h2>What was already done on water-thermal-insulation-system.html</h2>
+    </div>
+    <p class="desc">
+      <span class="tag-file">water-thermal-insulation-system.html</span> was used as the reference page.
+      Everything below is based on what was built and refined there. The same two phases will be applied to all 13 remaining pages.
+    </p>
+
+    <div class="phase">Phase A — Layout</div>
+    <ol class="steps">
+      <li>
+        <div class="step-body">
+          <div class="step-title">Clean 2-column layout</div>
+          <div class="step-desc">Content column (col-8) + sticky sidebar (col-4). Replaced the original messy nested sections and heavy inline styles.</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <div class="step-title">Structured content sections</div>
+          <div class="step-desc">Each section follows the pattern: <code>h2 heading → image → list or steps</code>. Uses 4 section types: definition, features list, numbered steps, note box.</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <div class="step-title">Sidebar components</div>
+          <div class="step-desc">WhatsApp CTA button + service navigation links (with active state) + PDF download + contact info (phone & email).</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <div class="step-title">Edit-friendly comments</div>
+          <div class="step-desc">Every editable element has an <code>&lt;!-- Edit: what to change --&gt;</code> comment directly above it. No need to search the code.</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <div class="step-title">CSS moved to main.css</div>
+          <div class="step-desc">All 6 component classes (<code>.section-heading</code>, <code>.section-img</code>, <code>.features-list</code>, <code>.steps-list</code>, <code>.note-box</code>, <code>.cta-whatsapp</code>) are in <span class="tag-file">assets/css/main.css</span> under the "SERVICE PAGE COMPONENTS" block, fully documented with usage examples.</div>
+        </div>
+      </li>
+    </ol>
+
+    <div class="phase">Phase B — SEO</div>
+    <ol class="steps">
+      <li>
+        <div class="step-body">
+          <div class="step-title">Stronger meta description</div>
+          <div class="step-desc">~150 characters, includes primary keywords naturally, ends with a call-to-action.</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <div class="step-title">Canonical URL</div>
+          <div class="step-desc"><code>&lt;link rel="canonical" href="https://tabqat.com.sa/page.html"&gt;</code> — tells Google the authoritative URL for each page.</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <div class="step-title">Meta robots</div>
+          <div class="step-desc"><code>&lt;meta name="robots" content="index, follow"&gt;</code> — explicitly tells search engines to index the page.</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <div class="step-title">Open Graph tags</div>
+          <div class="step-desc">og:title, og:description, og:image, og:url, og:type, og:locale, og:site_name — controls the preview when a link is shared on WhatsApp or social media.</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <div class="step-title">Twitter Card tags</div>
+          <div class="step-desc">twitter:card, twitter:title, twitter:description, twitter:image — controls the preview when shared on X (Twitter).</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <div class="step-title">JSON-LD: Service schema</div>
+          <div class="step-desc">Structured data that tells Google the page is about a specific service, who provides it, where, and how to contact them. Enables rich results in search.</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <div class="step-title">JSON-LD: BreadcrumbList schema</div>
+          <div class="step-desc">Structured data for the breadcrumb trail. Google shows this directly in search results under the page title.</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <div class="step-title">Heading hierarchy fix</div>
+          <div class="step-desc">Changed section headings from h3 → h2 so the page follows a proper h1 → h2 flow. Search engines use this hierarchy to understand page structure.</div>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <div class="step-title">Descriptive image alt texts</div>
+          <div class="step-desc">Changed generic alt values (e.g. "image") to keyword-rich descriptions (e.g. "عزل الأسطح بنظام رش البولي يوريثان بالرياض"). Google indexes alt text for image search.</div>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <div class="divider"></div>
+
+
+  <!-- ── Pages scope ── -->
+  <div class="section">
+    <div class="sec-head">
+      <span class="badge badge-teal">Scope</span>
+      <h2>Pages to be updated — 13 total</h2>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n">2</div><div class="l">Category pages</div></div>
+      <div class="stat"><div class="n">7</div><div class="l">Water detail pages</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">Heat detail pages</div></div>
+    </div>
+
+    <table>
+      <tr>
+        <th>Page</th>
+        <th>Type</th>
+        <th>Layout work</th>
+        <th>SEO work</th>
+        <th>Content complexity</th>
+      </tr>
+      <tr>
+        <td><span class="tag-file">waterproofing-insulation.html</span></td>
+        <td>Category grid</td>
+        <td>7 clickable service cards with images</td>
+        <td>All 10 SEO items</td>
+        <td>Low</td>
+      </tr>
+      <tr>
+        <td><span class="tag-file">thermal-insulation.html</span></td>
+        <td>Category grid</td>
+        <td>4 clickable service cards with images</td>
+        <td>All 10 SEO items</td>
+        <td>Low</td>
+      </tr>
+      <tr>
+        <td><span class="tag-file">bitumen-waterproofing.html</span></td>
+        <td>Detail page</td>
+        <td>2 phases — 6 sections with steps + images</td>
+        <td>All 10 SEO items</td>
+        <td>High</td>
+      </tr>
+      <tr>
+        <td><span class="tag-file">cementitious-waterproofing.html</span></td>
+        <td>Detail page</td>
+        <td>3 sections (requirements, execution, post)</td>
+        <td>All 10 SEO items</td>
+        <td>Medium</td>
+      </tr>
+      <tr>
+        <td><span class="tag-file">polyurethane-waterproofing.html</span></td>
+        <td>Detail page</td>
+        <td>3 sections (preparation, execution, post)</td>
+        <td>All 10 SEO items</td>
+        <td>Medium</td>
+      </tr>
+      <tr>
+        <td><span class="tag-file">acrylic-waterproofing-coating.html</span></td>
+        <td>Detail page</td>
+        <td>2 sections (preparation, execution)</td>
+        <td>All 10 SEO items</td>
+        <td>Low</td>
+      </tr>
+      <tr>
+        <td><span class="tag-file">polyurea-spray-waterproofing.html</span></td>
+        <td>Detail page</td>
+        <td>2 sections (preparation, execution)</td>
+        <td>All 10 SEO items</td>
+        <td>Low</td>
+      </tr>
+      <tr>
+        <td><span class="tag-file">pvc-waterproofing.html</span></td>
+        <td>Detail page</td>
+        <td>3 sections (preparation, floor, walls)</td>
+        <td>All 10 SEO items</td>
+        <td>Medium</td>
+      </tr>
+      <tr>
+        <td><span class="tag-file">epdm-waterproofing.html</span></td>
+        <td>Detail page</td>
+        <td>2 sections (preparation, execution)</td>
+        <td>All 10 SEO items</td>
+        <td>Medium</td>
+      </tr>
+      <tr>
+        <td><span class="tag-file">perlite-thermal-insulation.html</span></td>
+        <td>Detail page</td>
+        <td>Intro layout — description + image only</td>
+        <td>All 10 SEO items</td>
+        <td>Low</td>
+      </tr>
+      <tr>
+        <td><span class="tag-file">polystyrene-board-thermal-insulation.html</span></td>
+        <td>Detail page</td>
+        <td>Intro layout — description + image only</td>
+        <td>All 10 SEO items</td>
+        <td>Low</td>
+      </tr>
+      <tr>
+        <td><span class="tag-file">polyurethane-board-thermal-insulation.html</span></td>
+        <td>Detail page</td>
+        <td>Intro layout — description + image only</td>
+        <td>All 10 SEO items</td>
+        <td>Low</td>
+      </tr>
+      <tr>
+        <td><span class="tag-file">rockwool-board-thermal-insulation.html</span></td>
+        <td>Detail page</td>
+        <td>Intro layout — description + image only</td>
+        <td>All 10 SEO items</td>
+        <td>Low</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="divider"></div>
+
+
+  <!-- ── Per-page checklist ── -->
+  <div class="section">
+    <div class="sec-head">
+      <span class="badge badge-orange">Checklist</span>
+      <h2>What gets done on every single page</h2>
+    </div>
+    <p class="desc">Both phases are applied together in one pass per page — no page gets layout without SEO or vice versa.</p>
+
+    <table>
+      <tr><th>#</th><th>Task</th><th>Phase</th><th>File changed</th></tr>
+      <tr><td>1</td><td>Clean 2-col layout: content (col-8) + sidebar (col-4)</td><td><span class="tag-new">Layout</span></td><td>page .html</td></tr>
+      <tr><td>2</td><td>Section headings → images → lists (features / steps / note box)</td><td><span class="tag-new">Layout</span></td><td>page .html</td></tr>
+      <tr><td>3</td><td>Sidebar: WhatsApp CTA + nav links + PDF download + contact</td><td><span class="tag-new">Layout</span></td><td>page .html</td></tr>
+      <tr><td>4</td><td>Edit comments on every editable element</td><td><span class="tag-new">Layout</span></td><td>page .html</td></tr>
+      <tr><td>5</td><td>CSS uses shared classes from main.css (no per-page &lt;style&gt;)</td><td><span class="tag-new">Layout</span></td><td>main.css (already done)</td></tr>
+      <tr><td>6</td><td>Strong meta description (~150 chars, with keywords)</td><td><span class="tag-seo">SEO</span></td><td>page .html</td></tr>
+      <tr><td>7</td><td>Canonical URL</td><td><span class="tag-seo">SEO</span></td><td>page .html</td></tr>
+      <tr><td>8</td><td>Meta robots: index, follow</td><td><span class="tag-seo">SEO</span></td><td>page .html</td></tr>
+      <tr><td>9</td><td>Open Graph tags (og:title, og:description, og:image, og:url)</td><td><span class="tag-seo">SEO</span></td><td>page .html</td></tr>
+      <tr><td>10</td><td>Twitter Card tags</td><td><span class="tag-seo">SEO</span></td><td>page .html</td></tr>
+      <tr><td>11</td><td>JSON-LD Service schema (name, provider, area, URL)</td><td><span class="tag-seo">SEO</span></td><td>page .html</td></tr>
+      <tr><td>12</td><td>JSON-LD BreadcrumbList schema</td><td><span class="tag-seo">SEO</span></td><td>page .html</td></tr>
+      <tr><td>13</td><td>Heading hierarchy: h1 breadcrumb → h2 sections</td><td><span class="tag-seo">SEO</span></td><td>page .html</td></tr>
+      <tr><td>14</td><td>Descriptive keyword-rich image alt texts</td><td><span class="tag-seo">SEO</span></td><td>page .html</td></tr>
+    </table>
+  </div>
+
+  <div class="divider"></div>
+
+
+  <!-- ── Shared assets ── -->
+  <div class="section">
+    <div class="sec-head">
+      <span class="badge badge-blue">Shared Assets</span>
+      <h2>Files that apply to all pages (already done)</h2>
+    </div>
+
+    <table>
+      <tr><th>File</th><th>What was added / changed</th></tr>
+      <tr>
+        <td><span class="tag-file">assets/css/main.css</span></td>
+        <td>
+          6 documented CSS classes under the <strong>"SERVICE PAGE COMPONENTS"</strong> block:<br>
+          <code>.section-heading</code> &nbsp; <code>.section-img</code> &nbsp; <code>.features-list</code> &nbsp;
+          <code>.steps-list</code> &nbsp; <code>.note-box</code> &nbsp; <code>.cta-whatsapp</code><br>
+          Each class has usage example + what-to-edit comment.
+        </td>
+      </tr>
+      <tr>
+        <td><span class="tag-file">components/header-inner.html</span></td>
+        <td>Shared header — already loaded by all pages via components-loader.js</td>
+      </tr>
+      <tr>
+        <td><span class="tag-file">components/footer.html</span></td>
+        <td>Shared footer — already loaded by all pages via components-loader.js</td>
+      </tr>
+      <tr>
+        <td><span class="tag-file">assets/js/components-loader.js</span></td>
+        <td>Injects header, offcanvas, footer — already active on all pages</td>
+      </tr>
+    </table>
+
+    <div class="note-blue">
+      💡 Because CSS is in <strong>main.css</strong> and header/footer are in <strong>components/</strong>,
+      every page automatically picks up global changes without touching individual HTML files.
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+
+  <!-- ── What to have ready ── -->
+  <div class="section">
+    <div class="sec-head">
+      <span class="badge badge-orange">Before Starting</span>
+      <h2>What you need to confirm before we begin</h2>
+    </div>
+
+    <ul class="chk">
+      <li>Confirm the domain name — currently using <code>https://tabqat.com.sa</code> in all canonical URLs and schema. Replace with the actual live domain if different.</li>
+      <li>Confirm the WhatsApp number — currently <code>00966581032502</code> on all CTA buttons.</li>
+      <li>Confirm the email address — currently <code>Info@tabqat.com.sa</code> in schema and contact info.</li>
+      <li>Images for each page — all image paths already exist from the original pages. No new images needed.</li>
+    </ul>
+  </div>
+
+
+</div><!-- /body -->
+
+<div class="doc-footer">
+  Service Pages Plan — <strong>Tabqat</strong> — June 2026 &nbsp;|&nbsp; Claude Code
+</div>
+
+</div><!-- /page -->
+</body>
+</html>

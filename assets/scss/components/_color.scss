@@ -1,0 +1,35 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.4 Color Short Code
+/*----------------------------------------*/
+
+.rs-text-primary {
+    color: var(--rs-theme-primary);
+}
+.rs-theme-orange{
+    color: var(--rs-theme-orange);
+}
+.rs-theme-red{
+    color: var(--rs-theme-red);
+}
+.rs-theme-yellow{
+    color: var(--rs-theme-yellow);
+}
+.rs-white{
+    color: var(--rs-white);
+}
+.rs-theme-light-blue{
+    color: var(--rs-theme-light-blue);
+}
+.rs-theme-deep-blue{
+    color: var(--rs-theme-deep-blue);
+}
+
+.rs-black{
+    color: var(--rs-black);
+}
+
+.rating-color {
+	color: #FFB21D;
+}

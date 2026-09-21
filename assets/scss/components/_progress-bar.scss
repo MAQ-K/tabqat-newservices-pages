@@ -1,0 +1,75 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.10 Progress Bar
+/*----------------------------------------*/
+
+.single-progress {
+    position: relative;
+    overflow: hidden;
+}
+.single-progress {
+    .title {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 0;
+        color: var(--rs-title-primary);
+        letter-spacing: 0.5px;
+        margin-bottom: 18px;
+    }
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+.progress {
+    height: 6px;
+    overflow: visible;
+    background-color: var(--rs-light);
+    border-radius: 10px;
+}
+.progress-bar {
+    border-radius: 10px;
+    width: 0;
+    height: 100%;
+    background-color: var(--rs-theme-orange);
+    transition: width 0.5s ease;
+    overflow: visible;
+
+    &.bar-bg-2 {
+        background-color: var(--rs-hover-primary);
+    }
+
+    &.bar-bg-3 {
+        background-color: var(--rs-success);
+    }
+
+    &.bar-bg-4 {
+        background-color: var(--rs-info);
+    }
+
+    &.bar-bg-5 {
+        background-color: var(--rs-warning);
+    }
+
+    &.bar-bg-6 {
+        background-color: var(--rs-danger);
+    }
+}
+.progress-number {
+    position: absolute;
+    font-size: 14px;
+    top: 0;
+    inset-inline-end: 0;
+    z-index: 1;
+}
+.progress-style-2 {
+    .progress {
+        height: 15px;
+        border-radius: 10px;
+    }
+    .progress-number {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--rs-title-primary);
+    }
+}

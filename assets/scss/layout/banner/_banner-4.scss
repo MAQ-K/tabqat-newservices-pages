@@ -1,0 +1,209 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1.4 Banner Style 4
+/*----------------------------------------*/
+
+.rs-banner-four {
+    overflow-x: clip;
+    .rs-banner-stroke-text{
+        position: absolute;
+        transform: rotate(-90deg);
+        z-index: 2;
+        bottom: 225px;
+        inset-inline-start: -100px;
+        @media #{$laptop}{
+            bottom: 330px;
+        }
+        @media #{$lg}{
+            inset-inline-start: -70px;
+        }
+        @media #{$md}{
+            display: none;
+        }
+        span{
+            font-size: 150px;
+            font-weight: 600;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+            text-shadow: rgba(255, 255, 255, 0) 1px 1px 1px;
+            color: rgba(255, 255, 255, 0);
+            font-family: "Manrope";
+            text-transform: uppercase;
+            line-height: .85;
+            @media #{$laptop}{
+                font-size: 100px;
+            }
+            @media #{$lg}{
+                font-size: 80px;
+            }
+        }
+    }
+    .rs-banner-bg-thumb {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        inset-inline-end: 0;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 1;
+        &::before{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.28);
+            top: 0;
+            inset-inline-start: 0;
+            z-index: -1;
+        }
+    }
+    .rs-banner-item-wrapper{
+        padding-top: 330px;
+        padding-bottom: 205px;
+        padding-inline-start: 160px;
+        @media #{$laptop}{
+            padding-top: 280px;
+            padding-bottom: 185px;
+            padding-inline-start: 160px;
+        }
+        @media #{$lg}{
+            padding-top: 240px;
+            padding-bottom: 150px;
+            padding-inline-start: 100px;
+        }
+        @media #{$md}{
+            padding-top: 200px;
+            padding-bottom: 120px;
+            padding-inline-start: 0px;
+        }
+        @media #{$sm}{
+            padding-top: 160px;
+            padding-bottom: 120px;
+        }
+    }
+    .rs-banner-content{
+        position: relative;
+        z-index: 5;
+    }
+    .rs-banner-subtitle{
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--rs-white);
+        padding: 10px 19px;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: inline-flex;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 20px;
+        &::before{
+            position: absolute;
+            content: "";
+            width: 3px;
+            height: 10px;
+            background-color: rgb(238, 13, 8);
+            top: 0;
+            inset-inline-start: 0;
+        }
+        &::after{
+            position: absolute;
+            content: "";
+            width: 3px;
+            height: 10px;
+            background-color: rgb(238, 13, 8);
+            bottom: 0;
+            inset-inline-end: 0;
+        }
+    }
+    .rs-banner-title{
+        color: var(--rs-white);
+        font-size: 80px;
+        line-height: 1.15;
+        text-transform: capitalize;
+        @media #{$lg}{
+            font-size: 70px;
+        }
+        @media #{$md}{
+            font-size: 60px;
+        }
+        @media #{$sm}{
+            font-size: 50px;
+        }
+        @media #{$xs}{
+            font-size: 40px;
+        }
+    }
+    .rs-banner-descrip{
+        max-width: 630px;
+        margin: 25px 0 40px;
+        p{
+            color: rgba(255, 255, 255, 0.85);
+        }
+    }
+    .rs-banner-navigation{
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        position: absolute;
+        z-index: 2;
+        inset-inline-end: 110px;
+        top: 50%;
+        transform: translateY(-50%);
+        @media #{$laptop}{
+            inset-inline-end: 80px; 
+        }
+        @media #{$lg}{
+            inset-inline-end: 50px; 
+        }
+        @media #{$md}{
+            inset-inline-end: 30px; 
+        }
+        @media #{$sm}{
+            display: none;
+        }
+        .rs-swiper-btn{
+            &:hover{
+                background: rgba(238, 13, 8, 0.3);
+            }
+        }
+    }
+    .rs-pagination.swiper-pagination {
+        position: absolute;
+        bottom: 40px;
+    }
+}
+
+// slider animation
+.rs-banner-four {
+    &.rs-swiper{
+        .swiper-slide-active {
+            .rs-banner-subtitle,
+            .rs-banner-title,
+            .rs-banner-descrip,
+            .rs-banner-btn{
+               animation-fill-mode: both;
+               animation-name: fadeInUp;
+            }
+       }
+    }
+     .swiper-slide-active {
+        .rs-banner-subtitle{
+            animation-delay: .3s;
+            animation-duration: 0.7s;
+        }
+         .rs-banner-title {
+            animation-delay: .5s;
+            animation-duration: 0.9s;
+        }
+         .rs-banner-descrip {
+            animation-delay: .7s;
+            animation-duration: 1.1s;
+        }
+         .rs-banner-btn {
+            animation-delay: .9s;
+            animation-duration: 1.3s;
+        }
+    }
+}

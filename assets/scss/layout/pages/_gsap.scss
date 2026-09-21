@@ -1,0 +1,90 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  gasap css
+/*----------------------------------------*/
+
+.rs-gsap{
+    &-one{
+        overflow-x: clip;
+        .rs-gsap-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .rs-gsap-thumb{
+            img{
+                width: 100%;
+            }
+            &.rs-image{
+                overflow: hidden;
+                img{
+                    width: 400px;
+                    transition: unset;
+                }
+            }
+        }
+        .rs-gsap-item{
+            text-align: center;
+            p{
+                margin-top: 10px;
+                font-size: 14px;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+.gsap-slide{
+    &-one{
+        overflow-x: clip;
+        margin-bottom: 100px;
+        .rs-gsap-slide-wrapper{
+            background: var(--rs-theme-orange);
+            padding: 20px 0px 20px 0px;
+            transform: rotateZ(-7deg);
+            width: 110%;
+            margin-inline-start: -50px;
+            @media #{$xs}{
+                margin-inline-start: 0;
+                transform: rotateZ(0);
+                width: 100%;
+            }
+            &.has-style-two{
+                background: var(--rs-bg-primary);
+                position: absolute;
+                top: 0;
+                z-index: -1;
+                transform: rotateZ(7deg);
+                @media #{$xs}{
+                    transform: rotateZ(0);
+                    position: unset;
+                    top: unset;
+                }
+            }
+        }
+        .rs-gsap-slide-thumb{
+            img{
+                height: 80px;
+            }
+        }
+        .rs-gsap-slide-inner {
+            min-width: max-content;
+            display: flex;
+            align-items: center;
+            gap: 0 50px;
+        }
+        .has-slide-wrapper{
+            margin-top: 150px;
+            position: relative;
+            @media #{$laptop}{
+                margin-top: 100px;
+            }
+            @media #{$xs}{
+                margin-top: 0px;
+            }
+        }
+    }
+}

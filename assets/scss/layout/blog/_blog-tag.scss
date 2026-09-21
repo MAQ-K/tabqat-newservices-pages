@@ -1,0 +1,74 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.2.1 Blog tag css
+/*----------------------------------------*/
+
+.rs-blog-tag {
+  a {
+    color: var(--rs-white);
+    font-size: 15px;
+    padding: 6px 15px 6px 15px;
+    border-radius: 2px;
+    background: var(--rs-theme-orange);
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    &:hover {
+      background: var(--rs-black);
+    }
+  }
+  &.has-theme-red{
+    a{
+      background: var(--rs-theme-red);
+      &:hover {
+        background: var(--rs-black);
+      }
+    }
+  }
+  &.has-theme-blue{
+    a{
+      background: var(--rs-theme-blue);
+      &:hover {
+        background: var(--rs-black);
+      }
+    }
+  }
+  &.has-theme-green{
+    a{
+      background: var(--rs-theme-light-green);
+      &:hover {
+        background: var(--rs-theme-green);
+      }
+    }
+  }
+  &.has-theme-yellow{
+    a{
+      background: var(--rs-theme-yellow);
+      color: var(--rs-black);
+      &:hover {
+        background: #EBB40E;
+      }
+    }
+  }
+  &.has-theme-deep-blue{
+    a{
+      background: var(--rs-theme-deep-blue);
+      color: var(--rs-white);
+      &:hover {
+        background: #1F1CB9;
+      }
+    }
+  }
+  &.has-theme-orange{
+    a{
+      background: var(--rs-theme-orange);
+      color: var(--rs-white);
+      &:hover {
+        background: rgb(255, 92, 0);
+      }
+    }
+  }
+}

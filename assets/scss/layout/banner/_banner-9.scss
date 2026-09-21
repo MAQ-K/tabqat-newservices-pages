@@ -1,0 +1,135 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1.5 Banner Style 8
+/*----------------------------------------*/
+
+.rs-banner{
+    &-nine{
+        overflow-x: clip;
+        .rs-banner-item-wrapper{
+            position: relative;
+            z-index: 1;
+        }
+        .rs-banner-bg-thumb {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            inset-inline-end: 0;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+        .rs-banner-wrapper{
+            padding: 180px 0 220px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            @media #{$sm}{
+                padding: 150px 0 100px;
+            }
+        }
+        .rs-banner-title{
+            font-size: 80px;
+            color: var(--rs-white);
+            text-transform: capitalize;
+            line-height: 1.15;
+            position: relative;
+            @media #{$xl}{
+                font-size: 70px;
+            }
+            @media #{$lg}{
+                font-size: 60px;
+            }
+            @media #{$md}{
+                font-size: 50px;
+            }
+            @media #{$sm}{
+                font-size: 40px;
+            }
+        }
+        .rs-banner-descrip{
+            margin: 25px auto 45px;
+            max-width: 620px;
+            p{
+                color: var(--rs-white);
+                font-size: 20px;
+            }
+        }
+        .rs-banner-stroke-text{
+            position: absolute;
+            inset-inline-start: 0;
+            top: 315px;
+            font-size: 200px;
+            line-height: .8;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.12);
+            color: rgba(255, 255, 255, 0);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            animation: rs-translate 2s ease-in-out 1s forwards infinite alternate;
+            @media #{$xl}{
+                font-size: 150px;
+                inset-inline-start: 80px;
+            }
+            @media #{$lg}{
+                font-size: 120px;
+            }
+            @media #{$md}{
+                font-size: 80px;
+            }
+        }
+        .rs-banner-navigation{
+            @media #{$sm}{
+                display: none;
+            }
+            .swiper-button-prev,
+            .swiper-button-next{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                
+            }
+            button{
+                inset-inline-start: 30px;
+                &.swiper-button-next{
+                    inset-inline-end: 30px;
+                    inset-inline-start: auto;
+                }
+            }
+        }
+        .rs-pagination.swiper-pagination {
+            position: absolute;
+            bottom: 40px;
+        }
+    }
+}
+
+// slider animation
+.rs-banner-nine {
+    &.rs-swiper{
+       .swiper-slide-active{
+           .rs-banner-title,
+           .rs-banner-descrip,
+           .rs-banner-btn{
+            animation-fill-mode: both;
+            animation-name: fadeInUp;
+         }
+       }
+   }
+    .swiper-slide-active {
+       .rs-banner-title{
+           animation-delay: .3s;
+           animation-duration: 0.7s;
+       }
+        .rs-banner-descrip {
+           animation-delay: .5s;
+           animation-duration: 0.9s;
+       }
+        .rs-banner-btn {
+           animation-delay: .7s;
+           animation-duration: 1.1s;
+       }
+   }
+}

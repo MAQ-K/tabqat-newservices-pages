@@ -1,0 +1,213 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1.4 Banner Style 6
+/*----------------------------------------*/
+
+.rs-banner-six {
+    overflow-x: clip;
+    .rs-banner-bg-thumb {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        inset-inline-end: 0;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+    .rs-banner-slider-wrapper{
+        position: relative;
+    }
+    .rs-banner-item-wrapper{
+        padding-top: 140px;
+        padding-bottom: 250px;
+        padding-inline-start: 90px;
+        @media #{$large_laptop}{
+            padding-bottom: 200px;
+        }
+        @media #{$xl}{
+            padding-bottom: 130px;
+        }
+        @media #{$lg}{
+            padding-top: 100px;
+            padding-bottom: 90px;
+            padding-inline-start: 15px;
+        }
+        @media #{$md}{
+            padding-top: 70px;
+            padding-bottom: 80px;
+            padding-inline-start: 0px;
+        }
+    }
+    .rs-banner-item{
+        position: relative;
+        z-index: 2;
+    }
+    .rs-banner-subtitle{
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--rs-white);
+        display: inline-flex;
+        text-transform: uppercase;
+        align-items: center;
+        gap: 13px;
+        @media #{$lg}{
+            margin-bottom: 10px;
+        }
+        img{
+            height: 10px;
+        }
+    }
+    .rs-banner-title{
+        color: var(--rs-white);
+        font-size: 150px;
+        line-height: 1.15;
+        text-transform: capitalize;
+        position: relative;
+        @media #{$large_laptop}{
+            font-size: 140px;
+        }
+        @media #{$laptop}{
+            font-size: 110px;
+        }
+        @media #{$xl}{
+            font-size: 90px;
+        }
+        @media #{$xl}{
+            font-size: 90px;
+        }
+        @media #{$lg}{
+            font-size: 70px;
+        }
+        @media #{$md}{
+            font-size: 60px;
+        }
+        @media #{$sm}{
+            font-size: 50px;
+        }
+    }
+    .rs-banner-stroke-text{
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: var(--rs-white);
+        padding-inline-start: 90px;
+        @media #{$mobile}{
+            padding-inline-start: 20px;
+        }
+    }
+    .rs-banner-shape{
+        position: absolute;
+        bottom: 60px;
+        @media #{$laptop}{
+            bottom: 30px;
+        }
+        @media #{$lg}{
+            bottom: 0px;
+        }
+        @media #{$mobile}{
+            display: none;
+        }
+    }
+    .rs-banner-info{
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        @media #{$lg}{
+            margin-top: 20px;
+        }
+        @media #{$sm}{
+            align-items: start;
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+        }
+    }
+    .rs-banner-descrip{
+        max-width: 490px;
+        @media #{$sm}{
+            max-width: 350px;
+        }
+        @media #{$xs}{
+            max-width: 100%;
+        }
+        p{
+            color: rgba(255, 255, 255, 0.85);
+        }
+    }
+    .rs-play-btn{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &.has-transparent-btn{
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            font-size: 18px;
+            &:hover{
+                background: var(--rs-theme-light-blue);
+                border-color: var(--rs-theme-light-blue);
+            }
+        }
+    }
+    .rs-rotate-btn{
+        width: 130px;
+        height: 130px;
+        .rs-text-circle-wrapper{
+            width: 130px;
+        }
+        .rs-text-circle {
+            span{
+                position: absolute;
+                font-size: 14px;
+                font-weight: 500;
+                color: var(--rs-white);
+            }
+        }
+    }
+    .rs-pagination.swiper-pagination{
+        position: absolute;
+        bottom: 30px;
+    }
+    .rs-banner-navigation{
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        position: absolute;
+        z-index: 2;
+        inset-inline-end: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+        @media #{$xs}{
+            display: none;
+        }
+    }
+}
+
+// slider animation
+.rs-banner-six {
+     &.rs-swiper{
+        .swiper-slide-active{
+            .rs-banner-subtitle,
+            .rs-banner-title,
+            .rs-banner-info{
+               animation-fill-mode: both;
+               animation-name: fadeInUp;
+            }
+        }
+    }
+     .swiper-slide-active {
+        .rs-banner-subtitle{
+            animation-delay: .3s;
+            animation-duration: 0.7s;
+        }
+         .rs-banner-title {
+            animation-delay: .5s;
+            animation-duration: 0.9s;
+        }
+         .rs-banner-info {
+            animation-delay: .7s;
+            animation-duration: 1.1s;
+        }
+    }
+}

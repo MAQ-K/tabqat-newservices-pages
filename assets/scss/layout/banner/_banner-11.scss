@@ -1,0 +1,166 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1.5 Banner Style 11
+/*----------------------------------------*/
+
+.rs-banner {
+    &-eleven {
+        position: relative;
+        z-index: 1;
+        .rs-banner-stroke-text {
+            font-size: 200px;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+            color: rgba(255, 255, 255, 0);
+            font-weight: 700;
+            position: absolute;
+            bottom: 170px;
+            z-index: 2;
+            inset-inline-end: 130px;
+            line-height: .8;
+            @media #{$large_laptop}{
+                font-size: 180px;
+            }
+            @media #{$laptop}{
+                font-size: 150px;
+            }
+            @media #{$xl}{
+                font-size: 100px;
+            }
+            @media #{$lg}{
+                font-size: 80px;
+            }
+            @media #{$md}{
+                font-size: 60px;
+                inset-inline-end: 50px;
+            }
+            @media #{$sm}{
+                display: none;
+            }
+        }
+        .rs-banner-meta-text {
+            font-size: 24px;
+            font-weight: 700;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.46);
+            color: rgba(255, 255, 255, 0);
+            position: absolute;
+            inset-inline-start: -60px;
+            bottom: 240px;
+            z-index: 2;
+            transform: rotate(90deg);
+            @media #{$laptop}{
+                display: none;
+            }
+        }
+        .rs-banner-slider-wrapper{
+            position: relative;
+            z-index: 1;
+        }
+        .rs-banner-bg-thumb {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            inset-inline-end: 0;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            z-index: -1;
+        }
+        .rs-banner-title{
+            font-size: 70px;
+            line-height: 1.14;
+            text-transform: capitalize;
+            color: var(--rs-white);
+            @media #{$lg}{
+                font-size: 60px;
+            }
+            @media #{$md}{
+                font-size: 50px;
+            }
+            @media #{$sm}{
+                font-size: 40px;
+            }
+        }
+        .rs-banner-descrip{
+            max-width: 570px;
+            margin: 25px 0 45px;
+            p{
+                font-size: 20px;
+                font-weight: 500;
+                color: var(--rs-white);
+                @media #{$md}{
+                    font-size: 18px;
+                }
+            }
+        }
+        .rs-banner-item-wrapper{
+            padding: 225px 0 215px;
+            @media #{$laptop}{
+                padding: 165px 0 180px;
+            }
+            @media #{$xl}{
+                padding: 135px 0 150px;
+            }
+            @media #{$lg}{
+                padding: 105px 0 120px;
+            }
+            @media #{$md}{
+                padding: 70px 0 120px;
+            }
+        }
+        .rs-banner-navigation {
+            position: absolute;
+            inset-inline-end: 140px;
+            bottom: 90px;
+            display: flex;
+            gap: 15px;
+            z-index: 2;
+            @media #{$md}{
+                inset-inline-end: 50px;
+            }
+            @media #{$sm}{
+                display: none;
+            }
+            .rs-swiper-btn{
+                width: 60px;
+                height: 60px;
+                &:hover{
+                    background: rgba(59, 55, 253, 0.7);
+                }
+            }
+        }
+        .rs-pagination.swiper-pagination {
+            position: absolute;
+            bottom: 40px;
+        }
+    }
+}
+
+
+// slider animation
+.rs-banner-eleven {
+    &.rs-swiper{
+       .swiper-slide-active{
+           .rs-banner-title,
+           .rs-banner-descrip,
+           .rs-banner-btn{
+            animation-fill-mode: both;
+            animation-name: fadeInUp;
+         }
+       }
+   }
+    .swiper-slide-active {
+        .rs-banner-title {
+           animation-delay: .3s;
+           animation-duration: 0.7s;
+       }
+        .rs-banner-descrip {
+           animation-delay: .5s;
+           animation-duration: .9s;
+       }
+        .rs-banner-btn {
+           animation-delay: .7s;
+           animation-duration: 1.1s;
+       }
+   }
+}

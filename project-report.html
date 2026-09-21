@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-NBRW2ZDR');</script>
+        <!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تقرير تحسينات موقع طبقات</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Cairo', sans-serif; background: #f0f2f5; color: #1a1a2e; line-height: 1.8; }
+
+  .page { max-width: 960px; margin: 40px auto; background: #fff; border-radius: 14px; box-shadow: 0 6px 40px rgba(0,0,0,0.10); overflow: hidden; }
+
+  /* Cover */
+  .cover { background: linear-gradient(135deg, #0d1b2a 0%, #1b4332 100%); color: #fff; padding: 70px 60px; text-align: center; }
+  .cover .brand { font-size: 50px; font-weight: 900; color: #3fada2; letter-spacing: 3px; margin-bottom: 8px; }
+  .cover h1 { font-size: 26px; font-weight: 700; margin-bottom: 10px; }
+  .cover .sub { font-size: 14px; color: #a8d5b5; margin-bottom: 36px; }
+  .cover .kpis { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; margin-top: 10px; }
+  .cover .kpi .n { font-size: 38px; font-weight: 900; color: #3fada2; }
+  .cover .kpi .l { font-size: 13px; color: #cce; margin-top: 2px; }
+
+  /* TOC */
+  .toc { background: #f8fafb; padding: 32px 60px; border-bottom: 1px solid #e5e9f0; }
+  .toc h3 { font-size: 14px; color: #888; letter-spacing: 1px; margin-bottom: 14px; text-transform: uppercase; }
+  .toc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 30px; }
+  .toc-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #333; padding: 4px 0; }
+  .toc-item .num { background: #0d1b2a; color: #3fada2; border-radius: 6px; padding: 2px 9px; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+
+  /* Body */
+  .body { padding: 52px 60px; }
+
+  /* Section */
+  .section { margin-bottom: 58px; }
+  .sec-head { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 2px solid #e8f0fe; }
+  .badge { border-radius: 8px; padding: 6px 16px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+  .badge-main { background: linear-gradient(135deg, #1b4332, #3fada2); color: #fff; }
+  .badge-extra { background: linear-gradient(135deg, #1e3a5f, #3b82f6); color: #fff; }
+  .badge-perf { background: linear-gradient(135deg, #7c2d12, #f97316); color: #fff; }
+  .badge-note { background: linear-gradient(135deg, #78350f, #f59e0b); color: #fff; }
+  .sec-head h2 { font-size: 19px; font-weight: 700; color: #0d1b2a; }
+
+  p.desc { font-size: 14px; color: #555; margin-bottom: 16px; }
+
+  /* Stats */
+  .stats { display: flex; flex-wrap: wrap; gap: 14px; margin: 18px 0; }
+  .stat { background: #f0faf7; border: 1px solid #c8ede7; border-radius: 10px; padding: 16px 22px; text-align: center; min-width: 110px; }
+  .stat .n { font-size: 28px; font-weight: 900; color: #1b4332; }
+  .stat .l { font-size: 12px; color: #555; margin-top: 3px; }
+
+  /* Table */
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 13.5px; }
+  th { background: #0d1b2a; color: #fff; padding: 10px 14px; text-align: right; font-weight: 600; }
+  td { padding: 10px 14px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+  tr:nth-child(even) td { background: #f8fafb; }
+
+  /* List */
+  ul.chk { list-style: none; padding: 0; }
+  ul.chk li { padding: 7px 24px 7px 0; border-bottom: 1px solid #f3f3f3; font-size: 14px; position: relative; }
+  ul.chk li::before { content: '✓'; position: absolute; right: 0; color: #3fada2; font-weight: 700; }
+
+  /* Tags */
+  .err { background: #fee2e2; color: #b91c1c; border-radius: 4px; padding: 2px 8px; font-size: 13px; font-family: monospace; }
+  .fix { background: #dcfce7; color: #166534; border-radius: 4px; padding: 2px 8px; font-size: 13px; font-family: monospace; }
+  .file { background: #e0e7ff; color: #3730a3; border-radius: 4px; padding: 1px 7px; font-size: 12px; font-family: monospace; display: inline-block; margin: 2px; }
+  .tag-blue { background: #dbeafe; color: #1e40af; border-radius: 4px; padding: 2px 8px; font-size: 12px; }
+
+  /* Note */
+  .note { background: #fffbeb; border-right: 4px solid #f59e0b; border-radius: 6px; padding: 13px 18px; font-size: 14px; margin: 14px 0; color: #78350f; }
+  .note-blue { background: #eff6ff; border-right: 4px solid #3b82f6; border-radius: 6px; padding: 13px 18px; font-size: 14px; margin: 14px 0; color: #1e3a5f; }
+
+  /* Divider */
+  .divider { height: 1px; background: linear-gradient(to left, transparent, #cbd5e1, transparent); margin: 40px 0; }
+
+  /* Footer */
+  .doc-footer { background: #0d1b2a; color: #6b7280; text-align: center; padding: 22px; font-size: 13px; }
+  .doc-footer strong { color: #3fada2; }
+
+  @media print { body { background: #fff; } .page { box-shadow: none; margin: 0; border-radius: 0; } }
+</style>
+</head>
+<body>
+            <!-- Google Tag Manager (noscript) -->
+            <noscript>
+                <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBRW2ZDR"
+                    height="0" width="0" style="display:none;visibility:hidden">
+                </iframe>
+            </noscript>
+            <!-- End Google Tag Manager (noscript) -->
+
+<div class="page">
+
+<!-- ─── Cover ──────────────────────────────────────────────────── -->
+<div class="cover">
+  <div class="brand">طبقات</div>
+  <h1>تقرير تحسينات الموقع الإلكتروني</h1>
+  <div class="sub">ملخص شامل لجميع المهام المنجزة — يونيو 2026</div>
+  <div class="kpis">
+    <div class="kpi"><div class="n">64</div><div class="l">صفحة معدّلة</div></div>
+    <div class="kpi"><div class="n">9</div><div class="l">مهمة منجزة</div></div>
+    <div class="kpi"><div class="n">311</div><div class="l">عنصر متحرك</div></div>
+    <div class="kpi"><div class="n">33+</div><div class="l">خطأ إملائي صُحِّح</div></div>
+  </div>
+</div>
+
+<!-- ─── TOC ────────────────────────────────────────────────────── -->
+<div class="toc">
+  <h3>المهام المنجزة</h3>
+  <div class="toc-grid">
+    <div class="toc-item"><span class="num">01</span> نظام الهيدر والفوتر الخارجي (6 صفحات)</div>
+    <div class="toc-item"><span class="num">02</span> استعادة هيدر الصفحة الرئيسية</div>
+    <div class="toc-item"><span class="num">03</span> التدقيق الإملائي العربي (6 صفحات رئيسية)</div>
+    <div class="toc-item"><span class="num">04</span> إضافة الميتا والكلمات المفتاحية</div>
+    <div class="toc-item"><span class="num">05</span> انيميشن التمرير (6 صفحات رئيسية)</div>
+    <div class="toc-item"><span class="num">06</span> تحسينات الأداء (جميع الصفحات)</div>
+    <div class="toc-item"><span class="num">07</span> تطبيق الهيدر والفوتر على كل الموقع</div>
+    <div class="toc-item"><span class="num">08</span> التدقيق الإملائي (كل الصفحات)</div>
+    <div class="toc-item"><span class="num">09</span> انيميشن التمرير (كل الصفحات)</div>
+  </div>
+</div>
+
+<!-- ─── Body ────────────────────────────────────────────────────── -->
+<div class="body">
+
+  <!-- ══ TASK 01 ══════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="sec-head">
+      <span class="badge badge-main">المهمة 01</span>
+      <h2>نظام الهيدر والفوتر الخارجي — الصفحات الرئيسية الست</h2>
+    </div>
+    <p class="desc">إنشاء نظام مكونات خارجي يسمح بتعديل الهيدر والأوفكانفاس والفوتر من ملف واحد فقط، وتنعكس التغييرات على جميع الصفحات.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="n">4</div><div class="l">ملفات مكونات جديدة</div></div>
+      <div class="stat"><div class="n">1</div><div class="l">JS Loader</div></div>
+      <div class="stat"><div class="n">6</div><div class="l">صفحات في الجولة الأولى</div></div>
+    </div>
+
+    <table>
+      <tr><th>الملف المُنشأ</th><th>الوصف</th></tr>
+      <tr><td><span class="file">components/header-home.html</span></td><td>هيدر الصفحة الرئيسية (شفاف بخلفية زرقاء)</td></tr>
+      <tr><td><span class="file">components/header-inner.html</span></td><td>الهيدر المشترك لجميع الصفحات الداخلية</td></tr>
+      <tr><td><span class="file">components/offcanvas.html</span></td><td>قائمة السايدبار المتحركة مع بيانات التواصل</td></tr>
+      <tr><td><span class="file">components/footer.html</span></td><td>الفوتر الكامل مع الروابط والتواصل والسوشيال</td></tr>
+      <tr><td><span class="file">assets/js/components-loader.js</span></td><td>Synchronous Loader — يحمّل المكونات قبل jQuery حتى لا تتأخر القائمة</td></tr>
+    </table>
+
+    <table>
+      <tr><th>الصفحة</th><th>النتيجة</th></tr>
+      <tr><td><span class="file">about-us.html</span> <span class="file">certificates.html</span> <span class="file">projects.html</span> <span class="file">blogs.html</span> <span class="file">contact-us.html</span></td><td>استُبدل الهيدر والأوفكانفاس والفوتر بـ placeholders وأُضيف الـ Loader</td></tr>
+      <tr><td><span class="file">index.html</span></td><td>الهيدر خارجي (الجولة الأولى) ثم أُعيد inline بناءً على طلب المستخدم</td></tr>
+    </table>
+
+    <div class="note-blue">💡 لتعديل أي بيانات في القائمة أو الفوتر: افتح الملف المقابل في <strong>components/</strong> وعدّل منه فقط.</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══ TASK 02 ══════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="sec-head">
+      <span class="badge badge-extra">المهمة 02</span>
+      <h2>استعادة هيدر الصفحة الرئيسية بشكله الأصلي</h2>
+    </div>
+    <p class="desc">بعد تحويل الهيدر لنظام المكونات، طلب المستخدم إعادة الهيدر مباشرةً (inline) داخل index.html مع الإبقاء على النظام الخارجي لبقية الصفحات.</p>
+
+    <ul class="chk">
+      <li>أُعيد HTML الهيدر الأصلي كاملاً داخل <span class="file">index.html</span> من السطر 83</li>
+      <li>الصفحات الأخرى الخمس تواصل استخدام <span class="file">components/header-inner.html</span></li>
+      <li>ملف <span class="file">components/header-home.html</span> محفوظ للاستخدام المستقبلي</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══ TASK 03 ══════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="sec-head">
+      <span class="badge badge-main">المهمة 03</span>
+      <h2>التدقيق الإملائي العربي — الصفحات الرئيسية الست</h2>
+    </div>
+    <p class="desc">فحص جميع النصوص العربية في الصفحات الرئيسية الست وملفات المكونات وتصحيح الأخطاء.</p>
+
+    <table>
+      <tr><th>الخطأ</th><th style="text-align:center;">←</th><th>الصحيح</th><th>نوع الخطأ</th><th>الموقع</th></tr>
+      <tr><td><span class="err">ايبوكسية / اصلاح</span></td><td style="text-align:center;">←</td><td><span class="fix">إيبوكسية / إصلاح</span></td><td>همزة ناقصة</td><td>header-inner.html, header-home.html, index.html</td></tr>
+      <tr><td><span class="err">الإبوكسي الأنتي</span></td><td style="text-align:center;">←</td><td><span class="fix">الإيبوكسي الأنتي</span></td><td>حرف "ي" مفقود</td><td>index.html</td></tr>
+      <tr><td><span class="err">أطلب الان</span> (×4)</td><td style="text-align:center;">←</td><td><span class="fix">أطلب الآن</span></td><td>مدّة ناقصة</td><td>index.html</td></tr>
+      <tr><td><span class="err">التقنيات المتطور</span></td><td style="text-align:center;">←</td><td><span class="fix">التقنيات المتطورة</span></td><td>خطأ تأنيث</td><td>index.html</td></tr>
+      <tr><td><span class="err">التربه / معالجه / مقذوفه / بوابه</span></td><td style="text-align:center;">←</td><td><span class="fix">التربة / معالجة / مقذوفة / بوابة</span></td><td>ه بدل ة</td><td>projects.html</td></tr>
+      <tr><td><span class="err">الانشائية / اسطح / ايبوكسي</span></td><td style="text-align:center;">←</td><td><span class="fix">الإنشائية / أسطح / إيبوكسي</span></td><td>همزة ناقصة</td><td>projects.html</td></tr>
+      <tr><td><span class="err">الايبوكي الأنتي أستاتيك</span></td><td style="text-align:center;">←</td><td><span class="fix">الإيبوكسي الأنتي أستاتيك</span></td><td>همزة + حرف "س" مفقود</td><td>projects.html</td></tr>
+    </table>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══ TASK 04 ══════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="sec-head">
+      <span class="badge badge-main">المهمة 04</span>
+      <h2>إضافة الميتا والكلمات المفتاحية (من ملف Docx)</h2>
+    </div>
+    <p class="desc">تم قراءة ملف <strong>Meta Tabqat.docx</strong> تلقائياً وتطبيق العناوين والأوصاف والكلمات المفتاحية على 5 صفحات.</p>
+
+    <table>
+      <tr><th>الصفحة</th><th>العنوان الجديد</th><th>الوصف</th><th>الكلمات المفتاحية</th></tr>
+      <tr>
+        <td><span class="file">index.html</span></td>
+        <td style="font-size:12px;">شركة الطبقات المتعددة | افضل شركة مقاولات وحلول هندسية متكاملة بالرياض</td>
+        <td style="font-size:12px;">شركة الطبقات المتعددة للمقاولات بالرياض بخبرة +10 عامًا...</td>
+        <td style="font-size:12px;">عوازل اسطح، شركة عوازل، أفضل شركة عزل اسطح...</td>
+      </tr>
+      <tr>
+        <td><span class="file">about-us.html</span></td>
+        <td style="font-size:12px;">من نحن | شركة الطبقات المتعددة للعزل والمقاولات في الرياض</td>
+        <td style="font-size:12px;">تعرف على شركة الطبقات المتعددة...</td>
+        <td style="font-size:12px;">شركة الطبقات المتعددة، شركة عوازل...</td>
+      </tr>
+      <tr>
+        <td><span class="file">certificates.html</span></td>
+        <td style="font-size:12px;">الشهادات والاعتمادات | ضمان الجودة في شركة الطبقات المتعددة</td>
+        <td style="font-size:12px;">استعرض شهادات الجودة والاعتمادات...</td>
+        <td style="font-size:12px;">شهادات الجودة، الاعتمادات المهنية...</td>
+      </tr>
+      <tr>
+        <td><span class="file">projects.html</span></td>
+        <td style="font-size:12px;">بعض مشاريعنا | شركة الطبقات المتعددة</td>
+        <td style="font-size:12px;">استعرض مجموعة من المشاريع...</td>
+        <td style="font-size:12px;">مشاريع شركة الطبقات المتعددة، سابقة الأعمال...</td>
+      </tr>
+      <tr>
+        <td><span class="file">contact-us.html</span></td>
+        <td style="font-size:12px;">تواصل معنا | اطلب عرض سعر من شركة الطبقات المتعددة الآن</td>
+        <td style="font-size:12px;">للحصول على استشارة هندسية مجانية...</td>
+        <td style="font-size:12px;">طلب عرض سعر، استشارة مجانية...</td>
+      </tr>
+    </table>
+
+    <div class="note">📝 <strong>blogs.html</strong> غير مدرجة في الملف — يمكن إضافتها عند توفر البيانات.</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══ TASK 05 ══════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="sec-head">
+      <span class="badge badge-main">المهمة 05</span>
+      <h2>انيميشن عند التمرير — الصفحات الرئيسية الست</h2>
+    </div>
+    <p class="desc">تفعيل مكتبة WOW.js الموجودة مسبقاً وإضافة انيميشن للعناصر الرئيسية في الصفحات الست — بدون إضافة أي مكتبة جديدة.</p>
+
+    <table>
+      <tr><th>الصفحة</th><th>ما أُضيف</th><th>عدد العناصر</th></tr>
+      <tr><td><span class="file">projects.html</span></td><td>fadeInUp متدرج على 16 بطاقة مشروع</td><td>16</td></tr>
+      <tr><td><span class="file">about-us.html</span></td><td>fadeInLeft (عمود الصورة) + fadeInRight (عمود النص)</td><td>2</td></tr>
+      <tr><td><span class="file">index.html</span></td><td>fadeInLeft/Right قسم من نحن + عناصر موجودة مسبقاً</td><td>18</td></tr>
+      <tr><td><span class="file">contact-us.html</span></td><td>fadeInUp على نموذج التواصل</td><td>1</td></tr>
+      <tr><td><span class="file">certificates.html</span></td><td>كانت موجودة مسبقاً (16 شهادة)</td><td>16 ✓</td></tr>
+      <tr><td><span class="file">blogs.html</span></td><td>كانت موجودة مسبقاً (3 مقالات)</td><td>3 ✓</td></tr>
+    </table>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══ TASK 06 ══════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="sec-head">
+      <span class="badge badge-perf">المهمة 06</span>
+      <h2>تحسينات الأداء — جميع الصفحات</h2>
+    </div>
+    <p class="desc">فحص شامل للأداء وتطبيق جميع الإصلاحات على كل صفحات الموقع.</p>
+
+    <table>
+      <tr><th>#</th><th>المشكلة</th><th>الحل</th><th>الأثر</th></tr>
+      <tr>
+        <td>1</td>
+        <td><span class="err">lang="zxx"</span> على 64 صفحة</td>
+        <td>تغيير إلى <span class="fix">lang="ar"</span></td>
+        <td>محركات البحث تتعرف الآن على الموقع العربي</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>هيكل HTML مكسور: index.html بدون &lt;head&gt;، الصفحات الداخلية فيها &lt;body&gt; داخل &lt;head&gt;</td>
+        <td>إضافة &lt;head&gt; في index.html، إزالة &lt;body&gt; المكررة من داخل &lt;head&gt;</td>
+        <td>هيكل HTML صحيح يقرأه المتصفح بشكل سليم</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>نفس الـ CSS مكرر داخل &lt;style&gt; في body كل صفحة (خط Cairo، ستايل الهيدر، زر واتساب)</td>
+        <td>نقل كل الأنماط المشتركة إلى <span class="file">assets/css/main.css</span></td>
+        <td>حذف مئات الأسطر المكررة</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>6 ملفات CSS تُحجب تصيير الصفحة (Render-Blocking)</td>
+        <td>تحميل Async بتقنية <code>media="print"</code></td>
+        <td>الصفحة تُرسم أسرع — animate, swiper, nice-select, nouislider, magnific-popup, odometer</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>صفر صور مع <code>loading="lazy"</code> في 64 صفحة</td>
+        <td>إضافة <code>loading="lazy"</code> لكل صورة ما عدا الشعارات</td>
+        <td>تقليل التحميل الأولي للصفحة بشكل ملحوظ</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>زر واتساب مكرر مرتين في <span class="file">certificates.html</span></td>
+        <td>حذف النسخة المكررة</td>
+        <td>تنظيف الكود</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>وسوم &lt;style&gt;&lt;/style&gt; فارغة</td>
+        <td>حذفها من جميع الصفحات</td>
+        <td>تنظيف الكود</td>
+      </tr>
+    </table>
+
+    <div class="stats">
+      <div class="stat"><div class="n">64</div><div class="l">صفحة تم إصلاح lang</div></div>
+      <div class="stat"><div class="n">6</div><div class="l">CSS ملفات أصبحت Async</div></div>
+      <div class="stat"><div class="n">81+</div><div class="l">صورة مع Lazy Loading</div></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══ TASK 07 ══════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="sec-head">
+      <span class="badge badge-extra">المهمة 07</span>
+      <h2>تطبيق الهيدر والفوتر الخارجي على جميع صفحات الموقع</h2>
+    </div>
+    <p class="desc">تطبيق نفس نظام المكونات الذي أُنشئ في المهمة 01 على جميع صفحات الموقع المتبقية (58 صفحة إضافية).</p>
+
+    <div class="stats">
+      <div class="stat"><div class="n">58</div><div class="l">صفحة جديدة</div></div>
+      <div class="stat"><div class="n">64</div><div class="l">إجمالي الصفحات</div></div>
+      <div class="stat"><div class="n">0</div><div class="l">أخطاء</div></div>
+    </div>
+
+    <table>
+      <tr><th>المجموعة</th><th>الصفحات</th><th>العدد</th></tr>
+      <tr><td>خدمات تفصيلية</td><td><span class="file">s-epoxy-1..7</span> <span class="file">s-water-1..7</span> <span class="file">s-heat-1..4</span> <span class="file">s-injection-1..3</span> <span class="file">s-support-1..6</span></td><td>27</td></tr>
+      <tr><td>صفحات الخدمات الرئيسية</td><td><span class="file">service-epoxy</span> <span class="file">service-injection</span> <span class="file">service-support</span> <span class="file">service-Waterheat-insulation</span> <span class="file">our-services</span></td><td>5</td></tr>
+      <tr><td>صفحات المنتجات</td><td><span class="file">products</span> <span class="file">product-iso/rain/conc/const/leak/attatch</span> <span class="file">p-iso-1..4</span> <span class="file">p-rain-1</span> <span class="file">p-conc-1..2</span> <span class="file">p-const-1..2</span> <span class="file">p-attach-1..3</span></td><td>17</td></tr>
+      <tr><td>المدونة والمقالات</td><td><span class="file">blog-isolation</span> <span class="file">blog-rainfilters</span> <span class="file">services-water/heat/waterheat</span> <span class="file">concrete-treatment</span></td><td>6</td></tr>
+      <tr><td>صفحات متنوعة</td><td><span class="file">Support-the-sides-of-the-excavation</span> <span class="file">services-waterheat</span> وأخرى</td><td>3</td></tr>
+    </table>
+
+    <div class="note-blue">ملاحظة: صفحات في مجلدات فرعية (<span class="file">services/</span> <span class="file">service1/</span> <span class="file">services1/</span> <span class="file">microcement-terrazzo/</span>) لها تصميم مختلف كلياً وتُركت كما هي.</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══ TASK 08 ══════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="sec-head">
+      <span class="badge badge-extra">المهمة 08</span>
+      <h2>التدقيق الإملائي الشامل — جميع صفحات الموقع</h2>
+    </div>
+    <p class="desc">فحص شامل لجميع النصوص العربية في 64 صفحة وتصحيح جميع الأخطاء الإملائية دفعة واحدة.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="n">11</div><div class="l">نمط خطأ</div></div>
+      <div class="stat"><div class="n">33</div><div class="l">ملف صُحِّح</div></div>
+      <div class="stat"><div class="n">0</div><div class="l">أخطاء متبقية</div></div>
+    </div>
+
+    <table>
+      <tr><th>الخطأ</th><th>الصحيح</th><th>الملفات المتأثرة</th></tr>
+      <tr><td><span class="err">ايبوكسي / الايبوكسي</span></td><td><span class="fix">إيبوكسي / الإيبوكسي</span></td><td>20 صفحة (s-epoxy, s-injection, s-water, service-*)</td></tr>
+      <tr><td><span class="err">ارضيات / الارضيات</span></td><td><span class="fix">أرضيات / الأرضيات</span></td><td>8 صفحات (s-epoxy, service-epoxy)</td></tr>
+      <tr><td><span class="err">اسمنت / الاسمنتية</span></td><td><span class="fix">إسمنت / الإسمنتية</span></td><td>10 صفحات (index, product-*, p-conc-*)</td></tr>
+      <tr><td><span class="err">اصلاح</span></td><td><span class="fix">إصلاح</span></td><td>5 صفحات (our-services, s-injection-*)</td></tr>
+      <tr><td><span class="err">انشائي / الانشائية</span></td><td><span class="fix">إنشائي / الإنشائية</span></td><td>s-support-5, service-injection</td></tr>
+      <tr><td><span class="err">افضل</span></td><td><span class="fix">أفضل</span></td><td>index.html</td></tr>
+      <tr><td><span class="err">الخرسانه</span></td><td><span class="fix">الخرسانة</span></td><td>our-services.html</td></tr>
+    </table>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══ TASK 09 ══════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="sec-head">
+      <span class="badge badge-extra">المهمة 09</span>
+      <h2>انيميشن عند التمرير — جميع صفحات الموقع</h2>
+    </div>
+    <p class="desc">إضافة انيميشن WOW.js لجميع العناصر الرئيسية في 64 صفحة — المكتبة كانت محملة مسبقاً ولم تُستخدم على أغلب الصفحات.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="n">311</div><div class="l">عنصر متحرك</div></div>
+      <div class="stat"><div class="n">64</div><div class="l">صفحة</div></div>
+      <div class="stat"><div class="n">0</div><div class="l">مكتبات جديدة</div></div>
+    </div>
+
+    <table>
+      <tr><th>العنصر المُستهدَف</th><th>الانيميشن</th><th>التأخير</th><th>أين يظهر</th></tr>
+      <tr><td>عنوان الصفحة (Breadcrumb)</td><td>fadeInDown</td><td>0.2s</td><td>جميع الصفحات الـ 64</td></tr>
+      <tr><td>عناوين الأقسام</td><td>fadeIn</td><td>0.2s</td><td>صفحات الخدمات والمنتجات</td></tr>
+      <tr><td>عناوين المحتوى التفصيلي (h2/h3)</td><td>fadeIn</td><td>0.2s</td><td>27 صفحة خدمة/منتج</td></tr>
+      <tr><td>بطاقات الخدمات</td><td>fadeInUp متدرج</td><td>0.1s ← 0.4s</td><td>صفحات الخدمات</td></tr>
+      <tr><td>بطاقات المشاريع</td><td>fadeInUp متدرج</td><td>0.1s ← 0.4s</td><td>projects.html</td></tr>
+      <tr><td>عناصر الشهادات والمنتجات</td><td>fadeInUp متدرج</td><td>0.1s ← 0.4s</td><td>certificates + product pages</td></tr>
+      <tr><td>عمود الصورة (من نحن)</td><td>fadeInLeft</td><td>0.2s</td><td>index + about-us</td></tr>
+      <tr><td>عمود النص (من نحن)</td><td>fadeInRight</td><td>0.4s</td><td>index + about-us</td></tr>
+      <tr><td>عدادات الأرقام</td><td>fadeInUp</td><td>0.2s</td><td>index + about-us</td></tr>
+      <tr><td>نموذج التواصل</td><td>fadeInUp</td><td>0.2s</td><td>contact-us.html</td></tr>
+    </table>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══ Pending ══════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="sec-head">
+      <span class="badge badge-note">قيد الانتظار</span>
+      <h2>مهام معلّقة / تحتاج مدخلات</h2>
+    </div>
+
+    <table>
+      <tr><th>#</th><th>المهمة</th><th>ما يلزم</th></tr>
+      <tr><td>1</td><td>Meta لصفحة blogs.html</td><td>عنوان + وصف + كلمات مفتاحية</td></tr>
+      <tr><td>2</td><td>جملة ناقصة: "حلول متكاملة في __ لضمان جودة ومتانة مشاريعك"</td><td>الكلمة المفقودة بعد "في" في index.html و about-us.html</td></tr>
+      <tr><td>3</td><td>أبعاد الصور (width / height) لمنع Layout Shift</td><td>أبعاد كل صورة بالـ pixel</td></tr>
+      <tr><td>4</td><td>Canonical URLs</td><td>اسم الدومين الرسمي للموقع</td></tr>
+    </table>
+  </div>
+
+</div><!-- /body -->
+
+<div class="doc-footer">
+  تقرير مشروع <strong>طبقات</strong> — يونيو 2026 &nbsp;|&nbsp; أُعدّ بواسطة Claude Code
+</div>
+
+</div><!-- /page -->
+</body>
+</html>

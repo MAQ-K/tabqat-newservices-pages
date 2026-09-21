@@ -1,0 +1,344 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  Shop Style
+/*----------------------------------------*/
+
+.rs-shop-meta-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.rs-shorting-select{
+    .nice-select{
+        height: 54px;
+        display: flex;
+        align-items: center;
+        background: #E9E9ED;
+        min-width: 264px;
+        &::after{
+            color: var(--rs-black);
+            font-size: 18px;
+        }
+        .list{
+            margin-top: 0;
+            border-radius: 0 0 4px 4px;
+            width: 100%;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            .option{
+                &:hover{
+                    color: var(--rs-theme-orange);
+                }
+            }
+        }
+    }
+}
+
+.rs-product{
+    &-thumb{
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        img{
+            width: 100%;
+            transition: all 0.3s ease-out 0s;
+        }
+        &:hover{
+            .rs-product-btn{
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0px);
+            }
+            img{
+                transform: scale(1.1);
+            }
+        }
+    }
+    &-btn{
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            bottom: 0px;
+            transition: .5s;
+            transform: translateY(40px);
+            width: 100%;
+        .rs-btn{
+            height: 43px;
+            background: var(--rs-black);
+            color: var(--rs-white);
+            display: flex;
+            &:hover{
+                background: var(--rs-theme-orange);
+            }
+        }
+    }
+    &-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    &-title{
+        font-size: 16px;
+        &:hover{
+            color: var(--rs-theme-orange);
+        }
+    }
+    &-price{
+        .rs-current-price{
+            font-size: 16px;
+            color: #5d5d5d;
+            font-weight: 600;
+        }
+        .rs-product-discount-price{
+            color: #5d5d5d;
+            opacity: .5;
+        }
+    }
+    &-badge{
+        position: absolute;
+        inset-inline-end: 10px;
+        top: 10px;
+        .rs-circle-badge{
+                width: 47px;
+                height: 47px;
+                background: var(--rs-black);
+                display: flex;
+                border-radius: 50%;
+                font-size: 14px;
+                color: var(--rs-white);
+                align-items: center;
+                justify-content: center;
+                font-weight: 500;
+        }
+    }
+}
+
+// shop details style
+.product-details {
+	&-reviews-wrapper{
+		margin-bottom: 50px;
+	}
+	&-thumb-wrap{
+		margin-inline-end: 50px;
+		@media #{$lg}{
+			margin-inline-end: 0px;
+		}
+	}
+	&-active {
+		overflow: hidden;
+	}
+	&-thumb {
+		position: relative;
+		width: 186px;
+		flex: 0 0 auto;
+		border-radius: 4px;
+		@media #{$md} {
+			margin: 0 auto 20px;
+		}
+		width: 100%;
+		flex: 0 0 auto;
+		text-align: center;
+		position: relative;
+		@include flexbox();
+		align-items: flex-end;
+		justify-content: center;
+		img {
+			width: 100%;
+			border-radius: 4px;
+		}
+	}
+	&-nav {
+		& .swiper-wrapper {
+			display: inline-flex;
+			align-items: center;
+			gap: 30px;
+			& .custom-button {
+				border: none;
+				background: transparent;
+				padding: 0;
+				position: relative;
+				width: 115px;
+				height: 115px;
+				border-radius: 4px;
+				border: 1px solid transparent;
+				background: transparent;
+				@include flexbox();
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				line-height: 1;
+				transition: all 0.3s ease-in-out;
+				@media #{$xs} {
+					width: 75px;
+					height: 75px;
+				}
+				@media #{$xs} {
+					width: 85px;
+					height: 55px;
+				}
+				img {
+					width: 100%;
+					object-fit: cover;
+				}
+			}
+			& .swiper-slide {
+				width: auto !important;
+			}
+		}
+		& .swiper-slide-thumb-active {
+			& .custom-button {
+				background: var(--rs-white);
+				border-color: var(--rs-theme-orange);
+			}
+		}
+	}
+	&-rating-count{
+		span{
+			font-size: 14px;
+		}
+	}
+	&-price{
+		display: flex;
+		align-items: end;
+		gap: 5px;
+	}
+	&-old-price{
+		font-size: 16px;
+			color: var(--rs-text-primary);
+			text-decoration-line: line-through;
+	}
+	&-current-price{
+		font-size: 24px;
+	}
+	&-count-wrap{
+		border-bottom: 1px solid rgba(62, 62, 62, 0.1);
+		padding-bottom: 30px;
+		margin-bottom: 20px;
+	}
+	&-action{
+		.rs-btn{
+			background: var(--rs-theme-orange);
+			display: flex;
+			gap: 10px;
+			height: 48px;
+			&:hover{
+				background: rgb(255, 92, 0);
+			}
+		}
+	}
+	&-more{
+		a{
+			font-size: 16px;
+		}
+	}
+	&-tags{
+		a{
+			font-size: 16px;
+		}
+	}
+	&-title{
+		@media #{$md}{
+			font-size: 30px;
+		}
+		@media #{$xs}{
+			font-size: 26px;
+		}
+	}
+}
+
+.product-rating{
+	position: relative;
+	padding-inline-end: 10px;
+	margin-inline-end: 10px;
+	&::before{
+		position: absolute;
+		content: "";
+		inset-inline-end: 0;
+		top: 0px;
+		width: 1px;
+		height: 20px;
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+	i{
+		font-size: 14px;
+	}
+}
+
+// tab style
+.product-information-tab{
+	.nav-link{
+		background: #fbfbfb;
+		color: var(--rs-text-primary);
+		padding: 0 50px;
+		text-align: left;
+		font-weight: 700;
+		font-size: 18px;
+		border-radius: 0px;
+		height: 70px;
+		transition: .3s;
+		&:hover{
+			background-color: var(--rs-theme-orange);
+			color: var(--rs-white);
+		}
+		@media #{$xs}{
+			padding: 0 20px;
+			height: 50px;
+		}
+		&.active{
+			background-color: var(--rs-theme-orange);
+			border-color: var(--rs-theme-orange);
+			color: var(--rs-white);
+		}
+	}
+	.has-border{
+		border-bottom: 1px solid var(--rs-border-primary);
+	}
+
+}
+
+// review style
+.product-review{
+	&-avater{
+		display: flex;
+		align-items: center;
+		gap: 13px;
+		&-thumb{
+			img{
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+			}
+		
+		}
+	}
+	&-item{
+		&:not(:last-child){
+			border-bottom: 1px solid var(--rs-border-primary);
+			padding-bottom: 25px;
+			margin-bottom: 25px;
+		}
+	}
+	&-input{
+		input{
+			height: 60px;
+		}
+		&.is-textarea{
+			textarea{
+				height: 180px;
+			}
+		}
+	}
+	&-btn{
+		.rs-btn{
+			&:hover{
+				background: rgb(255, 92, 0);
+			}
+		}
+	}
+}

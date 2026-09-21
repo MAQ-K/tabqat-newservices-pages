@@ -1,0 +1,171 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1.4 Banner Style 5
+/*----------------------------------------*/
+
+.rs-banner-five {
+    overflow-x: clip;
+    .rs-banner-bg-thumb {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        inset-inline-end: 0;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+    .rs-banner-slider-wrapper{
+        position: relative;
+        &:hover{
+            .rs-banner-navigation{
+                button{
+                    visibility: visible;
+                    opacity: 1;
+                    inset-inline-start: 50px;
+                    &.swiper-button-next{
+                        inset-inline-start: auto;
+                        inset-inline-end: 50px;
+                    }
+                }
+            }
+        }
+    }
+    .rs-banner-item-wrapper{
+        padding: 215px 0 200px 0px;
+        @media #{$laptop}{
+            padding: 180px 0 180px 0px;
+        }
+        @media #{$xl}{
+            padding: 150px 0 150px 0px;
+        }
+        @media #{$lg}{
+            padding: 120px 0 120px 0px;
+        }
+        @media #{$md}{
+            padding: 100px 0 120px 0px;
+        }
+        @media #{$sm}{
+            padding: 80px 0 100px 0px;
+        }
+    }
+    .rs-banner-item{
+        background: rgba(30, 32, 35, 0.91);
+        position: relative;
+        z-index: 2;
+        padding: 40px 90px 50px 30px;
+        border-inline-start: 10px solid var(--rs-theme-orange);
+        @media #{$lg}{
+            padding: 30px 30px 30px 30px;
+        }
+        @media #{$mobile}{
+            padding: 20px 20px 20px 20px;
+        }
+    }
+    .rs-banner-subtitle{
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--rs-theme-orange);
+        margin-bottom: 20px;
+        display: inline-block;
+        text-transform: uppercase;
+    }
+    .rs-banner-title{
+        color: var(--rs-white);
+        font-size: 54px;
+        line-height: 1.15;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        @media #{$lg}{
+            font-size: 45px;
+        }
+        @media #{$md}{
+            font-size: 40px;
+        }
+        @media #{$mobile}{
+            font-size: 35px;
+        }
+    }
+    .rs-banner-descrip{
+        max-width: 630px;
+        margin: 25px 0 40px;
+        p{
+            color: rgba(255, 255, 255, 0.85);
+        }
+    }
+    .rs-banner-navigation{
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+        @media #{$laptop}{
+            display: none;
+        }
+        button{
+            background-color: rgba(238,92,3,0.53) ;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            inset-inline-start: 40px;
+            z-index: 2;
+            transition: 0.5s;
+            opacity: 0;
+            visibility: hidden;
+            &.swiper-button-next{
+                inset-inline-start: auto;
+                inset-inline-end: 40px;
+            }
+            &:hover{
+                background: var(--rs-theme-orange);
+            }
+        }
+    }
+    .rs-banner-pagination{
+        display: none;
+        @media #{$laptop}{
+            display: block;
+        }
+        .rs-pagination.swiper-pagination {
+            position: absolute;
+            bottom: 40px;
+            .swiper-pagination-bullet{
+                background: var(--rs-theme-orange);
+            }
+        }
+    }
+}
+
+// slider animation
+.rs-banner-five {
+     .swiper-slide-active {
+         .rs-banner-subtitle,
+         .rs-banner-title,
+         .rs-banner-descrip,
+         .rs-banner-btn{
+            animation-fill-mode: both;
+            animation-name: fadeInUp;
+         }
+    }
+     .swiper-slide-active {
+        .rs-banner-subtitle{
+            animation-delay: .3s;
+            animation-duration: 0.7s;
+        }
+         .rs-banner-title {
+            animation-delay: .5s;
+            animation-duration: 0.9s;
+        }
+         .rs-banner-descrip {
+            animation-delay: .7s;
+            animation-duration: 1.1s;
+        }
+         .rs-banner-btn {
+            animation-delay: .9s;
+            animation-duration: 1.3s;
+        }
+    }
+}

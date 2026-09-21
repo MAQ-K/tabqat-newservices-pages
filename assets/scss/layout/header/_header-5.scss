@@ -1,0 +1,151 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.5.1 Header Style 4
+/*----------------------------------------*/
+
+.rs-header{
+    &-five{
+        .rs-sticky{
+            &.rs-header-inner{
+            }
+        }
+        .rs-header-inner {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 99;
+            gap: 10px;
+            padding-inline-end: 45px;
+            @media #{$laptop}{
+                padding-inline-end: 25px;
+                justify-content: space-between;
+            }
+            @media #{$mobile}{
+                padding-inline-end: 15px;
+            }
+        }
+        .rs-header-logo-wrapper{
+            width: 295px;
+            height: 90px;
+            background-color: var(--rs-bg-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media #{$laptop}{
+                width: 230px;
+            }
+            @media #{$mobile}{
+                width: 210px;
+            }
+            @media #{$lg}{
+                height: 90px;
+            }
+            @media #{$md}{
+                height: 80px;
+            }
+        }
+        .rs-header-logo{
+            position: relative;
+            z-index: 1;
+        }
+        .rs-header-left{
+            .rs-theme-social{
+                padding-inline-start: 75px;
+                gap: 15px;
+                a{
+                    font-size: 18px;
+                }
+            }
+        }
+        .rs-header-menu{
+            display: flex;
+            align-items: center;
+            padding: 0 0px 0 40px;
+            margin-inline-end: auto;
+            @media #{$desktop}{
+                padding: 0 20px 0px 20px;
+            }
+            @media #{$xl}{
+                padding: 0 0px 0px 20px;
+            }
+            @media #{$lg}{
+                padding: 33px 20px 33px 20px;
+            }
+            @media #{$sm}{
+                display: none;
+            }
+        }
+        .rs-header-right{
+        }
+        .rs-header-right{
+            display: flex;
+              gap: 30px;
+            align-items: center;
+            @media #{$laptop}{
+                gap: 20px;
+            }
+            @media #{$lg}{
+                gap: 30px;
+            }
+        }
+        .rs-header-btn{
+            @media #{$xl}{
+                display: none;
+            }
+            .rs-btn{
+                @media #{$laptop}{
+                    padding: 15px 20px;
+                }
+            }
+        }
+        .main-menu {
+            border-inline-start: 1px solid rgba(31, 31, 31, 0.07);
+            padding-inline-start: 30px;
+            margin-inline-start: 50px;
+            @media #{$large_laptop}{
+                margin-inline-start: 30px;
+            }
+            @media #{$xl}{
+                padding-inline-start: 0px;
+            }
+            li{
+                a{
+                    padding: 36px 20px;
+                    color: var(--rs-text-primary);
+                }
+            }
+        }
+        .rs-header-search-inner{
+            top: 64px;
+            @media #{$sm}{
+                top: 59px;
+            }
+            input{
+                &:focus{
+                    border-color: var(--rs-theme-light-blue);
+                }
+            }
+            &.has-theme-green{
+                top: 63px;
+            }
+        }
+        .rs-header-btn{
+            @media #{$laptop}{
+                display: none;
+            }
+            @media #{$lg}{
+                display: block;
+            }
+            @media #{$xs}{
+                display: none;
+            }
+            .rs-btn{
+                @media #{$desktop}{
+                    padding: 15px 25px;
+                }
+            }
+        }
+    }
+}
+

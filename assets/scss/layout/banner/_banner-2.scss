@@ -1,0 +1,64 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1.2 banner Style 2
+/*----------------------------------------*/
+
+.rs-banner{
+    &-two{
+        .rs-banner-bg-thumb {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            inset-inline-end: 0;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+        .rs-banner-wrapper{
+            padding: 300px 0 345px;
+            @media #{$xl}{
+                padding: 230px 0 290px;
+            }
+            @media #{$lg}{
+                padding: 210px 0 270px;
+            }
+            @media #{$md}{
+                padding: 170px 0 250px;
+            }
+            @media #{$sm}{
+                padding: 150px 0 230px;
+            }
+        }
+        .rs-banner-title{
+            font-size: 75px;
+            color: var(--rs-white);
+            text-transform: capitalize;
+            line-height: 1.1;
+            @media #{$xl}{
+                font-size: 70px;
+            }
+            @media #{$lg}{
+                font-size: 65px;
+            }
+            @media #{$md}{
+                font-size: 60px;
+            }
+            @media #{$sm}{
+                font-size: 45px;
+            }
+        }
+        .rs-banner-descrip{
+            margin: 25px 0 45px;
+            max-width: 620px;
+            p{
+                color: var(--rs-white);
+                font-size: 20px;
+                @media #{$xs}{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

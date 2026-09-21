@@ -1,0 +1,402 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*   portfolio css
+/*----------------------------------------*/
+
+.rs-pricing{
+    &-one{
+        .rs-pricing-bg-thumb{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            inset-inline-start: 0;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+        .rs-pricing-amount-wrapper{
+            margin: 20px 0 20px;
+        }
+        .rs-pricing-title{
+            font-size: 24px;
+            color: var(--rs-theme-green);
+        }
+        .rs-pricing-amount{
+            font-size: 40px;
+            color: var(--rs-theme-light-green);
+            line-height: 1;
+            display: inline-block;
+        }
+        .rs-pricing-inner{
+            padding: 60px 60px 60px 60px;
+            background: var(--rs-white);
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0);
+            border-radius: 20px;
+            display: grid;
+            grid-template-columns: 370px auto;
+            position: relative;
+            gap: 30px 155px;
+            z-index: 1;
+            @media #{$laptop}{
+                padding: 30px 30px 30px 30px;
+                grid-template-columns: 270px auto;
+                gap: 30px 30px;
+            }
+            @media #{$lg}{
+                grid-template-columns: auto;
+            }
+            @media #{$sm}{
+                padding: 25px 25px 25px 25px;
+            }
+        }
+        .rs-pricing-feature{
+            position: relative;
+            span{
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+            }
+            ul{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 15px 25px;
+                padding: 75px 40px 30px 40px;
+                @media #{$md}{
+                    padding: 50px 30px 30px 30px;
+                }
+                @media #{$sm}{
+                    grid-template-columns: repeat(1,1fr);
+
+                }
+                @media #{$xs}{
+                    padding: 55px 25px 25px 25px;
+                }
+                li{
+                    list-style: none;
+                    position: relative;
+                    color: #737373;
+                    font-weight: 500;
+                    display: flex;
+                    align-items: center;
+                    padding-inline-start: 35px;
+                    @media #{$mobile}{
+                        font-size: 16px;
+                    }
+                    &::before{
+                        content: "\eb81";
+                        color: var(--rs-theme-light-green);
+                        font-size: 20px;
+                        margin: 0;
+                        font-weight: 400;
+                        display: inline-block;
+                        font-family: "remixicon";
+                        position: absolute;
+                        inset-inline-start: 0;
+                    }
+                    &.close{
+                        &::before{
+                            content: "\eb97";
+                        }
+                    }
+                }
+            }
+            .rs-pricing-feature-bg-thumb{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                inset-inline-start: 0;
+                background-repeat: no-repeat;
+                // background-size: cover;
+                @media #{$laptop}{
+                    background-size: cover;
+                }
+                @media #{$md}{
+                    background-position: center;
+                    border-radius: 20px;
+                }
+                @media #{$sm}{
+                    border-radius: unset;
+                }
+            }
+        }
+        .rs-pricing-tab-wrapper{
+            display: flex;
+            justify-content: end;
+            @media #{$md}{
+                justify-content: start;
+            }
+        }
+        .rs-pricing-tab-inner{
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #d2d2d2;
+            padding: 7px;
+            border-radius: 50px;
+            background: transparent;
+            transition: 0.4s;
+            display: inline-flex;
+            justify-content: space-between;
+        }
+        .rs-pricing-tab{
+            button{
+                padding: 8px 18px;
+                font-size: 17px;
+                border-radius: 50px;
+                &.active{
+                    background: var(--rs-theme-light-green);
+                    color: var(--rs-white);
+                }
+            }
+        }
+        .yearly-pricing{
+            display: none;
+        }
+        .rs-pricing-item{
+            &:not(:last-child){
+                margin-bottom: 50px;
+            }
+            &.item-active{
+                .rs-pricing-feature{
+                    ul{
+                        li{
+                            color: var(--rs-white);
+                            &::before{
+                                color: var(--rs-theme-yellow);
+                            }
+                        }
+                    }
+                }
+                .rs-pricing-amount{
+                    color: var(--rs-theme-yellow);
+                }
+            }
+        }
+    }
+    &-two{
+        position: relative;
+        z-index: 1;
+        .rs-pricing-shape{
+            position: absolute;
+            bottom: 0;
+            inset-inline-start: 0;
+        }
+        .rs-pricing-tab-inner{
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #d2d2d2;
+            padding: 7px;
+            border-radius: 50px;
+            background: transparent;
+            transition: 0.4s;
+            display: inline-flex;
+            justify-content: space-between;
+        }
+        .rs-pricing-tab{
+            button{
+                padding: 8px 18px;
+                font-size: 17px;
+                border-radius: 50px;
+                &.active{
+                    background: var(--rs-theme-orange);
+                    color: var(--rs-white);
+                }
+            }
+        }
+        .yearly-pricing{
+            display: none;
+        }
+        .rs-pricing-wrapper{
+            margin-top: 85px;
+            @media #{$sm}{
+                margin-top: 45px;
+            }
+        }
+        .rs-pricing-item{
+            background: var(--rs-bg-primary);
+            padding: 35px 45px 35px 45px;
+            text-align: center;
+            border-top: 3px solid var(--rs-theme-orange);
+            border-radius: 4px;
+            position: relative;
+            @media #{$lg}{
+                padding: 25px 25px 25px 25px;
+            }
+            &.item-active{
+                position: relative;
+                z-index: 1;
+                .rs-pricing-bg-thumb{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    bottom: 0;
+                    inset-inline-start: 0;
+                    background-position: bottom center;
+                    background-repeat: no-repeat;
+                    background-size: auto;
+                    z-index: -1;
+                }
+                &.rs-pricing-item{
+                    background: #faf5f5;
+                    @media #{$sm,$xs}{
+                        margin-top: 45px;
+                    }
+                }
+                .rs-pricing-amount{
+                    color: var(--rs-theme-orange);
+                }
+                .rs-pricing-btn{
+                    .rs-btn{
+                        background: var(--rs-theme-orange);
+                        color: var(--rs-white);
+                        border: 1px solid transparent;
+                        svg{
+                            fill: var(--rs-white);
+                        }
+                        &:hover{
+                            background: rgb(255, 92, 0);
+                        }
+                    }
+                }
+                .rs-pricing-tag{
+                    font-weight: 600;
+                    color: var(--rs-white);
+                    background-color: var(--rs-black);
+                    width: 100%;
+                    padding: 10px 0px 10px 0px;
+                    border-radius: 4px 4px 0px 0px;
+                    position: absolute;
+                    top: -47px;
+                    left: 0px;
+                }
+            }
+        }
+        .rs-pricing-content{
+            text-align: center;
+        }
+        .rs-pricing-top{
+            position: relative;
+            margin-bottom: 20px;
+            padding-bottom: 30px;
+            &::before{
+                position: absolute;
+                width: calc(100% + 80px);
+                height: 1px;
+                background: var(--rs-border-primary);
+                content: "";
+                bottom: 0;
+                left: -40px;
+                @media #{$lg}{
+                    width: calc(100% + 60px);
+                    left: -30px;
+                }
+                @media #{$mobile}{
+                    width: calc(100% + 50px);
+                    left: -25px;
+                }
+            }
+        }
+        .rs-pricing-bottom{
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .description{
+            font-size: 16px;
+        }
+        .rs-pricing-title{
+            font-size: 30px;
+            margin-bottom: 8px;
+            @media #{$lg}{
+                font-size: 25px;
+            }
+        }
+        .rs-pricing-amount{
+            font-size: 60px;
+            margin-bottom: 5px;
+            line-height: 1;
+            @media #{$lg}{
+                font-size: 50px;
+            }
+            @media #{$xs}{
+                font-size: 40px;
+            }
+        }
+        .rs-pricing-btn{
+            padding-top: 28px;
+            .rs-btn{
+                gap: 15px;
+                color: var(--rs-text-primary);
+                svg{
+                    width: 17px;
+                    fill: #616161;
+                }
+                &:hover{
+                    background: var(--rs-theme-orange);
+                    color: var(--rs-white);
+                    svg{
+                        fill: var(--rs-white);
+                    }
+                }
+            }
+        }
+        .rs-pricing-duration{
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        .rs-pricing-feature{
+            text-align: start;
+            position: relative;
+            margin-top: 35px;
+            padding-top: 30px;
+            &::before{
+                position: absolute;
+                width: calc(100% + 80px);
+                height: 1px;
+                background: var(--rs-border-primary);
+                content: "";
+                top: 0;
+                left: -40px;
+                @media #{$lg}{
+                    width: calc(100% + 50px);
+                    left: -25px;
+                }
+            }
+            ul{
+                li{
+                    list-style: none;
+                    position: relative;
+                    color: var(--rs-black);
+                    font-weight: 500;
+                    display: flex;
+                    align-items: center;
+                    &:not(:last-child){
+                        margin-bottom: 15px;
+                    }
+                    &::before{
+                        content: "\eb7b";
+                        color: var(--rs-theme-orange);
+                        font-size: 20px;
+                        margin: 0;
+                        font-weight: 400;
+                        display: inline-block;
+                        font-family: "remixicon";
+                        position: absolute;
+                        inset-inline-end: 0;
+                    }
+                    &.close{
+                        color: var(--rs-text-primary);
+                        &::before{
+                            content: "\eb99";
+                            color: #666;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

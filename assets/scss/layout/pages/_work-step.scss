@@ -1,0 +1,656 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  work step css
+/*----------------------------------------*/
+
+.rs-work-step {
+    &-one{
+        .rs-work-step-section-title{
+            font-size: 200px;
+            color: #ECECEC;
+            letter-spacing: 4px;
+            line-height: .8;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            @media #{$laptop}{
+                font-size: 150px;
+            }
+            @media #{$lg}{
+                font-size: 100px;
+            }
+            @media #{$md}{
+                font-size: 80px;
+            }
+            @media #{$sm}{
+                font-size: 70px;
+            }
+            @media #{$xs}{
+                font-size: 60px;
+            }
+            @media #{$mobile}{
+                font-size: 35px;
+            }
+        }
+        .rs-work-step-wrapper{
+            margin-top: -100px;
+            @media #{$laptop}{
+                margin-top: -80px;
+            }
+            @media #{$lg}{
+                margin-top: -60px;
+            }
+            @media #{$md}{
+                margin-top: -50px;
+            }
+            @media #{$sm}{
+                margin-top: -45px;
+            }
+            @media #{$mobile}{
+                margin-top: -35px;
+            }
+        }
+        .rs-work-step-item{
+            background: var(--rs-white);
+            padding: 40px 60px 40px 40px;
+            border-radius: 2px;
+            clip-path: polygon(0% 0%, 86% 0, 100% 20%, 100% 100%, 0% 100%) !important;
+            transition: all 0.5s ease;
+            position: relative;
+            border-bottom: 2px solid transparent;
+            @media #{$laptop}{
+                padding: 30px 30px 30px 30px;
+            }
+            &:hover{
+                border-color: var(--rs-theme-orange);
+                .rs-work-step-icon{
+                    &::before{
+                        opacity: 1;
+                        color: var(--rs-theme-orange);
+                    }
+                }
+            }
+        }
+        .rs-work-step-icon{
+            margin: 30px 0 30px;
+            position: relative;
+            svg{
+                width: 65px;
+                height: 65px;
+                fill: var(--rs-theme-orange);
+            }
+            &::before{
+                position: absolute;
+                color: var(--rs-text-primary);
+                counter-increment: count;
+                content: "0" counter(count);
+                z-index: 1;
+                inset-inline-end: 0;
+                font-size: 90px;
+                font-weight: 700;
+                top: 50%;
+                opacity: 0.08;
+                transform: translateY(-50%);
+                line-height: .8;
+                transition: all 0.5s ease;
+                @media #{$lg}{
+                    font-size: 70px;
+                }
+            }
+        }
+        &.has-different-style{
+            .rs-work-step-wrapper{
+                margin-top: 0;
+            }
+            .rs-work-step-item{
+                background: var(--rs-bg-primary);
+            }
+        }
+    }
+    &-two {
+        position: relative;
+        z-index: 2;
+        overflow-x: clip;
+        .rs-work-step-bg-thumb{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            inset-inline-start: 0;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 1;
+            @include rtl{
+                transform: rotateY(180deg);
+            }
+        }
+        .rs-work-process-content-wrapper{
+            position: relative;
+            z-index: 2;
+            padding-inline-end: 30px;
+            @media #{$xl}{
+                padding-inline-end: 0px;
+            }
+        }
+        .rs-work-step-wrapper {
+            :not(:last-child) {
+                .rs-work-step-number {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        height: 60%;
+                        border-left: 1px dashed #616161;
+                        top: 60px;
+                        @media #{$only_lg}{
+                            top: 75px;
+                        }
+                        @media #{$sm}{
+                            top: 75px;
+                        }
+                        @media #{$sm}{
+                            top: 75px;
+                        }
+                    }
+                }
+            }
+            @media #{$xs}{
+                &:last-child{
+                    .rs-work-step-number {
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            height: 60%;
+                            border-left: 1px dashed #616161;
+                            top: 70px;
+                        }
+                    }
+                }
+            }
+        }
+        .rs-work-step-item {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 40px;
+            align-items: center;
+            @media #{$xs}{
+                grid-template-columns: auto;
+                gap: 15px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 35px;
+            }
+            &:hover {
+                .rs-work-step-number {
+                    background: var(--rs-theme-red);
+                }
+            }
+        }
+        .rs-work-step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 54px;
+            height: 54px;
+            border-radius: 2px;
+            background: var(--rs-black);
+            color: var(--rs-white);
+            font-size: 18px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .rs-work-step-title {
+            font-size: 22px;
+            @media #{$lg}{
+                font-size: 20px;
+            }
+            @media #{$xs}{
+                margin-top: 50px;
+            }
+        }
+        &.has-theme-orange{
+            .rs-work-step-shape{
+                position: absolute;
+                inset-inline-start: -80px;
+                bottom: 0;
+                @media #{$lg}{
+                    display: none;
+                }
+            }
+            .rs-work-step-bg-thumb{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                inset-inline-end: 0;
+                background-position: center right;
+                background-repeat: no-repeat;
+                background-size: contain;
+                z-index: -1;
+                @media #{$md}{
+                    display: none;
+                }
+            }
+            .rs-work-step-item{
+                &:hover {
+                    .rs-work-step-number {
+                        background: transparent;
+                        color: var(--rs-white);
+                    }
+                    .rs-work-step-thumb{
+                        &.has-orange{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+            .rs-work-step-number {
+                background: transparent;
+                z-index: 1;
+                color: var(--rs-text-primary);
+                transition: all 0.3s ease;
+            }
+            .rs-work-step-thumb {
+                position: absolute;
+                z-index: -1;
+                transition: all 0.3s ease;
+                &.has-orange{
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+        &.has-theme-orange-two{
+            .rs-work-step-number{
+                background: var(--rs-bg-primary);
+                color: #616161;
+            }
+            .rs-work-step-item {
+                &:hover {
+                    .rs-work-step-number {
+                        background: var(--rs-theme-orange);
+                        color: var(--rs-white);
+                    }
+                }
+            }
+        }
+    }
+    &-three{
+        .row{
+            [class*="col-"]{
+                &:not(:last-child){
+                    .rs-work-step-item{
+                        border-inline-end: 1px solid #E7E9EC;
+                        @media #{$xs}{
+                            border-inline-end: none;
+                        }
+                    }
+                }
+                &:nth-child(2){
+                    .rs-work-step-item{
+                        margin-inline-end: 30px;
+                        @media #{$laptop}{
+                            margin-inline-end: 20px;
+                        }
+                        @media #{$xl}{
+                            margin-inline-end: 0px;
+                        }
+                        @media #{$sm}{
+                            border-inline-end: none;
+                        }
+                    }
+                }
+                &:nth-child(3){
+                    .rs-work-step-item{
+                            margin-inline-end: 30px;
+                            @media #{$laptop}{
+                                margin-inline-end: 20px;
+                            }
+                            @media #{$xl}{
+                                margin-inline-end: 10px;
+                            }
+                            @media #{$md}{
+                                margin-inline-end: 20px;
+                            }
+                            @media #{$sm}{
+                                margin-inline-end: 10px;
+                            }
+                    }
+                }
+            }
+        }
+        .rs-work-step-item{
+            padding-inline-end: 50px;
+            margin-inline-end: 38px;
+            @media #{$laptop}{
+                padding-inline-end: 20px;
+                margin-inline-end: 20px;
+            }
+            @media #{$only_lg}{
+                padding-inline-end: 10px;
+                margin-inline-end: 10px;
+            }
+            @media #{$sm}{
+                padding-inline-end: 10px;
+                margin-inline-end: 10px;
+            }
+            &:hover{
+                .rs-work-step-number{
+                    &::before{
+                        font-weight: 600;
+                    }
+                }
+            }
+            @media #{$sm}{
+                padding-inline-end: 10px;
+                margin-inline-end: 10px;
+            }
+        }
+        .rs-work-step-number-wrapper{
+            display: flex;
+            gap: 10px;
+        }
+        .rs-work-step-number{
+            position: relative;
+            &::before{
+                position: absolute;
+                color: var(--rs-white);
+                counter-increment: count;
+                content: "0" counter(count);
+                z-index: 2;
+                font-weight: 400;
+                transition: 0.3s;
+                width: 42px;
+                height: 48px;
+                background: var(--rs-theme-light-blue);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100px;
+                font-size: 20px;
+                top: 2px;
+                inset-inline-start: 0;
+                @media #{$lg}{
+                    top: -2px;
+                }
+            }
+        } 
+        .rs-work-step-text{
+            position: relative;
+            padding-inline-start: 40px;
+            font-size: 36px;
+            text-transform: uppercase;
+            color: #e7e9ec;
+            @media #{$lg}{
+                font-size: 30px;
+            }
+        }
+        .rs-work-step-title{
+            color: var(--rs-text-tertiary);
+            margin: 15px 0 20px 0;
+        }
+    }
+    &-four{
+        .rs-work-step-section-title{
+            font-size: 200px;
+            color: transparent;
+            letter-spacing: 4px;
+            line-height: .8;
+            display: flex;
+            justify-content: center;
+            -webkit-text-stroke-color: rgba(2, 59, 74, 0.14);
+            text-stroke-color: rgba(2, 59, 74, 0.14);
+            -webkit-text-stroke-width: 1px;
+            text-stroke-width: 1px;
+            @media #{$laptop}{
+                font-size: 150px;
+            }
+            @media #{$lg}{
+                font-size: 100px;
+            }
+            @media #{$md}{
+                font-size: 80px;
+            }
+            @media #{$sm}{
+                font-size: 70px;
+            }
+            @media #{$xs}{
+                font-size: 60px;
+            }
+            @media #{$mobile}{
+                font-size: 38px;
+            }
+        }
+        .rs-text-slide{
+            margin-top: 70px;
+            .swiper-wrapper{
+                -webkit-transition-timing-function: linear!important;
+                transition-timing-function: linear!important;
+            }
+        }
+        .rs-work-step-item{
+            background-color: #F9FAFB;
+            padding: 35px 45px 70px 40px;
+            position: relative;
+            z-index: 1;
+            @media #{$laptop}{
+                padding: 35px 30px 70px 30px;
+            }
+            @media #{$lg}{
+                padding: 30px 25px 70px 25px;
+            }
+            &:hover{
+                &::before{
+                    color: var(--rs-white);
+                    background: var(--rs-theme-light-green);
+                    border-color: var(--rs-theme-light-green);
+                }
+            }
+            &::before{
+                position: absolute;
+                color: var(--rs-theme-light-green);
+                counter-increment: count;
+                content: "0" counter(count);
+                font-size: 24px;
+                font-weight: 700;
+                transition: all 0.5s ease;
+                width: 50px;
+                height: 50px;
+                border: 1px solid #F0F0F0;
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                bottom: 20px;
+                inset-inline-end: 20px;
+            }
+            &.active{
+                background: var(--rs-white);
+                box-shadow: 2px 2px 15px 6px rgba(32.95, 16.975, 16.975, 0.03);
+                &::before{
+                    color: var(--rs-white);
+                    border: 1px solid var(--rs-theme-light-green);
+                    background: var(--rs-theme-light-green);
+                }
+            }
+        }
+        .rs-work-step-title{
+            color: var(--rs-theme-green);
+            margin-bottom: 15px;
+        }
+        .rs-work-step-wrapper {
+            margin-top: -90px;
+            @media #{$lg}{
+                margin-top: -60px;
+            }
+            @media #{$lg}{
+                margin-top: -60px;
+            }
+            @media #{$md}{
+                margin-top: -50px;
+            }
+            @media #{$mobile}{
+                margin-top: -40px;
+            }
+        }
+    }
+    &-five{
+        position: relative;
+        z-index: 1;
+        .rs-stroke-text {
+            font-size: 120px;
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 0.9;
+            letter-spacing: 6px;
+            color: #1F1F1F08;
+            position: absolute;
+            left: 170px;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-90deg);
+            @media #{$laptop}{
+                display: none;
+            }
+        }
+        .rs-work-step-bg-thumb{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            inset-inline-start: 0;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+        .rs-work-step-wrapper {
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+            @media #{$xs}{
+                grid-template-columns: auto; 
+                gap: 30px;
+            }
+        }
+        .rs-work-step-item{
+            padding-inline-end: 80px;
+            border-bottom: 1px solid rgba(31, 31, 31, 0.12);
+            border-right: 1px solid rgba(31, 31, 31, 0.12);
+            padding-bottom: 70px;
+            @media #{$laptop}{
+                padding-bottom: 50px;
+                padding-inline-end: 50px;
+            }
+            @media #{$lg}{
+                padding-bottom: 30px;
+                padding-inline-end: 30px;
+            }
+            @media #{$xs}{
+                border: 0;
+                padding: 0;
+            }
+            &:nth-child(2){
+                border-right: 0;
+                padding-inline-start: 80px;
+                padding-inline-end: 0px;
+                @media #{$laptop}{
+                    padding-inline-start: 50px;
+                }
+                @media #{$lg}{
+                    padding-inline-start: 30px;
+                }
+                @media #{$xs}{
+                    padding: 0;
+                }
+            }
+            &:nth-child(3){
+                border-bottom: 0;
+                padding-inline-start: 0px;
+                padding-bottom: 0;
+                padding-top: 75px;
+                @media #{$laptop}{
+                    padding-top: 50px;
+                }
+                @media #{$lg}{
+                    padding-top: 30px;
+                }
+                @media #{$xs}{
+                    padding: 0;
+                }
+            }
+            &:nth-child(4){
+                border-right: 0;
+                border-bottom: 0;
+                padding-inline-start: 80px;
+                padding-inline-end: 0px;
+                padding-bottom: 0;
+                padding-top: 75px;
+                @media #{$laptop}{
+                    padding-top: 50px;
+                    padding-inline-start: 50px;
+                }
+                @media #{$lg}{
+                    padding-top: 30px;
+                    padding-inline-start: 30px;
+                }
+                @media #{$xs}{
+                    padding: 0;
+                }
+            }
+        }
+        .rs-work-step-number-wrapper{
+            display: flex;
+            gap: 10px;
+        }
+        .rs-work-step-number{
+            position: relative;
+            &::before{
+                position: absolute;
+                color: var(--rs-white);
+                counter-increment: count;
+                content: "0" counter(count);
+                z-index: 2;
+                font-weight: 400;
+                transition: 0.3s;
+                width: 42px;
+                height: 48px;
+                background: var(--rs-theme-orange);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100px;
+                font-size: 20px;
+                top: 2px;
+                inset-inline-start: 0;
+                @media #{$lg}{
+                    top: -2px;
+                }
+            }
+        } 
+        .rs-work-step-text{
+            position: relative;
+            padding-inline-start: 40px;
+            font-size: 36px;
+            text-transform: uppercase;
+            color: #e7e9ec;
+            @media #{$lg}{
+                font-size: 30px;
+            }
+        }
+        .rs-work-step-title{
+            color: var(--rs-text-tertiary);
+            margin: 15px 0 20px 0;
+        }
+    }
+}
+
+// elements style
+.rs-elements-work-process-area{
+    &.rs-work-step-four{
+        .rs-work-step-wrapper{
+            margin-top: 0;
+        }
+    }
+}

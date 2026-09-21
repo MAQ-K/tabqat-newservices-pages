@@ -1,0 +1,137 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*   progress css
+/*----------------------------------------*/
+
+.rs-progress {
+    &-one {
+        &::before{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 250px;
+            background: var(--rs-bg-primary);
+            z-index: -1;
+            top: 0;
+            inset-inline-start: 0;
+        }
+        .rs-progress-bg-thumb {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            inset-inline-start: 0;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0) 23%, #000 100%);
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+        .rs-progress-wrapper {
+            position: relative;
+            z-index: 1;
+            height: 360px;
+        }
+        .rs-progress-content {
+            position: absolute;
+            bottom: 0;
+            padding-top: 40px;
+            padding-inline-end: 130px;
+            padding-bottom: 40px;
+            padding-inline-start: 40px;
+            z-index: 1;
+            @media #{$sm}{
+                padding-top: 30px;
+                padding-inline-end: 30px;
+                padding-bottom: 30px;
+                padding-inline-start: 30px;
+            }
+        }
+        .rs-progress-subtitle{
+            color: var(--rs-white);
+            font-weight: 500;
+            font-size: 15px;
+        }
+        .rs-progress-title{
+            font-size: 42px;
+            color: var(--rs-white);
+            margin: 12px 0 20px;
+            @media #{$laptop}{
+                font-size: 35px;
+            }
+            @media #{$xs}{
+                font-size: 30px;
+            }
+        }
+        .rs-progress-thumb{
+            height: 100%;
+            img{
+                box-shadow: 0px 6px 60px 0px rgba(0, 0, 0, 0.06);
+                height: 100%;
+            }
+        }
+        &.has-space{
+            position: relative;
+            z-index: 1;
+            margin-top:-190px ;
+            &::before{
+                content: none;
+            }
+        }
+    }
+    &-two{
+        position: relative;
+        z-index: 1;
+        .rs-progress-bg-thumb{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+        .rs-progress-shape{
+            position: absolute;
+            bottom: 0;
+            inset-inline-end: 0;
+            @media #{$md}{
+                display: none;
+            }
+        }
+        .rs-progress-thumb{
+            img{
+                width: 100%;
+            }
+        }
+        .rs-progress-wrapper {
+            display: grid;
+            grid-template-columns: 1.55fr 1fr;
+            align-items: center;
+            gap: 30px 90px;
+            @media #{$laptop}{
+                grid-template-columns: 1fr 1fr;
+                gap: 30px 30px;
+            }
+            @media #{$md}{
+                grid-template-columns: 1fr;
+                gap: 30px 30px;
+            }
+        }
+    }
+}
+
+// number count
+.process-counts {
+	counter-reset: count;
+}

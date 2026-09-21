@@ -1,0 +1,201 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  Checkout Style
+/*----------------------------------------*/
+
+.checkout-verify-item{
+    button{
+        font-weight: 600;
+    }
+}
+
+.coupon-info{
+    .rs-btn{
+        &:hover{
+            background: rgb(255, 92, 0);
+        }
+    }
+}
+
+.checkout-verify-reveal {
+	margin-bottom: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background-color: #f9f9f9;
+    gap: 10px;
+    border-top: 3px solid var(--rs-theme-orange);
+    color: #515151;
+    padding-top: 16px;
+    padding-inline-start: 50px;
+    padding-bottom: 16px;
+    padding-inline-end: 16px;
+    position: relative;
+    flex-wrap: wrap;
+    .checkout-login-form-reveal-btn{
+        &:hover{
+            color: var(--rs-theme-orange);
+        }
+    }
+    &::before{
+        content: "\f07b";
+        left: 15px;
+        top: 13px;
+        position: absolute;
+        color: var(--rs-theme-orange);
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 700;
+    }
+}
+
+.coupon-content{
+	display: none;
+	margin-top: 14px;
+	padding: 30px 30px;
+	background-color: var(--rs-white);
+    border: 1px solid rgba(54, 54, 54, 0.1) ;
+    border-radius: 5px;
+}
+
+.coupon-inner {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: 30px;
+}
+
+.checkout-coupon-form{
+    input{
+        margin-bottom: 20px;
+        height: 60px;
+        border-radius: 2px;
+    }
+}
+
+.checkout-form{
+    margin-bottom: 20px;
+    input{
+        height: 60px;
+        border-radius: 0;
+        border-radius: 2px;
+    }
+    label{
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    .required{
+        color: var(--rs-theme-orange);
+    }
+}
+
+.checkout-bill-area {
+	margin-top: 35px;
+}
+
+.checkout-bill-title {
+	margin-bottom: 20px;
+    @media #{$lg}{
+        font-size: 30px;
+    }
+    @media #{$md}{
+        font-size: 26px;
+    }
+}
+
+.checkout-bill-inner{
+    .checkout-input{
+            margin-bottom: 20px;
+        input{
+            height: 55px;
+            border-radius: 0;
+            border-radius: 2px;
+        }
+        label{
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        span{
+            color: var(--rs-theme-orange);
+        }
+        .nice-select {
+            height: 50px;
+            line-height: 48px;
+            border-radius: 0;
+            border: 1px solid var(--rs-border-primary);
+            color: var(--rs-black);
+            float: none;
+            padding: 0 26px;
+            .current{
+                color: var(--rs-text-primary);
+            }
+            .list{
+                width: 100%;
+                li{
+                    &:hover{
+                        color: var(--rs-theme-orange);
+                    }
+                }
+            }
+        }
+    }
+    textarea{
+        height: 70px;
+        background: var(--rs-white);
+        border: 1px solid var(--rs-border-primary);
+        border-radius:2px;
+    }
+}
+
+// place order style
+.checkout-place-total{
+    ul{
+        border: 1px solid var(--rs-border-primary);
+        li{
+            list-style:  none;
+              color: var(--rs-black);
+              padding: 10px 30px;
+              font-weight: 600;
+              display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @media #{$sm}{
+                padding: 10px 20px;
+            }
+            @media #{$mobile}{
+                padding: 10px 15px;
+            }
+              &:not(:last-child){
+                border-bottom: 1px solid var(--rs-border-primary);
+              }
+              &:nth-child(2){
+                padding: 20px 30px;
+                color: var(--rs-text-primary);
+                @media #{$sm}{
+                    padding: 10px 20px;
+                }
+                @media #{$mobile}{
+                    padding: 10px 15px;
+                }
+              }
+        }
+    }
+    .rs-btn{
+        &:hover{
+            background: var(--rs-theme-orange);
+            color: var(--rs-white);
+        }
+    }
+    .rs-btn{
+        &:hover{
+            background: rgb(255, 92, 0);
+        }
+    }
+    .checkout-place-order-title{
+        @media #{$lg}{
+            font-size: 30px;
+        }
+        @media #{$md}{
+            font-size: 26px;
+        }
+    }
+}

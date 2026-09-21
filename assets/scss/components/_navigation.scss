@@ -1,0 +1,167 @@
+@use '../utils' as *;
+
+/*----------------------------------------
+   Basic navigation
+-----------------------------------------*/
+
+.rs-swiper-btn{
+        background: var(--rs-theme-orange);
+        color: var(--rs-white);
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+    &.has-bg-light{
+        background: var(--rs-bg-primary);
+        color: #616161;
+        &:hover{
+            background: var(--rs-theme-orange);
+            color: var(--rs-white);
+        }
+    }
+    &.has-bg-white{
+            background: var(--rs-white);
+            color: #616161;
+            font-size: 15px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 2px;
+            &.has-small{
+                width: 40px;
+                height: 40px;
+            }
+            &.hover-red{
+                &:hover{
+                    background: var(--rs-theme-red);
+                    border-color: var(--rs-theme-red);
+                    color: var(--rs-white);
+                }
+            }
+            &.hover-black{
+                &:hover{
+                    background: var(--rs-black);
+                    color: var(--rs-white);
+                }
+            }
+            &.hover-orange{
+                &:hover{
+                    background: var(--rs-theme-orange);
+                    color: var(--rs-white);
+                }
+            }
+            &.hover-orange{
+                &:hover{
+                    background: var(--rs-theme-orange);
+                    color: var(--rs-white);
+                }
+            }
+            &.hover-blue{
+                &:hover{
+                    background: var(--rs-theme-blue);
+                    color: var(--rs-white);
+                }
+            }
+        &.has-bg-black{
+            gap: 15px;
+            button{
+                &:hover{
+                    background: var(--rs-black);
+                    color: var(--rs-white);
+                }
+            }
+        }
+    }
+    &.has-small{
+        width: 40px;
+        height: 40px;
+        &.hover-light-orange{
+            &:hover{
+                background: #EA550136;
+            }
+        }
+    }
+    &.has-theme-red{
+            background: var(--rs-theme-red);
+            width: 60px;
+            height: 60px;
+            &:hover{
+                background: var(--rs-theme-red);
+                color: var(--rs-white);
+                border-color: var(--rs-theme-red);
+            }
+    }
+    &.has-light-red{
+        display: flex;
+        gap: 15px;
+        width: 40px;
+        height: 40px;
+        background: #FFFFFF1A;
+        color: var(--rs-theme-red);
+        font-size: 15px;
+        border-radius: 2px;
+        &:hover{
+            background: var(--rs-theme-red);
+            color: var(--rs-white);
+        }
+    }
+    &.has-theme-light-blue{
+        background: var(--rs-theme-light-blue);
+        width: 60px;
+        height: 60px;
+        &:hover{
+            background: #3674a9;
+        }
+    }
+    &.has-theme-yellow{
+        background: #FAF0C9;
+        color: #616161;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        &:hover{
+            background: var(--rs-theme-yellow);
+            color: var(--rs-black);
+        }
+    }
+    &.has-theme-black{
+        background: var(--rs-black);
+        color: var(--rs-white);
+        width: 50px;
+        height: 50px;
+        &:hover{
+            background: var(--rs-white);
+            color: var(--rs-black);
+        }
+    }
+    &.has-light-orange{
+        background: rgba(238, 92, 3, 0.53);
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+        &:hover{
+            background: var(--rs-theme-orange);
+        }
+    }
+    &.has-theme-deep-blue{
+        background: var(--rs-theme-deep-blue);
+    }
+    &.has-theme-light-green{
+        background: var(--rs-theme-light-green);
+            &:hover{
+                background: var(--rs-theme-green);
+                color: var(--rs-white);
+                border-color: var(--rs-theme-green);
+        }
+    }
+}
+
+// common swiper button
+.rs-swiper{
+    .swiper-button-prev,
+    .swiper-button-next{
+        position: unset;
+        margin-top: 0;
+        &::after{
+            content: none;
+        }
+    }
+}

@@ -1,0 +1,96 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.8 experience css
+/*----------------------------------------*/
+
+.rs-experience {
+    &-one{
+        @media #{$md}{
+            padding-top: 60px;
+        }
+        .rs-experience-content {
+            margin-top: 25px;
+            @media #{$md}{
+                margin-top: 0px;
+            }
+        }
+        .rs-experience-list{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .rs-experience-icon{
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            border-radius: 50%;
+            background: var(--rs-bg-primary);
+            img{
+                width: 36px;
+                height: 36px;
+            }
+        }
+        .rs-experience-info{
+            h5{
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+        }
+        .rs-experience-list-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 20px 30px;
+            @media #{$laptop}{
+                grid-template-columns: repeat(1,1fr);
+            }
+            @media #{$md}{
+                grid-template-columns: repeat(2,1fr);
+            }
+            @media #{$sm}{
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+        .rs-experience-counter-wrapper{
+            margin-top: 45px;
+            .descrip{
+                max-width: 600px;
+                @media #{$md}{
+                    max-width: 100%;
+                }
+            }
+        }
+        .rs-experience-title{
+            font-size: 36px;
+            @media #{$xl}{
+                font-size: 30px;
+            }
+            @media #{$mobile}{
+                font-size: 26px;
+            }
+        }
+        .rs-experience-counter-item-wrapper{
+            .single-progress{
+                &:not(:last-child){
+                    margin-bottom: 20px;
+                }
+            }
+            .progress-number{
+                font-size: 16px;
+                font-weight: 500;
+                color: var(--rs-black);
+            }
+            .progress{
+                height: 4px;
+            }
+            .progress-title {
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 12px;
+            }
+        }
+    }
+}

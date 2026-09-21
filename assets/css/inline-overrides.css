@@ -1,0 +1,24 @@
+/* Hand-written rules that must be inlined with the critical CSS.
+   Kept separate so scripts/build.js can regenerate everything else. */
+/* width/height attributes now supply every img aspect ratio (kills layout shift). This keeps CSS in charge of the rendered size; specificity (0,0,1) means any class rule that sets an explicit height still wins. */img{height:auto}
+/* meanmenu hides #mobile-menu itself once it builds the mobile bar, but that is a JS-timed change: until then the desktop nav renders and the header is ~73px taller, which registers as a layout shift. Hide it up front at the same breakpoint meanmenu uses (meanScreenWidth 1199). meanmenu sets an inline display above that width, which still wins. */@media (max-width:1199px){#mobile-menu{display:none}}
+/* LCP hero. Set here rather than inline so the phone gets the 960px file (16 KiB) instead of the 1920px one (51 KiB). */.rs-banner-lcp{background-image:url(assets/my-images/homepage/main-slider/1-mobile.webp)}@media (min-width:768px){.rs-banner-lcp{background-image:url(assets/my-images/homepage/main-slider/1.webp)}}
+
+/* Skip rendering work for sections below the fold until they are scrolled near.
+   Style and layout of this page's ~900 elements was the largest remaining source
+   of main-thread blocking; content-visibility lets the browser defer all of it for
+   off-screen sections.
+
+   contain-intrinsic-size supplies the placeholder height used before a section has
+   ever rendered, so the scrollbar is right from the start and nothing shifts. The
+   values below are the measured heights at a 412px viewport; the "auto" keyword
+   makes the browser remember each section's real size once rendered, so other
+   viewports self-correct after first paint.
+
+   The banner is excluded -- it holds the LCP element and must render immediately. */
+main > section:nth-of-type(2){content-visibility:auto;contain-intrinsic-size:auto 1294px}
+main > section:nth-of-type(3){content-visibility:auto;contain-intrinsic-size:auto 893px}
+main > section:nth-of-type(4){content-visibility:auto;contain-intrinsic-size:auto 1049px}
+main > section:nth-of-type(5){content-visibility:auto;contain-intrinsic-size:auto 765px}
+main > section:nth-of-type(6){content-visibility:auto;contain-intrinsic-size:auto 753px}
+#site-footer{content-visibility:auto;contain-intrinsic-size:auto 991px}

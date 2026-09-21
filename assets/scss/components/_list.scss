@@ -1,0 +1,80 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.6 list
+/*----------------------------------------*/
+
+.rs-list-item{
+    ul{
+        li{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            &:not(:last-child){
+                margin-bottom: 15px;
+            }
+            i{
+                border: 2px solid var(--rs-theme-blue);
+                color: var(--rs-theme-blue);
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    &.has-theme-red{
+        ul{
+            li{
+                i{
+                    border: 2px solid var(--rs-theme-red);
+                    color: var(--rs-theme-red);
+                }
+            }
+        }
+    }
+    &.has-theme-green{
+        ul{
+            li{
+                i{
+                    border: 2px solid var(--rs-theme-light-green);
+                    color: var(--rs-theme-light-green);
+                }
+            }
+        }
+    }
+    &.has-theme-yellow{
+        ul{
+            li{
+                i{
+                    border: 2px solid var(--rs-theme-yellow);
+                    color: var(--rs-theme-yellow);
+                }
+            }
+        }
+    }
+    &.has-theme-orange{
+        ul{
+            li{
+                i{
+                    border: 2px solid var(--rs-theme-orange);
+                    color: var(--rs-theme-orange);
+                }
+            }
+        }
+    }
+    &.has-theme-blue{
+        ul{
+            li{
+                i{
+                    border: 2px solid var(--rs-theme-deep-blue);
+                    color: var(--rs-theme-deep-blue);
+                }
+            }
+        }
+    }
+}

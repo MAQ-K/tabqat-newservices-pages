@@ -1,0 +1,105 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.5.1 Header Style 1
+/*----------------------------------------*/
+
+.rs-header{
+    &-one{
+        .rs-header-inner {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 99;
+            padding-inline-end: 45px;
+            @media #{$laptop}{
+                padding-inline-end: 25px;
+            }
+            @media #{$mobile}{
+                padding-inline-end: 15px;
+            }
+        }
+        .rs-header-logo{
+            position: relative;
+            z-index: 1;
+        }
+        .rs-header-logo-wrapper{
+            width: 295px;
+            height: 98px;
+            background-color: var(--rs-bg-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media #{$laptop}{
+                width: 230px;
+            }
+            @media #{$mobile}{
+                width: 210px;
+            }
+            @media #{$lg}{
+                height: 90px;
+            }
+            @media #{$md}{
+                height: 80px;
+            }
+        }
+        .rs-header-left{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0 30px;
+            .rs-theme-social{
+                padding-inline-start: 75px;
+                gap: 15px;
+                a{
+                    font-size: 18px;
+                }
+            }
+        }
+        .rs-header-menu{
+            display: flex;
+            align-items: center;
+            margin-inline-end: auto;
+            padding-inline-start: 40px;
+            @media #{$laptop}{
+                padding-inline-start: 25px;
+            }
+        }
+        .rs-theme-social{
+            @media #{$xs}{
+                display: none;
+            }
+        }
+        .main-menu {
+            border-inline-start: 1px solid rgba(31, 31, 31, 0.07);
+            padding-inline-start: 30px;
+            margin-inline-start: 50px;
+            @media #{$laptop}{
+                padding-inline-start: 0px;
+                margin-inline-start: 20px;
+            }
+        }
+        .rs-header-right{
+            display: flex;
+              gap: 30px;
+            align-items: center;
+            @media #{$laptop}{
+                gap: 20px;
+            }
+            @media #{$lg}{
+                gap: 30px;
+            }
+        }
+        .rs-header-btn{
+            @media #{$xl}{
+                display: none;
+            }
+            .rs-btn{
+                @media #{$laptop}{
+                    padding: 15px 20px;
+                }
+            }
+        }
+    }
+}
+

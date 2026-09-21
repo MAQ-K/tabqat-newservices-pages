@@ -1,0 +1,13 @@
+// Responsive Variables
+
+$desktop: 'only screen and (max-width: 1800px)';
+$large_laptop: 'only screen and (max-width: 1700px)';
+$laptop: 'only screen and (max-width: 1600px)';
+$xl : 'only screen and (max-width: 1366px)';
+$lg : 'only screen and (max-width: 1199px)';
+$only_lg : 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$lg_to_sm : 'only screen and  (max-width: 1199px) and (min-width: 768px)';
+$md:'only screen and (max-width: 991px)';
+$sm: 'only screen and (max-width: 767px)';
+$xs: 'only screen and (max-width: 575px)';
+$mobile: 'only screen and (max-width: 480px)';

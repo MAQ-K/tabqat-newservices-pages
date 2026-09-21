@@ -1,0 +1,13 @@
+/* icons.css -- replaces Font Awesome Pro + Remix Icon on the homepage.
+   Only the glyphs this site actually uses, inlined as CSS masks.
+   Generated from the original woff2 files, so shapes are identical. */
+
+.fa-angle-down,.fa-arrow-left,.fa-arrow-right,.fa-arrow-up,.fa-check,.fa-facebook-f,.fa-instagram,.fa-play,.fa-tiktok,.fa-xmark,.fa-youtube,.ri-arrow-down-s-line,.ri-arrow-right-line,.ri-download-line,.ri-facebook-fill,.ri-instagram-line,.ri-play-fill,.ri-shield-check-fill,.ri-twitter-x-line,.ri-youtube-line{
+  display:inline-block;width:1em;height:1em;vertical-align:-.125em;
+  background-color:currentColor;flex-shrink:0;
+  -webkit-mask:var(--i) no-repeat center/contain;mask:var(--i) no-repeat center/contain;
+}
+
+.ri-arrow-down-s-line{--i:url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 -1020 1200 1200%22><path transform=%22scale(1,-1)%22 d=%22M600 367 847 614 918 544 600 226 282 544 353 614Z%22/></svg>")}
+.ri-download-line{--i:url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 -1020 1200 1200%22><path transform=%22scale(1,-1)%22 d=%22M150 45H1050V-55H150ZM650 336 954 640 1024 569 600 145 176 569 246 640 550 336V895H650Z%22/></svg>")}
+.ri-shield-check-fill{--i:url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 -1020 1200 1200%22><path transform=%22scale(1,-1)%22 d=%22M600 970 1011 879Q1028 875 1039.0 861.0Q1050 847 1050 830V331Q1050 255 1014.5 189.0Q979 123 916 81L600 -130L284 81Q221 123 185.5 189.0Q150 255 150 331V830Q150 847 161.0 861.0Q172 875 189 879ZM823 609 575 361 434 503 363 432 575 220 893 538Z%22/></svg>")}
