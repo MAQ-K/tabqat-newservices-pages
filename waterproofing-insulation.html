@@ -1016,15 +1016,15 @@
    adds the bullets + usage line + a details prompt) */
 .wp-navsvc-card__reveal{display:grid;grid-template-rows:0fr;opacity:0;margin-top:0;transition:grid-template-rows .42s var(--wp-ease),opacity .3s var(--wp-ease),margin-top .42s var(--wp-ease);}
 .wp-navsvc-card__reveal>div{overflow:hidden;min-height:0;}
-.wp-navsvc-card:hover .wp-navsvc-card__reveal,.wp-navsvc-card:focus-visible .wp-navsvc-card__reveal{grid-template-rows:1fr;opacity:1;margin-top:14px;}
+.wp-navsvc-card:hover .wp-navsvc-card__reveal,.wp-navsvc-card:focus-within .wp-navsvc-card__reveal{grid-template-rows:1fr;opacity:1;margin-top:14px;}
 .wp-navsvc-points{list-style:none;margin:0;padding:12px 0 0;border-top:1px solid rgba(255,255,255,.18);}
 .wp-navsvc-points li{position:relative;padding-inline-start:16px;font-size:13px;line-height:1.65;color:rgba(255,255,255,.88);margin-bottom:7px;}
 .wp-navsvc-points li::before{content:"";position:absolute;inset-inline-start:0;top:.7em;width:5px;height:5px;border-radius:50%;background:var(--wp-teal-bright);}
 .wp-navsvc-points .wp-use{color:#fff;font-weight:600;}
 .wp-navsvc-points .wp-use::before{background:#fff;}
-.wp-navsvc-more{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--wp-teal-bright);}
+.wp-navsvc-more{position:relative;z-index:3;text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--wp-teal-bright);}
 .wp-navsvc-more svg{width:15px;height:15px;flex:0 0 auto;transition:transform var(--wp-dur) var(--wp-ease);}
-.wp-navsvc-card:hover .wp-navsvc-more svg{transform:translateX(-5px);}
+.wp-navsvc-more:hover svg,.wp-navsvc-card:hover .wp-navsvc-more svg{transform:translateX(-5px);}
 
 .wp-navsvc .wp-dots{margin-top:28px;}
 .wp-navsvc .wp-dot{background:rgba(255,255,255,.22);}
@@ -1064,9 +1064,6 @@
 @media (prefers-reduced-motion:reduce){.wp-stats[data-reveal]{opacity:1;transform:none;transition:none;}}
 
 /* ---- service cards: WhatsApp quote link ---- */
-.wp-navsvc-wa{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:12px;padding:11px 16px;border-radius:var(--wp-r-sm);background:#25d366;color:#fff;font-size:14.5px;font-weight:700;text-decoration:none;transition:background .25s,transform .25s;}
-.wp-navsvc-wa i{font-size:19px;}
-.wp-navsvc-wa:hover,.wp-navsvc-wa:focus-visible{background:#1ebe5a;color:#fff;transform:translateY(-1px);}
 
 @media (prefers-reduced-motion:reduce){
   .wp-navsvc,.wp-navsvc-card__media img{transition:none;opacity:1;transform:none;}
@@ -1142,7 +1139,7 @@
 
         <ul class="wp-navsvc-track" id="wp-track" tabindex="0" role="group" aria-label="أنواع العزل المائي">
                 <li class="wp-navsvc-slide">
-                    <a class="wp-navsvc-card" id="sys-bitumen" href="bitumen-waterproofing.html">
+                    <div class="wp-navsvc-card" id="sys-bitumen">
                         <div class="wp-navsvc-card__media">
                             <img src="assets/my-images/our-services/Waterheat-insulation/new-waterproofing-insulation/bituminous-waterproofing.webp" width="1369" height="1149" alt="تنفيذ عزل الأسطح بلفائف البيتومين بالرياض" loading="lazy" decoding="async">
                         </div>
@@ -1160,12 +1157,12 @@
                                     </ul>
                                 </div>
                             </div>
+                            <a class="wp-navsvc-more" href="https://wa.me/966581032502?text=%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%80%20%D8%A7%D9%84%D8%B9%D8%B2%D9%84%20%D8%A7%D9%84%D8%A8%D9%8A%D8%AA%D9%88%D9%85%D9%8A%D9%86%D9%8A" target="_blank" rel="noopener">اطلب عرض سعر <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></a>
                         </div>
-                    </a>
-                    <a class="wp-navsvc-wa" href="https://wa.me/966581032502?text=%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%80%20%D8%A7%D9%84%D8%B9%D8%B2%D9%84%20%D8%A7%D9%84%D8%A8%D9%8A%D8%AA%D9%88%D9%85%D9%8A%D9%86%D9%8A" target="_blank" rel="noopener"><i class="ri-whatsapp-line" aria-hidden="true"></i>اطلب عرض سعر عبر واتساب</a>
+                    </div>
                 </li>
                 <li class="wp-navsvc-slide">
-                    <a class="wp-navsvc-card" id="sys-cementitious" href="cementitious-waterproofing.html">
+                    <div class="wp-navsvc-card" id="sys-cementitious">
                         <div class="wp-navsvc-card__media">
                             <img src="assets/my-images/our-services/Waterheat-insulation/new-waterproofing-insulation/cementitious-waterproofing.webp" width="1368" height="1149" alt="تطبيق العزل الأسمنتي للخزانات والمسابح" loading="lazy" decoding="async">
                         </div>
@@ -1183,12 +1180,12 @@
                                     </ul>
                                 </div>
                             </div>
+                            <a class="wp-navsvc-more" href="https://wa.me/966581032502?text=%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%80%20%D8%A7%D9%84%D8%B9%D8%B2%D9%84%20%D8%A7%D9%84%D8%A3%D8%B3%D9%85%D9%86%D8%AA%D9%8A" target="_blank" rel="noopener">اطلب عرض سعر <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></a>
                         </div>
-                    </a>
-                    <a class="wp-navsvc-wa" href="https://wa.me/966581032502?text=%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%80%20%D8%A7%D9%84%D8%B9%D8%B2%D9%84%20%D8%A7%D9%84%D8%A3%D8%B3%D9%85%D9%86%D8%AA%D9%8A" target="_blank" rel="noopener"><i class="ri-whatsapp-line" aria-hidden="true"></i>اطلب عرض سعر عبر واتساب</a>
+                    </div>
                 </li>
                 <li class="wp-navsvc-slide">
-                    <a class="wp-navsvc-card" id="sys-polyurethane" href="polyurethane-waterproofing.html">
+                    <div class="wp-navsvc-card" id="sys-polyurethane">
                         <div class="wp-navsvc-card__media">
                             <img src="assets/my-images/our-services/Waterheat-insulation/new-waterproofing-insulation/polyurethane-waterproofing.webp" width="1368" height="1149" alt="تنفيذ عزل البولي يوريثان للحمامات والأسطح" loading="lazy" decoding="async">
                         </div>
@@ -1206,12 +1203,12 @@
                                     </ul>
                                 </div>
                             </div>
+                            <a class="wp-navsvc-more" href="https://wa.me/966581032502?text=%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%80%20%D8%A7%D9%84%D8%B9%D8%B2%D9%84%20%D8%A8%D8%A7%D9%84%D8%A8%D9%88%D9%84%D9%8A%20%D9%8A%D9%88%D8%B1%D9%8A%D8%AB%D8%A7%D9%86" target="_blank" rel="noopener">اطلب عرض سعر <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></a>
                         </div>
-                    </a>
-                    <a class="wp-navsvc-wa" href="https://wa.me/966581032502?text=%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%80%20%D8%A7%D9%84%D8%B9%D8%B2%D9%84%20%D8%A8%D8%A7%D9%84%D8%A8%D9%88%D9%84%D9%8A%20%D9%8A%D9%88%D8%B1%D9%8A%D8%AB%D8%A7%D9%86" target="_blank" rel="noopener"><i class="ri-whatsapp-line" aria-hidden="true"></i>اطلب عرض سعر عبر واتساب</a>
+                    </div>
                 </li>
                 <li class="wp-navsvc-slide">
-                    <a class="wp-navsvc-card" id="sys-polyurea" href="polyurea-spray-waterproofing.html">
+                    <div class="wp-navsvc-card" id="sys-polyurea">
                         <div class="wp-navsvc-card__media">
                             <img src="assets/my-images/our-services/Waterheat-insulation/new-waterproofing-insulation/polyurea-waterproofing.webp" width="1368" height="1148" alt="رش عزل البولي يوريا للمنشآت الصناعية بالرياض" loading="lazy" decoding="async">
                         </div>
@@ -1229,12 +1226,12 @@
                                     </ul>
                                 </div>
                             </div>
+                            <a class="wp-navsvc-more" href="https://wa.me/966581032502?text=%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%80%20%D8%A7%D9%84%D8%B9%D8%B2%D9%84%20%D8%A8%D8%A7%D9%84%D8%A8%D9%88%D9%84%D9%8A%20%D9%8A%D9%88%D8%B1%D9%8A%D8%A7" target="_blank" rel="noopener">اطلب عرض سعر <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></a>
                         </div>
-                    </a>
-                    <a class="wp-navsvc-wa" href="https://wa.me/966581032502?text=%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%80%20%D8%A7%D9%84%D8%B9%D8%B2%D9%84%20%D8%A8%D8%A7%D9%84%D8%A8%D9%88%D9%84%D9%8A%20%D9%8A%D9%88%D8%B1%D9%8A%D8%A7" target="_blank" rel="noopener"><i class="ri-whatsapp-line" aria-hidden="true"></i>اطلب عرض سعر عبر واتساب</a>
+                    </div>
                 </li>
                 <li class="wp-navsvc-slide">
-                    <a class="wp-navsvc-card" id="sys-pvc" href="pvc-waterproofing.html">
+                    <div class="wp-navsvc-card" id="sys-pvc">
                         <div class="wp-navsvc-card__media">
                             <img src="assets/my-images/our-services/Waterheat-insulation/new-waterproofing-insulation/pvc-membrane-waterproofing.webp" width="1370" height="1148" alt="تركيب أغشية PVC للعزل المائي للأسطح" loading="lazy" decoding="async">
                         </div>
@@ -1252,12 +1249,12 @@
                                     </ul>
                                 </div>
                             </div>
+                            <a class="wp-navsvc-more" href="https://wa.me/966581032502?text=%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%80%20%D8%A7%D9%84%D8%B9%D8%B2%D9%84%20%D8%A8%D8%A3%D8%BA%D8%B4%D9%8A%D8%A9%20PVC" target="_blank" rel="noopener">اطلب عرض سعر <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></a>
                         </div>
-                    </a>
-                    <a class="wp-navsvc-wa" href="https://wa.me/966581032502?text=%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%80%20%D8%A7%D9%84%D8%B9%D8%B2%D9%84%20%D8%A8%D8%A3%D8%BA%D8%B4%D9%8A%D8%A9%20PVC" target="_blank" rel="noopener"><i class="ri-whatsapp-line" aria-hidden="true"></i>اطلب عرض سعر عبر واتساب</a>
+                    </div>
                 </li>
                 <li class="wp-navsvc-slide">
-                    <a class="wp-navsvc-card" id="sys-epdm" href="epdm-waterproofing.html">
+                    <div class="wp-navsvc-card" id="sys-epdm">
                         <div class="wp-navsvc-card__media">
                             <img src="assets/my-images/our-services/Waterheat-insulation/new-waterproofing-insulation/epdm-membrane-waterproofing.webp" width="1368" height="1149" alt="تركيب أغشية EPDM لعزل الأسطح من المياه" loading="lazy" decoding="async">
                         </div>
@@ -1275,12 +1272,12 @@
                                     </ul>
                                 </div>
                             </div>
+                            <a class="wp-navsvc-more" href="https://wa.me/966581032502?text=%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%80%20%D8%A7%D9%84%D8%B9%D8%B2%D9%84%20%D8%A8%D8%A3%D8%BA%D8%B4%D9%8A%D8%A9%20EPDM" target="_blank" rel="noopener">اطلب عرض سعر <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></a>
                         </div>
-                    </a>
-                    <a class="wp-navsvc-wa" href="https://wa.me/966581032502?text=%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%80%20%D8%A7%D9%84%D8%B9%D8%B2%D9%84%20%D8%A8%D8%A3%D8%BA%D8%B4%D9%8A%D8%A9%20EPDM" target="_blank" rel="noopener"><i class="ri-whatsapp-line" aria-hidden="true"></i>اطلب عرض سعر عبر واتساب</a>
+                    </div>
                 </li>
                 <li class="wp-navsvc-slide">
-                    <a class="wp-navsvc-card" id="sys-acrylic" href="acrylic-waterproofing-coating.html">
+                    <div class="wp-navsvc-card" id="sys-acrylic">
                         <div class="wp-navsvc-card__media">
                             <img src="assets/my-images/our-services/Waterheat-insulation/new-waterproofing-insulation/acrylic-waterproofing-coating.webp" width="1368" height="1148" alt="تطبيق دهانات الأكريليك لعزل الأسطح المبلطة" loading="lazy" decoding="async">
                         </div>
@@ -1298,9 +1295,9 @@
                                     </ul>
                                 </div>
                             </div>
+                            <a class="wp-navsvc-more" href="https://wa.me/966581032502?text=%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%80%20%D8%A7%D9%84%D8%B9%D8%B2%D9%84%20%D8%A8%D8%AF%D9%87%D8%A7%D9%86%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D9%83%D8%B1%D9%8A%D9%84%D9%8A%D9%83" target="_blank" rel="noopener">اطلب عرض سعر <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></a>
                         </div>
-                    </a>
-                    <a class="wp-navsvc-wa" href="https://wa.me/966581032502?text=%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%80%20%D8%A7%D9%84%D8%B9%D8%B2%D9%84%20%D8%A8%D8%AF%D9%87%D8%A7%D9%86%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D9%83%D8%B1%D9%8A%D9%84%D9%8A%D9%83" target="_blank" rel="noopener"><i class="ri-whatsapp-line" aria-hidden="true"></i>اطلب عرض سعر عبر واتساب</a>
+                    </div>
                 </li>
         </ul>
 
@@ -1622,7 +1619,7 @@
     raf = requestAnimationFrame(sync);
   }, { passive: true });
   slides.forEach(function (slide, i) {
-    var link = slide.querySelector('.wp-navsvc-card');
+    var link = slide.querySelector('.wp-navsvc-more');
     if (link) link.addEventListener('focus', function () { goTo(i); });
   });
   var rt;
