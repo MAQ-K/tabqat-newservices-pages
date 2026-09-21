@@ -851,6 +851,83 @@
   .wp-svc-box__media img{transition:none;}
 }
 .wp-choose-item p,.wp-ramp-step p{font-size:14px;line-height:1.75;color:var(--wp-muted);margin:8px 0 0;}
+/* ---- hero: same title treatment as waterproofing-thermal-insulation.html ---- */
+.wp-hero .rs-breadcrumb-title{font-size:46px;line-height:1.4;display:block;font-weight:800;}
+@media (max-width:991px){.wp-hero .rs-breadcrumb-title{font-size:36px;}}
+@media (max-width:575px){.wp-hero .rs-breadcrumb-title{font-size:28px;}}
+
+/* ---- stat counters: hairline-divided, same as the insulation hub ---- */
+.wp-stats-sec{background:#fff;padding:10px 0 34px;}
+.wp-stats{--line:#e6e9eb;--ink:#0d1b2a;--muted:#7c888f;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:820px;margin:0 auto;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.wp-stat{padding:28px 14px;text-align:center;border-inline-start:1px solid var(--line);}
+.wp-stat:first-child{border-inline-start:0;}
+.wp-stat b{display:block;font-size:40px;font-weight:800;line-height:1.25;color:var(--ink);font-variant-numeric:tabular-nums;}
+.wp-stat span{font-size:14px;color:var(--muted);}
+.wp-stats[data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
+.wp-stats[data-reveal].is-revealed{opacity:1;transform:none;}
+@media (max-width:767px){.wp-stat b{font-size:30px;}.wp-stat{padding:20px 8px;}}
+@media (max-width:575px){.wp-stats{grid-template-columns:1fr;}.wp-stat{border-inline-start:0;border-top:1px solid var(--line);}.wp-stat:first-child{border-top:0;}}
+@media (prefers-reduced-motion:reduce){.wp-stats[data-reveal]{opacity:1;transform:none;transition:none;}}
+
+/* ---- intro CTA row + applications list ---- */
+.wp-intro-cta{margin-top:24px;justify-content:center;}
+.wp-cta--ghost{background:transparent;color:var(--wp-teal);}
+.wp-cta--ghost:hover{background:var(--wp-teal);border-color:var(--wp-teal);color:var(--wp-surface);}
+.wp-apps-list{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:12px;margin-top:26px;}
+.wp-apps-list li{display:inline-flex;align-items:center;gap:9px;margin:0;padding:12px 22px;border-radius:999px;background:#fff;border:1px solid #d9e6e4;color:var(--wp-navy);font-size:15.5px;font-weight:700;line-height:1.4;transition:background .25s,border-color .25s,color .25s,transform .25s;}
+.wp-apps-list li svg{position:static;flex:0 0 auto;width:16px;height:16px;margin:0;color:var(--wp-teal);transition:color .25s;}
+.wp-apps-list li:hover{background:var(--wp-teal);border-color:var(--wp-teal);color:#fff;transform:translateY(-2px);}
+.wp-apps-list li:hover svg{color:#fff;}
+@media (max-width:575px){.wp-apps-list{gap:8px;}.wp-apps-list li{padding:10px 16px;font-size:14.5px;}}
+
+/* ---- customer reviews ---- */
+.wp-reviews .category-section-heading h2{margin:0 0 8px;}
+.wp-reviews .category-section-heading{margin-bottom:26px;}
+.wp-rev-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
+.wp-rev{margin:0;padding:24px 22px;background:#fff;border:1px solid #e6e9eb;border-radius:8px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;transition:border-color .25s,transform .25s;}
+.wp-rev:hover{border-color:#b9d8d4;transform:translateY(-3px);}
+.wp-rev blockquote{margin:0;font-size:15.5px;line-height:1.9;color:var(--wp-ink);}
+.wp-rev figcaption{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid #eef1f2;}
+.wp-rev-av{flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:#e8f4f2;color:var(--wp-teal);display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;}
+.wp-rev-who{display:flex;flex-direction:column;gap:2px;min-width:0;}
+.wp-rev-who b{font-size:15px;color:var(--wp-navy);}
+.wp-rev-who small{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;color:#7c888f;}
+.wp-rev-who small svg{width:13px;height:13px;}
+@media (max-width:991px){.wp-rev-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:575px){.wp-rev-grid{grid-template-columns:1fr;}}
+
+/* ---- projects: same treatment as the insulation hub ---- */
+.wp-projects .category-projects-block{margin:0;padding-top:0;border-top:0;}
+.wp-projects .category-section-heading{margin-bottom:26px;}
+.wp-projects .category-project-card{border-radius:8px;border-color:#e6e9eb;transition:border-color .25s ease,transform .25s ease;}
+.wp-projects .category-project-card:hover,.wp-projects .category-project-card:focus-visible{border-color:#b9d8d4;transform:translateY(-3px);box-shadow:none;}
+.wp-projects .category-project-card img{height:auto;aspect-ratio:1/1;}
+@media (max-width:767px){.wp-projects .category-section-heading{flex-direction:column;align-items:flex-start;gap:12px;}}
+
+/* ---- customer reviews ---- */
+.wp-reviews .category-section-heading h2{margin:0 0 8px;}
+.wp-reviews .category-section-heading{margin-bottom:26px;}
+.wp-rev-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
+.wp-rev{margin:0;padding:24px 22px;background:#fff;border:1px solid #e6e9eb;border-radius:8px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;transition:border-color .25s,transform .25s;}
+.wp-rev:hover{border-color:#b9d8d4;transform:translateY(-3px);}
+.wp-rev blockquote{margin:0;font-size:15.5px;line-height:1.9;color:var(--wp-ink);}
+.wp-rev figcaption{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid #eef1f2;}
+.wp-rev-av{flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:#e8f4f2;color:var(--wp-teal);display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;}
+.wp-rev-who{display:flex;flex-direction:column;gap:2px;min-width:0;}
+.wp-rev-who b{font-size:15px;color:var(--wp-navy);}
+.wp-rev-who small{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;color:#7c888f;}
+.wp-rev-who small svg{width:13px;height:13px;}
+@media (max-width:991px){.wp-rev-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:575px){.wp-rev-grid{grid-template-columns:1fr;}}
+
+
+/* ---- services: four boxes side by side ---- */
+.wp-svc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;}
+.wp-svc-row{display:contents;}
+.wp-svc-box__body{padding:18px 18px 20px;}
+.wp-svc-box__title{font-size:17px;}
+@media (max-width:991px){.wp-svc-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:575px){.wp-svc-grid{grid-template-columns:1fr;}}
 </style>
 
 <main>
@@ -865,9 +942,9 @@
                         <div class="rs-breadcrumb-title-wrapper">
                             <h1 class="rs-breadcrumb-title">عازل أسطح حراري بالرياض</h1>
                         </div>
-                        <p class="wp-hero-sub">أنظمة عزل حراري للأسطح تقلل انتقال الحرارة وتساعد على تحسين الراحة داخل المبنى. نحدد المادة والسماكة المناسبة بعد معاينة الموقع.</p>
+                        <p class="wp-hero-sub">حلول عزل حراري معتمدة واحترافية من شركة الطبقات المتعددة للمقاولات</p>
                         <div class="rs-breadcrumb-menu">
-                            <nav>
+                            <nav aria-label="مسار التنقل">
                                 <ul>
                                     <li><span><a href="our-services.html">خدماتنا</a></span></li>
                                     <li><span><a href="waterproofing-thermal-insulation.html">عزل مائي وحراري</a></span></li>
@@ -875,24 +952,16 @@
                                 </ul>
                             </nav></div></div></div></div></div></section>
 <section class="wp-scope wp-sec wp-sec--alt" aria-labelledby="thermal-problems"><div class="container"><h2 class="wp-h2" id="thermal-problems">هل تعاني من حرارة السطح؟</h2><p class="wp-lead">هذه العلامات تساعد على تحديد الحاجة إلى فحص السطح ونظام العزل الموجود.</p><div class="wp-probs"><div class="wp-prob"><span class="wp-prob-tick"><i class="ri-check-line" aria-hidden="true"></i></span>ارتفاع حرارة الطابق العلوي مقارنة ببقية الطوابق.</div><div class="wp-prob"><span class="wp-prob-tick"><i class="ri-check-line" aria-hidden="true"></i></span>زيادة استهلاك الكهرباء صيفًا مع طول تشغيل المكيف.</div><div class="wp-prob"><span class="wp-prob-tick"><i class="ri-check-line" aria-hidden="true"></i></span>بقاء السقف دافئًا في فترة العصر وبعد غروب الشمس.</div><div class="wp-prob"><span class="wp-prob-tick"><i class="ri-check-line" aria-hidden="true"></i></span>وجود سطح قديم دون طبقة عزل حراري.</div><div class="wp-prob"><span class="wp-prob-tick"><i class="ri-check-line" aria-hidden="true"></i></span>فراغات بين الألواح أو تلف طبقة الحماية.</div><div class="wp-prob"><span class="wp-prob-tick"><i class="ri-check-line" aria-hidden="true"></i></span>الحاجة إلى تقييم العزل القائم قبل تجديد السطح.</div></div><div class="wp-cta-row"><p class="wp-cta-note"><b>ابدأ بتقييم حالة سطحك</b>أرسل صور السطح ومساحته لنحدد متطلبات العزل المناسبة.</p><a class="wp-cta" href="https://wa.me/966581032502?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D8%B9%D8%A7%D9%8A%D9%86%D8%A9%20%D8%A7%D9%84%D8%B3%D8%B7%D8%AD%20%D9%88%D8%A7%D8%AE%D8%AA%D9%8A%D8%A7%D8%B1%20%D9%86%D8%B8%D8%A7%D9%85%20%D8%A7%D9%84%D8%B9%D8%B2%D9%84%20%D8%A7%D9%84%D8%AD%D8%B1%D8%A7%D8%B1%D9%8A%20%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8" target="_blank" rel="noopener">احجز معاينة مجانية <i class="ri-arrow-left-line" aria-hidden="true"></i></a></div></div></section>
-<section class="wp-scope wp-trust" aria-label="مؤشرات الثقة">
+<section class="wp-scope wp-stats-sec" aria-label="مؤشرات الثقة">
         <div class="container">
-            <div class="wp-trust-in">
-                <div class="wp-trust-item">
-                    <span class="wp-trust-num"><span>+</span>10</span>
-                    <span class="wp-trust-lbl">سنوات خبرة</span>
-                </div>
-                <div class="wp-trust-item">
-                    <span class="wp-trust-num"><span>+</span>500</span>
-                    <span class="wp-trust-lbl">مشروع منجز</span>
-                </div>
-                <div class="wp-trust-item">
-                    <span class="wp-trust-num">10 سنوات</span>
-                    <span class="wp-trust-lbl">ضمان يصل إلى</span>
-                </div>
+            <div class="wp-stats" data-reveal>
+                <div class="wp-stat"><b data-count-to="10" data-prefix="+">+10</b><span>سنوات خبرة</span></div>
+                <div class="wp-stat"><b data-count-to="500" data-prefix="+">+500</b><span>مشروع منجز</span></div>
+                <div class="wp-stat"><b data-count-to="10" data-suffix=" سنوات">10 سنوات</b><span>ضمان يصل إلى</span></div>
             </div>
         </div>
     </section>
+            <!-- ========== H2: هل تعاني من إحدى هذه المشكلات؟ ========== -->
 <section class="wp-scope wp-sec" aria-labelledby="wp-navsvc-heading">
         <div class="container">
             <h2 class="wp-h2" id="wp-navsvc-heading">أنواع العزل الحراري</h2>
@@ -954,8 +1023,43 @@
 <section class="wp-scope wp-sec" aria-labelledby="thermal-process"><div class="container"><h2 class="wp-h2" id="thermal-process">من المعاينة إلى التسليم في أربع خطوات</h2><div class="wp-ramp"><div class="wp-ramp-step"><i></i><b>01 — معاينة مجانية</b><p>نزور موقعك بالرياض ونقيّم نوع السطح وحالة العزل الحالي وقدرة السقف على التحمل.</p></div><div class="wp-ramp-step"><i></i><b>02 — اختيار النظام والسماكة</b><p>نرشّح النظام الأنسب من بين 4 أنظمة حرارية مع السماكة المناسبة، وعرض سعر خلال 24 ساعة.</p></div><div class="wp-ramp-step"><i></i><b>03 — التنفيذ ومعالجة الوصلات</b><p>تجهيز السطح والميول، ثم تركيب العزل الحراري ومعالجة الوصلات مع منظومة العزل المائي.</p></div><div class="wp-ramp-step"><i></i><b>04 — الفحص والتسليم</b><p>فحص السماكات وتداخل الألواح، واختبار طبقة العزل المائي بالمياه قبل التسليم الموثّق.</p></div></div></div></section>
 <section class="wp-scope wp-sec wp-sec--alt" aria-labelledby="thermal-mistakes"><div class="container"><h2 class="wp-h2" id="thermal-mistakes">أخطاء شائعة في العزل الحراري</h2><div class="wp-mistakes"><div class="wp-mistake"><span class="wp-mistake-x">×</span>إهمال منظومة العزل المائي المناسبة.</div><div class="wp-mistake"><span class="wp-mistake-x">×</span>ترك فراغات بين ألواح العزل.</div><div class="wp-mistake"><span class="wp-mistake-x">×</span>عدم معالجة الوصلات والزوايا.</div><div class="wp-mistake"><span class="wp-mistake-x">×</span>تقليل السماكة المطلوبة لتخفيض التكلفة.</div><div class="wp-mistake"><span class="wp-mistake-x">×</span>ترك العزل دون طبقة حماية مناسبة.</div></div></div></section>
 <section class="wp-scope wp-sec" aria-labelledby="thermal-price"><div class="container"><h2 class="wp-h2" id="thermal-price">كم سعر العزل الحراري للأسطح؟</h2><p class="wp-lead">تحدد التكلفة حسب حالة الموقع ومواصفات النظام، لذلك تبدأ المعاينة بتقييم احتياج السطح.</p><div class="wp-factors"><span class="wp-factor"><em>01</em>مساحة السطح</span><span class="wp-factor"><em>02</em>نوع مادة العزل</span><span class="wp-factor"><em>03</em>السماكة المطلوبة</span><span class="wp-factor"><em>04</em>حالة العزل القائم</span><span class="wp-factor"><em>05</em>أعمال التجهيز والميول</span><span class="wp-factor"><em>06</em>منظومة العزل المائي وطبقة الحماية</span></div><div class="wp-cta-row"><p class="wp-cta-note"><b>ابدأ بتقييم حالة سطحك</b>أرسل صور السطح ومساحته لنحدد متطلبات العزل المناسبة.</p><a class="wp-cta" href="https://wa.me/966581032502?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D8%B9%D8%A7%D9%8A%D9%86%D8%A9%20%D8%A7%D9%84%D8%B3%D8%B7%D8%AD%20%D9%88%D8%A7%D8%AE%D8%AA%D9%8A%D8%A7%D8%B1%20%D9%86%D8%B8%D8%A7%D9%85%20%D8%A7%D9%84%D8%B9%D8%B2%D9%84%20%D8%A7%D9%84%D8%AD%D8%B1%D8%A7%D8%B1%D9%8A%20%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8" target="_blank" rel="noopener">اطلب عرض سعر <i class="ri-arrow-left-line" aria-hidden="true"></i></a></div></div></section>
-<section class="wp-scope wp-sec wp-sec--alt" aria-labelledby="thermal-faq"><div class="container"><h2 class="wp-h2" id="thermal-faq">الأسئلة الشائعة عن العزل الحراري</h2><div class="wp-faq"><details><summary><h3 class="wp-faq-h">ما أفضل عزل حراري للأسطح في الرياض؟</h3><span class="wp-faq-sign" aria-hidden="true"></span></summary><p class="wp-faq-body">لا يوجد نظام واحد مناسب لكل الحالات؛ فألواح البولي يوريثان تمنح كفاءة عالية بسماكة أقل، والبوليسترين خيار اقتصادي منتشر، والصوف الصخري مناسب عند الحاجة لعزل الصوت ومقاومة الحريق، بينما يُستخدم البيرلايت عندما يلزم تشكيل ميول السطح. ونحدد الأنسب بعد المعاينة.</p></details><details><summary><h3 class="wp-faq-h">هل يقلل العزل الحراري فاتورة الكهرباء فعلًا؟</h3><span class="wp-faq-sign" aria-hidden="true"></span></summary><p class="wp-faq-body">نعم، لأنه يقلل انتقال الحرارة عبر السطح فيعمل المكيف لفترات أقل. ويختلف مقدار التوفير حسب مساحة المبنى وحالة السطح ونوع النظام والسماكة المنفذة.</p></details><details><summary><h3 class="wp-faq-h">هل يحتاج العزل الحراري إلى عزل مائي معه؟</h3><span class="wp-faq-sign" aria-hidden="true"></span></summary><p class="wp-faq-body">في معظم الأنظمة نعم؛ فالرطوبة تُضعف كفاءة مواد العزل الحراري مع الوقت، لذلك تُنفَّذ منظومة عزل مائي ضمن النظام، أو يُختار العزل المائي والحراري المدمج الذي يجمع الحمايتين في تطبيق واحد.</p></details><details><summary><h3 class="wp-faq-h">هل يمكن تنفيذ العزل الحراري على سطح قائم؟</h3><span class="wp-faq-sign" aria-hidden="true"></span></summary><p class="wp-faq-body">نعم في أغلب الحالات، بعد تقييم حالة السطح والعزل الموجود وقدرة السقف على تحمل الأحمال الإضافية، وقد يتطلب الأمر إزالة البلاط أو الطبقات التالفة قبل التنفيذ.</p></details><details><summary><h3 class="wp-faq-h">هل تقدمون ضمانًا على أعمال العزل؟</h3><span class="wp-faq-sign" aria-hidden="true"></span></summary><p class="wp-faq-body">تُحدد مدة الضمان وفق نوع المادة ونظام التنفيذ وحالة الموقع، وتُوضح جميع التفاصيل ضمن عرض السعر قبل بدء العمل.</p></details><details><summary><h3 class="wp-faq-h">ما الفرق بين ألواح البوليسترين وألواح البولي يوريثان؟</h3><span class="wp-faq-sign" aria-hidden="true"></span></summary><p class="wp-faq-body">كلاهما عازل حراري فعّال، لكن ألواح البولي يوريثان تحقق كفاءة حرارية أعلى بسماكة أقل ومقاومة أعلى للرطوبة، بينما تتميز ألواح البوليسترين بتكلفتها المناسبة وانتشارها في المشاريع السكنية.</p></details></div></div></section>
-<section class="wp-scope wp-sec" aria-labelledby="thermal-contact"><div class="container"><h2 class="wp-h2" id="thermal-contact">خفف حرارة سطحك وابدأ بالمعاينة</h2><p class="wp-lead">نقيّم حالة السطح ونرشح نظام العزل الحراري والسماكة المناسبة لمشروعك.</p><div class="wp-cta-row"><p class="wp-cta-note"><b>ابدأ بتقييم حالة سطحك</b>أرسل صور السطح ومساحته لنحدد متطلبات العزل المناسبة.</p><a class="wp-cta" href="https://wa.me/966581032502?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D8%B9%D8%A7%D9%8A%D9%86%D8%A9%20%D8%A7%D9%84%D8%B3%D8%B7%D8%AD%20%D9%88%D8%A7%D8%AE%D8%AA%D9%8A%D8%A7%D8%B1%20%D9%86%D8%B8%D8%A7%D9%85%20%D8%A7%D9%84%D8%B9%D8%B2%D9%84%20%D8%A7%D9%84%D8%AD%D8%B1%D8%A7%D8%B1%D9%8A%20%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8" target="_blank" rel="noopener">احجز معاينة مجانية <i class="ri-arrow-left-line" aria-hidden="true"></i></a></div></div></section>
+<!-- ========== آراء العملاء ========== -->
+    <section class="wp-scope wp-sec wp-sec--alt wp-reviews" aria-labelledby="wp-reviews-heading">
+        <div class="container">
+            <div class="category-section-heading">
+                <div><h2 class="wp-h2" id="wp-reviews-heading">آراء عملائنا</h2><p>تقييمات حقيقية من عملائنا على خرائط Google.</p></div>
+                <a class="category-projects-all" href="https://share.google/KDRjtfMnVpjcDfyJa" target="_blank" rel="noopener">كل التقييمات على Google <i class="ri-arrow-left-line" aria-hidden="true"></i></a>
+            </div>
+            <div class="wp-rev-grid">
+                <figure class="wp-rev">
+                    <blockquote>عزل ممتاز وخدمة رائعة وسريعة 👌</blockquote>
+                    <figcaption><span class="wp-rev-av" aria-hidden="true">A</span><span class="wp-rev-who"><b dir="auto">Ahmed Tarek</b><small><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.2a5.3 5.3 0 0 1-2.3 3.5v2.9h3.7c2.2-2 3.4-5 3.4-8.6Z"/><path fill="#34A853" d="M12 23.5c3.1 0 5.7-1 7.6-2.8l-3.7-2.9c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v3c1.9 3.7 5.700 6.300 10.200 6.300Z"/><path fill="#FBBC05" d="M5.600 14.200a6.900 6.900 0 0 1 0-4.400v-3H1.800a11.500 11.500 0 0 0 0 10.400l3.800-3Z"/><path fill="#EA4335" d="M12 5.100c1.700 0 3.200.6 4.400 1.700l3.300-3.300A11.500 11.500 0 0 0 1.800 6.800l3.800 3c.9-2.700 3.400-4.700 6.400-4.700Z"/></svg> تقييم على Google</small></span></figcaption>
+                </figure>
+                <figure class="wp-rev">
+                    <blockquote>من أفضل شركات العزل الحراري والمائي في الرياض، وقسم الميكروسمنت لديهم يقدم عملًا نظيفًا جدًا.</blockquote>
+                    <figcaption><span class="wp-rev-av" aria-hidden="true">E</span><span class="wp-rev-who"><b dir="auto">Essam 1995</b><small><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.2a5.3 5.3 0 0 1-2.3 3.5v2.9h3.7c2.2-2 3.4-5 3.4-8.6Z"/><path fill="#34A853" d="M12 23.5c3.1 0 5.7-1 7.6-2.8l-3.7-2.9c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v3c1.9 3.7 5.700 6.300 10.200 6.300Z"/><path fill="#FBBC05" d="M5.600 14.200a6.900 6.900 0 0 1 0-4.400v-3H1.800a11.500 11.500 0 0 0 0 10.400l3.800-3Z"/><path fill="#EA4335" d="M12 5.100c1.700 0 3.200.6 4.400 1.700l3.300-3.300A11.500 11.500 0 0 0 1.800 6.800l3.800 3c.9-2.700 3.400-4.700 6.400-4.700Z"/></svg> تقييم على Google</small></span></figcaption>
+                </figure>
+                <figure class="wp-rev">
+                    <blockquote>شركة ممتازة وتعامل أمين ودقة في التسليم. المهندس محمود مثال في الأدب والاحترام.</blockquote>
+                    <figcaption><span class="wp-rev-av" aria-hidden="true">O</span><span class="wp-rev-who"><b dir="auto">Omar Gaber</b><small><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.2a5.3 5.3 0 0 1-2.3 3.5v2.9h3.7c2.2-2 3.4-5 3.4-8.6Z"/><path fill="#34A853" d="M12 23.5c3.1 0 5.7-1 7.6-2.8l-3.7-2.9c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v3c1.9 3.7 5.700 6.300 10.200 6.300Z"/><path fill="#FBBC05" d="M5.600 14.200a6.900 6.900 0 0 1 0-4.400v-3H1.800a11.500 11.500 0 0 0 0 10.400l3.800-3Z"/><path fill="#EA4335" d="M12 5.100c1.700 0 3.200.6 4.400 1.700l3.300-3.300A11.500 11.500 0 0 0 1.800 6.800l3.800 3c.9-2.700 3.400-4.700 6.400-4.700Z"/></svg> تقييم على Google</small></span></figcaption>
+                </figure>
+                <figure class="wp-rev">
+                    <blockquote>من الشركات الرائدة في العزل بالرياض وفي أنحاء المملكة، ومن واقع التجربة يقدمون أفضل خدمة وجودة.</blockquote>
+                    <figcaption><span class="wp-rev-av" aria-hidden="true">H</span><span class="wp-rev-who"><b dir="auto">hassan elghoriry</b><small><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.2a5.3 5.3 0 0 1-2.3 3.5v2.9h3.7c2.2-2 3.4-5 3.4-8.6Z"/><path fill="#34A853" d="M12 23.5c3.1 0 5.7-1 7.6-2.8l-3.7-2.9c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v3c1.9 3.7 5.700 6.300 10.200 6.300Z"/><path fill="#FBBC05" d="M5.600 14.200a6.900 6.900 0 0 1 0-4.400v-3H1.800a11.500 11.500 0 0 0 0 10.400l3.800-3Z"/><path fill="#EA4335" d="M12 5.100c1.700 0 3.200.6 4.400 1.700l3.300-3.300A11.500 11.500 0 0 0 1.800 6.800l3.800 3c.9-2.700 3.400-4.700 6.400-4.700Z"/></svg> تقييم على Google</small></span></figcaption>
+                </figure>
+                <figure class="wp-rev">
+                    <blockquote>تعاملهم ممتاز.</blockquote>
+                    <figcaption><span class="wp-rev-av" aria-hidden="true">S</span><span class="wp-rev-who"><b dir="auto">Saed Saad</b><small><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.2a5.3 5.3 0 0 1-2.3 3.5v2.9h3.7c2.2-2 3.4-5 3.4-8.6Z"/><path fill="#34A853" d="M12 23.5c3.1 0 5.7-1 7.6-2.8l-3.7-2.9c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v3c1.9 3.7 5.700 6.300 10.200 6.300Z"/><path fill="#FBBC05" d="M5.600 14.200a6.900 6.900 0 0 1 0-4.400v-3H1.800a11.500 11.500 0 0 0 0 10.400l3.800-3Z"/><path fill="#EA4335" d="M12 5.100c1.700 0 3.200.6 4.400 1.700l3.300-3.300A11.500 11.500 0 0 0 1.800 6.800l3.800 3c.9-2.700 3.400-4.700 6.400-4.700Z"/></svg> تقييم على Google</small></span></figcaption>
+                </figure>
+                <figure class="wp-rev">
+                    <blockquote>من أفضل شركات العزل من حيث الدقة والمصداقية والخامات، أنصح بالتعامل معهم، خصوصًا قسم الميكروسمنت.</blockquote>
+                    <figcaption><span class="wp-rev-av" aria-hidden="true">A</span><span class="wp-rev-who"><b dir="auto">Ahmed</b><small><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.2a5.3 5.3 0 0 1-2.3 3.5v2.9h3.7c2.2-2 3.4-5 3.4-8.6Z"/><path fill="#34A853" d="M12 23.5c3.1 0 5.7-1 7.6-2.8l-3.7-2.9c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v3c1.9 3.7 5.700 6.300 10.200 6.300Z"/><path fill="#FBBC05" d="M5.600 14.200a6.900 6.900 0 0 1 0-4.400v-3H1.800a11.500 11.500 0 0 0 0 10.400l3.800-3Z"/><path fill="#EA4335" d="M12 5.100c1.700 0 3.200.6 4.400 1.700l3.300-3.300A11.500 11.500 0 0 0 1.800 6.800l3.800 3c.9-2.700 3.400-4.700 6.400-4.700Z"/></svg> تقييم على Google</small></span></figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+<section class="wp-scope wp-sec" aria-labelledby="thermal-faq"><div class="container"><h2 class="wp-h2" id="thermal-faq">الأسئلة الشائعة عن العزل الحراري</h2><div class="wp-faq"><details><summary><h3 class="wp-faq-h">ما أفضل عزل حراري للأسطح في الرياض؟</h3><span class="wp-faq-sign" aria-hidden="true"></span></summary><p class="wp-faq-body">لا يوجد نظام واحد مناسب لكل الحالات؛ فألواح البولي يوريثان تمنح كفاءة عالية بسماكة أقل، والبوليسترين خيار اقتصادي منتشر، والصوف الصخري مناسب عند الحاجة لعزل الصوت ومقاومة الحريق، بينما يُستخدم البيرلايت عندما يلزم تشكيل ميول السطح. ونحدد الأنسب بعد المعاينة.</p></details><details><summary><h3 class="wp-faq-h">هل يقلل العزل الحراري فاتورة الكهرباء فعلًا؟</h3><span class="wp-faq-sign" aria-hidden="true"></span></summary><p class="wp-faq-body">نعم، لأنه يقلل انتقال الحرارة عبر السطح فيعمل المكيف لفترات أقل. ويختلف مقدار التوفير حسب مساحة المبنى وحالة السطح ونوع النظام والسماكة المنفذة.</p></details><details><summary><h3 class="wp-faq-h">هل يحتاج العزل الحراري إلى عزل مائي معه؟</h3><span class="wp-faq-sign" aria-hidden="true"></span></summary><p class="wp-faq-body">في معظم الأنظمة نعم؛ فالرطوبة تُضعف كفاءة مواد العزل الحراري مع الوقت، لذلك تُنفَّذ منظومة عزل مائي ضمن النظام، أو يُختار العزل المائي والحراري المدمج الذي يجمع الحمايتين في تطبيق واحد.</p></details><details><summary><h3 class="wp-faq-h">هل يمكن تنفيذ العزل الحراري على سطح قائم؟</h3><span class="wp-faq-sign" aria-hidden="true"></span></summary><p class="wp-faq-body">نعم في أغلب الحالات، بعد تقييم حالة السطح والعزل الموجود وقدرة السقف على تحمل الأحمال الإضافية، وقد يتطلب الأمر إزالة البلاط أو الطبقات التالفة قبل التنفيذ.</p></details><details><summary><h3 class="wp-faq-h">هل تقدمون ضمانًا على أعمال العزل؟</h3><span class="wp-faq-sign" aria-hidden="true"></span></summary><p class="wp-faq-body">تُحدد مدة الضمان وفق نوع المادة ونظام التنفيذ وحالة الموقع، وتُوضح جميع التفاصيل ضمن عرض السعر قبل بدء العمل.</p></details><details><summary><h3 class="wp-faq-h">ما الفرق بين ألواح البوليسترين وألواح البولي يوريثان؟</h3><span class="wp-faq-sign" aria-hidden="true"></span></summary><p class="wp-faq-body">كلاهما عازل حراري فعّال، لكن ألواح البولي يوريثان تحقق كفاءة حرارية أعلى بسماكة أقل ومقاومة أعلى للرطوبة، بينما تتميز ألواح البوليسترين بتكلفتها المناسبة وانتشارها في المشاريع السكنية.</p></details></div></div></section>
+<section class="wp-scope wp-sec wp-sec--alt" aria-labelledby="thermal-contact"><div class="container"><h2 class="wp-h2" id="thermal-contact">خفف حرارة سطحك وابدأ بالمعاينة</h2><p class="wp-lead">نقيّم حالة السطح ونرشح نظام العزل الحراري والسماكة المناسبة لمشروعك.</p><div class="wp-cta-row"><p class="wp-cta-note"><b>ابدأ بتقييم حالة سطحك</b>أرسل صور السطح ومساحته لنحدد متطلبات العزل المناسبة.</p><a class="wp-cta" href="https://wa.me/966581032502?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D8%B9%D8%A7%D9%8A%D9%86%D8%A9%20%D8%A7%D9%84%D8%B3%D8%B7%D8%AD%20%D9%88%D8%A7%D8%AE%D8%AA%D9%8A%D8%A7%D8%B1%20%D9%86%D8%B8%D8%A7%D9%85%20%D8%A7%D9%84%D8%B9%D8%B2%D9%84%20%D8%A7%D9%84%D8%AD%D8%B1%D8%A7%D8%B1%D9%8A%20%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8" target="_blank" rel="noopener">احجز معاينة مجانية <i class="ri-arrow-left-line" aria-hidden="true"></i></a></div></div></section>
 </main>
 
 <!-- ============================================================
@@ -1363,6 +1467,57 @@
 <script src="assets/js/vendor/odometer.min.js" defer>
 </script>
 <script src="assets/js/main.js" defer>
+</script>
+<script>
+(function () {
+  'use strict';
+  function initStats() {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var paint = function (el, v) {
+      el.textContent = (el.getAttribute('data-prefix') || '') + v + (el.getAttribute('data-suffix') || '');
+    };
+    var counters = document.querySelectorAll('[data-count-to]');
+    var reveals = document.querySelectorAll('.wp-stats[data-reveal]');
+    if (reduce || !('IntersectionObserver' in window)) {
+      reveals.forEach(function (el) { el.classList.add('is-revealed'); });
+      return;
+    }
+    function countUp(el) {
+      var target = parseInt(el.getAttribute('data-count-to'), 10), duration = 1400, t0 = null, done = false;
+      if (isNaN(target)) return;
+      function finish() { if (!done) { done = true; paint(el, target); } }
+      function frame(now) {
+        if (done) return;
+        if (t0 === null) t0 = now;
+        var p = Math.min((now - t0) / duration, 1);
+        paint(el, Math.round(target * (1 - Math.pow(1 - p, 3))));
+        if (p < 1) requestAnimationFrame(frame); else finish();
+      }
+      requestAnimationFrame(frame);
+      setTimeout(finish, duration + 150);
+    }
+    counters.forEach(function (el) { paint(el, 0); });
+    var revealObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('is-revealed');
+        revealObs.unobserve(e.target);
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(function (el) { revealObs.observe(el); });
+    var countObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        countUp(e.target);
+        countObs.unobserve(e.target);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(function (el) { countObs.observe(el); });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initStats, {once: true});
+  } else initStats();
+})();
 </script>
 </body>
 </html>
