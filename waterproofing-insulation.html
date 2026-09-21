@@ -1029,7 +1029,7 @@
 .wp-navsvc .wp-dot[aria-current="true"]{background:var(--wp-teal-bright);}
 
 /* Content stays visible unless the scroll observer is successfully initialized. */
-[data-wp-reveal="pending"]{opacity:0;translate:0 48px;}
+[data-wp-reveal="pending"]{opacity:0;translate:0 30px;}
 @media (prefers-reduced-motion:reduce){
   [data-wp-reveal="pending"]{opacity:1;translate:none;}
 }
@@ -1786,9 +1786,9 @@
       });
       var delay = Math.min(Math.max(0, siblings.indexOf(element)), 4) * 65;
       var animation = element.animate([
-        {opacity: 0, translate: '0 48px'},
+        {opacity: 0, translate: '0 30px'},
         {opacity: 1, translate: '0 0'}
-      ], {duration: 800, delay: delay, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'backwards'});
+      ], {duration: 750, delay: delay, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'backwards'});
       animations.set(element, animation);
       animation.onfinish = function () { animations.delete(element); };
     }
@@ -1796,7 +1796,7 @@
       entries.forEach(function (entry) {
         if (entry.isIntersecting) show(entry.target, false);
       });
-    }, {threshold: 0, rootMargin: '0px 0px -64px 0px'});
+    }, {threshold: 0, rootMargin: '0px 0px -8% 0px'});
 
     elements.forEach(function (element) {
       // Do not hide content already above the viewport on a restored scroll position.
