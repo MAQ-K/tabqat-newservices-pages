@@ -50,10 +50,10 @@
                 },
                 {
                 "@type": "Question",
-                "name": "ما طريقة العزل المائي للأسطح؟",
+                "name": "كيف يتم تنفيذ العزل المائي؟",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "تبدأ طريقة العزل المائي للأسطح بفحص السطح وتحديد مصدر التسرب، ثم تنظيفه وتجهيزه ومعالجة الشروخ والتفاصيل الحساسة، وبعد ذلك تطبيق طبقات نظام العزل المناسب وفحصه قبل التسليم أو التشطيب النهائي."
+                    "text": "نبدأ بمعاينة الموقع وتحديد مصدر التسرب، ثم نجهز السطح ونعالج الشقوق والزوايا والمصارف، وبعدها نطبق نظام العزل المناسب ونفحصه قبل التسليم."
                 }
                 },
                 {
@@ -1061,6 +1061,33 @@
 @media (max-width:575px){.wp-stats{grid-template-columns:1fr;}.wp-stat{border-inline-start:0;border-top:1px solid var(--line);}.wp-stat:first-child{border-top:0;}}
 @media (prefers-reduced-motion:reduce){.wp-stats[data-reveal]{opacity:1;transform:none;transition:none;}}
 
+/* ---- intro CTA row + applications list ---- */
+.wp-intro-cta{margin-top:24px;justify-content:center;}
+.wp-cta--ghost{background:transparent;color:var(--wp-teal);}
+.wp-cta--ghost:hover{background:var(--wp-teal);border-color:var(--wp-teal);color:var(--wp-surface);}
+.wp-apps-list{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:12px;margin-top:26px;}
+.wp-apps-list li{display:inline-flex;align-items:center;gap:9px;margin:0;padding:12px 22px;border-radius:999px;background:#fff;border:1px solid #d9e6e4;color:var(--wp-navy);font-size:15.5px;font-weight:700;line-height:1.4;transition:background .25s,border-color .25s,color .25s,transform .25s;}
+.wp-apps-list li svg{position:static;flex:0 0 auto;width:16px;height:16px;margin:0;color:var(--wp-teal);transition:color .25s;}
+.wp-apps-list li:hover{background:var(--wp-teal);border-color:var(--wp-teal);color:#fff;transform:translateY(-2px);}
+.wp-apps-list li:hover svg{color:#fff;}
+@media (max-width:575px){.wp-apps-list{gap:8px;}.wp-apps-list li{padding:10px 16px;font-size:14.5px;}}
+
+/* ---- customer reviews ---- */
+.wp-reviews .category-section-heading h2{margin:0 0 8px;}
+.wp-reviews .category-section-heading{margin-bottom:26px;}
+.wp-rev-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
+.wp-rev{margin:0;padding:24px 22px;background:#fff;border:1px solid #e6e9eb;border-radius:8px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;transition:border-color .25s,transform .25s;}
+.wp-rev:hover{border-color:#b9d8d4;transform:translateY(-3px);}
+.wp-rev blockquote{margin:0;font-size:15.5px;line-height:1.9;color:var(--wp-ink);}
+.wp-rev figcaption{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid #eef1f2;}
+.wp-rev-av{flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:#e8f4f2;color:var(--wp-teal);display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;}
+.wp-rev-who{display:flex;flex-direction:column;gap:2px;min-width:0;}
+.wp-rev-who b{font-size:15px;color:var(--wp-navy);}
+.wp-rev-who small{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;color:#7c888f;}
+.wp-rev-who small svg{width:13px;height:13px;}
+@media (max-width:991px){.wp-rev-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:575px){.wp-rev-grid{grid-template-columns:1fr;}}
+
 /* ---- projects: same treatment as the insulation hub ---- */
 .wp-projects .category-projects-block{margin:0;padding-top:0;border-top:0;}
 .wp-projects .category-section-heading{margin-bottom:26px;}
@@ -1110,7 +1137,11 @@
     <section class="wp-scope wp-intro " aria-labelledby="wp-intro-heading">
         <div class="container mt-30">
             <h2 class="wp-h2" id="wp-intro-heading"><span>عزل مائي</span> يناسب احتياج مبناك</h2>
-            <p class="wp-lead">نعاين الموقع ونحدد نظام العزل المناسب للأسطح والخزانات والأقبية، مع تجهيز السطح ومعالجة التفاصيل لحمايته من تسرب المياه والرطوبة.</p>
+            <p class="wp-lead">شركة عزل مائي بالرياض تقدم لك حلولًا مناسبة سواء كنت تعاني من تسرب في السطح، أو رطوبة بالجدران، أو تحتاج إلى عزل خزان أو حمام قبل التشطيب. نبدأ بمعاينة الموقع وتحديد مصدر المشكلة، ثم نرشح نظام العزل المناسب ونوضح أعمال التجهيز قبل بدء التنفيذ.</p>
+            <div class="wp-cta-row wp-intro-cta">
+                <a class="wp-cta" href="https://wa.me/966581032502?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D9%85%D8%B9%D8%A7%D9%8A%D9%86%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20%D9%84%D9%84%D8%B9%D8%B2%D9%84%20%D8%A7%D9%84%D9%85%D8%A7%D8%A6%D9%8A" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.4A10 10 0 1 0 12 2Zm5.5 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.5-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2 .2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.4-.3.3c-.1.1-.2.3 0 .5.2.3.8 1.2 1.6 1.9 1 .9 1.9 1.2 2.1 1.3.2.1.4.1.5-.1l.7-.9c.2-.2.3-.2.5-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1Z"/></svg> اطلب معاينة مجانية</a>
+                <a class="wp-cta wp-cta--ghost" href="https://wa.me/966581032502" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.4A10 10 0 1 0 12 2Zm5.5 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.5-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2 .2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.4-.3.3c-.1.1-.2.3 0 .5.2.3.8 1.2 1.6 1.9 1 .9 1.9 1.2 2.1 1.3.2.1.4.1.5-.1l.7-.9c.2-.2.3-.2.5-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1Z"/></svg> تواصل معنا واتساب</a>
+            </div>
         </div>
     </section>
 
@@ -1124,6 +1155,68 @@
             </div>
         </div>
     </section>
+            <!-- ========== H2: هل تعاني من إحدى هذه المشكلات؟ ========== -->
+    <section class="wp-scope wp-sec wp-sec--alt" aria-labelledby="wp-problems-heading">
+        <div class="container">
+            <h2 class="wp-h2" id="wp-problems-heading">هل تعاني من إحدى هذه المشكلات؟</h2>
+            <p class="wp-lead">احمِ مبناك من التسرب والرطوبة قبل أن تبدأ الأضرار بالظهور.</p>
+
+            <div class="wp-probs">
+                <div class="wp-prob"><span class="wp-prob-tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg></span>تسرب مياه من السطح أو ظهور بقع رطوبة.</div>
+                <div class="wp-prob"><span class="wp-prob-tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg></span>تجمع المياه على الأسطح بعد الغسيل أو الأمطار.</div>
+                <div class="wp-prob"><span class="wp-prob-tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg></span>تسرب المياه من الحمامات أو المطابخ إلى الأدوار السفلية.</div>
+                <div class="wp-prob"><span class="wp-prob-tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg></span>تسرب أو فقدان مياه من الخزانات والمسابح.</div>
+                <div class="wp-prob"><span class="wp-prob-tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg></span>تشققات أو نقاط ضعف قد تسمح بوصول المياه إلى الخرسانة.</div>
+                <div class="wp-prob"><span class="wp-prob-tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg></span>عزل قديم لم يعد يؤدي وظيفته بالشكل المطلوب.</div>
+            </div>
+
+            <div class="wp-cta-row">
+                <p class="wp-cta-note">
+                    <b>لا تعرف نوع العزل المناسب؟ لا تحتاج إلى اختيار المادة بنفسك.</b>
+                    نبدأ بمعاينة الموقع وتحديد حالته، ثم نوضح لك نظام العزل المناسب وأعمال التجهيز المطلوبة قبل التنفيذ.
+                </p>
+                <a class="wp-cta" href="https://wa.me/966581032502?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D9%85%D8%B9%D8%A7%D9%8A%D9%86%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20%D9%84%D9%84%D8%B9%D8%B2%D9%84%20%D8%A7%D9%84%D9%85%D8%A7%D8%A6%D9%8A" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.4A10 10 0 1 0 12 2Zm5.5 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.5-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2 .2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.4-.3.3c-.1.1-.2.3 0 .5.2.3.8 1.2 1.6 1.9 1 .9 1.9 1.2 2.1 1.3.2.1.4.1.5-.1l.7-.9c.2-.2.3-.2.5-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1Z"/></svg>
+                    اطلب معاينة مجانية
+                </a>
+            </div>
+        </div>
+    </section>   
+    
+
+
+    <!-- ========== H2: لماذا تحتاج إلى عزل مائي لمبناك؟ ========== -->
+    <section class="wp-scope wp-sec" aria-labelledby="wp-why-heading">
+        <div class="container">
+            <h2 class="wp-h2" id="wp-why-heading">لماذا تحتاج إلى عزل مائي لمبناك؟</h2>
+            <p class="wp-lead">تبدأ المشكلة ببقعة رطوبة بسيطة، لكنها لا تتوقف هناك. مع كل تسرب متكرر، تتغلغل المياه داخل الخرسانة وتبدأ في تآكل حديد التسليح — قبل أن تتحول إلى تشققات إنشائية، تلف متكرر للتشطيبات، وعفن يهدد صحة السكان. وفي الخزانات، قد يمتد الأمر إلى تلوث مياه الشرب نفسها.</p>
+
+            <div class="wp-why">
+                <div>
+                    <div class="wp-ramp">
+                        <div class="wp-ramp-step"><i></i><b>بقعة رطوبة بسيطة</b></div>
+                        <div class="wp-ramp-step"><i></i><b>تغلغل المياه في الخرسانة</b></div>
+                        <div class="wp-ramp-step"><i></i><b>تآكل حديد التسليح</b></div>
+                        <div class="wp-ramp-step"><i></i><b>تشققات إنشائية وعفن</b></div>
+                    </div>
+                    <p class="wp-why-warn">كل شهر تأجيل يعني ضررًا أكبر وتكلفة إصلاح أعلى.</p>
+                </div>
+
+                <div>
+                    <h3 class="wp-h3">يساعد العزل المائي على:</h3>
+                    <ul class="wp-benefits">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>حماية الأسطح من تجمع مياه الأمطار والغسيل.</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>تقليل وصول الرطوبة إلى الخرسانة والجدران.</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>حماية الحمامات والمطابخ من تسرب المياه إلى الأدوار السفلية.</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>الحفاظ على الخزانات والمسابح من فقدان المياه.</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>تقليل تكاليف الإصلاحات الناتجة عن التسربات المتكررة.</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>المساعدة في إطالة عمر المبنى وتشطيباته.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ========== H2: أنواع العزل المائي ========== -->
     <section class="wp-scope wp-navsvc" aria-labelledby="wp-navsvc-heading" data-navsvc>
         <div class="container">
@@ -1312,153 +1405,23 @@
         </div>
     </section>
 
-            <!-- ========== H2: هل تعاني من إحدى هذه المشكلات؟ ========== -->
-    <section class="wp-scope wp-sec wp-sec--alt" aria-labelledby="wp-problems-heading">
+    <!-- ========== H2: أين ننفذ العزل المائي؟ ========== -->
+    <section class="wp-scope wp-sec wp-sec--alt wp-apps" aria-labelledby="wp-apps-heading">
         <div class="container">
-            <h2 class="wp-h2" id="wp-problems-heading">هل تعاني من إحدى هذه المشكلات؟</h2>
-            <p class="wp-lead">احمِ مبناك من التسرب والرطوبة قبل أن تبدأ الأضرار بالظهور.</p>
-
-            <div class="wp-probs">
-                <div class="wp-prob"><span class="wp-prob-tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg></span>تسرب مياه من السطح أو ظهور بقع رطوبة.</div>
-                <div class="wp-prob"><span class="wp-prob-tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg></span>تجمع المياه على الأسطح بعد الغسيل أو الأمطار.</div>
-                <div class="wp-prob"><span class="wp-prob-tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg></span>تسرب المياه من الحمامات أو المطابخ إلى الأدوار السفلية.</div>
-                <div class="wp-prob"><span class="wp-prob-tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg></span>تسرب أو فقدان مياه من الخزانات والمسابح.</div>
-                <div class="wp-prob"><span class="wp-prob-tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg></span>تشققات أو نقاط ضعف قد تسمح بوصول المياه إلى الخرسانة.</div>
-                <div class="wp-prob"><span class="wp-prob-tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg></span>عزل قديم لم يعد يؤدي وظيفته بالشكل المطلوب.</div>
-            </div>
-
-            <div class="wp-cta-row">
-                <p class="wp-cta-note">
-                    <b>لا تعرف نوع العزل المناسب؟ لا تحتاج إلى اختيار المادة بنفسك.</b>
-                    نبدأ بمعاينة الموقع وتحديد حالته، ثم نوضح لك نظام العزل المناسب وأعمال التجهيز المطلوبة قبل التنفيذ.
-                </p>
-                <a class="wp-cta" href="https://wa.me/966581032502?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D9%85%D8%B9%D8%A7%D9%8A%D9%86%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20%D9%84%D9%84%D8%B9%D8%B2%D9%84%20%D8%A7%D9%84%D9%85%D8%A7%D8%A6%D9%8A" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.4A10 10 0 1 0 12 2Zm5.5 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.5-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2 .2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.4-.3.3c-.1.1-.2.3 0 .5.2.3.8 1.2 1.6 1.9 1 .9 1.9 1.2 2.1 1.3.2.1.4.1.5-.1l.7-.9c.2-.2.3-.2.5-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1Z"/></svg>
-                    اطلب معاينة مجانية
-                </a>
-            </div>
-        </div>
-    </section>   
-    
-
-
-    <!-- ========== H2: لماذا تحتاج إلى عزل مائي لمبناك؟ ========== -->
-    <section class="wp-scope wp-sec" aria-labelledby="wp-why-heading">
-        <div class="container">
-            <h2 class="wp-h2" id="wp-why-heading">لماذا تحتاج إلى عزل مائي لمبناك؟</h2>
-            <p class="wp-lead">تبدأ المشكلة ببقعة رطوبة بسيطة، لكنها لا تتوقف هناك. مع كل تسرب متكرر، تتغلغل المياه داخل الخرسانة وتبدأ في تآكل حديد التسليح — قبل أن تتحول إلى تشققات إنشائية، تلف متكرر للتشطيبات، وعفن يهدد صحة السكان. وفي الخزانات، قد يمتد الأمر إلى تلوث مياه الشرب نفسها.</p>
-
-            <div class="wp-why">
-                <div>
-                    <div class="wp-ramp">
-                        <div class="wp-ramp-step"><i></i><b>بقعة رطوبة بسيطة</b></div>
-                        <div class="wp-ramp-step"><i></i><b>تغلغل المياه في الخرسانة</b></div>
-                        <div class="wp-ramp-step"><i></i><b>تآكل حديد التسليح</b></div>
-                        <div class="wp-ramp-step"><i></i><b>تشققات إنشائية وعفن</b></div>
-                    </div>
-                    <p class="wp-why-warn">كل شهر تأجيل يعني ضررًا أكبر وتكلفة إصلاح أعلى.</p>
-                </div>
-
-                <div>
-                    <h3 class="wp-h3">يساعد العزل المائي على:</h3>
-                    <ul class="wp-benefits">
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>حماية الأسطح من تجمع مياه الأمطار والغسيل.</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>تقليل وصول الرطوبة إلى الخرسانة والجدران.</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>حماية الحمامات والمطابخ من تسرب المياه إلى الأدوار السفلية.</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>الحفاظ على الخزانات والمسابح من فقدان المياه.</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>تقليل تكاليف الإصلاحات الناتجة عن التسربات المتكررة.</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>المساعدة في إطالة عمر المبنى وتشطيباته.</li>
-                    </ul>
-                </div>
-            </div>
+            <h2 class="wp-h2" id="wp-apps-heading">أين ننفذ العزل المائي؟</h2>
+            <ul class="wp-benefits wp-apps-list">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>عزل الأسطح الخرسانية والمبلطة.</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>عزل الخزانات الأرضية والعلوية.</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>عزل الحمامات والمطابخ.</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>عزل المسابح.</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>عزل الأقبية والأساسات.</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>عزل المستودعات والمصانع.</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>عزل مواقف السيارات.</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>عزل الأسطح المعدنية.</li>
+            </ul>
         </div>
     </section>
 
-    <!-- ========== H2: لماذا تختار شركة الطبقات المتعددة للعزل المائي؟ ========== -->
-    <section class="wp-scope wp-sec wp-sec--alt" aria-labelledby="wp-choose-heading">
-        <div class="container">
-            <h2 class="wp-h2" id="wp-choose-heading">لماذا تختار شركة الطبقات المتعددة للعزل المائي؟</h2>
-            <p class="wp-lead">لأن العزل الناجح لا يعتمد على المادة فقط، بل على المعاينة الصحيحة، تجهيز السطح، ودقة تنفيذ كل تفصيلة.</p>
-
-            <div class="wp-choose">
-                <div class="wp-choose-item">
-                    <span class="wp-choose-icon"><i class="ri-award-line" aria-hidden="true"></i></span>
-                    <div><b>خبرة وكفاءة</b><span>فهم لطبيعة مشاكل التسرب ومتطلبات كل موقع.</span></div>
-                </div>
-                <div class="wp-choose-item">
-                    <span class="wp-choose-icon"><i class="ri-settings-3-line" aria-hidden="true"></i></span>
-                    <div><b>اختيار النظام المناسب</b><span>نحدد المادة والسماكة حسب استخدام المكان، وليس بنظام واحد للجميع.</span></div>
-                </div>
-                <div class="wp-choose-item">
-                    <span class="wp-choose-icon"><i class="ri-shield-check-line" aria-hidden="true"></i></span>
-                    <div><b>مواد عزل موثوقة</b><span>استخدام مواد مناسبة لطبيعة المشروع ومتطلبات العزل.</span></div>
-                </div>
-                <div class="wp-choose-item">
-                    <span class="wp-choose-icon"><i class="ri-team-line" aria-hidden="true"></i></span>
-                    <div><b>فريق عمل مدرب</b><span>تنفيذ دقيق لطبقات العزل والزوايا والمصارف والفواصل.</span></div>
-                </div>
-                <div class="wp-choose-item">
-                    <span class="wp-choose-icon"><i class="ri-medal-line" aria-hidden="true"></i></span>
-                    <div><b>ضمان حسب الخدمة</b><span>وضوح في نطاق العمل ونظام العزل المنفذ.</span></div>
-                </div>
-                <div class="wp-choose-item">
-                    <span class="wp-choose-icon"><i class="ri-calendar-check-line" aria-hidden="true"></i></span>
-                    <div><b>التزام بالمواعيد</b><span>تنظيم التنفيذ بما يتناسب مع مراحل المشروع.</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== H2: أخطاء شائعة قد تؤدي إلى فشل العزل المائي ========== -->
-    <section class="wp-scope wp-sec" aria-labelledby="wp-mistakes-heading">
-        <div class="container">
-            <h2 class="wp-h2" id="wp-mistakes-heading">أخطاء شائعة قد تؤدي إلى فشل العزل المائي</h2>
-            <p class="wp-lead">هذه الأخطاء هي السبب الأكثر تكرارًا في عودة التسرب بعد تنفيذ العزل.</p>
-
-            <div class="wp-mistakes">
-                <div class="wp-mistake"><span class="wp-mistake-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg></span>تنفيذ العزل دون معالجة الشروخ والتعشيش.</div>
-                <div class="wp-mistake"><span class="wp-mistake-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg></span>تطبيق العزل على سطح رطب أو غير مجهز.</div>
-                <div class="wp-mistake"><span class="wp-mistake-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg></span>تقليل عدد الطبقات أو السماكة المطلوبة.</div>
-                <div class="wp-mistake"><span class="wp-mistake-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg></span>اختيار مادة لا تناسب طبيعة الموقع.</div>
-                <div class="wp-mistake"><span class="wp-mistake-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg></span>إهمال المصارف والزوايا والفواصل.</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== H2: كم سعر العزل المائي؟ ========== -->
-    <section class="wp-scope wp-sec wp-sec--alt" aria-labelledby="wp-price-heading">
-        <div class="container">
-            <h2 class="wp-h2" id="wp-price-heading">كم سعر العزل المائي؟</h2>
-            <p class="wp-lead">إذا كنت تبحث عن سعر العزل المائي أو سعر العزل المائي للأسطح، فمن المهم معرفة أن التكلفة ليست رقمًا ثابتًا لجميع المواقع. السعر يتأثر بعدة عوامل، منها:</p>
-
-            <div class="wp-factors">
-                <span class="wp-factor"><em>01</em> مساحة الموقع</span>
-                <span class="wp-factor"><em>02</em> حالة السطح</span>
-                <span class="wp-factor"><em>03</em> نوع نظام العزل</span>
-                <span class="wp-factor"><em>04</em> عدد طبقات العزل</span>
-                <span class="wp-factor"><em>05</em> أعمال التجهيز والمعالجة المطلوبة</span>
-                <span class="wp-factor"><em>06</em> طبيعة استخدام الموقع</span>
-            </div>
-
-            <p class="wp-price-note">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-                لذلك نحتاج إلى معرفة تفاصيل المشروع أو معاينة الموقع حتى يكون عرض السعر مبنيًا على الاحتياج الفعلي.
-            </p>
-
-            <div class="wp-cta-row">
-                <p class="wp-cta-note">
-                    <b>لديك سطح وتريد معرفة التكلفة؟</b>
-                    أرسل صور الموقع أو اطلب معاينة، وسنحدد لك أعمال العزل المطلوبة وفق حالة الموقع.
-                </p>
-                <a class="wp-cta" href="https://wa.me/966581032502?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%84%D8%B9%D8%B2%D9%84%20%D8%A7%D9%84%D9%85%D8%A7%D8%A6%D9%8A" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.4A10 10 0 1 0 12 2Zm5.5 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.5-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2 .2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.4-.3.3c-.1.1-.2.3 0 .5.2.3.8 1.2 1.6 1.9 1 .9 1.9 1.2 2.1 1.3.2.1.4.1.5-.1l.7-.9c.2-.2.3-.2.5-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1Z"/></svg>
-                    اطلب عرض السعر
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== H2: الأسئلة الشائعة عن العزل المائي ========== -->
     <!-- ========== مشاريعنا ========== -->
     <section class="wp-scope wp-sec wp-projects" aria-label="مشاريعنا">
         <div class="container">
@@ -1494,6 +1457,127 @@
         </div>
     </section>
 
+    <!-- ========== آراء العملاء ========== -->
+    <section class="wp-scope wp-sec wp-sec--alt wp-reviews" aria-labelledby="wp-reviews-heading">
+        <div class="container">
+            <div class="category-section-heading">
+                <div><h2 class="wp-h2" id="wp-reviews-heading">آراء عملائنا</h2><p>تقييمات حقيقية من عملائنا على خرائط Google.</p></div>
+                <a class="category-projects-all" href="https://share.google/KDRjtfMnVpjcDfyJa" target="_blank" rel="noopener">كل التقييمات على Google <i class="ri-arrow-left-line" aria-hidden="true"></i></a>
+            </div>
+            <div class="wp-rev-grid">
+                <figure class="wp-rev">
+                    <blockquote>عزل ممتاز وخدمة رائعة وسريعة 👌</blockquote>
+                    <figcaption><span class="wp-rev-av" aria-hidden="true">A</span><span class="wp-rev-who"><b dir="auto">Ahmed Tarek</b><small><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.2a5.3 5.3 0 0 1-2.3 3.5v2.9h3.7c2.2-2 3.4-5 3.4-8.6Z"/><path fill="#34A853" d="M12 23.5c3.1 0 5.7-1 7.6-2.8l-3.7-2.9c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v3c1.9 3.7 5.700 6.300 10.200 6.300Z"/><path fill="#FBBC05" d="M5.600 14.200a6.900 6.900 0 0 1 0-4.400v-3H1.800a11.500 11.500 0 0 0 0 10.400l3.800-3Z"/><path fill="#EA4335" d="M12 5.100c1.700 0 3.200.6 4.400 1.700l3.300-3.300A11.500 11.500 0 0 0 1.800 6.800l3.800 3c.9-2.700 3.400-4.700 6.400-4.700Z"/></svg> تقييم على Google</small></span></figcaption>
+                </figure>
+                <figure class="wp-rev">
+                    <blockquote>من أفضل شركات العزل الحراري والمائي في الرياض، وقسم الميكروسمنت لديهم يقدم عملًا نظيفًا جدًا.</blockquote>
+                    <figcaption><span class="wp-rev-av" aria-hidden="true">E</span><span class="wp-rev-who"><b dir="auto">Essam 1995</b><small><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.2a5.3 5.3 0 0 1-2.3 3.5v2.9h3.7c2.2-2 3.4-5 3.4-8.6Z"/><path fill="#34A853" d="M12 23.5c3.1 0 5.7-1 7.6-2.8l-3.7-2.9c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v3c1.9 3.7 5.700 6.300 10.200 6.300Z"/><path fill="#FBBC05" d="M5.600 14.200a6.900 6.900 0 0 1 0-4.400v-3H1.800a11.500 11.500 0 0 0 0 10.400l3.800-3Z"/><path fill="#EA4335" d="M12 5.100c1.700 0 3.200.6 4.400 1.700l3.300-3.300A11.500 11.500 0 0 0 1.800 6.800l3.800 3c.9-2.700 3.400-4.700 6.400-4.700Z"/></svg> تقييم على Google</small></span></figcaption>
+                </figure>
+                <figure class="wp-rev">
+                    <blockquote>شركة ممتازة وتعامل أمين ودقة في التسليم. المهندس محمود مثال في الأدب والاحترام.</blockquote>
+                    <figcaption><span class="wp-rev-av" aria-hidden="true">O</span><span class="wp-rev-who"><b dir="auto">Omar Gaber</b><small><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.2a5.3 5.3 0 0 1-2.3 3.5v2.9h3.7c2.2-2 3.4-5 3.4-8.6Z"/><path fill="#34A853" d="M12 23.5c3.1 0 5.7-1 7.6-2.8l-3.7-2.9c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v3c1.9 3.7 5.700 6.300 10.200 6.300Z"/><path fill="#FBBC05" d="M5.600 14.200a6.900 6.900 0 0 1 0-4.400v-3H1.800a11.500 11.500 0 0 0 0 10.400l3.800-3Z"/><path fill="#EA4335" d="M12 5.100c1.700 0 3.200.6 4.400 1.700l3.300-3.300A11.500 11.500 0 0 0 1.800 6.800l3.800 3c.9-2.700 3.400-4.700 6.400-4.700Z"/></svg> تقييم على Google</small></span></figcaption>
+                </figure>
+                <figure class="wp-rev">
+                    <blockquote>من الشركات الرائدة في العزل بالرياض وفي أنحاء المملكة، ومن واقع التجربة يقدمون أفضل خدمة وجودة.</blockquote>
+                    <figcaption><span class="wp-rev-av" aria-hidden="true">H</span><span class="wp-rev-who"><b dir="auto">hassan elghoriry</b><small><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.2a5.3 5.3 0 0 1-2.3 3.5v2.9h3.7c2.2-2 3.4-5 3.4-8.6Z"/><path fill="#34A853" d="M12 23.5c3.1 0 5.7-1 7.6-2.8l-3.7-2.9c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v3c1.9 3.7 5.700 6.300 10.200 6.300Z"/><path fill="#FBBC05" d="M5.600 14.200a6.900 6.900 0 0 1 0-4.400v-3H1.800a11.500 11.500 0 0 0 0 10.400l3.800-3Z"/><path fill="#EA4335" d="M12 5.100c1.700 0 3.200.6 4.400 1.700l3.300-3.300A11.500 11.500 0 0 0 1.800 6.800l3.800 3c.9-2.700 3.400-4.700 6.400-4.700Z"/></svg> تقييم على Google</small></span></figcaption>
+                </figure>
+                <figure class="wp-rev">
+                    <blockquote>تعاملهم ممتاز.</blockquote>
+                    <figcaption><span class="wp-rev-av" aria-hidden="true">S</span><span class="wp-rev-who"><b dir="auto">Saed Saad</b><small><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.2a5.3 5.3 0 0 1-2.3 3.5v2.9h3.7c2.2-2 3.4-5 3.4-8.6Z"/><path fill="#34A853" d="M12 23.5c3.1 0 5.7-1 7.6-2.8l-3.7-2.9c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v3c1.9 3.7 5.700 6.300 10.200 6.300Z"/><path fill="#FBBC05" d="M5.600 14.200a6.900 6.900 0 0 1 0-4.400v-3H1.800a11.500 11.500 0 0 0 0 10.400l3.800-3Z"/><path fill="#EA4335" d="M12 5.100c1.700 0 3.200.6 4.400 1.700l3.300-3.300A11.500 11.500 0 0 0 1.800 6.800l3.800 3c.9-2.700 3.400-4.700 6.400-4.700Z"/></svg> تقييم على Google</small></span></figcaption>
+                </figure>
+                <figure class="wp-rev">
+                    <blockquote>من أفضل شركات العزل من حيث الدقة والمصداقية والخامات، أنصح بالتعامل معهم، خصوصًا قسم الميكروسمنت.</blockquote>
+                    <figcaption><span class="wp-rev-av" aria-hidden="true">A</span><span class="wp-rev-who"><b dir="auto">Ahmed</b><small><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.2a5.3 5.3 0 0 1-2.3 3.5v2.9h3.7c2.2-2 3.4-5 3.4-8.6Z"/><path fill="#34A853" d="M12 23.5c3.1 0 5.7-1 7.6-2.8l-3.7-2.9c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v3c1.9 3.7 5.700 6.300 10.200 6.300Z"/><path fill="#FBBC05" d="M5.600 14.200a6.900 6.900 0 0 1 0-4.400v-3H1.800a11.500 11.500 0 0 0 0 10.400l3.800-3Z"/><path fill="#EA4335" d="M12 5.100c1.700 0 3.200.6 4.400 1.700l3.300-3.300A11.500 11.500 0 0 0 1.800 6.800l3.800 3c.9-2.700 3.400-4.700 6.400-4.700Z"/></svg> تقييم على Google</small></span></figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== H2: لماذا تختار شركة الطبقات المتعددة للعزل المائي؟ ========== -->
+    <section class="wp-scope wp-sec" aria-labelledby="wp-choose-heading">
+        <div class="container">
+            <h2 class="wp-h2" id="wp-choose-heading">لماذا تختار شركة الطبقات المتعددة للعزل المائي؟</h2>
+            <p class="wp-lead">لأن العزل الناجح لا يعتمد على المادة فقط، بل على المعاينة الصحيحة، تجهيز السطح، ودقة تنفيذ كل تفصيلة.</p>
+
+            <div class="wp-choose">
+                <div class="wp-choose-item">
+                    <span class="wp-choose-icon"><i class="ri-award-line" aria-hidden="true"></i></span>
+                    <div><b>خبرة وكفاءة</b><span>فهم لطبيعة مشاكل التسرب ومتطلبات كل موقع.</span></div>
+                </div>
+                <div class="wp-choose-item">
+                    <span class="wp-choose-icon"><i class="ri-settings-3-line" aria-hidden="true"></i></span>
+                    <div><b>اختيار النظام المناسب</b><span>نحدد المادة والسماكة حسب استخدام المكان، وليس بنظام واحد للجميع.</span></div>
+                </div>
+                <div class="wp-choose-item">
+                    <span class="wp-choose-icon"><i class="ri-shield-check-line" aria-hidden="true"></i></span>
+                    <div><b>مواد عزل موثوقة</b><span>استخدام مواد مناسبة لطبيعة المشروع ومتطلبات العزل.</span></div>
+                </div>
+                <div class="wp-choose-item">
+                    <span class="wp-choose-icon"><i class="ri-team-line" aria-hidden="true"></i></span>
+                    <div><b>فريق عمل مدرب</b><span>تنفيذ دقيق لطبقات العزل والزوايا والمصارف والفواصل.</span></div>
+                </div>
+                <div class="wp-choose-item">
+                    <span class="wp-choose-icon"><i class="ri-medal-line" aria-hidden="true"></i></span>
+                    <div><b>ضمان على الخدمة</b><span>وضوح في نطاق العمل ونظام العزل المنفذ.</span></div>
+                </div>
+                <div class="wp-choose-item">
+                    <span class="wp-choose-icon"><i class="ri-calendar-check-line" aria-hidden="true"></i></span>
+                    <div><b>التزام بالمواعيد</b><span>تنظيم التنفيذ بما يتناسب مع مراحل المشروع.</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== H2: أخطاء شائعة قد تؤدي إلى فشل العزل المائي ========== -->
+    <section class="wp-scope wp-sec wp-sec--alt" aria-labelledby="wp-mistakes-heading">
+        <div class="container">
+            <h2 class="wp-h2" id="wp-mistakes-heading">أخطاء شائعة قد تؤدي إلى فشل العزل المائي</h2>
+            <p class="wp-lead">هذه الأخطاء هي السبب الأكثر تكرارًا في عودة التسرب بعد تنفيذ العزل.</p>
+
+            <div class="wp-mistakes">
+                <div class="wp-mistake"><span class="wp-mistake-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg></span>تنفيذ العزل دون معالجة الشروخ والتعشيش.</div>
+                <div class="wp-mistake"><span class="wp-mistake-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg></span>تطبيق العزل على سطح رطب أو غير مجهز.</div>
+                <div class="wp-mistake"><span class="wp-mistake-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg></span>تقليل عدد الطبقات أو السماكة المطلوبة.</div>
+                <div class="wp-mistake"><span class="wp-mistake-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg></span>اختيار مادة لا تناسب طبيعة الموقع.</div>
+                <div class="wp-mistake"><span class="wp-mistake-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg></span>إهمال المصارف والزوايا والفواصل.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== H2: كم سعر العزل المائي؟ ========== -->
+    <section class="wp-scope wp-sec" aria-labelledby="wp-price-heading">
+        <div class="container">
+            <h2 class="wp-h2" id="wp-price-heading">كم سعر العزل المائي؟</h2>
+            <p class="wp-lead">إذا كنت تبحث عن سعر العزل المائي أو سعر العزل المائي للأسطح، فمن المهم معرفة أن التكلفة ليست رقمًا ثابتًا لجميع المواقع. السعر يتأثر بعدة عوامل، منها:</p>
+
+            <div class="wp-factors">
+                <span class="wp-factor"><em>01</em> مساحة الموقع</span>
+                <span class="wp-factor"><em>02</em> حالة السطح</span>
+                <span class="wp-factor"><em>03</em> نوع نظام العزل</span>
+                <span class="wp-factor"><em>04</em> عدد طبقات العزل</span>
+                <span class="wp-factor"><em>05</em> أعمال التجهيز والمعالجة المطلوبة</span>
+                <span class="wp-factor"><em>06</em> طبيعة استخدام الموقع</span>
+            </div>
+
+            <p class="wp-price-note">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                لذلك نحتاج إلى معرفة تفاصيل المشروع أو معاينة الموقع حتى يكون عرض السعر مبنيًا على الاحتياج الفعلي.
+            </p>
+
+            <div class="wp-cta-row">
+                <p class="wp-cta-note">
+                    <b>لديك سطح وتريد معرفة التكلفة؟</b>
+                    أرسل صور الموقع أو اطلب معاينة، وسنحدد لك أعمال العزل المطلوبة وفق حالة الموقع.
+                </p>
+                <a class="wp-cta" href="https://wa.me/966581032502?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%84%D8%B9%D8%B2%D9%84%20%D8%A7%D9%84%D9%85%D8%A7%D8%A6%D9%8A" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.4A10 10 0 1 0 12 2Zm5.5 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.5-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2 .2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.4-.3.3c-.1.1-.2.3 0 .5.2.3.8 1.2 1.6 1.9 1 .9 1.9 1.2 2.1 1.3.2.1.4.1.5-.1l.7-.9c.2-.2.3-.2.5-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1Z"/></svg>
+                    اطلب عرض السعر
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== H2: الأسئلة الشائعة عن العزل المائي ========== -->
     <section class="wp-scope wp-sec wp-sec--alt" aria-labelledby="wp-faq-heading">
         <div class="container">
             <h2 class="wp-h2" id="wp-faq-heading">الأسئلة الشائعة عن العزل المائي</h2>
@@ -1505,8 +1589,8 @@
                     <p class="wp-faq-body">يعتمد اختيار أفضل عازل مائي للأسطح على حالة السطح وميله، ونوعه، وهل هو مبلط أم مكشوف، ودرجة تعرضه للشمس والمياه. قد تكون أنظمة مثل البيتومين أو PVC أو EPDM أو البولي يوريا أو الأكريليك مناسبة لبعض الأسطح، لكن الاختيار الصحيح يتحدد وفق حالة الموقع.</p>
                 </details>
                 <details>
-                    <summary><h3 class="wp-faq-h">ما طريقة العزل المائي للأسطح؟</h3><span class="wp-faq-sign" aria-hidden="true"></span></summary>
-                    <p class="wp-faq-body">تبدأ طريقة العزل المائي للأسطح بفحص السطح وتحديد مصدر التسرب، ثم تنظيفه وتجهيزه ومعالجة الشروخ والتفاصيل الحساسة، وبعد ذلك تطبيق طبقات نظام العزل المناسب وفحصه قبل التسليم أو التشطيب النهائي.</p>
+                    <summary><h3 class="wp-faq-h">كيف يتم تنفيذ العزل المائي؟</h3><span class="wp-faq-sign" aria-hidden="true"></span></summary>
+                    <p class="wp-faq-body">نبدأ بمعاينة الموقع وتحديد مصدر التسرب، ثم نجهز السطح ونعالج الشقوق والزوايا والمصارف، وبعدها نطبق نظام العزل المناسب ونفحصه قبل التسليم.</p>
                 </details>
                 <details>
                     <summary><h3 class="wp-faq-h">أيهما أفضل: عزل الروالت أم الفوم؟</h3><span class="wp-faq-sign" aria-hidden="true"></span></summary>
