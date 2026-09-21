@@ -1063,6 +1063,14 @@
 @media (max-width:575px){.wp-stats{grid-template-columns:1fr;}.wp-stat{border-inline-start:0;border-top:1px solid var(--line);}.wp-stat:first-child{border-top:0;}}
 @media (prefers-reduced-motion:reduce){.wp-stats[data-reveal]{opacity:1;transform:none;transition:none;}}
 
+/* ---- projects: same treatment as the insulation hub ---- */
+.wp-projects .category-projects-block{margin:0;padding-top:0;border-top:0;}
+.wp-projects .category-section-heading{margin-bottom:26px;}
+.wp-projects .category-project-card{border-radius:8px;border-color:#e6e9eb;transition:border-color .25s ease,transform .25s ease;}
+.wp-projects .category-project-card:hover,.wp-projects .category-project-card:focus-visible{border-color:#b9d8d4;transform:translateY(-3px);box-shadow:none;}
+.wp-projects .category-project-card img{height:auto;aspect-ratio:1/1;}
+@media (max-width:767px){.wp-projects .category-section-heading{flex-direction:column;align-items:flex-start;gap:12px;}}
+
 /* ---- service cards: WhatsApp quote link ---- */
 
 @media (prefers-reduced-motion:reduce){
@@ -1084,7 +1092,7 @@
                         <div class="rs-breadcrumb-title-wrapper">
                             <h1 class="rs-breadcrumb-title">شركة عزل مائي بالرياض</h1>
                         </div>
-                        <p class="wp-hero-sub">حلول عزل مائي معتمدة واحترافية للأسطح والخزانات والأقبية من شركة الطبقات المتعددة للمقاولات</p>
+                        <p class="wp-hero-sub">حلول عزل مائي معتمدة واحترافية من شركة الطبقات المتعددة للمقاولات</p>
                         <div class="rs-breadcrumb-menu">
                             <nav aria-label="مسار التنقل">
                                 <ul>
@@ -1453,7 +1461,42 @@
     </section>
 
     <!-- ========== H2: الأسئلة الشائعة عن العزل المائي ========== -->
-    <section class="wp-scope wp-sec" aria-labelledby="wp-faq-heading">
+    <!-- ========== مشاريعنا ========== -->
+    <section class="wp-scope wp-sec wp-projects" aria-label="مشاريعنا">
+        <div class="container">
+        <div class="category-projects-block">
+        <div class="category-section-heading">
+        <div><h2>مشاريع العزل المائي</h2><p>نماذج مختارة من أعمالنا. تصفح صفحة المشاريع للاطلاع على المزيد.</p></div>
+        <a class="category-projects-all" href="projects.html">جميع المشاريع <i class="ri-arrow-left-line" aria-hidden="true"></i></a>
+        </div>
+        <div class="category-projects-grid">
+        <a class="category-project-card" href="projects.html" aria-label="عرض مشروع وقت اللياقة في صفحة المشاريع" style="--i:0">
+        <img src="assets/my-images/projects/12.webp" alt="وقت اللياقة: عزل مائي وحراري للأسطح — شركة الطبقات المتعددة" width="600" height="600" loading="lazy" decoding="async">
+        <span class="category-project-card__body">
+        <strong>وقت اللياقة</strong><span>عزل مائي وحراري للأسطح</span>
+        <span class="category-project-card__link">عرض المشروع <i class="ri-arrow-left-line" aria-hidden="true"></i></span>
+        </span>
+        </a>
+        <a class="category-project-card" href="projects.html" aria-label="عرض مشروع قصر سكني في صفحة المشاريع" style="--i:1">
+        <img src="assets/my-images/projects/6.webp" alt="قصر سكني: العزل المائي للقبو بلفات الــ PVC — شركة الطبقات المتعددة" width="600" height="600" loading="lazy" decoding="async">
+        <span class="category-project-card__body">
+        <strong>قصر سكني</strong><span>العزل المائي للقبو بلفات الــ PVC</span>
+        <span class="category-project-card__link">عرض المشروع <i class="ri-arrow-left-line" aria-hidden="true"></i></span>
+        </span>
+        </a>
+        <a class="category-project-card" href="projects.html" aria-label="عرض مشروع ارمال 43 بالنرجس في صفحة المشاريع" style="--i:2">
+        <img src="assets/my-images/projects/13.webp" alt="ارمال 43 بالنرجس: عزل مائي للقبو — شركة الطبقات المتعددة" width="600" height="600" loading="lazy" decoding="async">
+        <span class="category-project-card__body">
+        <strong>ارمال 43 بالنرجس</strong><span>عزل مائي للقبو</span>
+        <span class="category-project-card__link">عرض المشروع <i class="ri-arrow-left-line" aria-hidden="true"></i></span>
+        </span>
+        </a>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="wp-scope wp-sec wp-sec--alt" aria-labelledby="wp-faq-heading">
         <div class="container">
             <h2 class="wp-h2" id="wp-faq-heading">الأسئلة الشائعة عن العزل المائي</h2>
             <p class="wp-lead">إجابات مختصرة عن أكثر ما يُسأل حول أنظمة العزل المائي وتكلفتها.</p>
