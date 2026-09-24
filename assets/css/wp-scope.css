@@ -856,3 +856,6 @@ body{background:#0a121a;}
 .wp-final .wp-cta-note b{font-size:22px;margin-bottom:6px;}
 .wp-final .wp-cta{min-height:50px;}
 @media (max-width:767px){.wp-final .wp-cta-row{padding:24px 20px;}.wp-final .wp-cta{width:100%;justify-content:center;}}
+
+/* footer: no factory background image */
+.rs-footer-bg-thumb{display:none !important;}
