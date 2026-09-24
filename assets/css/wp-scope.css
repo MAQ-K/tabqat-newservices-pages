@@ -1,0 +1,858 @@
+/* Shared styles for the .wp-scope service pages (extracted from epoxy-draft.html). */
+.wp-scope{
+  /* ---- colour tokens (semantic; no raw hex used below this block) ---- */
+  --wp-navy:#0d1b2a;          /* headings            16.2:1 on panel */
+  --wp-ink:#41505e;           /* body copy            8.3:1 on white */
+  --wp-muted:#5b6a78;         /* secondary copy       5.6:1 on white */
+  --wp-teal:#0F766E;          /* interactive + text   5.5:1 on white */
+  --wp-teal-bright:#3fada2;   /* DECORATIVE ONLY — never behind text */
+  --wp-panel:#f4f7f8;
+  --wp-surface:#fff;
+  --wp-line:#e3eaed;
+  --wp-line-strong:#d0dade;
+
+  /* ---- type sizes ---- */
+  --wp-fs-h2:32px;
+  --wp-fs-sub:14.5px;
+  --wp-fs-card-title:17px;
+  --wp-fs-card:12.5px;
+
+  /* ---- metrics ---- */
+  --wp-card-h:380px;
+  --wp-gap:26px;
+
+  --wp-radius:12px;
+  --wp-ease:cubic-bezier(.22,.61,.36,1);
+  --wp-dur:.42s;
+}
+
+.wp-types-area{padding:64px 0 70px;background:var(--wp-surface);}
+
+/* ---------- section head ---------- */
+.wp-types-head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:32px;}
+.wp-types-head-text{max-width:560px;}
+.wp-scope .wp-types-title{font-size:var(--wp-fs-h2);line-height:1.25;font-weight:800;color:var(--wp-navy);margin:0 0 10px;}
+.wp-scope .wp-types-sub{font-size:var(--wp-fs-sub);line-height:1.75;color:var(--wp-muted);margin:0;}
+
+/* ---------- carousel controls ---------- */
+.wp-nav{display:flex;gap:10px;flex:0 0 auto;}
+.wp-nav-btn{
+  width:42px;height:42px;
+  border-radius:50%;border:1px solid var(--wp-line-strong);
+  background:var(--wp-surface);color:var(--wp-navy);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;touch-action:manipulation;
+  transition:background var(--wp-dur) var(--wp-ease),border-color var(--wp-dur) var(--wp-ease),color var(--wp-dur) var(--wp-ease);
+}
+.wp-nav-btn svg{width:18px;height:18px;}
+.wp-nav-btn:hover:not(:disabled){background:var(--wp-teal);border-color:var(--wp-teal);color:var(--wp-surface);}
+.wp-nav-btn:disabled{opacity:.35;cursor:default;}
+
+/* visible focus on every operable control (WCAG 2.2) */
+.wp-scope :focus-visible{outline:3px solid var(--wp-teal);outline-offset:3px;border-radius:4px;}
+
+/* ---------- track: native scroll-snap, swipes without any JS ---------- */
+.wp-track{
+  display:flex;gap:var(--wp-gap);list-style:none;margin:0;padding:0 0 4px;
+  overflow-x:auto;overscroll-behavior-x:contain;
+  scroll-snap-type:x mandatory;scroll-behavior:smooth;
+  scrollbar-width:none;-ms-overflow-style:none;
+}
+.wp-track::-webkit-scrollbar{display:none;}
+.wp-slide{flex:0 0 calc((100% - (var(--wp-gap) * 2)) / 3);scroll-snap-align:start;}
+
+/* ---------- card ---------- */
+.wp-card{
+  position:relative;display:block;height:var(--wp-card-h);
+  border-radius:var(--wp-radius);overflow:hidden;
+  background:var(--wp-navy);text-decoration:none;isolation:isolate;
+  touch-action:manipulation;
+}
+.wp-card-media{position:absolute;inset:0;}
+.wp-card-media img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--wp-ease);}
+.wp-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(13,27,42,.5),rgba(13,27,42,.06) 45%,rgba(13,27,42,0) 70%);}
+.wp-card:hover .wp-card-media img{transform:scale(1.06);}
+
+.wp-card-panel{
+  position:absolute;inset-inline:10px;bottom:10px;z-index:2;
+  background:var(--wp-panel);border-radius:9px;padding:14px 16px;
+  box-shadow:0 6px 18px rgba(13,27,42,.10);
+  transition:background var(--wp-dur) var(--wp-ease),box-shadow var(--wp-dur) var(--wp-ease);
+}
+.wp-card:hover .wp-card-panel,.wp-card:focus-visible .wp-card-panel{background:var(--wp-surface);box-shadow:0 14px 30px rgba(13,27,42,.18);}
+.wp-scope .wp-card-title{display:block;font-size:var(--wp-fs-card-title);line-height:1.45;font-weight:800;color:var(--wp-navy);margin:0;transition:color var(--wp-dur) var(--wp-ease);}
+.wp-card:hover .wp-card-title{color:var(--wp-teal);}
+
+/* Reveal animates grid 0fr -> 1fr, so the open state is content-sized
+   and never clips text at zoom or under user spacing overrides (SC 1.4.12). */
+.wp-card-reveal{
+  display:grid;grid-template-rows:0fr;opacity:0;margin-top:0;
+  transition:grid-template-rows var(--wp-dur) var(--wp-ease),opacity .3s var(--wp-ease),margin-top var(--wp-dur) var(--wp-ease);
+}
+.wp-card-reveal > div{overflow:hidden;min-height:0;}
+.wp-card:hover .wp-card-reveal,.wp-card:focus-visible .wp-card-reveal{grid-template-rows:1fr;opacity:1;margin-top:10px;}
+@supports not (grid-template-rows:0fr){
+  .wp-card-reveal{display:block;max-height:0;overflow:hidden;}
+  .wp-card:hover .wp-card-reveal,.wp-card:focus-visible .wp-card-reveal{max-height:260px;}
+}
+
+.wp-points{list-style:none;margin:0;padding:10px 0 0;border-top:1px solid var(--wp-line);}
+.wp-points li{position:relative;padding-inline-start:16px;font-size:var(--wp-fs-card);line-height:1.6;color:var(--wp-ink);margin-bottom:6px;}
+.wp-points li::before{content:"";position:absolute;inset-inline-start:0;top:.7em;width:5px;height:5px;border-radius:50%;background:var(--wp-teal-bright);}
+.wp-points li:last-child{margin-bottom:0;}
+.wp-points .wp-use{color:var(--wp-navy);font-weight:600;}
+.wp-points .wp-use::before{background:var(--wp-navy);}
+
+.wp-more{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:var(--wp-fs-card);font-weight:700;color:var(--wp-teal);}
+.wp-more svg{width:15px;height:15px;flex:0 0 auto;transition:transform var(--wp-dur) var(--wp-ease);}
+.wp-card:hover .wp-more svg{transform:translateX(-5px);}
+
+/* ---------- dots ---------- */
+.wp-dots{display:flex;justify-content:center;gap:8px;margin-top:26px;}
+.wp-dot{position:relative;width:8px;height:8px;padding:0;border:0;border-radius:50%;background:var(--wp-line-strong);cursor:pointer;touch-action:manipulation;transition:background .3s,width .3s;}
+.wp-dot::after{content:"";position:absolute;inset:-8px;} /* visual dot stays small, hit area >= 24px (SC 2.5.8) */
+.wp-dot[aria-current="true"]{background:var(--wp-teal);width:22px;border-radius:4px;}
+
+/* ---------- responsive ---------- */
+@media (max-width:1199px){
+  .wp-scope{--wp-fs-h2:28px;--wp-card-h:370px;}
+  .wp-slide{flex-basis:calc((100% - var(--wp-gap)) / 2);}
+}
+@media (max-width:991px){
+  .wp-types-head{flex-direction:column;align-items:flex-start;gap:18px;}
+  .wp-types-area{padding:52px 0 56px;}
+}
+@media (max-width:767px){
+  .wp-scope{--wp-fs-h2:24px;--wp-card-h:360px;}
+  .wp-slide{flex-basis:100%;}
+}
+
+/* ---------- touch devices: no hover, so never hide the points.
+     The panel drops into normal flow so the card grows to fit its text
+     instead of clipping it, and body copy steps up to 16px. ---------- */
+@media (hover:none){
+  .wp-card{height:auto;background:var(--wp-panel);}
+  .wp-card::after{display:none;}
+  .wp-card-media{position:relative;inset:auto;aspect-ratio:16/10;}
+  .wp-card-panel{position:static;box-shadow:none;background:transparent;padding:16px;}
+  .wp-card-reveal{grid-template-rows:1fr;opacity:1;margin-top:10px;}
+  .wp-points li,.wp-more{font-size:16px;}
+  @supports not (grid-template-rows:0fr){.wp-card-reveal{max-height:none;}}
+}
+
+/* ---------- respect motion preferences ---------- */
+@media (prefers-reduced-motion:reduce){
+  .wp-scope *,.wp-scope *::before,.wp-scope *::after{transition-duration:.01ms !important;animation-duration:.01ms !important;}
+  .wp-track{scroll-behavior:auto;}
+}
+
+/* ============================================================
+   SHARED SECTION SHELL
+   Every section below is capped tight on vertical space:
+   56px block padding, 10px heading margin, 22px lead margin.
+   ============================================================ */
+.wp-sec{padding:56px 0;background:var(--wp-surface);}
+.wp-sec--alt{background:#f7fafb;}
+.wp-intro{padding:32px 0 12px;margin:0;text-align:center;background:var(--wp-surface);}
+.wp-scope.wp-intro .wp-h2{font-size:clamp(27px,3vw,38px);font-weight:900;line-height:1.4;color:var(--wp-navy);margin-bottom:12px;}
+.wp-intro .wp-h2 span{color:var(--wp-teal);}
+.wp-scope.wp-intro .wp-lead{max-width:760px;margin:0 auto;font-size:clamp(16px,1.3vw,18px);line-height:1.85;color:#344553;}
+.wp-intro + .wp-trust .wp-trust-in{padding:18px 0 24px;gap:clamp(20px,5vw,72px);}
+@media(max-width:575px){
+  .wp-intro{padding:24px 0 8px;}
+  .wp-intro + .wp-trust .wp-trust-in{flex-direction:row;flex-wrap:nowrap;gap:8px;padding:16px 0 20px;}
+  .wp-intro + .wp-trust .wp-trust-item{width:auto;flex:1 1 0;min-width:0;padding:0 4px;}
+  .wp-intro + .wp-trust .wp-trust-num{font-size:24px;}
+  .wp-intro + .wp-trust .wp-trust-lbl{font-size:12px;}
+}
+.wp-scope .wp-h2{font-size:var(--wp-fs-h2);line-height:1.25;font-weight:800;color:var(--wp-navy);margin:0 0 10px;}
+.wp-scope .wp-lead{font-size:var(--wp-fs-sub);line-height:1.75;color:var(--wp-muted);margin:0 0 22px;max-width:70ch;}
+.wp-scope .wp-h3{font-size:var(--wp-fs-card-title);font-weight:800;color:var(--wp-navy);margin:0 0 12px;}
+
+/* shared pill CTA */
+.wp-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  min-height:44px;padding:0 24px;border-radius:var(--wp-r-md);
+  background:var(--wp-teal);color:var(--wp-surface);border:1px solid var(--wp-teal);
+  font-size:var(--wp-fs-sub);font-weight:700;text-decoration:none;
+  touch-action:manipulation;transition:background var(--wp-dur) var(--wp-ease),border-color var(--wp-dur) var(--wp-ease),transform var(--wp-dur) var(--wp-ease);
+}
+.wp-cta:hover{background:#0b5c55;border-color:#0b5c55;color:var(--wp-surface);transform:translateY(-2px);}
+.wp-cta svg{width:17px;height:17px;flex:0 0 auto;}
+.wp-cta-row{display:flex;align-items:center;flex-wrap:wrap;gap:14px 20px;margin-top:20px;}
+.wp-cta-note{font-size:var(--wp-fs-sub);line-height:1.7;color:var(--wp-ink);margin:0;flex:1 1 320px;}
+.wp-cta-note b{color:var(--wp-navy);display:block;}
+
+/* ============================================================
+   1. TRUST BAR — thin navy strip, hairline-split stats
+   ============================================================ */
+.wp-trust{background:var(--wp-surface);}
+.wp-trust-in{display:flex;align-items:flex-start;justify-content:center;flex-wrap:wrap;gap:clamp(26px,6vw,92px);padding:clamp(46px,7vw,84px) 0;}
+.wp-trust-item{display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;}
+.wp-trust-num{font-size:clamp(30px,4vw,40px);font-weight:800;color:var(--wp-navy);line-height:1.05;letter-spacing:-.01em;font-variant-numeric:tabular-nums;}
+.wp-trust-num span{color:inherit;}
+.wp-trust-lbl{font-size:13.5px;color:var(--wp-muted);line-height:1.5;}
+
+/* ============================================================
+   2. PROBLEMS — symptom checklist, 3x2 tick chips
+   ============================================================ */
+.wp-probs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.wp-prob{
+  display:flex;align-items:flex-start;gap:10px;
+  padding:14px 16px;border-radius:10px;
+  background:var(--wp-surface);border:1px solid var(--wp-line);
+  font-size:var(--wp-fs-sub);line-height:1.6;color:var(--wp-ink);
+  transition:border-color var(--wp-dur) var(--wp-ease),box-shadow var(--wp-dur) var(--wp-ease);
+}
+.wp-prob:hover{border-color:var(--wp-teal);box-shadow:0 6px 16px rgba(13,27,42,.07);}
+.wp-prob-tick{
+  flex:0 0 auto;width:20px;height:20px;margin-top:1px;border-radius:5px;
+  border:1.5px solid var(--wp-line-strong);
+  display:flex;align-items:center;justify-content:center;
+  transition:background var(--wp-dur) var(--wp-ease),border-color var(--wp-dur) var(--wp-ease);
+}
+.wp-prob-tick svg{width:12px;height:12px;color:var(--wp-surface);opacity:0;transition:opacity var(--wp-dur) var(--wp-ease);}
+.wp-prob:hover .wp-prob-tick{background:var(--wp-teal);border-color:var(--wp-teal);}
+.wp-prob:hover .wp-prob-tick svg{opacity:1;}
+
+/* ============================================================
+   3. WHY YOU NEED IT — damage-escalation ramp + benefits
+   ============================================================ */
+.wp-why{display:grid;grid-template-columns:1.4fr .6fr;gap:36px;align-items:start;}
+.wp-ramp{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:0 0 14px;}
+.wp-ramp-step{border-radius:10px;padding:20px 18px 21px;background:var(--wp-panel);position:relative;}
+.wp-ramp-step i{display:block;height:4px;width:34px;border-radius:2px;margin-bottom:13px;background:var(--wp-teal-bright);}
+.wp-ramp-step b{display:block;font-size:16px;font-weight:700;color:var(--wp-navy);line-height:1.5;}
+/* intensity ramp: calm -> alarming, left (start) to right (end) */
+.wp-ramp-step:nth-child(1) i{background:#7fc7bf;}
+.wp-ramp-step:nth-child(2) i{background:#e0a33c;}
+.wp-ramp-step:nth-child(3) i{background:#cf7038;}
+.wp-ramp-step:nth-child(4) i{background:#b42318;}
+.wp-ramp-step:nth-child(4){background:#fdf4f3;}
+.wp-ramp-step:nth-child(4) b{color:#b42318;}
+.wp-why-warn{font-size:var(--wp-fs-sub);font-weight:700;color:#b42318;margin:0;}
+.wp-benefits{list-style:none;margin:0;padding:0;}
+.wp-benefits li{position:relative;padding-inline-start:24px;font-size:var(--wp-fs-sub);line-height:1.6;color:var(--wp-ink);margin-bottom:9px;}
+.wp-benefits li:last-child{margin-bottom:0;}
+.wp-benefits li svg{position:absolute;inset-inline-start:0;top:3px;width:15px;height:15px;color:var(--wp-teal);}
+
+/* ============================================================
+   4. WHY CHOOSE US — 3x2 label + inline description
+   ============================================================ */
+/* flat icon grid, no card chrome — icon square + title/description pair */
+.wp-choose{display:grid;grid-template-columns:repeat(2,1fr);gap:38px 48px;}
+.wp-choose-item{display:flex;align-items:flex-start;gap:16px;}
+.wp-choose-icon{flex:0 0 auto;width:48px;height:48px;border-radius:12px;background:var(--wp-panel);display:flex;align-items:center;justify-content:center;transition:background-color .25s var(--wp-ko-ease);}
+.wp-choose-icon i{font-size:22px;color:var(--wp-navy);}
+.wp-choose-item:hover .wp-choose-icon{background:rgba(15,118,110,.12);}
+.wp-choose-item:hover .wp-choose-icon i{color:var(--wp-teal);}
+.wp-choose-item b{display:block;font-size:16px;font-weight:800;color:var(--wp-navy);margin-bottom:6px;}
+.wp-choose-item span{font-size:14px;line-height:1.75;color:var(--wp-muted);}
+@media (max-width:575px){.wp-choose{grid-template-columns:1fr;gap:28px;}}
+
+/* ============================================================
+   5. COMMON MISTAKES — 5 struck-through "don't" cards
+   ============================================================ */
+.wp-mistakes{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
+.wp-mistake{
+  position:relative;overflow:hidden;
+  padding:16px 14px;border-radius:10px;
+  background:#fdf4f3;border:1px solid #f2dcd9;
+  font-size:var(--wp-fs-sub);line-height:1.6;color:var(--wp-ink);
+}
+.wp-mistake::before{
+  content:"";position:absolute;inset-inline-end:-30%;top:-40%;
+  width:160%;height:3px;background:#b42318;opacity:.16;
+  transform:rotate(-38deg);transform-origin:center;
+}
+.wp-mistake-x{display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#b42318;color:var(--wp-surface);margin-bottom:9px;}
+.wp-mistake-x svg{width:12px;height:12px;}
+
+/* ============================================================
+   6. PRICE — factor pills that add up to a quote
+   ============================================================ */
+.wp-factors{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 4px;}
+.wp-factor{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 22px;border-radius:var(--wp-r-md);
+  background:var(--wp-surface);border:1px solid var(--wp-line);
+  font-size:16px;line-height:1.5;color:var(--wp-ink);
+}
+.wp-factor em{font-style:normal;font-weight:800;color:var(--wp-teal);}
+.wp-price-note{display:flex;align-items:flex-start;gap:10px;margin-top:18px;padding:14px 16px;border-radius:10px;background:var(--wp-panel);border-inline-start:3px solid var(--wp-teal);font-size:var(--wp-fs-sub);line-height:1.7;color:var(--wp-ink);}
+.wp-price-note svg{flex:0 0 auto;width:17px;height:17px;margin-top:3px;color:var(--wp-teal);}
+
+/* ============================================================
+   7. FAQ — native <details>, no JS at all
+   ============================================================ */
+.wp-faq{border-top:1px solid var(--wp-line);}
+.wp-faq details{border-bottom:1px solid var(--wp-line);}
+.wp-faq summary{
+  display:flex;align-items:center;gap:12px;
+  padding:15px 2px;cursor:pointer;list-style:none;
+  font-size:var(--wp-fs-card-title);font-weight:700;color:var(--wp-navy);
+  transition:color var(--wp-dur) var(--wp-ease);
+}
+.wp-faq summary::-webkit-details-marker{display:none;}
+.wp-faq summary:hover{color:var(--wp-teal);}
+.wp-faq-sign{flex:0 0 auto;margin-inline-start:auto;width:22px;height:22px;position:relative;}
+.wp-faq-sign::before,.wp-faq-sign::after{content:"";position:absolute;inset-inline-start:4px;top:10px;width:14px;height:2px;border-radius:1px;background:var(--wp-teal);transition:transform var(--wp-dur) var(--wp-ease);}
+.wp-faq-sign::after{transform:rotate(90deg);}
+.wp-faq details[open] .wp-faq-sign::after{transform:rotate(0deg);}
+.wp-faq-body{padding:0 2px 16px;font-size:var(--wp-fs-sub);line-height:1.85;color:var(--wp-ink);margin:0;}
+.wp-faq-h{margin:0;font:inherit;color:inherit;}
+
+/* ============================================================
+   RESPONSIVE — collapse the grids, keep the rhythm
+   ============================================================ */
+@media (max-width:1199px){
+  .wp-mistakes{grid-template-columns:repeat(3,1fr);}
+  .wp-why{grid-template-columns:1fr;gap:26px;}
+}
+@media (max-width:991px){
+  .wp-sec{padding:44px 0;}
+  .wp-probs,.wp-choose{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:767px){
+  .wp-probs,.wp-choose,.wp-mistakes{grid-template-columns:1fr;}
+  .wp-trust-in{flex-direction:column;gap:0;}
+  .wp-trust-item{width:100%;flex:1 1 auto;padding:14px 10px;}
+  .wp-trust-item + .wp-trust-item::before{inset-inline-start:15%;top:0;width:70%;height:1px;}
+  /* touch: body copy steps up to 16px, matching the cards */
+  .wp-prob,.wp-choose-item span,.wp-mistake,
+  .wp-benefits li,.wp-faq-body,.wp-cta-note,.wp-price-note{font-size:16px;}
+}
+
+/* ============================================================
+   KOKONUTUI BORDER & BOX LANGUAGE
+   Adapted from kokonut-labs/kokonutui (MIT) — feature-card.tsx,
+   bento-grid.tsx and spotlight-cards.tsx. Their Tailwind idiom
+   translated to this page's vanilla CSS and teal/navy brand:
+
+     rounded-2xl / rounded-xl / rounded-lg   -> 16 / 12 / 8 nested radii
+     border-neutral-200/60                   -> faint rest border
+     hover:border-primary/30                 -> border blooms on hover
+     bg-gradient-to-b from-.../60 to-.../30  -> boxes are never flat
+     shadow-[0_4px_20px_rgb(0,0,0,.04)]      -> soft, wide, low-alpha
+     hover:shadow-[0_8px_30px_rgb(0,0,0,.06)]
+     before: white wash gradient overlay
+     h-[2px] w-0 group-hover:w-full          -> accent rule sweeps out
+     transition-all duration-300/500 ease-out
+   ============================================================ */
+.wp-scope{
+  --wp-r-lg:16px;   /* rounded-2xl — outer cards   */
+  --wp-r-md:12px;   /* rounded-xl  — boxes, badges */
+  --wp-r-sm:8px;    /* rounded-lg  — inner media   */
+
+  --wp-bd:rgba(13,27,42,.10);          /* rest border  */
+  --wp-bd-soft:rgba(13,27,42,.07);     /* quieter rest */
+  --wp-bd-hi:rgba(15,118,110,.32);     /* teal/30 on hover */
+
+  --wp-sh:0 4px 20px rgba(13,27,42,.04);
+  --wp-sh-hi:0 8px 30px rgba(13,27,42,.07);
+
+  --wp-fill:linear-gradient(to bottom,rgba(255,255,255,.95),rgba(247,250,251,.75) 55%,rgba(247,250,251,.6));
+  --wp-wash:linear-gradient(to bottom,rgba(255,255,255,.55),rgba(255,255,255,.22) 45%,transparent);
+  --wp-ko-ease:cubic-bezier(.16,1,.3,1);
+}
+
+/* ---- the shared "kokonut box": faint border, gradient fill,
+        soft shadow, white wash overlay, border blooms on hover ---- */
+.wp-prob,.wp-mistake,.wp-factor,.wp-ramp-step,.wp-price-note{
+  position:relative;isolation:isolate;
+  border:1px solid var(--wp-bd);
+  background:var(--wp-fill);
+  box-shadow:var(--wp-sh);
+  transition:border-color .3s var(--wp-ko-ease),box-shadow .3s var(--wp-ko-ease),transform .3s var(--wp-ko-ease);
+}
+.wp-prob::before,.wp-ramp-step::before{
+  content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;
+  background:var(--wp-wash);pointer-events:none;
+}
+.wp-prob,.wp-mistake{border-radius:var(--wp-r-md);}
+.wp-ramp-step{border-radius:var(--wp-r-sm);}
+.wp-price-note{border-radius:var(--wp-r-md);}
+.wp-factor{border-radius:var(--wp-r-md);box-shadow:0 2px 8px rgba(13,27,42,.04);}
+
+.wp-prob:hover,.wp-mistake:hover,.wp-factor:hover{
+  border-color:var(--wp-bd-hi);
+  box-shadow:var(--wp-sh-hi);
+}
+
+/* ---- accent rule sweeping out from the inline-start edge (choose-item only) ---- */
+.wp-choose-item{overflow:hidden;}
+.wp-choose-item::after{
+  content:"";position:absolute;bottom:0;inset-inline-start:0;
+  height:2px;width:0;border-radius:999px;background:var(--wp-teal);
+  transition:width .5s var(--wp-ko-ease);
+}
+.wp-choose-item:hover::after{width:100%;}
+
+/* ---- problem boxes: gentle zoom instead of an underline sweep ---- */
+.wp-prob{transform:scale(1);transform-origin:center;}
+.wp-prob:hover{transform:scale(1.035);}
+
+/* ---- mistakes keep their red identity, but on the kokonut chassis ---- */
+.wp-mistake{
+  border-color:rgba(180,35,24,.16);
+  background:linear-gradient(to bottom,rgba(253,244,243,.95),rgba(253,244,243,.6));
+}
+.wp-mistake:hover{border-color:rgba(180,35,24,.38);}
+
+/* ---- carousel card: rounded-2xl shell, rounded-lg inner panel ---- */
+.wp-card{
+  border-radius:var(--wp-r-lg);
+  /* border:1px solid var(--wp-bd-soft); */
+  box-shadow:var(--wp-sh);
+  transition:border-color .3s var(--wp-ko-ease),box-shadow .3s var(--wp-ko-ease);
+}
+.wp-card:hover{border-color:var(--wp-bd-hi);box-shadow:var(--wp-sh-hi);}
+.wp-card-panel{
+  border-radius:var(--wp-r-sm);
+  border:1px solid rgba(255,255,255,.7);
+  background:var(--wp-fill);
+  backdrop-filter:blur(4px);
+  transition:background .3s var(--wp-ko-ease),box-shadow .3s var(--wp-ko-ease),backdrop-filter .3s var(--wp-ko-ease);
+}
+.wp-card:hover .wp-card-panel,.wp-card:focus-visible .wp-card-panel{
+  background:linear-gradient(to bottom,#fff,rgba(255,255,255,.94));
+  backdrop-filter:blur(6px);
+}
+
+/* ---- nav buttons + dots pick up the same border treatment ---- */
+.wp-nav-btn{border-color:var(--wp-bd);box-shadow:var(--wp-sh);transition:background .3s var(--wp-ko-ease),border-color .3s var(--wp-ko-ease),color .3s var(--wp-ko-ease),box-shadow .3s var(--wp-ko-ease);}
+.wp-nav-btn:hover:not(:disabled){box-shadow:var(--wp-sh-hi);}
+
+/* ---- FAQ rows become bordered boxes rather than hairline rules ---- */
+.wp-faq{border-top:0;display:flex;flex-direction:column;gap:10px;}
+.wp-faq details{
+  border:1px solid var(--wp-bd);border-radius:var(--wp-r-md);
+  background:var(--wp-fill);box-shadow:var(--wp-sh);
+  overflow:hidden;
+  transition:border-color .3s var(--wp-ko-ease),box-shadow .3s var(--wp-ko-ease);
+}
+.wp-faq details:hover{border-color:var(--wp-bd-hi);box-shadow:var(--wp-sh-hi);}
+.wp-faq details[open]{border-color:var(--wp-bd-hi);}
+.wp-faq summary{padding:15px 18px;}
+.wp-faq-body{padding:0 18px 16px;}
+
+/* ---- trust strip: inner hairline box, matching radii ---- */
+.wp-trust .wp-trust-in{
+  border-radius:var(--wp-r-md);
+  border:1px solid rgba(255,255,255,.10);
+  background:linear-gradient(to bottom,rgba(255,255,255,.05),rgba(255,255,255,.02));
+}
+
+/* ---- price pills: numeral gets its own inner badge ---- */
+.wp-factor em{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:28px;height:28px;border-radius:var(--wp-r-sm);
+  background:rgba(15,118,110,.10);border:1px solid rgba(15,118,110,.16);
+  font-size:12.5px;font-style:normal;font-weight:700;letter-spacing:.02em;
+}
+
+@media (prefers-reduced-motion:reduce){
+  .wp-choose-item::after{transition:none;}
+  .wp-prob{transition:none;}
+}
+
+/* ---- hero banner: centered, shaded, matches the hub page's style ---- */
+.wp-hero{padding-bottom:149px;}
+.wp-hero-image{width:100%;height:100%;object-fit:cover;}
+.wp-hero .rs-breadcrumb-bg::after{content:"";position:absolute;inset:0;background:rgba(6,17,28,.6);}
+.wp-hero .rs-breadcrumb-content-wrapper{text-align:center;}
+.wp-hero-sub{max-width:760px;margin:6px auto 18px;font-size:17px;line-height:1.9;color:rgba(255,255,255,.9);}
+@media (max-width:991px){.wp-hero{padding-bottom:102px;}}
+/* ============================================================
+   COMBINED NAV + SERVICES — one full-width, dark, horizontally
+   scrolling section. Cards are the same idea as the preview
+   carousel (image, title, hover reveals more) but bigger, with
+   an extra always-visible fact line.
+   ============================================================ */
+.wp-navsvc{background:var(--wp-navy);padding:54px 0 58px;overflow:hidden;}
+.wp-navsvc-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:32px;}
+.wp-navsvc-head-text h2{color:var(--wp-surface);font-size:28px;font-weight:800;margin:0 0 8px;line-height:1.4;}
+.wp-navsvc-head-text p{color:rgba(255,255,255,.62);font-size:var(--wp-fs-sub);line-height:1.75;margin:0;max-width:62ch;}
+.wp-navsvc .wp-nav{display:flex;gap:10px;flex-shrink:0;}
+.wp-navsvc .wp-nav-btn{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.18);color:var(--wp-surface);box-shadow:none;}
+.wp-navsvc .wp-nav-btn:hover:not(:disabled){background:var(--wp-teal);border-color:var(--wp-teal);color:var(--wp-surface);}
+.wp-navsvc .wp-nav-btn:disabled{opacity:.3;}
+
+/* track bleeds to the true edge; the head/dots above and below stay
+   inside a normal .container so only the cards row goes full width */
+.wp-navsvc-track{
+  display:flex;gap:24px;list-style:none;margin:0;
+  padding:4px 10px 12px;
+  scroll-padding-inline:10px;
+  overflow-x:auto;overscroll-behavior-x:contain;
+  scroll-snap-type:x mandatory;scroll-behavior:smooth;
+  scrollbar-width:none;-ms-overflow-style:none;
+}
+.wp-navsvc-track::-webkit-scrollbar{display:none;}
+.wp-navsvc-track{cursor:grab;}
+.wp-navsvc-track.is-mouse-scrolling{scroll-snap-type:none;scroll-behavior:auto;}
+.wp-navsvc-track.is-dragging{cursor:grabbing;user-select:none;}
+.wp-navsvc-track.is-dragging a{cursor:grabbing;}
+.wp-navsvc-track:focus-visible,.wp-navsvc-card:focus-visible{outline:3px solid var(--wp-teal-bright);outline-offset:2px;}
+.wp-navsvc-slide{flex:0 0 min(640px,calc(100vw - 48px));min-width:0;scroll-snap-align:start;}
+
+.wp-navsvc-card{
+  position:relative;isolation:isolate;display:block;height:auto;aspect-ratio:500/320;
+  border-radius:var(--wp-r-lg);overflow:hidden;
+  background:var(--wp-navy);text-decoration:none;touch-action:manipulation;
+}
+.wp-navsvc-card__media{position:absolute;inset:0;}
+.wp-navsvc-card__media img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--wp-ease);}
+.wp-navsvc-card::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(13,27,42,.92) 0%,rgba(13,27,42,.55) 38%,rgba(13,27,42,.08) 68%);
+}
+.wp-navsvc-card:hover .wp-navsvc-card__media img{transform:scale(1.06);}
+
+.wp-navsvc-card__num{
+  position:absolute;inset-inline-start:16px;top:16px;z-index:2;
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:32px;height:27px;padding:0 8px;border-radius:7px;
+  background:rgba(13,27,42,.5);border:1px solid rgba(255,255,255,.2);
+  color:#fff;font-size:12.5px;font-weight:800;letter-spacing:.03em;
+}
+
+.wp-navsvc-card__body{position:absolute;inset-inline:0;bottom:0;z-index:2;padding:22px;}
+.wp-navsvc-card__title{display:block;color:#fff;font-size:20px;font-weight:800;line-height:1.4;margin:0 0 8px;}
+.wp-navsvc-card__data{color:rgba(255,255,255,.75);font-size:13.5px;line-height:1.65;margin:0;}
+
+/* hover reveal: the same grid-rows trick as the original preview
+   carousel, just carrying more content (facts stay visible; this
+   adds the bullets + usage line + a details prompt) */
+.wp-navsvc-card__reveal{display:grid;grid-template-rows:0fr;opacity:0;margin-top:0;transition:grid-template-rows .42s var(--wp-ease),opacity .3s var(--wp-ease),margin-top .42s var(--wp-ease);}
+.wp-navsvc-card__reveal>div{overflow:hidden;min-height:0;}
+.wp-navsvc-card:hover .wp-navsvc-card__reveal,.wp-navsvc-card:focus-within .wp-navsvc-card__reveal{grid-template-rows:1fr;opacity:1;margin-top:14px;}
+.wp-navsvc-points{list-style:none;margin:0;padding:12px 0 0;border-top:1px solid rgba(255,255,255,.18);}
+.wp-navsvc-points li{position:relative;padding-inline-start:16px;font-size:13px;line-height:1.65;color:rgba(255,255,255,.88);margin-bottom:7px;}
+.wp-navsvc-points li::before{content:"";position:absolute;inset-inline-start:0;top:.7em;width:5px;height:5px;border-radius:50%;background:var(--wp-teal-bright);}
+.wp-navsvc-points .wp-use{color:#fff;font-weight:600;}
+.wp-navsvc-points .wp-use::before{background:#fff;}
+.wp-navsvc-more{position:relative;z-index:3;text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--wp-teal-bright);}
+.wp-navsvc-more svg{width:15px;height:15px;flex:0 0 auto;transition:transform var(--wp-dur) var(--wp-ease);}
+.wp-navsvc-more:hover svg,.wp-navsvc-card:hover .wp-navsvc-more svg{transform:translateX(-5px);}
+
+.wp-navsvc .wp-dots{margin-top:28px;}
+.wp-navsvc .wp-dot{background:rgba(255,255,255,.22);}
+.wp-navsvc .wp-dot[aria-current="true"]{background:var(--wp-teal-bright);}
+
+/* Content stays visible unless the scroll observer is successfully initialized. */
+[data-wp-reveal="pending"]{opacity:0;translate:0 30px;}
+@media (prefers-reduced-motion:reduce){
+  [data-wp-reveal="pending"]{opacity:1;translate:none;}
+}
+@media print{
+  [data-wp-reveal]{opacity:1 !important;translate:none !important;}
+}
+
+@media (max-width:767px){
+  .wp-navsvc-head{flex-direction:column;align-items:flex-start;}
+  .wp-navsvc-card__body{padding:14px;}
+  .wp-navsvc-card__reveal{display:none;}
+  .wp-navsvc-card__title{font-size:18px;}
+}
+/* ---- hero: same title treatment as waterproofing-thermal-insulation.html ---- */
+.wp-hero .rs-breadcrumb-title{font-size:46px;line-height:1.4;display:block;font-weight:800;}
+@media (max-width:991px){.wp-hero .rs-breadcrumb-title{font-size:36px;}}
+@media (max-width:575px){.wp-hero .rs-breadcrumb-title{font-size:28px;}}
+
+/* ---- stat counters: hairline-divided, same as the insulation hub ---- */
+.wp-stats-sec{background:#fff;padding:10px 0 34px;}
+.wp-stats{--line:#e6e9eb;--ink:#0d1b2a;--muted:#7c888f;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:820px;margin:0 auto;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.wp-stat{padding:28px 14px;text-align:center;border-inline-start:1px solid var(--line);}
+.wp-stat:first-child{border-inline-start:0;}
+.wp-stat b{display:block;font-size:40px;font-weight:800;line-height:1.25;color:var(--ink);font-variant-numeric:tabular-nums;}
+.wp-stat span{font-size:14px;color:var(--muted);}
+.wp-stats[data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
+.wp-stats[data-reveal].is-revealed{opacity:1;transform:none;}
+@media (max-width:767px){.wp-stat b{font-size:30px;}.wp-stat{padding:20px 8px;}}
+@media (max-width:575px){.wp-stats{grid-template-columns:1fr;}.wp-stat{border-inline-start:0;border-top:1px solid var(--line);}.wp-stat:first-child{border-top:0;}}
+@media (prefers-reduced-motion:reduce){.wp-stats[data-reveal]{opacity:1;transform:none;transition:none;}}
+
+/* ---- intro CTA row + applications list ---- */
+.wp-intro-cta{margin-top:24px;justify-content:center;}
+.wp-cta--ghost{background:transparent;color:var(--wp-teal);}
+.wp-cta--ghost:hover{background:var(--wp-teal);border-color:var(--wp-teal);color:var(--wp-surface);}
+.wp-apps-list{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:12px;margin-top:26px;}
+.wp-apps-list li{display:inline-flex;align-items:center;gap:9px;margin:0;padding:12px 22px;border-radius:999px;background:#fff;border:1px solid #d9e6e4;color:var(--wp-navy);font-size:15.5px;font-weight:700;line-height:1.4;transition:background .25s,border-color .25s,color .25s,transform .25s;}
+.wp-apps-list li svg{position:static;flex:0 0 auto;width:16px;height:16px;margin:0;color:var(--wp-teal);transition:color .25s;}
+.wp-apps-list li:hover{background:var(--wp-teal);border-color:var(--wp-teal);color:#fff;transform:translateY(-2px);}
+.wp-apps-list li:hover svg{color:#fff;}
+@media (max-width:575px){.wp-apps-list{gap:8px;}.wp-apps-list li{padding:10px 16px;font-size:14.5px;}}
+
+/* ---- customer reviews ---- */
+.wp-reviews .category-section-heading h2{margin:0 0 8px;}
+.wp-reviews .category-section-heading{margin-bottom:26px;}
+.wp-rev-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
+.wp-rev{margin:0;padding:24px 22px;background:#fff;border:1px solid #e6e9eb;border-radius:8px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;transition:border-color .25s,transform .25s;}
+.wp-rev:hover{border-color:#b9d8d4;transform:translateY(-3px);}
+.wp-rev blockquote{margin:0;font-size:15.5px;line-height:1.9;color:var(--wp-ink);}
+.wp-rev figcaption{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid #eef1f2;}
+.wp-rev-av{flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:#e8f4f2;color:var(--wp-teal);display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;}
+.wp-rev-who{display:flex;flex-direction:column;gap:2px;min-width:0;}
+.wp-rev-who b{font-size:15px;color:var(--wp-navy);}
+.wp-rev-who small{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;color:#7c888f;}
+.wp-rev-who small svg{width:13px;height:13px;}
+@media (max-width:991px){.wp-rev-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:575px){.wp-rev-grid{grid-template-columns:1fr;}}
+
+/* ---- projects: same treatment as the insulation hub ---- */
+.wp-projects .category-projects-block{margin:0;padding-top:0;border-top:0;}
+.wp-projects .category-section-heading{margin-bottom:26px;}
+.wp-projects .category-project-card{border-radius:8px;border-color:#e6e9eb;transition:border-color .25s ease,transform .25s ease;}
+.wp-projects .category-project-card:hover,.wp-projects .category-project-card:focus-visible{border-color:#b9d8d4;transform:translateY(-3px);box-shadow:none;}
+.wp-projects .category-project-card img{height:auto;aspect-ratio:1/1;}
+@media (max-width:767px){.wp-projects .category-section-heading{flex-direction:column;align-items:flex-start;gap:12px;}}
+
+/* ---- service cards: WhatsApp quote link ---- */
+
+@media (prefers-reduced-motion:reduce){
+  .wp-navsvc,.wp-navsvc-card__media img{transition:none;opacity:1;transform:none;}
+  .wp-navsvc-track{scroll-behavior:auto;}
+}
+/* ============================================================
+   DARK THEME  (epoxy-draft.html)
+   Same component CSS as waterproofing-insulation.html above; this
+   block re-tokens the page for a dark surface and patches the few
+   rules that hard-code light colours. It sits after the shared
+   rules on purpose so it wins on equal specificity.
+
+   Contrast (WCAG 2.2 AA) on the page surface #0a121a:
+     headings #f3f7f9 ........ 17.5:1     body  #c3ced5 ........ 11.8:1
+     muted   #93a4af ........... 7.3:1     teal  #3fada2 .......... 6.9:1
+     button text #0a121a on teal #3fada2 ... 6.9:1  (all clear 4.5:1 on the alt band too)
+   ============================================================ */
+body{background:#0a121a;}
+
+.wp-scope{
+  --wp-navy:#f3f7f9;          /* headings (the old "navy" token, now light) */
+  --wp-ink:#c3ced5;           /* body copy */
+  --wp-muted:#93a4af;         /* secondary copy */
+  --wp-teal:#3fada2;          /* interactive + text on dark */
+  --wp-teal-bright:#4fc4b7;
+  --wp-panel:#111e29;
+  --wp-surface:#0a121a;       /* page surface; also the text colour ON teal buttons */
+  --wp-alt:#0e1923;           /* alternate section band */
+  --wp-deep:#060b10;          /* the carousel band, a step darker than the page */
+  --wp-line:rgba(255,255,255,.09);
+  --wp-line-strong:rgba(255,255,255,.18);
+
+  --wp-bd:rgba(255,255,255,.10);
+  --wp-bd-soft:rgba(255,255,255,.07);
+  --wp-bd-hi:rgba(63,173,162,.55);
+  --wp-sh:0 4px 20px rgba(0,0,0,.30);
+  --wp-sh-hi:0 10px 34px rgba(0,0,0,.45);
+  --wp-fill:linear-gradient(to bottom,rgba(255,255,255,.065),rgba(255,255,255,.028) 60%,rgba(255,255,255,.016));
+  --wp-wash:linear-gradient(to bottom,rgba(255,255,255,.05),transparent 55%);
+}
+
+.wp-scope{color:var(--wp-ink);}
+
+/* ---- site header: fixed white bar -> dark (main.css leaves menu colour to inherit) ---- */
+.rs-header-one .rs-header-inner,
+.rs-header-one.rs-sticky .rs-header-inner{background-color:#0a121a;box-shadow:0 1px 0 rgba(255,255,255,.08);}
+.rs-header-one .rs-header-logo-wrapper{background-color:transparent;}
+.rs-header-one .rs-header-logo img{filter:brightness(0) invert(1);}
+.rs-header-one .main-menu{border-inline-start-color:rgba(255,255,255,.12);}
+.rs-header-one .main-menu > ul > li > a{color:#e8eef2;}
+.rs-header-one .main-menu > ul > li:hover > a{color:#3fada2;}
+.rs-header-one .rs-theme-social a{color:#c3ced5;background-color:rgba(255,255,255,.07);}
+.rs-header-one .rs-theme-social a:hover{color:#0a121a;background:#3fada2;}
+.rs-header-one .rs-header-hamburger .bar-icon svg path{fill:#e8eef2;}
+.rs-header-one .rs-header-hamburger .bar-icon:hover svg path{fill:#3fada2;}
+
+/* ---- section bands ---- */
+.wp-sec--alt{background:var(--wp-alt);}
+.wp-stats-sec{background:var(--wp-surface);}
+.wp-stats{--line:rgba(255,255,255,.12);--ink:#f3f7f9;--muted:#93a4af;}
+.wp-scope.wp-intro .wp-lead{color:var(--wp-ink);}
+
+/* ---- buttons: dark text on teal ---- */
+.wp-cta:hover{background:#63cbc0;border-color:#63cbc0;color:var(--wp-surface);}
+.wp-cta--ghost{background:transparent;color:var(--wp-teal);border-color:rgba(63,173,162,.6);}
+.wp-cta--ghost:hover{background:var(--wp-teal);border-color:var(--wp-teal);color:var(--wp-surface);}
+
+/* ---- why: escalation ramp keeps its calm -> alarming colours ---- */
+.wp-ramp-step:nth-child(4){
+  background:linear-gradient(to bottom,rgba(239,91,77,.18),rgba(239,91,77,.07));
+  border-color:rgba(239,110,98,.34);
+}
+.wp-ramp-step:nth-child(4) i{background:#ef5b4d;}
+.wp-ramp-step:nth-child(4) b,.wp-why-warn{color:#ff9d94;}
+
+/* ---- choose ---- */
+.wp-choose-icon{border:1px solid var(--wp-bd);}
+.wp-choose-item:hover .wp-choose-icon{background:rgba(63,173,162,.18);}
+
+/* ---- mistakes: red identity on the dark chassis ---- */
+.wp-mistake{
+  background:linear-gradient(to bottom,rgba(239,91,77,.11),rgba(239,91,77,.04));
+  border-color:rgba(239,110,98,.24);
+}
+.wp-mistake:hover{border-color:rgba(239,110,98,.5);}
+.wp-mistake::before{background:#ef5b4d;opacity:.22;}
+.wp-mistake-x{background:#d64536;color:#fff;}
+
+/* ---- price pills ---- */
+.wp-factor em{background:rgba(63,173,162,.14);border-color:rgba(63,173,162,.28);}
+
+/* ---- applications list ---- */
+.wp-apps-list li{background:var(--wp-fill);border-color:var(--wp-bd);color:var(--wp-navy);}
+.wp-apps-list li:hover{background:var(--wp-teal);border-color:var(--wp-teal);color:var(--wp-surface);}
+.wp-apps-list li:hover svg{color:var(--wp-surface);}
+
+/* ---- reviews ---- */
+.wp-rev{background:var(--wp-fill);border-color:var(--wp-bd);box-shadow:var(--wp-sh);}
+.wp-rev:hover{border-color:var(--wp-bd-hi);}
+.wp-rev figcaption{border-top-color:var(--wp-line);}
+.wp-rev-av{background:rgba(63,173,162,.16);color:var(--wp-teal);}
+.wp-rev-who small{color:var(--wp-muted);}
+.wp-rev-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+@media (max-width:575px){.wp-rev-grid{grid-template-columns:1fr;}}
+
+/* ---- shared theme blocks (main.css) used by projects + reviews heading ---- */
+.wp-scope .category-section-heading p{color:var(--wp-muted);}
+.wp-scope .category-projects-all{color:var(--wp-teal);}
+.wp-projects .category-section-heading h2{color:var(--wp-navy);}
+.wp-projects .category-project-card{background:var(--wp-fill);border-color:var(--wp-bd);}
+.wp-projects .category-project-card:hover,
+.wp-projects .category-project-card:focus-visible{border-color:var(--wp-bd-hi);box-shadow:var(--wp-sh-hi);}
+.wp-projects .category-project-card__body strong{color:var(--wp-navy);}
+.wp-projects .category-project-card__body > span:not(.category-project-card__link){color:var(--wp-muted);}
+.wp-projects .category-project-card__link{color:var(--wp-teal);}
+
+/* ---- carousel band ---- */
+.wp-navsvc{background:var(--wp-deep);border-block:1px solid var(--wp-bd-soft);}
+.wp-navsvc .wp-navsvc-head-text h2{color:var(--wp-navy);}
+.wp-navsvc .wp-nav-btn{color:var(--wp-navy);}
+.wp-navsvc .wp-nav-btn:hover:not(:disabled){color:var(--wp-surface);}
+.wp-navsvc-card{background:#101c27;border:1px solid var(--wp-bd-soft);}
+.wp-navsvc-card:hover{border-color:var(--wp-bd-hi);}
+
+/* ---- hero: shade fades into the page instead of ending on a hard edge ---- */
+.wp-hero .rs-breadcrumb-bg::after{
+  background:linear-gradient(to bottom,rgba(6,12,18,.5),rgba(6,12,18,.72) 62%,#0a121a);
+}
+
+/* ============================================================
+   CONTENT-PAGE COMPONENTS (child service pages + hubs)
+   Token-driven, so they follow the dark re-tokening above.
+   ============================================================ */
+.wp-scope .wp-lead + .wp-lead{margin-top:-8px;}
+.wp-scope .wp-h3{margin-top:26px;}
+.wp-scope .wp-lead + .wp-choose,.wp-scope .wp-lead + .wp-benefits,.wp-scope .wp-h3 + .wp-choose{margin-top:6px;}
+.wp-scope .wp-choose,.wp-scope .wp-benefits,.wp-scope .wp-fig,.wp-scope .wp-split,.wp-scope .wp-tablewrap,.wp-scope .wp-callout,.wp-scope .wp-faq{margin-bottom:26px;}
+.wp-scope .wp-lead a,.wp-scope .wp-faq-body a{color:var(--wp-teal);}
+.wp-intro .wp-cta-row + .wp-fig{margin-top:28px;}
+.wp-final .wp-cta-row{margin-top:0;}
+.wp-final .wp-cta-note{color:var(--wp-ink);}
+
+/* images */
+.wp-fig{margin:0 0 26px;}
+.wp-fig img,.wp-split-media img{display:block;width:100%;height:auto;border-radius:var(--wp-r-md);border:1px solid var(--wp-bd);}
+.wp-fig img{max-height:460px;object-fit:cover;}
+
+/* image + text row */
+.wp-split{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:36px;align-items:center;}
+.wp-split--rev .wp-split-media{order:2;}
+.wp-split-media{margin:0;}
+.wp-split-text .wp-h3:first-child{margin-top:0;}
+.wp-split-text .wp-lead{max-width:none;}
+@media (max-width:767px){.wp-split{grid-template-columns:1fr;gap:18px;}.wp-split--rev .wp-split-media{order:0;}}
+
+/* comparison tables */
+.wp-tablewrap{overflow-x:auto;border:1px solid var(--wp-bd);border-radius:var(--wp-r-md);background:var(--wp-fill);}
+.wp-table{width:100%;border-collapse:collapse;font-size:14.5px;line-height:1.7;color:var(--wp-ink);min-width:520px;}
+.wp-table th,.wp-table td{padding:13px 16px;text-align:center;border-bottom:1px solid var(--wp-line);}
+.wp-table thead th{background:var(--wp-panel);color:var(--wp-navy);font-weight:800;}
+.wp-table tbody tr:last-child td{border-bottom:0;}
+.wp-table tbody td:first-child{font-weight:700;color:var(--wp-navy);}
+.wp-table i{color:var(--wp-teal);margin-inline-end:6px;}
+
+/* callout + ordered list */
+.wp-callout{padding:16px 18px;border-radius:10px;background:var(--wp-panel);border-inline-start:3px solid var(--wp-teal);font-size:var(--wp-fs-sub);line-height:1.85;color:var(--wp-ink);}
+.wp-callout strong{color:var(--wp-navy);}
+.wp-ol{margin:0 0 26px;padding-inline-start:22px;font-size:var(--wp-fs-sub);line-height:1.9;color:var(--wp-ink);}
+
+/* hub: badges under the stats, card blurb clamp */
+.wp-badges{justify-content:center;margin-top:22px;}
+.wp-badges li i{color:var(--wp-teal);font-size:16px;}
+.wp-badges li:hover i{color:inherit;}
+.wp-navsvc-card__data{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+@media (max-width:767px){.wp-table{font-size:14px;}}
+
+/* ============================================================
+   POLISH PASS — richer content pages (same data, better layout)
+   ============================================================ */
+.wp-sec .container > :last-child{margin-bottom:0;}
+.wp-sec{padding:64px 0;}
+.wp-scope .wp-sec .wp-h2,.wp-scope .wp-intro .wp-h2{position:relative;padding-bottom:16px;margin-bottom:22px;}
+.wp-scope .wp-sec .wp-h2::after{content:"";position:absolute;inset-inline-start:0;bottom:0;width:56px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--wp-teal),var(--wp-teal-bright));}
+.wp-scope .wp-reviews .wp-h2::after{display:none;}
+.wp-scope .wp-sec .wp-lead{font-size:16.5px;line-height:1.95;color:var(--wp-ink);max-width:80ch;}
+.wp-scope.wp-intro .wp-lead{font-size:clamp(17px,1.4vw,19px);}
+
+/* card grid (features / steps / list items) */
+.wp-scope .wp-sec .wp-choose{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}
+.wp-scope .wp-sec .wp-choose-item{padding:20px 22px;border:1px solid var(--wp-bd);border-radius:var(--wp-r-lg);background:var(--wp-fill);box-shadow:var(--wp-sh);transition:border-color .3s var(--wp-ko-ease),transform .3s var(--wp-ko-ease),box-shadow .3s var(--wp-ko-ease);}
+.wp-scope .wp-sec .wp-choose-item:hover{border-color:var(--wp-bd-hi);transform:translateY(-3px);box-shadow:var(--wp-sh-hi);}
+.wp-scope .wp-sec .wp-choose-icon{background:rgba(15,118,110,.10);}
+.wp-scope .wp-sec .wp-choose-icon i{color:var(--wp-teal);}
+.wp-scope .wp-sec .wp-choose-item b{font-size:17px;margin-bottom:8px;}
+.wp-scope .wp-sec .wp-choose-item span{font-size:15px;line-height:1.85;}
+@media (max-width:767px){.wp-scope .wp-sec .wp-choose{grid-template-columns:1fr;}}
+
+/* plain bullet lists -> two-column tick cards */
+.wp-sec .wp-benefits:not(.wp-apps-list){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.wp-sec .wp-benefits:not(.wp-apps-list) li{margin:0;padding:16px 18px;padding-inline-start:46px;border:1px solid var(--wp-bd);border-radius:var(--wp-r-md);background:var(--wp-fill);font-size:15.5px;line-height:1.8;}
+.wp-sec .wp-benefits:not(.wp-apps-list) li svg{inset-inline-start:16px;top:19px;width:17px;height:17px;}
+@media (max-width:767px){.wp-sec .wp-benefits:not(.wp-apps-list){grid-template-columns:1fr;}}
+
+/* image + text: text lives in a card, image fills the row height */
+.wp-split{align-items:stretch;gap:24px;}
+.wp-split-media img{height:100%;min-height:260px;object-fit:cover;border-radius:var(--wp-r-lg);}
+.wp-split-text{padding:28px 30px;border:1px solid var(--wp-bd);border-radius:var(--wp-r-lg);background:var(--wp-fill);box-shadow:var(--wp-sh);display:flex;flex-direction:column;justify-content:center;}
+.wp-split-text .wp-lead{font-size:15.5px;margin-bottom:14px;}
+.wp-split-text > :last-child{margin-bottom:0;}
+.wp-split-text .wp-h3{font-size:19px;}
+.wp-split-text .wp-h3 ~ .wp-h3{margin-top:22px;padding-top:22px;border-top:1px solid var(--wp-line);}
+.wp-split{margin-bottom:24px;}
+
+/* numbered steps */
+.wp-sec{counter-reset:wpstep;}
+.wp-h3.wp-step{display:flex;align-items:center;gap:12px;}
+.wp-h3.wp-step::before{counter-increment:wpstep;content:counter(wpstep);flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--wp-teal);color:var(--wp-surface);display:inline-flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;}
+.wp-sec > .container > .wp-h3.wp-step{margin-top:28px;}
+.wp-sec > .container > .wp-h3.wp-step + .wp-lead{padding-inline-start:46px;}
+
+/* images */
+.wp-fig img{border-radius:var(--wp-r-lg);box-shadow:var(--wp-sh-hi);}
+
+/* callout: feature panel */
+.wp-callout{padding:26px 30px;border-radius:var(--wp-r-lg);border:1px solid var(--wp-bd-hi);border-inline-start:4px solid var(--wp-teal);background:linear-gradient(to left,rgba(15,118,110,.10),rgba(15,118,110,.03));font-size:16.5px;line-height:1.95;}
+
+/* tables */
+.wp-tablewrap{border-radius:var(--wp-r-lg);box-shadow:var(--wp-sh);}
+.wp-table{font-size:15px;}
+.wp-table thead th{background:rgba(15,118,110,.14);border-bottom:2px solid var(--wp-teal);padding:15px 16px;}
+.wp-table tbody tr:nth-child(even) td{background:rgba(127,140,150,.06);}
+.wp-table tbody tr:hover td{background:rgba(15,118,110,.09);}
+
+/* FAQ */
+.wp-faq{border-top:0;display:grid;gap:12px;}
+.wp-faq details{border:1px solid var(--wp-bd);border-radius:var(--wp-r-md);background:var(--wp-fill);padding:0 20px;transition:border-color .3s var(--wp-ko-ease);}
+.wp-faq details[open]{border-color:var(--wp-bd-hi);}
+.wp-faq summary{padding:18px 0;}
+.wp-faq-body{padding:0 0 20px;font-size:15.5px;}
+
+/* final CTA banner */
+.wp-final{padding:56px 0 72px;}
+.wp-final .wp-cta-row{padding:34px 36px;border:1px solid var(--wp-bd-hi);border-radius:var(--wp-r-lg);background:linear-gradient(135deg,rgba(15,118,110,.16),rgba(15,118,110,.04));gap:18px 24px;}
+.wp-final .wp-cta-note{font-size:17px;line-height:1.9;}
+.wp-final .wp-cta-note b{font-size:22px;margin-bottom:6px;}
+.wp-final .wp-cta{min-height:50px;}
+@media (max-width:767px){.wp-final .wp-cta-row{padding:24px 20px;}.wp-final .wp-cta{width:100%;justify-content:center;}}
