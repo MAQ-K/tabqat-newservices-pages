@@ -31,3 +31,7 @@
 .ins-dock a:first-child{border-top:0;}
 .ins-dock__label{max-width:0;opacity:0;overflow:hidden;transition:max-width .28s cubic-bezier(.16,1,.3,1),opacity .2s ease,margin-inline-start .28s cubic-bezier(.16,1,.3,1);}
 .ins-dock:hover .ins-dock__label,.ins-dock:focus-within .ins-dock__label{opacity:1;margin-inline-start:12px;}
+
+/* scroll slide (assets/js/scroll-slide.js) */
+.ss{opacity:0;transform:translate3d(0,56px,0);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);will-change:transform,opacity;}
+.ss-in{opacity:1;transform:none;will-change:auto;}
