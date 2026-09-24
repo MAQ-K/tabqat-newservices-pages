@@ -1,0 +1,33 @@
+/* Floating service dock (عزل pages): bigger, glowing, floating. Loads after insulation-hub.css / dark-theme.css. */
+.ins-dock{
+  position:fixed;top:50%;left:0;transform:translateY(-50%);z-index:900;overflow:hidden;
+  display:block !important;
+  background:linear-gradient(160deg,#10202c,#0a121a);
+  border:1px solid rgba(63,173,162,.55);border-left:0;
+  border-radius:0 18px 18px 0;
+  box-shadow:0 0 10px rgba(63,173,162,.22),0 8px 24px rgba(0,0,0,.45);
+  animation:insDockFloat 5s ease-in-out infinite,insDockGlow 3s ease-in-out infinite;
+}
+.ins-dock a{padding:20px 22px;font-size:16px;color:#e8eef2;border-top-color:rgba(255,255,255,.09);}
+.ins-dock a i{font-size:28px;color:#4fc4b7;filter:drop-shadow(0 0 3px rgba(79,196,183,.4));}
+.ins-dock a:hover,.ins-dock a:focus-visible,.ins-dock a.is-active{background:rgba(63,173,162,.18);color:#7fe0d5;}
+.ins-dock a.is-active{box-shadow:inset 4px 0 0 #4fc4b7,0 0 8px rgba(63,173,162,.2) inset;}
+.ins-dock a:hover i{color:#7fe0d5;}
+.ins-dock:hover .ins-dock__label,.ins-dock:focus-within .ins-dock__label{max-width:150px;}
+.ins-dock__label{font-size:16px;}
+@keyframes insDockFloat{0%,100%{transform:translateY(-50%)}50%{transform:translateY(calc(-50% - 10px))}}
+@keyframes insDockGlow{
+  0%,100%{box-shadow:0 0 8px rgba(63,173,162,.15),0 8px 24px rgba(0,0,0,.45)}
+  50%{box-shadow:0 0 16px rgba(63,173,162,.32),0 8px 24px rgba(0,0,0,.45)}
+}
+@media (max-width:767px){
+  .ins-dock{border-radius:0 12px 12px 0;}
+  .ins-dock a{padding:13px 12px;}
+  .ins-dock a i{font-size:22px;}
+  .ins-dock:hover .ins-dock__label,.ins-dock:focus-within .ins-dock__label{max-width:0;opacity:0;margin:0;}
+}
+@media (prefers-reduced-motion:reduce){.ins-dock{animation:none;transform:translateY(-50%);}}
+.ins-dock a{display:flex;align-items:center;text-decoration:none;white-space:nowrap;font-weight:700;border-top:1px solid rgba(255,255,255,.09);transition:background-color .2s ease,color .2s ease;}
+.ins-dock a:first-child{border-top:0;}
+.ins-dock__label{max-width:0;opacity:0;overflow:hidden;transition:max-width .28s cubic-bezier(.16,1,.3,1),opacity .2s ease,margin-inline-start .28s cubic-bezier(.16,1,.3,1);}
+.ins-dock:hover .ins-dock__label,.ins-dock:focus-within .ins-dock__label{opacity:1;margin-inline-start:12px;}
