@@ -1,0 +1,76 @@
+/* Layout helpers for the rebuilt service pages (<main id="sp-main">).
+   Sits on top of wp-scope.css, which is dark in every theme. */
+
+#sp-main .wp-sec .wp-h2{margin-bottom:22px;}
+#sp-main .wp-sec .wp-h2 + .wp-lead{margin-top:-8px;}
+#sp-main .wp-lead a,#sp-main .sp-box a,#sp-main .wp-benefits a{color:var(--wp-teal);text-decoration:underline;text-underline-offset:3px;}
+#sp-main .wp-lead b{color:var(--wp-navy);}
+
+/* hero */
+.wp-hero .wp-cta-row{justify-content:center;margin:0 0 18px;}
+
+/* trust bar: four items */
+@media (min-width:768px){.wp-stats.sp-stats{grid-template-columns:repeat(4,minmax(0,1fr));max-width:1100px;}}
+@media (min-width:576px) and (max-width:767px){.wp-stats.sp-stats{grid-template-columns:repeat(2,minmax(0,1fr));}}
+.sp-stats .sp-stat-text{font-size:22px;line-height:1.6;}
+
+/* calmer surfaces: flat table, barely-there gradient on boxes */
+#sp-main .wp-scope{--wp-fill:linear-gradient(to bottom,rgba(255,255,255,.045),rgba(255,255,255,.03));}
+#sp-main .wp-tablewrap,html[data-theme="dark"] #sp-main .wp-tablewrap{background:rgba(255,255,255,.03);}
+#sp-main .wp-final .wp-cta-row{background:rgba(63,173,162,.07);}
+html[data-theme="dark"] #sp-main .wp-split-text,html[data-theme="dark"] #sp-main .wp-choose-item,html[data-theme="dark"] #sp-main .wp-benefits li,html[data-theme="dark"] #sp-main .wp-faq details{background:var(--wp-fill);}
+
+/* cards: icon + title + line. Three across; <a> cards jump to a section */
+.sp-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:0 0 26px;}
+.sp-cards--4{grid-template-columns:repeat(2,minmax(0,1fr));}
+.sp-card{display:flex;flex-direction:column;gap:10px;padding:22px 22px 24px;border:1px solid var(--wp-bd);border-radius:var(--wp-r-lg);background:var(--wp-fill);color:var(--wp-ink);text-decoration:none;transition:border-color .3s,transform .3s;}
+.sp-card i{font-size:24px;color:var(--wp-teal);line-height:1;}
+.sp-card b{font-size:17px;font-weight:800;color:var(--wp-navy);}
+.sp-card span{font-size:15px;line-height:1.85;color:var(--wp-ink);}
+a.sp-card:hover{border-color:var(--wp-bd-hi);transform:translateY(-3px);color:var(--wp-ink);}
+@media (max-width:991px){.sp-cards{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:575px){.sp-cards,.sp-cards--4{grid-template-columns:1fr;}}
+
+/* boxes with title + text + button: one centred group with even gaps */
+#sp-main .wp-split{margin-bottom:32px;}
+.wp-split.sp-solo{grid-template-columns:1fr;}
+#sp-main .wp-split-text{justify-content:center;gap:16px;}
+#sp-main .wp-split-text .wp-h3,#sp-main .wp-split-text .wp-lead{margin:0;}
+#sp-main .wp-split-text > .wp-cta{align-self:flex-start;margin-top:4px;}
+#sp-main .wp-split-text .wp-benefits{display:flex;flex-direction:column;gap:10px;}
+.sp-fig{margin:0;}
+.sp-fig figcaption{margin-top:8px;font-size:13.5px;color:var(--wp-muted);text-align:center;}
+
+/* small boxes with a heading (methods) */
+.sp-box{padding:22px;border:1px solid var(--wp-bd);border-radius:var(--wp-r-lg);background:var(--wp-fill);}
+.wp-scope .sp-box .wp-h3{margin:0 0 10px;font-size:18px;}
+.wp-scope .sp-box p{margin:0;font-size:15px;line-height:1.85;color:var(--wp-ink);}
+
+/* prompt row: question on one side, button on the other */
+.sp-ask{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px 20px;padding:18px 22px;border:1px solid var(--wp-bd);border-radius:var(--wp-r-md);background:var(--wp-fill);}
+.wp-scope .sp-ask .wp-lead{margin:0;font-weight:700;}
+@media (max-width:575px){#sp-main .wp-split-text > .wp-cta,.sp-ask .wp-cta{align-self:stretch;justify-content:center;width:100%;}}
+
+/* steps: numbered rows with a gap between them */
+.sp-steps{list-style:none;margin:0 0 26px;padding:0;counter-reset:sp;display:flex;flex-direction:column;gap:14px;}
+.sp-steps li{counter-increment:sp;display:flex;align-items:flex-start;gap:16px;padding:16px 20px;border:1px solid var(--wp-bd);border-radius:var(--wp-r-md);background:var(--wp-fill);font-size:15.5px;line-height:1.8;color:var(--wp-ink);}
+.sp-steps li::before{content:counter(sp);flex:0 0 auto;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(63,173,162,.14);color:var(--wp-teal);font-weight:800;}
+.sp-steps b{display:block;color:var(--wp-navy);font-weight:800;}
+
+/* before / after project */
+.sp-case{margin-bottom:18px;padding:22px 24px;border:1px solid var(--wp-bd);border-radius:var(--wp-r-lg);background:var(--wp-fill);}
+.wp-scope .sp-case .wp-h3{margin:0 0 14px;font-size:18px;}
+.sp-case .wp-lead:last-of-type{margin-bottom:0;}
+.sp-case .wp-lead{margin:0 0 10px;max-width:none;}
+.sp-ba{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:16px 0 0;}
+.sp-ba img{display:block;width:100%;height:auto;border-radius:var(--wp-r-md);border:1px solid var(--wp-bd);}
+
+/* tables: clean rows, start-aligned text */
+.wp-tablewrap.sp-tablewrap{border-radius:var(--wp-r-lg);}
+.wp-table.sp-table{min-width:680px;border-collapse:separate;border-spacing:0;}
+.wp-table.sp-table th,.wp-table.sp-table td{text-align:start;vertical-align:middle;padding:18px 22px;}
+.wp-table.sp-table thead th,html[data-theme="dark"] .wp-table.sp-table thead th{background:transparent;border-bottom:1px solid var(--wp-line);padding:14px 22px;font-size:13.5px;font-weight:700;color:var(--wp-muted);}
+.wp-table.sp-table thead th:not(:first-child),html[data-theme="dark"] .wp-table.sp-table thead th:not(:first-child){color:var(--wp-teal);font-size:15px;}
+.wp-table.sp-table tbody tr:nth-child(even) td{background:transparent;}
+.wp-table.sp-table tbody tr:hover td{background:rgba(255,255,255,.03);}
+.wp-table.sp-table tbody td:first-child{white-space:nowrap;}

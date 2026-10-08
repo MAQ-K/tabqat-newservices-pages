@@ -1,0 +1,115 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://tabqat.com.sa/concrete-honeycomb-repair.html#webpage",
+      "url": "https://tabqat.com.sa/concrete-honeycomb-repair.html",
+      "name": "معالجة التعشيش في الخرسانة بالرياض | شركة الطبقات المتعددة",
+      "description": "شركة معالجة التعشيش في الخرسانة بالرياض: ترميم تعشيش الأعمدة والأسقف والكمرات، ومعالجة حديد التسليح المكشوف وتسوس الخرسانة. أرسل صورة التعشيش واحصل على تقييم.",
+      "inLanguage": "ar",
+      "dateModified": "[تاريخ النشر YYYY-MM-DD]",
+      "breadcrumb": {
+        "@id": "https://tabqat.com.sa/concrete-honeycomb-repair.html#breadcrumb"
+      },
+      "isPartOf": {
+        "@id": "https://tabqat.com.sa/#website"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://tabqat.com.sa/concrete-honeycomb-repair.html#service",
+      "name": "معالجة التعشيش في الخرسانة",
+      "serviceType": "معالجة التعشيش في الخرسانة",
+      "description": "معالجة التعشيش في الخرسانة بالرياض من شركة الطبقات المتعددة تشمل ترميم تعشيش الأعمدة والأسقف والكمرات والجدران، ومعالجة حديد التسليح المكشوف وتسوس الخرسانة، باستخدام مونة إصلاح أو جراوت مناسب لعمق التعشيش، بعد معاينة الحالة وتحديد درجتها.",
+      "provider": {
+        "@id": "https://tabqat.com.sa/#organization"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "الرياض"
+      },
+      "url": "https://tabqat.com.sa/concrete-honeycomb-repair.html"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tabqat.com.sa/concrete-honeycomb-repair.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "ما الفرق بين التعشيش والشروخ في الخرسانة؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "التعشيش فراغات تحدث أثناء الصب بسبب ضعف الدمك أو تسرب المونة، أما الشروخ فتشققات تظهر في الخرسانة المتصلبة بسبب الانكماش أو الأحمال أو الحركة. لذلك يعالج التعشيش بالترميم، وتعالج الشروخ غالبا بالحقن."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ما الفرق بين التعشيش وتسوس الخرسانة؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "التعشيش عيب تنفيذ يظهر بعد الصب مباشرة، أما تسوس الخرسانة فتلف يحدث مع الوقت بسبب الرطوبة والأملاح وصدأ الحديد، فتتقشر الخرسانة وتتفتت. وكلاهما يعالج بإزالة الأجزاء الضعيفة ومعالجة الحديد ثم الترميم."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يمكن معالجة التعشيش بعد سنوات من الصب؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم. التعشيش يعالج في أي وقت، لكن كلما تأخرت المعالجة زاد احتمال صدأ الحديد المكشوف، فتصبح المعالجة أوسع. لذلك يفضل معالجته فور اكتشافه."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل تحتاج معالجة التعشيش إلى تكسير كبير؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "لا. نزيل الأجزاء الضعيفة من المنطقة المتعششة فقط حتى نصل لخرسانة سليمة، دون المساس بباقي العنصر."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "كم تستغرق معالجة التعشيش وما الذي يحدد تكلفتها؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "تحددها مساحة التعشيش وعمقه، وعدد العناصر المتأثرة، وحالة حديد التسليح، وسهولة الوصول. وتنتهي أغلب الحالات الموضعية خلال أيام قليلة، ونحدد السعر والمدة بعد المعاينة."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يوجد ضمان على معالجة التعشيش؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم، نقدم ضمانا مكتوبا حتى [عدد] سنوات حسب نوع الخدمة، ويوضح نطاقه وشروطه في عرض السعر."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://tabqat.com.sa/concrete-honeycomb-repair.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://tabqat.com.sa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "خدماتنا",
+          "item": "https://tabqat.com.sa/our-services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "معالجة التعشيش في الخرسانة",
+          "item": "https://tabqat.com.sa/concrete-honeycomb-repair.html"
+        }
+      ]
+    }
+  ]
+}
+</script>

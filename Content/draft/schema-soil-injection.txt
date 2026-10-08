@@ -1,0 +1,113 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://tabqat.com.sa/soil-injection.html#webpage",
+      "url": "https://tabqat.com.sa/soil-injection.html",
+      "name": "حقن التربة تحت الأساسات بالرياض | شركة الطبقات المتعددة",
+      "description": "شركة حقن التربة بالرياض: إيقاف هبوط الأساسات بحقن مراقب بالضغط وقياس المناسيب قبل التنفيذ وبعده. أرسل صور المشكلة ومساحة المبنى واحصل على تقييم.",
+      "inLanguage": "ar",
+      "dateModified": "[تاريخ النشر YYYY-MM-DD]",
+      "breadcrumb": {
+        "@id": "https://tabqat.com.sa/soil-injection.html#breadcrumb"
+      },
+      "isPartOf": {
+        "@id": "https://tabqat.com.sa/#website"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://tabqat.com.sa/soil-injection.html#service",
+      "name": "حقن التربة تحت الأساسات",
+      "serviceType": "حقن التربة تحت الأساسات",
+      "description": "حقن التربة تحت الأساسات يوقف هبوط المبنى من أسفله: نحقن التربة الضعيفة والفراغات أسفل القواعد بمونة إسمنتية أو مواد حقن بضغط مراقب حتى تستعيد ثباتها. وتنفذه شركة الطبقات المتعددة في الرياض بعد تحديد سبب الهبوط، مع قياس المناسيب قبل التنفيذ وبعده.",
+      "provider": {
+        "@id": "https://tabqat.com.sa/#organization"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "الرياض"
+      },
+      "url": "https://tabqat.com.sa/soil-injection.html"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tabqat.com.sa/soil-injection.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "هل الحقن مناسب لجميع حالات الهبوط؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "لا. الحقن يعالج الهبوط الناتج عن ضعف التربة أو الفراغات أسفل الأساسات. أما إذا كان السبب ضعفا في العناصر الإنشائية نفسها، أو كان الهبوط كبيرا ومستمرا، فيحتاج المبنى إلى تدعيم الأساسات مع الحقن أو بدلا منه. ويحدد ذلك التقييم الهندسي في المعاينة."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يمكن حقن التربة في مبنى مسكون دون تكسير الأرضيات؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم في أغلب الحالات. نحقن عبر فتحات موضعية صغيرة حول القواعد أو في الأرضية، ويستمر استخدام المبنى أثناء التنفيذ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يعيد الحقن المبنى إلى مستواه السابق؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ليس بالضرورة. الهدف الأساسي من الحقن هو إيقاف استمرار الهبوط وتثبيت الأساسات. أما رفع المبنى إلى منسوبه السابق فيدرس لكل حالة على حدة، ولا يعد نتيجة تلقائية للحقن."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ما الفرق بين حقن التربة وحقن الخرسانة؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "الأول يعالج التربة والفراغات أسفل المنشأ لإيقاف الهبوط، أما حقن الخرسانة فيعالج الشروخ والفراغات داخل العناصر الخرسانية نفسها مثل الأعمدة والأسقف. وفي كثير من حالات الهبوط يحتاج المبنى إلى الاثنين: حقن التربة لإيقاف السبب، وحقن الشروخ لإصلاح أثره."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://tabqat.com.sa/soil-injection.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://tabqat.com.sa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "خدماتنا",
+          "item": "https://tabqat.com.sa/our-services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "تدعيم المباني",
+          "item": "[رابط صفحة تدعيم المباني]"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "حقن التربة",
+          "item": "https://tabqat.com.sa/soil-injection.html"
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "خطوات حقن التربة في أحد مشاريع شركة الطبقات المتعددة",
+      "description": "[وصف الفيديو]",
+      "thumbnailUrl": "[رابط الصورة المصغرة]",
+      "uploadDate": "[YYYY-MM-DD]",
+      "embedUrl": "https://www.youtube.com/embed/[VIDEO_ID]"
+    }
+  ]
+}
+</script>

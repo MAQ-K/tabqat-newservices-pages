@@ -1,0 +1,123 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://tabqat.com.sa/concrete-repair-injection.html#webpage",
+      "url": "https://tabqat.com.sa/concrete-repair-injection.html",
+      "name": "حقن الخرسانة وعلاج الشروخ بالرياض | شركة الطبقات المتعددة",
+      "description": "شركة حقن الخرسانة وإصلاحها بالرياض: حقن الشروخ الخرسانية بالإيبوكسي، وعلاج الشروخ الخطيرة، وإيقاف تسربات المياه. أرسل صور المشكلة واحصل على تقييم.",
+      "inLanguage": "ar",
+      "dateModified": "[تاريخ النشر YYYY-MM-DD]",
+      "breadcrumb": {
+        "@id": "https://tabqat.com.sa/concrete-repair-injection.html#breadcrumb"
+      },
+      "isPartOf": {
+        "@id": "https://tabqat.com.sa/#website"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://tabqat.com.sa/concrete-repair-injection.html#service",
+      "name": "حقن الخرسانة وإصلاحها",
+      "serviceType": "حقن الخرسانة وإصلاح الشروخ",
+      "description": "خدمات حقن الخرسانة في الرياض من شركة الطبقات المتعددة تشمل حقن الشروخ الخرسانية بالإيبوكسي، وإيقاف تسربات المياه بالبولي يوريثان، وترميم التعشيش والتقشر في الأعمدة والأسقف والجدران والخزانات، بعد معاينة الحالة وتحديد سبب المشكلة ونظام الإصلاح المناسب.",
+      "provider": {
+        "@id": "https://tabqat.com.sa/#organization"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "الرياض"
+      },
+      "url": "https://tabqat.com.sa/concrete-repair-injection.html"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tabqat.com.sa/concrete-repair-injection.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "ما هو حقن الخرسانة؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "حقن الخرسانة طريقة إصلاح تضخ فيها مواد مثل الإيبوكسي أو البولي يوريثان تحت ضغط داخل الشروخ والفراغات الخرسانية، لملئها وربط أجزائها أو إيقاف تسرب المياه منها، دون تكسير العنصر الخرساني أو إعادة صبه."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل كل شرخ خرساني يمكن علاجه بالحقن؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "لا. الحقن يناسب الشروخ المستقرة والشروخ التي تتسرب منها المياه، أما الشروخ الناتجة عن هبوط أو أحمال زائدة فتحتاج تقييما إنشائيا وقد تتطلب تدعيما قبل الحقن."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يحتاج إصلاح الخرسانة إلى تكسير أو إخلاء المبنى؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "لا في أغلب الحالات. حقن الشروخ يتم عبر نقاط حقن على مسار الشرخ، ومعالجة التعشيش تقتصر على إزالة الأجزاء الضعيفة من المنطقة المتضررة، لذلك تنفذ معظم الأعمال أثناء استخدام المبنى، ويحدد فريق المعاينة أي احتياطات لازمة."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ما الفرق بين إصلاح الخرسانة والتدعيم الإنشائي؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "إصلاح الخرسانة يعيد العنصر المتضرر إلى حالته السليمة، أما التدعيم الإنشائي فيرفع قدرة العنصر على تحمل الأحمال عندما لا تكفي قدرته الأصلية."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ما الذي يحدد تكلفة حقن الشروخ ومدة التنفيذ؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "تحددها مساحة التلف، وطول الشروخ وعمقها، ووجود تسرب مياه، وسهولة الوصول إلى العنصر. ونقدم عرض السعر والمدة بعد المعاينة."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يمكن أن يعود الشرخ بعد المعالجة، وهل يوجد ضمان؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "قد يعود إذا عولج دون معالجة سببه، مثل الحركة المستمرة أو مصدر المياه، لذلك نبدأ بتحديد السبب ونختار مادة الحقن المناسبة. ونقدم ضمانا مكتوبا حتى [عدد] سنوات حسب نوع الخدمة، ويوضح نطاقه وشروطه في عرض السعر."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://tabqat.com.sa/concrete-repair-injection.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://tabqat.com.sa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "خدماتنا",
+          "item": "https://tabqat.com.sa/our-services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "حقن الخرسانة وإصلاحها",
+          "item": "https://tabqat.com.sa/concrete-repair-injection.html"
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "خطوات حقن الخرسانة في أحد مشاريع شركة الطبقات المتعددة",
+      "description": "[وصف الفيديو]",
+      "thumbnailUrl": "[رابط الصورة المصغرة]",
+      "uploadDate": "[YYYY-MM-DD]",
+      "embedUrl": "https://www.youtube.com/embed/[VIDEO_ID]"
+    }
+  ]
+}
+</script>

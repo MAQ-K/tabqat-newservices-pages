@@ -1,0 +1,79 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "GeneralContractor",
+      "@id": "https://tabqat.com.sa/#organization",
+      "name": "شركة الطبقات المتعددة للمقاولات",
+      "alternateName": [
+        "شركة الطبقات المتعددة",
+        "Multi Tabqat Contracting Company"
+      ],
+      "url": "https://tabqat.com.sa/",
+      "telephone": "+966581032502",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "عمارة المتنبي رقم 1، الدور الأول، مكتب 12، شارع عرفات، حي الملز",
+        "addressLocality": "الرياض",
+        "postalCode": "11461",
+        "addressCountry": "SA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 24.673195,
+        "longitude": 46.7305639
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday",
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ],
+          "opens": "08:00",
+          "closes": "17:00"
+        }
+      ],
+      "founder": {
+        "@id": "https://tabqat.com.sa/#founder"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "الرياض"
+      },
+      "sameAs": [
+        "https://www.instagram.com/tabqat.sa",
+        "https://www.tiktok.com/@tabqatsa",
+        "https://www.facebook.com/profile.php?id=61569450652556",
+        "https://www.youtube.com/@TABQAT_sa",
+        "https://x.com/tabqatsa"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://tabqat.com.sa/#founder",
+      "name": "محمود أبو شنب",
+      "honorificPrefix": "م.",
+      "jobTitle": "المدير العام",
+      "worksFor": {
+        "@id": "https://tabqat.com.sa/#organization"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://tabqat.com.sa/#website",
+      "url": "https://tabqat.com.sa/",
+      "name": "شركة الطبقات المتعددة",
+      "inLanguage": "ar",
+      "publisher": {
+        "@id": "https://tabqat.com.sa/#organization"
+      }
+    }
+  ]
+}
+</script>
