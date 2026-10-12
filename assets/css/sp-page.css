@@ -64,6 +64,7 @@ a.sp-card:hover{border-color:var(--wp-bd-hi);transform:translateY(-3px);color:va
 .sp-case .wp-lead{margin:0 0 10px;max-width:none;}
 .sp-ba{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:16px 0 0;}
 .sp-ba img{display:block;width:100%;height:auto;border-radius:var(--wp-r-md);border:1px solid var(--wp-bd);}
+.sp-ba--fit img{aspect-ratio:4/3;object-fit:cover;}
 
 /* tables: clean rows, start-aligned text */
 .wp-tablewrap.sp-tablewrap{border-radius:var(--wp-r-lg);}
