@@ -59,6 +59,10 @@ a.sp-card:hover{border-color:var(--wp-bd-hi);transform:translateY(-3px);color:va
 .sp-steps li{counter-increment:sp;display:flex;align-items:flex-start;gap:16px;padding:16px 20px;border:1px solid var(--wp-bd);border-radius:var(--wp-r-md);background:var(--wp-fill);font-size:15.5px;line-height:1.8;color:var(--wp-ink);}
 .sp-steps li::before{content:counter(sp);flex:0 0 auto;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(63,173,162,.14);color:var(--wp-teal);font-weight:800;}
 .sp-steps b{display:block;color:var(--wp-navy);font-weight:800;}
+/* steps with a photo beside them (photo on the left in RTL) */
+.sp-steps-row{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px;margin:0 0 26px;}
+.sp-steps-row .sp-steps{margin:0;}
+@media (max-width:767px){.sp-steps-row{grid-template-columns:1fr;}}
 
 /* before / after project */
 .sp-case{margin-bottom:18px;padding:22px 24px;border:1px solid var(--wp-bd);border-radius:var(--wp-r-lg);background:var(--wp-fill);}
