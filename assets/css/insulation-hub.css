@@ -253,6 +253,8 @@
 .ins-card__title a:hover { color: var(--teal-deep); }
 .ins-card__body > p { margin: 0 0 14px; font-size: 14.5px; line-height: 1.9; color: var(--body); }
 .ins-card .ins-link { margin-top: auto; }
+.ins-card { position: relative; }
+.ins-card .ins-link::after { content: ""; position: absolute; inset: 0; }
 
 /* Bullet list */
 .ins-list { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 8px; }
@@ -565,7 +567,7 @@
     top: 23px;
     inset-inline: 11%;
     height: 1px;
-    background: linear-gradient(to left, var(--teal-deep), var(--teal));
+    background: var(--teal);
     transform: scaleX(var(--p, 0));
     transform-origin: right center;
     transition: transform .85s cubic-bezier(.16, 1, .3, 1);

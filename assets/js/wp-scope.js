@@ -124,7 +124,10 @@
   }, { passive: true });
   slides.forEach(function (slide, i) {
     var link = slide.querySelector('.wp-navsvc-more');
-    if (link) link.addEventListener('focus', function () { goTo(i); });
+    if (!link) return;
+    link.addEventListener('focus', function () { goTo(i); });
+    // whole card opens the service page (drags are already swallowed above)
+    slide.addEventListener('click', function (e) { if (!e.target.closest('a,button')) link.click(); });
   });
   var rt;
   window.addEventListener('resize', function () {

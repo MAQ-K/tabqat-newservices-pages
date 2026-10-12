@@ -351,8 +351,8 @@
   --wp-sh:0 4px 20px rgba(13,27,42,.04);
   --wp-sh-hi:0 8px 30px rgba(13,27,42,.07);
 
-  --wp-fill:linear-gradient(to bottom,rgba(255,255,255,.95),rgba(247,250,251,.75) 55%,rgba(247,250,251,.6));
-  --wp-wash:linear-gradient(to bottom,rgba(255,255,255,.55),rgba(255,255,255,.22) 45%,transparent);
+  --wp-fill:rgba(250,252,253,.8);
+  --wp-wash:rgba(255,255,255,.3);
   --wp-ko-ease:cubic-bezier(.16,1,.3,1);
 }
 
@@ -395,7 +395,7 @@
 /* ---- mistakes keep their red identity, but on the kokonut chassis ---- */
 .wp-mistake{
   border-color:rgba(180,35,24,.16);
-  background:linear-gradient(to bottom,rgba(253,244,243,.95),rgba(253,244,243,.6));
+  background:rgba(253,244,243,.8);
 }
 .wp-mistake:hover{border-color:rgba(180,35,24,.38);}
 
@@ -415,7 +415,7 @@
   transition:background .3s var(--wp-ko-ease),box-shadow .3s var(--wp-ko-ease),backdrop-filter .3s var(--wp-ko-ease);
 }
 .wp-card:hover .wp-card-panel,.wp-card:focus-visible .wp-card-panel{
-  background:linear-gradient(to bottom,#fff,rgba(255,255,255,.94));
+  background:#fff;
   backdrop-filter:blur(6px);
 }
 
@@ -440,7 +440,7 @@
 .wp-trust .wp-trust-in{
   border-radius:var(--wp-r-md);
   border:1px solid rgba(255,255,255,.10);
-  background:linear-gradient(to bottom,rgba(255,255,255,.05),rgba(255,255,255,.02));
+  background:rgba(255,255,255,.035);
 }
 
 /* ---- price pills: numeral gets its own inner badge ---- */
@@ -646,8 +646,8 @@ body{background:#0a121a;}
   --wp-bd-hi:rgba(63,173,162,.55);
   --wp-sh:0 4px 20px rgba(0,0,0,.30);
   --wp-sh-hi:0 10px 34px rgba(0,0,0,.45);
-  --wp-fill:linear-gradient(to bottom,rgba(255,255,255,.065),rgba(255,255,255,.028) 60%,rgba(255,255,255,.016));
-  --wp-wash:linear-gradient(to bottom,rgba(255,255,255,.05),transparent 55%);
+  --wp-fill:rgba(255,255,255,.04);
+  --wp-wash:rgba(255,255,255,.025);
 }
 
 .wp-scope{color:var(--wp-ink);}
@@ -678,7 +678,7 @@ body{background:#0a121a;}
 
 /* ---- why: escalation ramp keeps its calm -> alarming colours ---- */
 .wp-ramp-step:nth-child(4){
-  background:linear-gradient(to bottom,rgba(239,91,77,.18),rgba(239,91,77,.07));
+  background:rgba(239,91,77,.12);
   border-color:rgba(239,110,98,.34);
 }
 .wp-ramp-step:nth-child(4) i{background:#ef5b4d;}
@@ -690,7 +690,7 @@ body{background:#0a121a;}
 
 /* ---- mistakes: red identity on the dark chassis ---- */
 .wp-mistake{
-  background:linear-gradient(to bottom,rgba(239,91,77,.11),rgba(239,91,77,.04));
+  background:rgba(239,91,77,.07);
   border-color:rgba(239,110,98,.24);
 }
 .wp-mistake:hover{border-color:rgba(239,110,98,.5);}
@@ -730,7 +730,7 @@ body{background:#0a121a;}
 .wp-navsvc .wp-navsvc-head-text h2{color:var(--wp-navy);}
 .wp-navsvc .wp-nav-btn{color:var(--wp-navy);}
 .wp-navsvc .wp-nav-btn:hover:not(:disabled){color:var(--wp-surface);}
-.wp-navsvc-card{background:#101c27;border:1px solid var(--wp-bd-soft);}
+.wp-navsvc-card{cursor:pointer;background:#101c27;border:1px solid var(--wp-bd-soft);}
 .wp-navsvc-card:hover{border-color:var(--wp-bd-hi);}
 
 /* ---- hero: shade fades into the page instead of ending on a hard edge ---- */
@@ -791,7 +791,7 @@ body{background:#0a121a;}
 .wp-sec .container > :last-child{margin-bottom:0;}
 .wp-sec{padding:64px 0;}
 .wp-scope .wp-sec .wp-h2,.wp-scope .wp-intro .wp-h2{position:relative;padding-bottom:16px;margin-bottom:22px;}
-.wp-scope .wp-sec .wp-h2::after{content:"";position:absolute;inset-inline-start:0;bottom:0;width:56px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--wp-teal),var(--wp-teal-bright));}
+.wp-scope .wp-sec .wp-h2::after{content:"";position:absolute;inset-inline-start:0;bottom:0;width:56px;height:4px;border-radius:2px;background:var(--wp-teal);}
 .wp-scope .wp-reviews .wp-h2::after{display:none;}
 .wp-scope .wp-sec .wp-lead{font-size:16.5px;line-height:1.95;color:var(--wp-ink);max-width:80ch;}
 .wp-scope.wp-intro .wp-lead{font-size:clamp(17px,1.4vw,19px);}
@@ -833,7 +833,7 @@ body{background:#0a121a;}
 .wp-fig img{border-radius:var(--wp-r-lg);box-shadow:var(--wp-sh-hi);}
 
 /* callout: feature panel */
-.wp-callout{padding:26px 30px;border-radius:var(--wp-r-lg);border:1px solid var(--wp-bd-hi);border-inline-start:4px solid var(--wp-teal);background:linear-gradient(to left,rgba(15,118,110,.10),rgba(15,118,110,.03));font-size:16.5px;line-height:1.95;}
+.wp-callout{padding:26px 30px;border-radius:var(--wp-r-lg);border:1px solid var(--wp-bd-hi);border-inline-start:4px solid var(--wp-teal);background:rgba(15,118,110,.06);font-size:16.5px;line-height:1.95;}
 
 /* tables */
 .wp-tablewrap{border-radius:var(--wp-r-lg);box-shadow:var(--wp-sh);}
@@ -851,7 +851,7 @@ body{background:#0a121a;}
 
 /* final CTA banner */
 .wp-final{padding:56px 0 72px;}
-.wp-final .wp-cta-row{padding:34px 36px;border:1px solid var(--wp-bd-hi);border-radius:var(--wp-r-lg);background:linear-gradient(135deg,rgba(15,118,110,.16),rgba(15,118,110,.04));gap:18px 24px;}
+.wp-final .wp-cta-row{padding:34px 36px;border:1px solid var(--wp-bd-hi);border-radius:var(--wp-r-lg);background:rgba(15,118,110,.09);gap:18px 24px;}
 .wp-final .wp-cta-note{font-size:17px;line-height:1.9;}
 .wp-final .wp-cta-note b{font-size:22px;margin-bottom:6px;}
 .wp-final .wp-cta{min-height:50px;}

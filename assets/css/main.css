@@ -25928,7 +25928,7 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li {
    ─────────────────────────────────────────────────── */
 .cta-whatsapp {
     display: block;
-    background: linear-gradient(135deg, #3fada2, #2f7d75);
+    background: #3fada2;
     color: #fff !important;
     text-align: center;
     padding: 15px;
@@ -26236,7 +26236,7 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li {
     display: inline-flex;
     align-items: center;
     gap: 9px;
-    background: linear-gradient(135deg, #3fada2, #2f7d75);
+    background: #3fada2;
     color: #fff;
     border: none;
     font-weight: 700;
@@ -26260,7 +26260,7 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li {
 /* Modal content */
 .quote-modal-content { border-radius: 16px; border: none; overflow: hidden; }
 .quote-modal-content .modal-header {
-    background: linear-gradient(135deg, #3fada2, #2f7d75);
+    background: #3fada2;
     border: none;
     padding: 20px 24px;
 }
@@ -26394,7 +26394,7 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li {
 .quote-form-submit {
     display: block;
     width: 100%;
-    background: linear-gradient(135deg, #3fada2, #2f7d75);
+    background: #3fada2;
     color: #fff;
     border: none;
     font-weight: 700;
@@ -26442,8 +26442,8 @@ html[data-theme="dark"] body .wp-scope{
   --wp-bd-hi:rgba(63,173,162,.55);
   --wp-sh:0 4px 20px rgba(0,0,0,.30);
   --wp-sh-hi:0 10px 34px rgba(0,0,0,.45);
-  --wp-fill:linear-gradient(to bottom,rgba(255,255,255,.065),rgba(255,255,255,.028) 60%,rgba(255,255,255,.016));
-  --wp-wash:linear-gradient(to bottom,rgba(255,255,255,.05),transparent 55%);
+  --wp-fill:rgba(255,255,255,.04);
+  --wp-wash:rgba(255,255,255,.025);
 }
 html[data-theme="dark"] body .wp-scope{color:var(--wp-ink);}
 html[data-theme="dark"] body .rs-header-one .rs-header-inner,
@@ -26453,7 +26453,7 @@ html[data-theme="dark"] body .rs-header-one .rs-header-logo img{filter:brightnes
 html[data-theme="dark"] body .rs-header-one .main-menu{border-inline-start-color:rgba(255,255,255,.12);}
 html[data-theme="dark"] body .rs-header-one .main-menu > ul > li > a{color:#e8eef2;}
 html[data-theme="dark"] body .rs-header-one .main-menu > ul > li:hover > a{color:#3fada2;}
-html[data-theme="dark"] body .rs-header-one .rs-theme-social a{color:#c3ced5;background-color:rgba(255,255,255,.07);}
+html[data-theme="dark"] body .rs-header-one .rs-theme-social a{color:#c3ced5;background-color:transparent;}
 html[data-theme="dark"] body .rs-header-one .rs-theme-social a:hover{color:#0a121a;background:#3fada2;}
 html[data-theme="dark"] body .rs-header-one .rs-header-hamburger .bar-icon svg path{fill:#e8eef2;}
 html[data-theme="dark"] body .rs-header-one .rs-header-hamburger .bar-icon:hover svg path{fill:#3fada2;}
@@ -26465,7 +26465,7 @@ html[data-theme="dark"] body .wp-cta:hover{background:#63cbc0;border-color:#63cb
 html[data-theme="dark"] body .wp-cta--ghost{background:transparent;color:var(--wp-teal);border-color:rgba(63,173,162,.6);}
 html[data-theme="dark"] body .wp-cta--ghost:hover{background:var(--wp-teal);border-color:var(--wp-teal);color:var(--wp-surface);}
 html[data-theme="dark"] body .wp-ramp-step:nth-child(4){
-  background:linear-gradient(to bottom,rgba(239,91,77,.18),rgba(239,91,77,.07));
+  background:rgba(239,91,77,.12);
   border-color:rgba(239,110,98,.34);
 }
 html[data-theme="dark"] body .wp-ramp-step:nth-child(4) i{background:#ef5b4d;}
@@ -26474,7 +26474,7 @@ html[data-theme="dark"] body .wp-why-warn{color:#ff9d94;}
 html[data-theme="dark"] body .wp-choose-icon{border:1px solid var(--wp-bd);}
 html[data-theme="dark"] body .wp-choose-item:hover .wp-choose-icon{background:rgba(63,173,162,.18);}
 html[data-theme="dark"] body .wp-mistake{
-  background:linear-gradient(to bottom,rgba(239,91,77,.11),rgba(239,91,77,.04));
+  background:rgba(239,91,77,.07);
   border-color:rgba(239,110,98,.24);
 }
 html[data-theme="dark"] body .wp-mistake:hover{border-color:rgba(239,110,98,.5);}
@@ -26531,7 +26531,7 @@ html[data-theme="dark"] body .sidebar-nav-list li{border-bottom-color:rgba(255,2
 html[data-theme="dark"] body .sidebar-card h5{border-bottom-color:rgba(255,255,255,.12);}
 html[data-theme="dark"] body .feature-card,html[data-theme="dark"] body .srv-card-link,html[data-theme="dark"] body .sidebar-card,html[data-theme="dark"] body .srv-intro-card,
 html[data-theme="dark"] body .category-project-card,html[data-theme="dark"] body .category-faq .accordion-item,html[data-theme="dark"] body .accordion-item{
-  background:linear-gradient(to bottom,rgba(255,255,255,.065),rgba(255,255,255,.028) 60%,rgba(255,255,255,.016));
+  background:rgba(255,255,255,.04);
   border-color:rgba(255,255,255,.10);box-shadow:0 4px 20px rgba(0,0,0,.30);color:#c3ced5;}
 html[data-theme="dark"] body .feature-card:hover,html[data-theme="dark"] body .srv-card-link:hover,html[data-theme="dark"] body .category-project-card:hover,
 html[data-theme="dark"] body .category-project-card:focus-visible{border-color:rgba(63,173,162,.55);box-shadow:0 10px 34px rgba(0,0,0,.45);}
@@ -26565,7 +26565,7 @@ html[data-theme="dark"] body .rs-header-one .rs-header-logo img{filter:brightnes
 html[data-theme="dark"] body .rs-header-one .main-menu{border-inline-start-color:rgba(255,255,255,.12);}
 html[data-theme="dark"] body .rs-header-one .main-menu > ul > li > a{color:#e8eef2;}
 html[data-theme="dark"] body .rs-header-one .main-menu > ul > li:hover > a{color:#3fada2;}
-html[data-theme="dark"] body .rs-header-one .rs-theme-social a{color:#c3ced5;background-color:rgba(255,255,255,.07);}
+html[data-theme="dark"] body .rs-header-one .rs-theme-social a{color:#c3ced5;background-color:transparent;}
 html[data-theme="dark"] body .rs-header-one .rs-theme-social a:hover{color:#0a121a;background:#3fada2;}
 html[data-theme="dark"] body .rs-header-one .rs-header-hamburger .bar-icon svg path{fill:#e8eef2;}
 html[data-theme="dark"] body .rs-header-one .rs-header-hamburger .bar-icon:hover svg path{fill:#3fada2;}
@@ -26578,3 +26578,10 @@ html[data-theme="dark"] body .lukacho-marquee-item img{background:#f3f7f9;border
 
 /* footer: no factory background image */
 .rs-footer-bg-thumb{display:none !important;}
+
+/* footer link arrow: Font Awesome is not loaded on the site, use remixicon (ri-arrow-left-line) */
+.rs-footer-widget-links ul li a::before{content:"\ea60";font-family:"remixicon";}
+
+/* scroll slide (assets/js/scroll-slide.js) */
+.ss{opacity:0;transform:translate3d(0,56px,0);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);will-change:transform,opacity;}
+.ss-in{opacity:1;transform:none;will-change:auto;}

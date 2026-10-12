@@ -1,8 +1,10 @@
-/* Sections slide up + fade in as they scroll into view (عزل pages). No-JS / reduced-motion: content stays visible. */
+/* Sections slide up + fade in as they scroll into view (all pages). No-JS / reduced-motion: content stays visible. */
 (function () {
   'use strict';
   if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var els = document.querySelectorAll('main .wp-scope, main .ins-sec, main .rs-logo-marquee-area');
+  var SEL = 'section, .wp-scope, .ins-sec';
+  // innermost sections only, so a wrapper and its children never both animate
+  var els = [].filter.call(document.querySelectorAll('main section, main .wp-scope, main .ins-sec'), function (el) { return !el.querySelector(SEL); });
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (!e.isIntersecting) return;
