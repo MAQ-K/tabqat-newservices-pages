@@ -26585,3 +26585,7 @@ html[data-theme="dark"] body .lukacho-marquee-item img{background:#f3f7f9;border
 /* scroll slide (assets/js/scroll-slide.js) */
 .ss{opacity:0;transform:translate3d(0,56px,0);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);will-change:transform,opacity;}
 .ss-in{opacity:1;transform:none;will-change:auto;}
+
+/* width/height attributes only reserve space; keep the real aspect ratio when CSS sets just the width.
+   :where() has zero specificity, so any explicit height rule still wins. */
+:where(img[width][height]){height:auto;}
