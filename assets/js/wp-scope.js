@@ -123,7 +123,7 @@
     raf = requestAnimationFrame(sync);
   }, { passive: true });
   slides.forEach(function (slide, i) {
-    var link = slide.querySelector('.wp-navsvc-more');
+    var link = slide.querySelector('a.wp-navsvc-card, a.wp-navsvc-more');
     if (!link) return;
     link.addEventListener('focus', function () { goTo(i); });
     // whole card opens the service page (drags are already swallowed above)

@@ -1,0 +1,69 @@
+/* Google reviews band, shared by every service page (markup: components/reviews.html).
+   Self-contained: its own dark surface, so it reads the same on every page template and theme. */
+
+.tq-reviews{
+  --tq-teal:#5fd3c6;--tq-ink:#c3ced5;--tq-muted:#93a4af;--tq-line:rgba(255,255,255,.1);
+  position:relative;overflow:hidden;direction:rtl;padding:88px 0 96px;color:var(--tq-ink);
+  background:
+    radial-gradient(900px 380px at 88% 0%,rgba(63,173,162,.22),transparent 65%),
+    radial-gradient(700px 320px at 0% 100%,rgba(66,133,244,.12),transparent 60%),
+    #0b1620;
+}
+.tq-reviews svg{width:1em;height:1em;flex:0 0 auto;}
+
+/* heading + score card */
+.tq-reviews__head{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:28px 40px;margin-bottom:44px;}
+.tq-reviews__eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:14px;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid var(--tq-line);color:#f3f7f9;font-size:13px;font-weight:700;}
+.tq-reviews .tq-reviews__title h2{margin:0 0 10px;color:#f3f7f9;font-size:clamp(28px,3.4vw,42px);font-weight:800;line-height:1.25;}
+.tq-reviews .tq-reviews__lead{margin:0;color:var(--tq-muted);font-size:16px;line-height:1.8;}
+.tq-reviews__score{display:flex;align-items:center;gap:20px;padding:22px 28px;border-radius:22px;background:rgba(255,255,255,.05);border:1px solid var(--tq-line);box-shadow:0 24px 60px rgba(0,0,0,.35);}
+.tq-reviews__num{font-size:60px;font-weight:900;line-height:1;color:#fff;}
+.tq-reviews__meta{display:flex;flex-direction:column;align-items:flex-start;gap:6px;}
+.tq-reviews__meta small{color:var(--tq-muted);font-size:13.5px;}
+.tq-stars{font-size:24px;letter-spacing:3px;line-height:1;color:transparent;
+  background:linear-gradient(to left,#fbbc05 var(--fill,100%),rgba(255,255,255,.22) var(--fill,100%));
+  -webkit-background-clip:text;background-clip:text;}
+.tq-reviews .tq-reviews__all{display:inline-flex;align-items:center;gap:6px;color:var(--tq-teal);font-size:14px;font-weight:700;text-decoration:none;}
+.tq-reviews .tq-reviews__all:hover{color:#fff;text-decoration:underline;text-underline-offset:4px;}
+.tq-reviews__all svg{transition:transform .3s;}
+.tq-reviews__all:hover svg{transform:translateX(-4px);}
+
+/* auto-scrolling row: the list is baked twice, so sliding by half its width loops seamlessly */
+.tq-reviews__marquee{position:relative;
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent);
+          mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent);}
+.tq-reviews__track{display:flex;width:max-content;margin:0;padding:8px 0 12px;list-style:none;
+  animation:tq-scroll var(--tq-dur,48s) linear infinite;}
+.tq-reviews__marquee:hover .tq-reviews__track,.tq-reviews__marquee:focus-within .tq-reviews__track{animation-play-state:paused;}
+@keyframes tq-scroll{to{transform:translateX(50%);}}
+
+/* card: margin (not gap) keeps both copies exactly the same width */
+.tq-rev{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:22px;
+  flex:0 0 auto;width:360px;margin-inline-start:22px;padding:30px 28px 24px;border-radius:22px;
+  background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.025));border:1px solid var(--tq-line);
+  transition:border-color .3s,transform .3s;}
+.tq-rev:hover{border-color:rgba(95,211,198,.45);transform:translateY(-4px);}
+.tq-rev::before{content:"”";position:absolute;top:6px;inset-inline-end:22px;font:900 72px/1 Georgia,serif;color:rgba(95,211,198,.28);}
+.tq-reviews .tq-rev blockquote{margin:0;padding:0;border:0;background:none;font-style:normal;
+  color:#e3eaee;font-size:16px;line-height:1.9;}
+.tq-rev blockquote::before,.tq-rev blockquote::after{content:none;}
+.tq-rev__who{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--tq-line);}
+.tq-rev__av{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;
+  background:linear-gradient(135deg,#3fada2,#0f766e);color:#fff;font-weight:800;font-size:17px;}
+.tq-rev__who b{display:block;color:#f3f7f9;font-size:15px;}
+.tq-rev__who small{display:block;color:var(--tq-muted);font-size:12.5px;}
+
+@media (max-width:767px){
+  .tq-reviews{padding:64px 0 70px;}
+  .tq-reviews__head{grid-template-columns:1fr;margin-bottom:32px;}
+  .tq-reviews__score{justify-self:start;padding:18px 22px;}
+  .tq-reviews__num{font-size:48px;}
+  .tq-rev{width:290px;margin-inline-start:16px;padding:26px 22px 20px;}
+}
+/* no motion: a plain swipeable row, without the duplicate copy */
+@media (prefers-reduced-motion:reduce){
+  .tq-reviews__marquee{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-mask-image:none;mask-image:none;}
+  .tq-reviews__track{animation:none;padding-inline:16px;}
+  .tq-rev{scroll-snap-align:start;}
+  .tq-rev[aria-hidden="true"]{display:none;}
+}
