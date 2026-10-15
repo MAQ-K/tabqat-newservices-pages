@@ -85,3 +85,20 @@ a.sp-card:hover{border-color:var(--wp-bd-hi);transform:translateY(-3px);color:va
 .wp-table.sp-table tbody tr:nth-child(even) td{background:transparent;}
 .wp-table.sp-table tbody tr:hover td{background:rgba(255,255,255,.03);}
 .wp-table.sp-table tbody td:first-child{white-space:nowrap;}
+
+/* photo strip of numbered site stages: five across, fewer on small screens */
+.sp-ba--5{grid-template-columns:repeat(5,minmax(0,1fr));max-width:none;}
+.sp-ba--5 figcaption{font-size:14.5px;font-weight:700;color:var(--wp-ink);}
+.sp-ba--5 figcaption b{display:block;color:var(--wp-teal);}
+@media (max-width:991px){.sp-ba--5{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media (max-width:575px){.sp-ba--5{grid-template-columns:repeat(2,minmax(0,1fr));}}
+
+/* name-only cards (problem list): icon beside the name, no line under it */
+.sp-cards--names .sp-card{flex-direction:row;align-items:center;gap:12px;padding:18px 20px;}
+
+/* in-page anchors land below the sticky header */
+#sp-main [id]{scroll-margin-top:110px;}
+
+/* project cards side by side, one photo each */
+.sp-cases .sp-case{margin:0;display:flex;flex-direction:column;}
+.sp-cases .sp-ba{grid-template-columns:1fr;margin-top:auto;padding-top:14px;}
