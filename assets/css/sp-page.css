@@ -14,7 +14,7 @@
 @media (min-width:576px) and (max-width:767px){.wp-stats.sp-stats{grid-template-columns:repeat(2,minmax(0,1fr));}}
 .sp-stats .sp-stat-text{font-size:22px;line-height:1.6;}
 
-/* calmer surfaces: flat table, barely-there gradient on boxes */
+/* calmer surfaces: flat table, flat boxes */
 #sp-main .wp-scope{--wp-fill:rgba(255,255,255,.035);}
 #sp-main .wp-tablewrap,html[data-theme="dark"] #sp-main .wp-tablewrap{background:rgba(255,255,255,.03);}
 #sp-main .wp-final .wp-cta-row{background:rgba(63,173,162,.07);}

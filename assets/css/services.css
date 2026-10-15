@@ -1,5 +1,6 @@
-/* Google reviews band, shared by every service page (markup: components/reviews.html).
-   Self-contained: its own dark surface, so it reads the same on every page template and theme. */
+/* Sections shared by every service page, baked in by tools/bake-sections.py:
+   the Google reviews band (components/reviews.html) and the closing call to action.
+   Self-contained: own dark surface and flat fills, so both read the same on every template and theme. */
 
 .tq-reviews{
   --tq-teal:#5fd3c6;--tq-ink:#c3ced5;--tq-muted:#93a4af;--tq-line:rgba(255,255,255,.1);
@@ -40,7 +41,7 @@
 /* card: margin (not gap) keeps both copies exactly the same width */
 .tq-rev{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:22px;
   flex:0 0 auto;width:360px;margin-inline-start:22px;padding:30px 28px 24px;border-radius:22px;
-  background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.025));border:1px solid var(--tq-line);
+  background:rgba(255,255,255,.05);border:1px solid var(--tq-line);
   transition:border-color .3s,transform .3s;}
 .tq-rev:hover{border-color:rgba(95,211,198,.45);transform:translateY(-4px);}
 .tq-rev::before{content:"”";position:absolute;top:6px;inset-inline-end:22px;font:900 72px/1 Georgia,serif;color:rgba(95,211,198,.28);}
@@ -66,4 +67,21 @@
   .tq-reviews__track{animation:none;padding-inline:16px;}
   .tq-rev{scroll-snap-align:start;}
   .tq-rev[aria-hidden="true"]{display:none;}
+}
+
+/* ---- closing call to action: one design on every service page ---- */
+.tq-cta{direction:rtl;padding:72px 0 88px;background:#0b1620;}
+.tq-cta__box{max-width:880px;margin:0 auto;padding:48px 40px;text-align:center;border:1px solid rgba(95,211,198,.35);border-radius:22px;background:rgba(63,173,162,.08);}
+.tq-cta .tq-cta__box h2{margin:0 0 14px;color:#f3f7f9;font-size:clamp(24px,2.8vw,34px);font-weight:800;line-height:1.35;}
+.tq-cta .tq-cta__box p{max-width:640px;margin:0 auto 28px;color:#c3ced5;font-size:17px;line-height:1.9;}
+.tq-cta__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;}
+.tq-cta .tq-cta__btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border:1px solid #3fada2;border-radius:12px;background:#3fada2;color:#0a121a;font-size:16px;font-weight:800;text-decoration:none;transition:background-color .25s,color .25s,border-color .25s;}
+.tq-cta .tq-cta__btn:hover{background:#4fc4b7;border-color:#4fc4b7;color:#0a121a;}
+.tq-cta .tq-cta__btn--ghost{background:transparent;color:#5fd3c6;}
+.tq-cta .tq-cta__btn--ghost:hover{background:rgba(63,173,162,.14);color:#f3f7f9;}
+.tq-cta__btn svg{width:20px;height:20px;}
+@media (max-width:575px){
+  .tq-cta{padding:56px 0 64px;}
+  .tq-cta__box{padding:32px 20px;}
+  .tq-cta__btn{width:100%;}
 }
