@@ -26589,3 +26589,19 @@ html[data-theme="dark"] body .lukacho-marquee-item img{background:#f3f7f9;border
 /* width/height attributes only reserve space; keep the real aspect ratio when CSS sets just the width.
    :where() has zero specificity, so any explicit height rule still wins. */
 :where(img[width][height]){height:auto;}
+
+/* footer location map: its own column on the far left */
+@media (min-width:992px){.rs-footer-one .rs-footer-wrapper:has(.tq-fmap-col){grid-template-columns:1fr 1fr 1.1fr 1.4fr;}}
+.tq-fmap-col{padding:80px 0 90px;}
+.tq-fmap{display:flex;flex-direction:column;height:100%;}
+.tq-fmap iframe{display:block;width:100%;flex:1;min-height:220px;border:0;border-radius:12px;}
+.tq-fmap a{display:block;margin-top:12px;color:#fff;font-size:14px;line-height:1.7;}
+@media (max-width:991px){.tq-fmap-col{padding:0 0 40px;}.tq-fmap iframe{min-height:240px;flex:none;}}
+@media (max-width:991px) and (min-width:768px){.tq-fmap-col{grid-column:1/-1;}}
+/* footer: contact column was inheriting Bootstrap col-3 width + inline margin, wrapping the title letter by letter */
+.rs-footer-one .rs-footer-item > [class*="col-"]{width:100%;max-width:100%;flex:none;margin:0 !important;padding:0;}
+.rs-footer-one .rs-footer-widget-title{font-size:22px;line-height:1.4;}
+.rs-footer-one .rs-footer-widget-number a,.rs-footer-one .rs-footer-widget-email a{font-size:16px;word-break:break-word;}
+/* cursor ball hover state (was a GSAP tween) */
+#rs-mouse #cursor-ball{will-change:transform;transition:scale .2s,opacity .2s,background-color .2s;}
+#rs-mouse #cursor-ball.tq-cur-hover{scale:1.7;opacity:.15;background-color:rgba(34,34,34,.2);}

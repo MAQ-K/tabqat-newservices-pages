@@ -859,3 +859,7 @@ body{background:#0a121a;}
 
 /* footer: no factory background image */
 .rs-footer-bg-thumb{display:none !important;}
+
+/* problem chips: shorter copy, larger type */
+.wp-prob{font-size:18px;line-height:1.7;align-items:center;}
+@media (max-width:767px){.wp-prob{font-size:17px;}}

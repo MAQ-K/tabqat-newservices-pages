@@ -85,3 +85,55 @@
   .tq-cta__box{padding:32px 20px;}
   .tq-cta__btn{width:100%;}
 }
+
+/* ---- reviews pop-up ---- */
+.tq-pop{direction:rtl;width:min(640px,94vw);max-height:86vh;padding:0;border:0;border-radius:16px;overflow:hidden;background:#0b1620;color:#c3ced5;}
+.tq-pop::backdrop{background:rgba(0,0,0,.65);}
+.tq-pop[open]{display:flex;flex-direction:column;}
+.tq-pop__x{position:absolute;top:10px;inset-inline-start:10px;width:36px;height:36px;border:0;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;font-size:22px;line-height:1;cursor:pointer;}
+.tq-pop__head{display:flex;align-items:center;gap:14px;padding:22px 24px 16px 60px;border-bottom:1px solid rgba(255,255,255,.1);}
+.tq-pop__head .tq-reviews__num{font-size:44px;font-weight:800;color:#fff;line-height:1;}
+.tq-pop__head small{display:block;color:#93a4af;font-size:13px;}
+.tq-pop__list{list-style:none;margin:0;padding:8px 24px;overflow-y:auto;flex:1;}
+.tq-pop__list .tq-rev{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08);}
+.tq-pop__list blockquote{margin:0 0 10px;font-size:15px;line-height:1.8;color:#e3eaee;}
+.tq-pop__list .tq-rev__who{display:flex;align-items:center;gap:10px;font-size:14px;}
+.tq-pop__list small{display:block;color:#93a4af;font-size:12px;}
+.tq-pop__ext{padding:14px;text-align:center;color:#5fd3c6;font-weight:700;text-decoration:none;border-top:1px solid rgba(255,255,255,.1);}
+
+/* ---- CTA phone number: larger, soft light sweep ---- */
+.tq-cta .tq-cta__btn--ghost span[dir=ltr]{position:relative;font-size:22px;font-weight:900;letter-spacing:.5px;background:linear-gradient(110deg,#5fd3c6 35%,#fff 50%,#5fd3c6 65%) 200% 0/250% 100% no-repeat;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:tq-shine 3s linear infinite;}
+@keyframes tq-shine{to{background-position:-50% 0;}}
+@media (prefers-reduced-motion:reduce){.tq-cta .tq-cta__btn--ghost span[dir=ltr]{animation:none;-webkit-text-fill-color:#5fd3c6;}}
+
+/* CTA: always centred (page-level heading/paragraph rules were pushing it to the right) */
+.tq-cta .tq-cta__box,.tq-cta .tq-cta__box h2,.tq-cta .tq-cta__box p{text-align:center !important;}
+.tq-cta .tq-cta__box h2,.tq-cta .tq-cta__box p{margin-inline:auto !important;}
+.tq-cta .tq-cta__actions{justify-content:center;}
+
+/* problem chips: shorter copy, larger type */
+.wp-scope .wp-prob{font-size:18px;line-height:1.7;align-items:center;}
+@media (max-width:767px){.wp-scope .wp-prob{font-size:17px;}}
+
+/* split block whose image was removed: text takes the full width */
+.wp-split.wp-split--solo{display:block;}
+
+/* ---- microcement: applications cards + numbered steps ---- */
+.mc-photos{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:28px 0 24px;}
+.mc-photos--3{grid-template-columns:repeat(3,1fr);}
+.mc-photo{margin:0;border-radius:16px;overflow:hidden;aspect-ratio:4/3;background:var(--wp-panel,#10202b);}
+.mc-photo img{display:block;width:100%;height:100%;object-fit:cover;}
+.mc-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.mc-card{padding:24px 22px;border:1px solid var(--wp-line,rgba(255,255,255,.12));border-radius:16px;background:var(--wp-surface,#0a121a);transition:border-color .25s,transform .25s;}
+.mc-card:hover{border-color:var(--wp-teal,#3fada2);transform:translateY(-3px);}
+.mc-card__icon{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;margin-bottom:14px;border-radius:12px;background:rgba(63,173,162,.14);color:var(--wp-teal,#3fada2);font-size:24px;}
+.wp-scope .mc-card h3{margin:0 0 8px;font-size:19px;font-weight:800;line-height:1.5;color:var(--wp-navy,#fff);}
+.wp-scope .mc-card p{margin:0;font-size:16px;line-height:1.85;color:var(--wp-ink,#c3ced5);}
+.mc-steps{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:16px;counter-reset:none;}
+.mc-step{display:flex;gap:16px;align-items:flex-start;padding:20px 22px;border:1px solid var(--wp-line,rgba(255,255,255,.12));border-radius:16px;background:var(--wp-surface,#0a121a);}
+.mc-step:last-child:nth-child(odd){grid-column:1/-1;}
+.mc-step__n{flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:var(--wp-teal,#3fada2);color:var(--wp-surface,#0a121a);font-weight:900;font-size:18px;}
+.wp-scope .mc-step h3{margin:0 0 6px;font-size:18px;font-weight:800;color:var(--wp-navy,#fff);}
+.wp-scope .mc-step p{margin:0;font-size:16px;line-height:1.85;color:var(--wp-ink,#c3ced5);}
+@media (max-width:991px){.mc-cards{grid-template-columns:repeat(2,1fr);}.mc-photos--3{grid-template-columns:repeat(2,1fr);}.mc-photos--3 .mc-photo:last-child{display:none;}}
+@media (max-width:640px){.mc-cards,.mc-steps,.mc-photos,.mc-photos--3{grid-template-columns:1fr;}.mc-photos--3 .mc-photo:last-child{display:block;}.mc-photo{aspect-ratio:16/10;}.mc-step{padding:16px;}}
