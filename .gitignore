@@ -1,2 +1,5 @@
 *.zip
 *.docx
+
+# deploy build output (python tools/build-upload.py)
+upload/
