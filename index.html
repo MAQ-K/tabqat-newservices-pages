@@ -80,6 +80,7 @@
         <script>!function(){var t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="dark"&&t!=="light")t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";var d=document.documentElement;d.setAttribute("data-theme",t);d.setAttribute("data-bs-theme",t)}()</script>
         <link rel="stylesheet" href="assets/css/theme-auto.css?v=1">
         <link rel="stylesheet" href="assets/css/theme.css?v=1">
+        <link rel="stylesheet" href="assets/css/home-sections.css?v=1">
         <script src="assets/js/theme.js?v=1" defer></script>
         <!-- Site-wide organization schema (schema-localbusiness.txt) -->
 <script type="application/ld+json">
@@ -266,9 +267,6 @@
                                             <a href="projects.html"> بعض مشاريعنا</a>
                                         </li>
                                         <li>
-                                            <a href="blogs.html">المدونة</a>
-                                        </li>
-                                        <li>
                                             <a href="contact-us.html"> تواصل معنا</a>
                                         </li>
                                     </ul>
@@ -363,7 +361,6 @@
 </li>
 <li><a href="certificates.html">الشهادات</a></li>
 <li><a href="projects.html">بعض مشاريعنا</a></li>
-<li><a href="blogs.html">المدونة</a></li>
 <li><a href="contact-us.html">تواصل معنا</a></li>
 </ul>
 </div>
@@ -685,45 +682,20 @@
                     </div>
                 </section>
                 <!-- banner area end -->
+                <!-- counter start -->
+                <section class="hs-stats-sec" aria-label="مؤشرات الثقة">
+                    <div class="container">
+                        <div class="hs-stats"><div class="hs-stat"><b dir="ltr">+<span class="purecounter" data-purecounter-end="10" data-purecounter-duration="1.5">10</span></b><span>سنوات خبرة</span></div><div class="hs-stat"><b dir="ltr">+<span class="purecounter" data-purecounter-end="500" data-purecounter-duration="1.5">500</span></b><span>مشروع منفذ</span></div><div class="hs-stat"><b dir="ltr"><span class="purecounter" data-purecounter-end="10" data-purecounter-duration="1.5">10</span></b><span>سنوات ضمان كحد أقصى</span></div><div class="hs-stat"><b dir="ltr">+<span class="purecounter" data-purecounter-end="25" data-purecounter-duration="1.5">25</span></b><span>جهة حكومية وخاصة تعتمدنا</span></div></div>
+                    </div>
+                </section>
+                <!-- counter end -->
                 <!-- about area start -->
                 <section class="rs-about-area section-space rs-about-four">
                     <div class="container">
                         <div class="row g-5">
                             <div class="col-xl-6 col-lg-6 wow fadeInLeft" data-wow-delay=".2s" data-wow-duration="1s">
-                                <div class="rs-about-thumb-wrapper wow fadeInLeft" data-wow-delay=".2s" data-wow-duration="1s">
-                                    <div class="rs-about-thumb-left-part">
-                                        <div class="rs-about-thumb">
-                                            <img width="300" height="333" src="assets/my-images/homepage/about-us/bc.webp" alt="فيديو تعريفي عن شركة الطبقات المتعددة للمقاولات بالرياض" loading="lazy">
-                                        </div>
-                                        <div class="rs-about-video-btn">
-                                            <div class="rs-rotate-btn">
-                                                <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=Mgrf4DgPa4A" class="rs-play-btn popup-video has-theme-red" aria-label="تشغيل الفيديو التعريفي عن شركة الطبقات المتعددة">
-                                                    <i class="ri-play-fill">
-                                                    </i>
-                                                </a>
-                                                <div class="rs-circle-title gsap-rotate rs-text-circle-wrapper">
-                                                    <div class="rs-text-circle" data-rotate-degree="13.33">
-                                                        <!-- شاهد الفيديو -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="rs-about-thumb-right-part">
-                                        <div class="rs-about-counter">
-                                            <div class="rs-counter-inner wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1s">
-                                                <div class="rs-counter-number-wrapper">
-                                                    <span class="rs-counter-number" style="direction:ltr; unicode-bidi:isolate;">10+</span>
-<span class="prefix"></span>
-                                                </div>
-                                                <span class="rs-counter-title">سنة من الخبرة
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="rs-about-thumb has-large-thumb rs-image scroll_reveal reveal_left reveal-active">
-                                            <img width="768" height="576" decoding="async" src="assets/my-images/homepage/about-us/2.webp" alt="عزل مائي للأسطح باستخدام مواد بيتومينية سوداء لحماية المباني من التسرب" loading="lazy">
-                                        </div>
-                                    </div>
+                                <div class="hs-about-media">
+                                    <img width="768" height="576" src="assets/my-images/homepage/about-us/2.webp" alt="عزل مائي للأسطح باستخدام مواد بيتومينية لحماية المباني من التسرب — شركة الطبقات المتعددة" loading="lazy" decoding="async">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 wow fadeInRight" data-wow-delay=".4s" data-wow-duration="1s">
@@ -848,59 +820,6 @@
                         </div>
                     </section>
                     <!-- about area end -->
-                    <!-- video area start -->
-                    <div class="rs-video-area rs-video-four jarallax">
-                        <div class="rs-video-bg-thumb jarallax-img" data-background="assets/my-images/homepage/main-slider/1.webp">
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-7 col-lg-8 col-md-10">
-                                    <div class="rs-video-content">
-                                        <div class="rs-section-title-wrapper wow fadeIn" data-wow-delay=".2s" data-wow-duration="1s">
-                                            <span class="rs-section-subtitle has-theme-yellow justify-content-start">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15"
-                                                    fill="none">
-                                                    <path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#3fada2">
-                                                    </path>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z"
-                                                        fill="#3fada2">
-                                                    </path>
-                                                </svg>
-                                                حلول عزل وإنشاء موثوقة
-                                            </span>
-                                            <h2 class="rs-section-title rs-split-text-enable split-in-fade">جودة عالية في العزل، الإصلاح، والتدعيم</h2>
-                                        </div>
-                                        <div class="rs-video-btn-wrapper">
-                                            <div class="rs-video-btn">
-                                                <a class="rs-btn has-theme-yellow has-icon has-bg" href="contact-us.html">المزيد
-                                                    <span class="icon-box">
-                                                        <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                                            <path
-                                                                d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                            </path>
-                                                        </svg>
-                                                        <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                                            <path
-                                                                d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                            </path>
-                                                        </svg>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                            <div class="rs-video-play-btn">
-                                                <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=lGwsu9x5hB8" class="rs-play-btn popup-video has-theme-yellow" aria-label="تشغيل الفيديو">
-                                                    <i class="ri-play-fill">
-                                                    </i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- video area end -->
                     <!-- feature area start -->
                     <!-- <div class="rs-feature-area rs-feature-three">
                     <div class="rs-feature-bg-thumb" data-background="assets/images/bg/features-bg-01.webp">
@@ -950,218 +869,119 @@
                     </div>
                 </div> -->
                 <!-- feature area end -->
-                <!-- services area start -->
-                <section class="rs-services-area section-space rs-services-eight rs-swiper">
-                    <div class="rs-services-bg-thumb" data-background="assets/images/bg/services-bg-05.webp">
+                <!-- services start -->
+                <section class="rs-services-area section-space hs-svc-sec" aria-label="خدماتنا">
+                    <div class="hs-svc-layout">
+                        <div class="hs-svc-intro">
+                <div class="rs-section-title-wrapper wow fadeIn" data-wow-delay=".2s" data-wow-duration="1s">
+                    <span class="rs-section-subtitle has-theme-orange justify-content-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#3fada2"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#3fada2"></path></svg>
+                        خدماتنا
+                    </span>
+                    <h2 class="rs-section-title rs-split-text-enable split-in-fade">حلول متكاملة لضمان جودة ومتانة مشاريعك</h2>
+                </div>
+                            <p class="hs-svc-intro__text">من العزل المائي والحراري إلى الإيبوكسي وحقن الخرسانة والتدعيم الإنشائي، نقدم الحل المناسب لكل مشكلة في مبناك بفريق فني ومواد معتمدة.</p>
+                            <a class="rs-btn has-theme-red has-icon has-bg has-skew" href="our-services.html">كل الخدمات
+                                <span class="icon-box">
+                                    <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+                                    <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+                                </span>
+                            </a>
+            <div class="hs-hscroll-nav">
+                <button type="button" class="rs-swiper-btn has-bg-white hover-red" data-hs-scroll="prev" data-hs-target="hs-services" aria-label="السابق"><i class="ri-arrow-right-line" aria-hidden="true"></i></button>
+                <button type="button" class="rs-swiper-btn has-bg-white hover-red" data-hs-scroll="next" data-hs-target="hs-services" aria-label="التالي"><i class="ri-arrow-left-line" aria-hidden="true"></i></button>
+            </div>
+                        </div>
+                        <div class="hs-hscroll" id="hs-services" tabindex="0" aria-label="قائمة الخدمات، اسحب أو مرر أفقيًا">
+            <a class="hs-svc" href="waterproofing-thermal-insulation.html">
+                <div class="hs-svc__img"><img width="600" height="415" src="assets/my-images/homepage/our-services/iso.webp" alt="العزل المائي والحراري بالرياض — شركة الطبقات المتعددة" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="hs-svc__body">
+                    <span class="hs-svc__num">01</span>
+                    <h3>العزل المائي والحراري</h3>
+                    <p>حماية الأسطح والخزانات والحمامات من تسرب المياه وانتقال الحرارة.</p>
+                    <span class="hs-svc__more">تفاصيل الخدمة <i class="ri-arrow-left-line" aria-hidden="true"></i></span>
+                </div>
+            </a>
+            <a class="hs-svc" href="epoxy-flooring-coating.html">
+                <div class="hs-svc__img"><img width="600" height="415" src="assets/my-images/homepage/our-services/epoxy.webp" alt="أرضيات ودهانات الإيبوكسي بالرياض — شركة الطبقات المتعددة" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="hs-svc__body">
+                    <span class="hs-svc__num">02</span>
+                    <h3>أرضيات ودهانات الإيبوكسي</h3>
+                    <p>للمستودعات والمواقف والمصانع وخزانات المياه والصرف.</p>
+                    <span class="hs-svc__more">تفاصيل الخدمة <i class="ri-arrow-left-line" aria-hidden="true"></i></span>
+                </div>
+            </a>
+            <a class="hs-svc" href="concrete-repair-injection.html">
+                <div class="hs-svc__img"><img width="600" height="415" src="assets/my-images/homepage/our-services/injection.webp" alt="حقن وإصلاح الخرسانة بالرياض — شركة الطبقات المتعددة" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="hs-svc__body">
+                    <span class="hs-svc__num">03</span>
+                    <h3>حقن وإصلاح الخرسانة</h3>
+                    <p>معالجة الشروخ والتعشيش ووقف تسربات المياه في الخرسانة.</p>
+                    <span class="hs-svc__more">تفاصيل الخدمة <i class="ri-arrow-left-line" aria-hidden="true"></i></span>
+                </div>
+            </a>
+            <a class="hs-svc" href="structural-strengthening.html">
+                <div class="hs-svc__img"><img width="600" height="415" src="assets/my-images/homepage/our-services/support.webp" alt="التدعيم الإنشائي بالرياض — شركة الطبقات المتعددة" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="hs-svc__body">
+                    <span class="hs-svc__num">04</span>
+                    <h3>التدعيم الإنشائي</h3>
+                    <p>كربون فايبر، قمصان خرسانية وحديدية، شوت كريت وسند جوانب الحفر.</p>
+                    <span class="hs-svc__more">تفاصيل الخدمة <i class="ri-arrow-left-line" aria-hidden="true"></i></span>
+                </div>
+            </a>
+            <a class="hs-svc" href="microcement-flooring.html">
+                <div class="hs-svc__img"><img width="600" height="415" src="assets/my-images/our-services/microcement/microcement-interior-floor-riyadh.webp" alt="المايكروسمنت بالرياض — شركة الطبقات المتعددة" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="hs-svc__body">
+                    <span class="hs-svc__num">05</span>
+                    <h3>المايكروسمنت</h3>
+                    <p>سطح متصل بلا فواصل للأرضيات والجدران والحمامات.</p>
+                    <span class="hs-svc__more">تفاصيل الخدمة <i class="ri-arrow-left-line" aria-hidden="true"></i></span>
+                </div>
+            </a>
+            <a class="hs-svc" href="terrazzo-flooring.html">
+                <div class="hs-svc__img"><img width="600" height="415" src="assets/my-images/our-services/terrazzo/terrazzo-flooring-riyadh.webp" alt="أرضيات التيرازو بالرياض — شركة الطبقات المتعددة" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="hs-svc__body">
+                    <span class="hs-svc__num">06</span>
+                    <h3>أرضيات التيرازو</h3>
+                    <p>أرضيات فاخرة تدوم لعقود بتصاميم وألوان مخصصة.</p>
+                    <span class="hs-svc__more">تفاصيل الخدمة <i class="ri-arrow-left-line" aria-hidden="true"></i></span>
+                </div>
+            </a>
+                    </div>
+                    </div>
+                </section>
+                <!-- services end -->
+                <!-- image parallax band start -->
+                <div class="rs-video-area rs-video-four jarallax hs-band">
+                    <div class="rs-video-bg-thumb jarallax-img" data-background="assets/my-images/homepage/main-slider/4.webp">
                     </div>
                     <div class="container">
-                        <div class="row align-items-center g-5 section-title-space">
-                            <div class="col-xl-7 col-lg-7">
-                                <div class="rs-section-title-wrapper wow fadeIn" data-wow-delay=".2s" data-wow-duration="1s">
-                                    <span class="rs-section-subtitle has-theme-yellow justify-content-start">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none">
-                                            <path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#3fada2">
-                                            </path>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z"
-                                                fill="#3fada2">
-                                            </path>
-                                        </svg>
-                                        خدماتنا
-                                    </span>
-                                    <h2 class="rs-section-title rs-split-text-enable split-in-fade">حلول متكاملة لضمان جودة ومتانة مشاريعك</h2>
-                                </div>
-                            </div>
-                            <div class="col-xl-5 col-lg-5">
-                                <!-- If we need navigation buttons -->
-                                <div class="rs-services-navigation">
-                                    <style>
-                                        .btn-me{
-                                        width: 190px;
-                                        height: 65px;
-                                        border-radius: 4px;
-                                        background-color: #3fada2;
-                                        color: white;
-                                        transition: .3s ease;
-                                        }
-                                        .btn-me:hover{
-                                        background-color: #18413c;
-                                        }
-                                    </style>
-                                    <a href="contact-us.html">
-                                        <button class="btn-me">تواصل معنا</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
                         <div class="row">
-                            <div class="rs-services-slide-wrapper">
-                                <div class="swiper" data-clone-slides="false" data-loop="false" data-speed="1500" data-autoplay="true" data-dots-dynamic="false" data-hover-pause="true" data-effect="false" data-delay="1000" data-item="4" data-item-xl="3" data-item-lg="3" data-item-md="2" data-item-sm="1" data-item-xs="1" data-item-mobile="1" data-margin="30">
-                                    <div class="swiper-wrapper process-counts">
-                                        <div class="swiper-slide">
-                                            <div class="rs-services-item wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
-                                                <div class="rs-services-thumb">
-                                                    <a href="waterproofing-thermal-insulation.html">
-                                                        <img width="600" height="415" src="assets/my-images/homepage/our-services/iso.webp" alt="خدمات العزل المائي والحراري للأسطح والخزانات بالرياض" loading="lazy">
-                                                    </a>
-                                                </div>
-                                                <div class="rs-services-content">
-                                                    <h3 class="rs-services-title">
-                                                        <a href="waterproofing-thermal-insulation.html">عزل مائي وحراري</a>
-                                                    </h3>
-                                                    <p class="descrip">حلول متطورة لتقليل انتقال الحرارة ومنع تسرب المياه وحماية المباني</p>
-                                                    <div class="rs-services-number">
-                                                    </div>
-                                                    <div class="rs-services-btn-wrapper">
-                                                        <div class="rs-services-text-btn underline has-theme-yellow">
-                                                            <a class="rs-text-btn" href="waterproofing-thermal-insulation.html">المزيد</a>
-                                                        </div>
-                                                        <a class="rs-square-btn has-icon has-light-bg" href="waterproofing-thermal-insulation.html" aria-hidden="true" tabindex="-1">
-                                                            <span class="icon-box">
-                                                                <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" width="12"
-                                                                    height="10" viewBox="0 0 12 10" fill="none">
-                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                        d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571L8.98985 4.28571L5.92349 1.21936C5.64455 0.940417 5.64455 0.488155 5.92349 0.209209C6.20244 -0.0697365 6.6547 -0.0697365 6.93365 0.209209L11.2194 4.49492C11.4983 4.77387 11.4983 5.22613 11.2194 5.50508L6.93365 9.79079C6.6547 10.0697 6.20244 10.0697 5.92349 9.79079C5.64455 9.51184 5.64455 9.05958 5.92349 8.78064L8.98985 5.71429L0.714286 5.71429C0.319797 5.71429 0 5.39449 0 5Z"
-                                                                        fill="#616161">
-                                                                    </path>
-                                                                </svg>
-                                                                <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" width="12"
-                                                                    height="10" viewBox="0 0 12 10" fill="none">
-                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                        d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571L8.98985 4.28571L5.92349 1.21936C5.64455 0.940417 5.64455 0.488155 5.92349 0.209209C6.20244 -0.0697365 6.6547 -0.0697365 6.93365 0.209209L11.2194 4.49492C11.4983 4.77387 11.4983 5.22613 11.2194 5.50508L6.93365 9.79079C6.6547 10.0697 6.20244 10.0697 5.92349 9.79079C5.64455 9.51184 5.64455 9.05958 5.92349 8.78064L8.98985 5.71429L0.714286 5.71429C0.319797 5.71429 0 5.39449 0 5Z"
-                                                                        fill="#616161">
-                                                                    </path>
-                                                                </svg>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="rs-services-item wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1s">
-                                                <div class="rs-services-thumb">
-                                                    <a href="epoxy-flooring-coating.html"> <img width="600" height="415" src="assets/my-images/homepage/our-services/epoxy.webp" alt="دهانات إيبوكسية للأرضيات الصناعية والخزانات بالرياض — شركة الطبقات المتعددة" loading="lazy">
-                                                    </a>
-                                                </div>
-                                                <div class="rs-services-content">
-                                                    <h3 class="rs-services-title">
-                                                        <a href="epoxy-flooring-coating.html"> دهانات إيبوكسية</a>
-                                                    </h3>
-                                                    <p class="descrip">طبقات متينة تحمي الأسطح وتمنحها مقاومة عالية مع مظهر عصري</p>
-                                                    <div class="rs-services-number">
-                                                    </div>
-                                                    <div class="rs-services-btn-wrapper">
-                                                        <div class="rs-services-text-btn underline has-theme-yellow">
-                                                            <a class="rs-text-btn" href="epoxy-flooring-coating.html">المزيد</a>
-                                                        </div>
-                                                        <a class="rs-square-btn has-icon has-light-bg" href="epoxy-flooring-coating.html" aria-hidden="true" tabindex="-1">
-                                                            <span class="icon-box">
-                                                                <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" width="12"
-                                                                    height="10" viewBox="0 0 12 10" fill="none">
-                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                        d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571L8.98985 4.28571L5.92349 1.21936C5.64455 0.940417 5.64455 0.488155 5.92349 0.209209C6.20244 -0.0697365 6.6547 -0.0697365 6.93365 0.209209L11.2194 4.49492C11.4983 4.77387 11.4983 5.22613 11.2194 5.50508L6.93365 9.79079C6.6547 10.0697 6.20244 10.0697 5.92349 9.79079C5.64455 9.51184 5.64455 9.05958 5.92349 8.78064L8.98985 5.71429L0.714286 5.71429C0.319797 5.71429 0 5.39449 0 5Z"
-                                                                        fill="#616161">
-                                                                    </path>
-                                                                </svg>
-                                                                <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" width="12"
-                                                                    height="10" viewBox="0 0 12 10" fill="none">
-                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                        d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571L8.98985 4.28571L5.92349 1.21936C5.64455 0.940417 5.64455 0.488155 5.92349 0.209209C6.20244 -0.0697365 6.6547 -0.0697365 6.93365 0.209209L11.2194 4.49492C11.4983 4.77387 11.4983 5.22613 11.2194 5.50508L6.93365 9.79079C6.6547 10.0697 6.20244 10.0697 5.92349 9.79079C5.64455 9.51184 5.64455 9.05958 5.92349 8.78064L8.98985 5.71429L0.714286 5.71429C0.319797 5.71429 0 5.39449 0 5Z"
-                                                                        fill="#616161">
-                                                                    </path>
-                                                                </svg>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="rs-services-item wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
-                                                <div class="rs-services-thumb">
-                                                    <a href="concrete-repair-injection.html"> <img width="600" height="415" src="assets/my-images/homepage/our-services/injection.webp" alt="حقن وإصلاح الخرسانة ومعالجة الشروخ الإنشائية بالرياض — شركة الطبقات المتعددة" loading="lazy">
-                                                    </a>
-                                                </div>
-                                                <div class="rs-services-content">
-                                                    <h3 class="rs-services-title">
-                                                        <a href="concrete-repair-injection.html">حقن وإصلاح الخرسانة </a>
-                                                    </h3>
-                                                    <p class="descrip"> تقنيات متخصصة لمعالجة التشققات لضمان قوة واستدامة المباني</p>
-                                                    <div class="rs-services-number">
-                                                    </div>
-                                                    <div class="rs-services-btn-wrapper">
-                                                        <div class="rs-services-text-btn underline has-theme-yellow">
-                                                            <a class="rs-text-btn" href="concrete-repair-injection.html">المزيد</a>
-                                                        </div>
-                                                        <a class="rs-square-btn has-icon has-light-bg" href="concrete-repair-injection.html" aria-hidden="true" tabindex="-1">
-                                                            <span class="icon-box">
-                                                                <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" width="12"
-                                                                    height="10" viewBox="0 0 12 10" fill="none">
-                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                        d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571L8.98985 4.28571L5.92349 1.21936C5.64455 0.940417 5.64455 0.488155 5.92349 0.209209C6.20244 -0.0697365 6.6547 -0.0697365 6.93365 0.209209L11.2194 4.49492C11.4983 4.77387 11.4983 5.22613 11.2194 5.50508L6.93365 9.79079C6.6547 10.0697 6.20244 10.0697 5.92349 9.79079C5.64455 9.51184 5.64455 9.05958 5.92349 8.78064L8.98985 5.71429L0.714286 5.71429C0.319797 5.71429 0 5.39449 0 5Z"
-                                                                        fill="#616161">
-                                                                    </path>
-                                                                </svg>
-                                                                <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" width="12"
-                                                                    height="10" viewBox="0 0 12 10" fill="none">
-                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                        d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571L8.98985 4.28571L5.92349 1.21936C5.64455 0.940417 5.64455 0.488155 5.92349 0.209209C6.20244 -0.0697365 6.6547 -0.0697365 6.93365 0.209209L11.2194 4.49492C11.4983 4.77387 11.4983 5.22613 11.2194 5.50508L6.93365 9.79079C6.6547 10.0697 6.20244 10.0697 5.92349 9.79079C5.64455 9.51184 5.64455 9.05958 5.92349 8.78064L8.98985 5.71429L0.714286 5.71429C0.319797 5.71429 0 5.39449 0 5Z"
-                                                                        fill="#616161">
-                                                                    </path>
-                                                                </svg>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="rs-services-item wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
-                                                <div class="rs-services-thumb">
-                                                    <a href="structural-strengthening.html"> <img width="600" height="415" src="assets/my-images/homepage/our-services/support.webp" alt="خدمات التدعيم الإنشائي للمباني والأساسات بالرياض — شركة الطبقات المتعددة" loading="lazy">
-                                                    </a>
-                                                </div>
-                                                <div class="rs-services-content">
-                                                    <h3 class="rs-services-title">
-                                                        <a href="structural-strengthening.html"> خدمات التدعيم</a>
-                                                    </h3>
-                                                    <p class="descrip">تعزيز العناصر الإنشائية لمقاومة الهبوط والأحمال الزائدة بكفاءة عالية </p>
-                                                    <div class="rs-services-number">
-                                                    </div>
-                                                    <div class="rs-services-btn-wrapper">
-                                                        <div class="rs-services-text-btn underline has-theme-yellow">
-                                                            <a class="rs-text-btn" href="structural-strengthening.html">المزيد</a>
-                                                        </div>
-                                                        <a class="rs-square-btn has-icon has-light-bg" href="structural-strengthening.html" aria-hidden="true" tabindex="-1">
-                                                            <span class="icon-box">
-                                                                <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" width="12"
-                                                                    height="10" viewBox="0 0 12 10" fill="none">
-                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                        d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571L8.98985 4.28571L5.92349 1.21936C5.64455 0.940417 5.64455 0.488155 5.92349 0.209209C6.20244 -0.0697365 6.6547 -0.0697365 6.93365 0.209209L11.2194 4.49492C11.4983 4.77387 11.4983 5.22613 11.2194 5.50508L6.93365 9.79079C6.6547 10.0697 6.20244 10.0697 5.92349 9.79079C5.64455 9.51184 5.64455 9.05958 5.92349 8.78064L8.98985 5.71429L0.714286 5.71429C0.319797 5.71429 0 5.39449 0 5Z"
-                                                                        fill="#616161">
-                                                                    </path>
-                                                                </svg>
-                                                                <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" width="12"
-                                                                    height="10" viewBox="0 0 12 10" fill="none">
-                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                        d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571L8.98985 4.28571L5.92349 1.21936C5.64455 0.940417 5.64455 0.488155 5.92349 0.209209C6.20244 -0.0697365 6.6547 -0.0697365 6.93365 0.209209L11.2194 4.49492C11.4983 4.77387 11.4983 5.22613 11.2194 5.50508L6.93365 9.79079C6.6547 10.0697 6.20244 10.0697 5.92349 9.79079C5.64455 9.51184 5.64455 9.05958 5.92349 8.78064L8.98985 5.71429L0.714286 5.71429C0.319797 5.71429 0 5.39449 0 5Z"
-                                                                        fill="#616161">
-                                                                    </path>
-                                                                </svg>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <div class="col-xl-7 col-lg-8 col-md-10">
+                                <div class="rs-video-content">
+                                    <div class="rs-section-title-wrapper wow fadeIn" data-wow-delay=".2s" data-wow-duration="1s">
+                                        <span class="rs-section-subtitle has-theme-yellow justify-content-start">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#3fada2"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#3fada2"></path></svg>
+                                            معاينة مجانية في الرياض
+                                        </span>
+                                        <h2 class="rs-section-title rs-split-text-enable split-in-fade">نشخّص المشكلة في الموقع ونقدّم لك الحل بضمان يصل إلى 10 سنوات</h2>
+                                    </div>
+                                    <div class="rs-video-btn-wrapper">
+                                        <div class="rs-video-btn">
+                                            <a class="rs-btn has-theme-yellow has-icon has-bg" href="contact-us.html">اطلب معاينة
+                                            <span class="icon-box">
+                <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+                <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+            </span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-                <!-- services area end -->
+                </div>
+                <!-- image parallax band end -->
                 <!-- WHY chose us start -->
                 <!-- <section class="rs-services-area section-space-bottom rs-services-ten">
                 <div class="container">
@@ -2075,129 +1895,93 @@
     </div>
 </section> -->
 <!-- portfolio area end -->
-<!-- products -->
-<section class="rs-elements-services-area section-space rs-services-nine primary-bg rs-swiper">
+<!-- products start -->
+<section class="rs-services-area section-space primary-bg" aria-label="منتجاتنا">
     <div class="container">
-        <div class="row  g-5 justify-content-center section-title-space align-items-center">
-            <div class="col-xxl-8 col-xl-9 col-lg-9">
-                <div class="rs-section-title-wrapper text-center wow fadeIn" data-wow-delay=".2s" data-wow-duration="1s">
-                    <span class="rs-section-subtitle has-theme-orange">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none">
-                            <path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#3fada2">
-                            </path>
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z"
-                                fill="#3fada2">
-                            </path>
-                        </svg>
+        <div class="hs-hscroll-head section-title-space">
+            <div class="rs-section-title-wrapper wow fadeIn" data-wow-delay=".2s" data-wow-duration="1s">
+                    <span class="rs-section-subtitle has-theme-orange justify-content-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#3fada2"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#3fada2"></path></svg>
                         منتجاتنا
                     </span>
-                    <h2 class="rs-section-title rs-split-text-enable split-in-fade">بعض منتجات العزل</h2>
+                    <h2 class="rs-section-title rs-split-text-enable split-in-fade">منتجات العزل ومواد البناء</h2>
                 </div>
+            <div class="hs-hscroll-nav">
+                <button type="button" class="rs-swiper-btn has-bg-white hover-red" data-hs-scroll="prev" data-hs-target="hs-products" aria-label="السابق"><i class="ri-arrow-right-line" aria-hidden="true"></i></button>
+                <button type="button" class="rs-swiper-btn has-bg-white hover-red" data-hs-scroll="next" data-hs-target="hs-products" aria-label="التالي"><i class="ri-arrow-left-line" aria-hidden="true"></i></button>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="rs-services-slider-wrapper">
-                    <div class="swiper" data-clone-slides="false" data-loop="false" data-speed="2000" data-autoplay="true" data-dots-dynamic="false" data-hover-pause="true" data-effect="false" data-delay="1000" data-item="3" data-item-xl="2" data-item-lg="2" data-item-md="2" data-item-sm="1" data-item-xs="1" data-item-mobile="1" data-margin="30">
-                        <div class="swiper-wrapper process-counts">
-                            <div class="swiper-slide">
-                                <div class="rs-services-item wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
-                                    <div class="rs-services-thumb">
-                                        <img width="500" height="500" src="assets/my-images/homepage/products/conc.webp" alt="المواد الإسمنتية للعزل وإصلاح الخرسانة — منتجات شركة الطبقات المتعددة" loading="lazy">
-                                    </div>
-                                    <div class="rs-services-content">
-                                        <h3 class="rs-services-title">
-                                            <a href="cementitious-waterproofing-products.html">المواد الإسمنتية</a>
-                                        </h3>
-                                        <div class="rs-services-descrip">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="rs-services-item wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1s">
-                                    <div class="rs-services-thumb">
-                                        <img width="500" height="500" src="assets/my-images/homepage/products/const.webp" alt="المواد الإنشائية المتخصصة لإصلاح الخرسانة — منتجات شركة الطبقات المتعددة" loading="lazy">
-                                    </div>
-                                    <div class="rs-services-content">
-                                        <h3 class="rs-services-title">
-                                            <a href="construction-materials.html">المواد الإنشائية المتخصصة</a>
-                                        </h3>
-                                        <div class="rs-services-descrip">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="rs-services-item wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
-                                    <div class="rs-services-thumb">
-                                        <img width="500" height="500" src="assets/my-images/homepage/products/iso.webp" alt="صفاية عزل لتصريف المياه عن طبقات العزل — منتجات شركة الطبقات المتعددة" loading="lazy">
-                                    </div>
-                                    <div class="rs-services-content">
-                                        <h3 class="rs-services-title">
-                                            <a href="insulation-rolls.html">صفاية عزل</a>
-                                        </h3>
-                                        <div class="rs-services-descrip">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="rs-services-item wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
-                                    <div class="rs-services-thumb">
-                                        <img width="500" height="500" src="assets/my-images/homepage/products/rain.webp" alt="صفاية مطر لتصريف مياه الأمطار من الأسطح — منتجات شركة الطبقات المتعددة" loading="lazy">
-                                    </div>
-                                    <div class="rs-services-content">
-                                        <h3 class="rs-services-title">
-                                            <a href="product-rain.html">صفاية مطر</a>
-                                        </h3>
-                                        <div class="rs-services-descrip">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="rs-services-item wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
-                                    <div class="rs-services-thumb">
-                                        <img width="650" height="628" src="assets/my-images/homepage/products/iso-1.webp" alt="لفات العزل المائي البيتومينية — منتجات شركة الطبقات المتعددة" loading="lazy">
-                                    </div>
-                                    <div class="rs-services-content">
-                                        <h3 class="rs-services-title">
-                                            <a href="insulation-rolls.html">لفات العزل</a>
-                                        </h3>
-                                        <div class="rs-services-descrip">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="rs-services-item wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1s">
-                                    <div class="rs-services-thumb">
-                                        <img width="700" height="700" src="assets/my-images/homepage/products/attach.webp" alt="المواد اللاصقة ومواد التثبيت — منتجات شركة الطبقات المتعددة" loading="lazy">
-                                    </div>
-                                    <div class="rs-services-content">
-                                        <h3 class="rs-services-title">
-                                            <a href="adhesive-materials.html">مواد لاصقة</a>
-                                        </h3>
-                                        <div class="rs-services-descrip">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- if we need pagination -->
-                        <div class="rs-services-pagination">
-                            <div class="swiper-pagination rs-pagination has-theme-orange">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="hs-hscroll" id="hs-products" tabindex="0" aria-label="قائمة المنتجات، اسحب أو مرر أفقيًا">
+            <a class="hs-product" href="cementitious-waterproofing-products.html">
+                <div class="hs-product__img"><img width="500" height="500" src="assets/my-images/homepage/products/conc.webp" alt="المواد الإسمنتية للعزل وإصلاح الخرسانة — منتجات شركة الطبقات المتعددة" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="hs-product__body"><h3>المواد الإسمنتية</h3><i class="ri-arrow-left-up-line" aria-hidden="true"></i></div>
+            </a>
+            <a class="hs-product" href="construction-materials.html">
+                <div class="hs-product__img"><img width="500" height="500" src="assets/my-images/homepage/products/const.webp" alt="المواد الإنشائية المتخصصة لإصلاح الخرسانة — منتجات شركة الطبقات المتعددة" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="hs-product__body"><h3>المواد الإنشائية المتخصصة</h3><i class="ri-arrow-left-up-line" aria-hidden="true"></i></div>
+            </a>
+            <a class="hs-product" href="insulation-rolls.html">
+                <div class="hs-product__img"><img width="500" height="500" src="assets/my-images/homepage/products/iso-1.webp" alt="لفات العزل المائي البيتومينية — منتجات شركة الطبقات المتعددة" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="hs-product__body"><h3>لفات العزل</h3><i class="ri-arrow-left-up-line" aria-hidden="true"></i></div>
+            </a>
+            <a class="hs-product" href="insulation-drain.html">
+                <div class="hs-product__img"><img width="500" height="500" src="assets/my-images/homepage/products/iso.webp" alt="صفاية عزل لتصريف المياه عن طبقات العزل — منتجات شركة الطبقات المتعددة" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="hs-product__body"><h3>صفايات العزل</h3><i class="ri-arrow-left-up-line" aria-hidden="true"></i></div>
+            </a>
+            <a class="hs-product" href="product-rain.html">
+                <div class="hs-product__img"><img width="500" height="500" src="assets/my-images/homepage/products/rain.webp" alt="صفاية مطر لتصريف مياه الأمطار من الأسطح — منتجات شركة الطبقات المتعددة" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="hs-product__body"><h3>صفايات المطر</h3><i class="ri-arrow-left-up-line" aria-hidden="true"></i></div>
+            </a>
+            <a class="hs-product" href="adhesive-materials.html">
+                <div class="hs-product__img"><img width="500" height="500" src="assets/my-images/homepage/products/attach.webp" alt="المواد اللاصقة ومواد التثبيت — منتجات شركة الطبقات المتعددة" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="hs-product__body"><h3>مواد لاصقة</h3><i class="ri-arrow-left-up-line" aria-hidden="true"></i></div>
+            </a>
         </div>
     </div>
 </section>
-<!-- products -->
+<!-- products end -->
+<!-- certificates start -->
+<section class="hs-cert-sec" aria-label="الاعتمادات والشهادات">
+    <div class="container">
+        <div class="row g-4 align-items-end hs-cert-top">
+            <div class="col-lg-6">
+                <div class="rs-section-title-wrapper wow fadeIn" data-wow-delay=".2s" data-wow-duration="1s">
+                    <span class="rs-section-subtitle has-theme-orange justify-content-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#3fada2"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#3fada2"></path></svg>
+                        اعتمادات موثقة
+                    </span>
+                    <h2 class="rs-section-title rs-split-text-enable split-in-fade">مسجلون رسميًا ومعتمدون من كبار المصنّعين</h2>
+                    <p class="descrip mt-15">كل شهادة هنا متاحة للاطلاع بصيغتها الأصلية في صفحة الشهادات.</p>
+                </div>
+                <a class="rs-btn has-theme-red has-icon has-bg has-skew" href="certificates.html">كل الشهادات والمستندات
+                <span class="icon-box">
+                <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+                <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+            </span>
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <div class="hs-refs">
+                    <h3>مُطبّق معتمد لدى</h3>
+                    <ul class="hs-chips">
+                        <li>Henkel Polybit</li><li>FOSROC</li><li>DCP</li><li>Drizoro</li><li>Bitumat</li><li>INSUWRAP</li><li>Al Taawon Confoam</li>
+                    </ul>
+                    <h3>عملاء وثّقنا العمل معهم</h3>
+                    <ul class="hs-chips">
+                        <li>مول العثيم</li><li>Huawei NEOM Data Center</li><li>برج العجلان المكتبي</li><li>سحارى سنتر</li><li>مؤسسة سعدان</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="hs-certs">
+                    <a class="hs-cert popup-image wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s" href="assets/my-images/certificate/certi3.jpg" title="الهيئة السعودية للمقاولين"><img src="assets/my-images/certificate/certi3.webp" width="724" height="1024" alt="شهادة عضوية الهيئة السعودية للمقاولين - شركة الطبقات المتعددة" loading="lazy" decoding="async"><span>الهيئة السعودية للمقاولين</span></a>
+                    <a class="hs-cert popup-image wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1s" href="assets/my-images/certificate/certi2.jpg" title="غرفة الرياض – عضوية"><img src="assets/my-images/certificate/certi2.webp" width="768" height="543" alt="شهادة عضوية غرفة الرياض التجارية الصناعية - شركة الطبقات المتعددة" loading="lazy" decoding="async"><span>غرفة الرياض – عضوية</span></a>
+                    <a class="hs-cert popup-image wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s" href="assets/my-images/certificate/certi1.jpg" title="منشآت – تصنيف المنشأة"><img src="assets/my-images/certificate/certi1.webp" width="768" height="543" alt="شهادة تصنيف منشآت للمنشآت الصغيرة والمتوسطة - شركة الطبقات المتعددة" loading="lazy" decoding="async"><span>منشآت – تصنيف المنشأة</span></a>
+                    <a class="hs-cert popup-image wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s" href="assets/my-images/certificate/certi18.jpg" title="وزارة التجارة – السجل التجاري"><img src="assets/my-images/certificate/certi18.webp" width="768" height="543" alt="رمز التحقق QR لوزارة التجارة والسجل التجاري - شركة الطبقات المتعددة" loading="lazy" decoding="async"><span>وزارة التجارة – السجل التجاري</span></a>
+                </div>
+    </div>
+</section>
+<!-- certificates end -->
 <!-- blog -->
 <!-- <section class="rs-elements-blog-are section-space rs-blog-three primary-bg">
 <div class="container">
@@ -2307,263 +2091,157 @@
 </div>
 </section> -->
 <!-- blog -->
-<!-- projects -->
-<section class="rs-elements-portfolio-area section-space rs-portfolio-one rs-swiper has-theme-red primary-bg">
+<!-- projects start -->
+<section class="rs-elements-portfolio-area section-space rs-portfolio-one has-theme-red primary-bg" aria-label="مشاريعنا">
     <div class="container">
-        <div class="row  g-5 justify-content-center section-title-space align-items-center">
-            <div class="col-xxl-8 col-xl-9 col-lg-9">
-                <div class="rs-section-title-wrapper text-center wow fadeIn" data-wow-delay=".2s" data-wow-duration="1s">
-                    <span class="rs-section-subtitle has-theme-orange">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none">
-                            <path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#3fada2">
-                            </path>
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z"
-                                fill="#3fada2">
-                            </path>
-                        </svg>
+        <div class="row g-5 section-title-space align-items-end">
+            <div class="col-xxl-7 col-xl-8 col-lg-8">
+                <div class="rs-section-title-wrapper wow fadeIn" data-wow-delay=".2s" data-wow-duration="1s">
+                    <span class="rs-section-subtitle has-theme-orange justify-content-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#3fada2"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#3fada2"></path></svg>
                         مشاريعنا
                     </span>
                     <h2 class="rs-section-title rs-split-text-enable split-in-fade">بعض مشاريعنا التي تعكس تميزنا</h2>
                 </div>
             </div>
-        </div>
-        <div class="row  g-5 section-title-space align-items-end">
-            <div class="col-xxl-7 col-xl-8 col-lg-8">
-                <div class="rs-section-title-wrapper wow fadeIn" data-wow-delay=".2s" data-wow-duration="1s">
-                    <span class="rs-section-subtitle has-theme-orange justify-content-start">
-                    </span>
-                    <div class="rs-section-title rs-split-text-enable split-in-fade" aria-hidden="true">
-                    </div>
-                </div>
-            </div>
             <div class="col-xxl-5 col-xl-4 col-lg-4">
-                <!-- If we need navigation buttons -->
-                <div class=" rs-portfolio-navigation">
-                    <button class="swiper-button-prev rs-swiper-btn has-bg-white hover-red">
-                        <i
-                            class="ri-arrow-left-line">
-                        </i>
-                    </button>
-                    <button class="swiper-button-next rs-swiper-btn has-bg-white hover-red">
-                        <i
-                            class="ri-arrow-right-line">
-                        </i>
-                    </button>
-                </div>
+                <div class="rs-portfolio-navigation">
+                <button type="button" class="rs-swiper-btn has-bg-white hover-red" data-hs-scroll="prev" data-hs-target="hs-projects" aria-label="السابق"><i class="ri-arrow-right-line" aria-hidden="true"></i></button>
+                <button type="button" class="rs-swiper-btn has-bg-white hover-red" data-hs-scroll="next" data-hs-target="hs-projects" aria-label="التالي"><i class="ri-arrow-left-line" aria-hidden="true"></i></button>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="rs-portfolio-slider-wrapper">
-                    <div class="swiper has-space" data-clone-slides="false" data-loop="true" data-speed="1500" data-autoplay="true" data-dots-dynamic="false" data-hover-pause="true" data-effect="false" data-delay="2500" data-item="4" data-item-xl="3" data-item-lg="3" data-item-md="2" data-item-sm="1" data-item-xs="1" data-item-mobile="1" data-margin="30" data-margin-xl="30">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="rs-portfolio-item wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1s">
-                                    <div class="rs-portfolio-thumb">
-                                        <img width="700" height="607" src="assets/my-images/homepage/projects/1.webp" alt="مشروع وادي صفار — من مشاريع شركة الطبقات المتعددة بالرياض" loading="lazy">
-                                    </div>
-                                    <div class="rs-portfolio-content">
-                                        <div class="rs-portfolio-tag">
-                                            <a href="projects.html">وادي صفار</a>
-                                        </div>
-                                        <h3 class="rs-portfolio-title underline has-white">
-                                            <a href="projects.html">الإيبوكسي الأنتي أستاتيك</a>
-                                        </h3>
-                                        <div class="rs-portfolio-btn">
-                                            <a href="projects.html" class="rs-btn has-theme-red has-circle has-icon" aria-hidden="true" tabindex="-1">
-                                                <span class="icon-box">
-                                                    <svg class="icon-first" xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 32 32">
-                                                        <path
-                                                            d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                        </path>
-                                                    </svg>
-                                                    <svg class="icon-second" xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 32 32">
-                                                        <path
-                                                            d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                        </path>
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="rs-portfolio-item wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
-                                    <div class="rs-portfolio-thumb">
-                                        <img width="700" height="607" src="assets/my-images/homepage/projects/2.webp" alt="مشروع قصر سكني — من مشاريع شركة الطبقات المتعددة بالرياض" loading="lazy">
-                                    </div>
-                                    <div class="rs-portfolio-content">
-                                        <div class="rs-portfolio-tag">
-                                            <a href="projects.html">قصر سكني</a>
-                                        </div>
-                                        <h3 class="rs-portfolio-title underline has-white">
-                                            <a href="projects.html">العزل المائي للقبو بلفات الPVC</a>
-                                        </h3>
-                                        <div class="rs-portfolio-btn">
-                                            <a href="projects.html" class="rs-btn has-theme-red has-circle has-icon" aria-hidden="true" tabindex="-1">
-                                                <span class="icon-box">
-                                                    <svg class="icon-first" xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 32 32">
-                                                        <path
-                                                            d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                        </path>
-                                                    </svg>
-                                                    <svg class="icon-second" xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 32 32">
-                                                        <path
-                                                            d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                        </path>
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="rs-portfolio-item wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
-                                    <div class="rs-portfolio-thumb">
-                                        <img width="700" height="607" src="assets/my-images/homepage/projects/3.webp" alt="مشروع برج بيجي — من مشاريع شركة الطبقات المتعددة بالرياض" loading="lazy">
-                                    </div>
-                                    <div class="rs-portfolio-content">
-                                        <div class="rs-portfolio-tag">
-                                            <a href="projects.html">برج بيجي</a>
-                                        </div>
-                                        <h3 class="rs-portfolio-title underline has-white">
-                                            <a href="projects.html">أوتاد شوت كريت</a>
-                                        </h3>
-                                        <div class="rs-portfolio-btn">
-                                            <a href="projects.html" class="rs-btn has-theme-red has-circle has-icon" aria-hidden="true" tabindex="-1">
-                                                <span class="icon-box">
-                                                    <svg class="icon-first" xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 32 32">
-                                                        <path
-                                                            d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                        </path>
-                                                    </svg>
-                                                    <svg class="icon-second" xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 32 32">
-                                                        <path
-                                                            d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                        </path>
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="rs-portfolio-item wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
-                                    <div class="rs-portfolio-thumb">
-                                        <img width="700" height="607" src="assets/my-images/homepage/projects/4.webp" alt="مشروع صحاري مول — من مشاريع شركة الطبقات المتعددة بالرياض" loading="lazy">
-                                    </div>
-                                    <div class="rs-portfolio-content">
-                                        <div class="rs-portfolio-tag">
-                                            <a href="projects.html">صحاري مول</a>
-                                        </div>
-                                        <h3 class="rs-portfolio-title underline has-white">
-                                            <a href="projects.html">تدعيم جدران مواقف السيارات</a>
-                                        </h3>
-                                        <div class="rs-portfolio-btn">
-                                            <a href="projects.html" class="rs-btn has-theme-red has-circle has-icon" aria-hidden="true" tabindex="-1">
-                                                <span class="icon-box">
-                                                    <svg class="icon-first" xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 32 32">
-                                                        <path
-                                                            d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                        </path>
-                                                    </svg>
-                                                    <svg class="icon-second" xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 32 32">
-                                                        <path
-                                                            d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                        </path>
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="rs-portfolio-item wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1s">
-                                    <div class="rs-portfolio-thumb">
-                                        <img width="700" height="607" src="assets/my-images/homepage/projects/5.webp" alt="مشروع مصنع سندس — من مشاريع شركة الطبقات المتعددة بالرياض" loading="lazy">
-                                    </div>
-                                    <div class="rs-portfolio-content">
-                                        <div class="rs-portfolio-tag">
-                                            <a href="projects.html">مصنع سندس</a>
-                                        </div>
-                                        <h3 class="rs-portfolio-title underline has-white">
-                                            <a href="projects.html">حقن التربة</a>
-                                        </h3>
-                                        <div class="rs-portfolio-btn">
-                                            <a href="projects.html" class="rs-btn has-theme-red has-circle has-icon" aria-hidden="true" tabindex="-1">
-                                                <span class="icon-box">
-                                                    <svg class="icon-first" xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 32 32">
-                                                        <path
-                                                            d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                        </path>
-                                                    </svg>
-                                                    <svg class="icon-second" xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 32 32">
-                                                        <path
-                                                            d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                        </path>
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="rs-portfolio-item wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
-                                    <div class="rs-portfolio-thumb">
-                                        <img width="700" height="607" src="assets/my-images/homepage/projects/6.webp" alt="مشروع وقت اللياقة — من مشاريع شركة الطبقات المتعددة بالرياض" loading="lazy">
-                                    </div>
-                                    <div class="rs-portfolio-content">
-                                        <div class="rs-portfolio-tag">
-                                            <a href="projects.html">وقت اللياقة</a>
-                                        </div>
-                                        <h3 class="rs-portfolio-title underline has-white">
-                                            <a href="projects.html">حقن التربة تدعيم</a>
-                                        </h3>
-                                        <div class="rs-portfolio-btn">
-                                            <a href="projects.html" class="rs-btn has-theme-red has-circle has-icon" aria-hidden="true" tabindex="-1">
-                                                <span class="icon-box">
-                                                    <svg class="icon-first" xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 32 32">
-                                                        <path
-                                                            d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                        </path>
-                                                    </svg>
-                                                    <svg class="icon-second" xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 32 32">
-                                                        <path
-                                                            d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                        </path>
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
+    <div class="hs-hscroll hs-hscroll--bleed hs-proj" id="hs-projects" tabindex="0" aria-label="قائمة المشاريع، اسحب أو مرر أفقيًا">
+            <div class="rs-portfolio-item">
+                <div class="rs-portfolio-thumb">
+                    <img width="700" height="607" src="assets/my-images/homepage/projects/1.webp" alt="مشروع وادي صفار — من مشاريع شركة الطبقات المتعددة بالرياض" loading="lazy" decoding="async" draggable="false">
+                </div>
+                <div class="rs-portfolio-content">
+                    <div class="rs-portfolio-tag">
+                        <a href="projects.html">وادي صفار</a>
+                    </div>
+                    <h3 class="rs-portfolio-title underline has-white">
+                        <a href="projects.html">الإيبوكسي الأنتي أستاتيك</a>
+                    </h3>
+                    <div class="rs-portfolio-btn">
+                        <a href="projects.html" class="rs-btn has-theme-red has-circle has-icon" aria-hidden="true" tabindex="-1">
+                        <span class="icon-box">
+                <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+                <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="rs-portfolio-item">
+                <div class="rs-portfolio-thumb">
+                    <img width="700" height="607" src="assets/my-images/homepage/projects/2.webp" alt="مشروع قصر سكني — من مشاريع شركة الطبقات المتعددة بالرياض" loading="lazy" decoding="async" draggable="false">
+                </div>
+                <div class="rs-portfolio-content">
+                    <div class="rs-portfolio-tag">
+                        <a href="projects.html">قصر سكني</a>
+                    </div>
+                    <h3 class="rs-portfolio-title underline has-white">
+                        <a href="projects.html">العزل المائي للقبو بلفات الPVC</a>
+                    </h3>
+                    <div class="rs-portfolio-btn">
+                        <a href="projects.html" class="rs-btn has-theme-red has-circle has-icon" aria-hidden="true" tabindex="-1">
+                        <span class="icon-box">
+                <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+                <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="rs-portfolio-item">
+                <div class="rs-portfolio-thumb">
+                    <img width="700" height="607" src="assets/my-images/homepage/projects/3.webp" alt="مشروع برج بيجي — من مشاريع شركة الطبقات المتعددة بالرياض" loading="lazy" decoding="async" draggable="false">
+                </div>
+                <div class="rs-portfolio-content">
+                    <div class="rs-portfolio-tag">
+                        <a href="projects.html">برج بيجي</a>
+                    </div>
+                    <h3 class="rs-portfolio-title underline has-white">
+                        <a href="projects.html">أوتاد شوت كريت</a>
+                    </h3>
+                    <div class="rs-portfolio-btn">
+                        <a href="projects.html" class="rs-btn has-theme-red has-circle has-icon" aria-hidden="true" tabindex="-1">
+                        <span class="icon-box">
+                <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+                <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="rs-portfolio-item">
+                <div class="rs-portfolio-thumb">
+                    <img width="700" height="607" src="assets/my-images/homepage/projects/4.webp" alt="مشروع صحاري مول — من مشاريع شركة الطبقات المتعددة بالرياض" loading="lazy" decoding="async" draggable="false">
+                </div>
+                <div class="rs-portfolio-content">
+                    <div class="rs-portfolio-tag">
+                        <a href="projects.html">صحاري مول</a>
+                    </div>
+                    <h3 class="rs-portfolio-title underline has-white">
+                        <a href="projects.html">تدعيم جدران مواقف السيارات</a>
+                    </h3>
+                    <div class="rs-portfolio-btn">
+                        <a href="projects.html" class="rs-btn has-theme-red has-circle has-icon" aria-hidden="true" tabindex="-1">
+                        <span class="icon-box">
+                <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+                <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="rs-portfolio-item">
+                <div class="rs-portfolio-thumb">
+                    <img width="700" height="607" src="assets/my-images/homepage/projects/5.webp" alt="مشروع مصنع سندس — من مشاريع شركة الطبقات المتعددة بالرياض" loading="lazy" decoding="async" draggable="false">
+                </div>
+                <div class="rs-portfolio-content">
+                    <div class="rs-portfolio-tag">
+                        <a href="projects.html">مصنع سندس</a>
+                    </div>
+                    <h3 class="rs-portfolio-title underline has-white">
+                        <a href="projects.html">حقن التربة</a>
+                    </h3>
+                    <div class="rs-portfolio-btn">
+                        <a href="projects.html" class="rs-btn has-theme-red has-circle has-icon" aria-hidden="true" tabindex="-1">
+                        <span class="icon-box">
+                <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+                <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="rs-portfolio-item">
+                <div class="rs-portfolio-thumb">
+                    <img width="700" height="607" src="assets/my-images/homepage/projects/6.webp" alt="مشروع وقت اللياقة — من مشاريع شركة الطبقات المتعددة بالرياض" loading="lazy" decoding="async" draggable="false">
+                </div>
+                <div class="rs-portfolio-content">
+                    <div class="rs-portfolio-tag">
+                        <a href="projects.html">وقت اللياقة</a>
+                    </div>
+                    <h3 class="rs-portfolio-title underline has-white">
+                        <a href="projects.html">حقن التربة تدعيم</a>
+                    </h3>
+                    <div class="rs-portfolio-btn">
+                        <a href="projects.html" class="rs-btn has-theme-red has-circle has-icon" aria-hidden="true" tabindex="-1">
+                        <span class="icon-box">
+                <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+                <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </div>
 </section>
-<!-- Portfolio Style 01 -->
+<!-- projects end -->
 </main>
 <!-- Body main wrapper end -->
 <div id="site-footer">
@@ -2601,7 +2279,47 @@
 <script src="assets/js/plugins/rs-anim-int.js" defer></script>
 <script src="assets/js/plugins/rs-scroll-trigger.min.js" defer></script>
 <script src="assets/js/plugins/rs-splitText.min.js" defer></script>
+<script src="assets/js/vendor/purecounter.js" defer></script>
 <script src="assets/js/main.js?v=20261018" defer>
+</script>
+<script>
+// .hs-hscroll rows: arrow buttons + mouse drag (touch scrolls natively)
+(function () {
+    document.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-hs-scroll]');
+        if (!b) return;
+        var row = document.getElementById(b.dataset.hsTarget);
+        var card = row && row.firstElementChild;
+        if (!card) return;
+        var step = card.getBoundingClientRect().width + parseFloat(getComputedStyle(row).columnGap || 0);
+        var dir = getComputedStyle(row).direction === 'rtl' ? -1 : 1;
+        row.scrollBy({ left: (b.dataset.hsScroll === 'next' ? 1 : -1) * dir * step, behavior: 'smooth' });
+    });
+    document.querySelectorAll('.hs-hscroll').forEach(function (row) {
+        var down = false, moved = false, x0 = 0, s0 = 0;
+        row.addEventListener('dragstart', function (e) { e.preventDefault(); });
+        row.addEventListener('pointerdown', function (e) {
+            if (e.pointerType !== 'mouse' || e.button !== 0) return;
+            down = true; moved = false; x0 = e.clientX; s0 = row.scrollLeft;
+        });
+        window.addEventListener('pointermove', function (e) {
+            if (!down) return;
+            var dx = e.clientX - x0;
+            if (!moved && Math.abs(dx) < 6) return;
+            if (!moved) { moved = true; row.classList.add('is-dragging'); }
+            row.scrollLeft = s0 - dx;
+        });
+        window.addEventListener('pointerup', function () {
+            if (!down) return;
+            down = false;
+            row.classList.remove('is-dragging');
+        });
+        // a drag must not count as a click on the card link
+        row.addEventListener('click', function (e) {
+            if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; }
+        }, true);
+    });
+})();
 </script>
 </body>
 </html>

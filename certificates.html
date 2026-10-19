@@ -43,6 +43,7 @@
         <script>!function(){var t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="dark"&&t!=="light")t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";var d=document.documentElement;d.setAttribute("data-theme",t);d.setAttribute("data-bs-theme",t)}()</script>
         <link rel="stylesheet" href="assets/css/theme-auto.css?v=1">
         <link rel="stylesheet" href="assets/css/theme.css?v=1">
+        <link rel="stylesheet" href="assets/css/home-sections.css?v=1">
         <script src="assets/js/theme.js?v=1" defer></script>
     </head>
     <body class="rs-smoother-yes rtl">
@@ -173,9 +174,6 @@
                                 <a href="projects.html">بعض مشاريعنا</a>
                             </li>
                             <li>
-                                <a href="blogs.html">المدونة</a>
-                            </li>
-                            <li>
                                 <a href="contact-us.html">تواصل معنا</a>
                             </li>
                         </ul>
@@ -266,7 +264,6 @@
                         </li>
                         <li><a href="certificates.html">الشهادات</a></li>
                         <li><a href="projects.html">بعض مشاريعنا</a></li>
-                        <li><a href="blogs.html">المدونة</a></li>
                         <li><a href="contact-us.html">تواصل معنا</a></li>
                     </ul>
                 </div>
@@ -399,7 +396,7 @@
             </section>
             <!-- breadcrumb area end -->
             <!-- certificates by category -->
-            <section class="rs-services-area section-space">
+            <section class="rs-services-area section-space hs-certs-page">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-xxl-7 col-xl-8 col-lg-9">
@@ -411,27 +408,27 @@
                     </div>
 
                     <h3 class="srv-block-title wow fadeIn" data-wow-delay=".1s">الاعتمادات والتسجيلات الرسمية</h3>
-                    <div class="row g-4" style="margin-bottom:50px;">
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a href="assets/my-images/certificate/certi1.jpg" target="_blank" class="srv-card-link wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
+                    <div class="row g-4 justify-content-center" style="margin-bottom:50px;">
+                        <div class="col-xl-4 col-md-6">
+                            <a href="assets/my-images/certificate/certi1.jpg" title="منشآت – تصنيف المنشأة" class="srv-card-link popup-image wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
                                 <img width="768" height="543" src="assets/my-images/certificate/certi1.webp" alt="شهادة تصنيف منشآت للمنشآت الصغيرة والمتوسطة - شركة الطبقات المتعددة" loading="lazy">
                                 <div class="srv-card-body"><h5>منشآت – تصنيف المنشأة</h5></div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a href="assets/my-images/certificate/certi2.jpg" target="_blank" class="srv-card-link wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1s">
+                        <div class="col-xl-4 col-md-6">
+                            <a href="assets/my-images/certificate/certi2.jpg" title="غرفة الرياض – شهادة عضوية" class="srv-card-link popup-image wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1s">
                                 <img width="768" height="543" src="assets/my-images/certificate/certi2.webp" alt="شهادة عضوية غرفة الرياض التجارية الصناعية - شركة الطبقات المتعددة" loading="lazy">
                                 <div class="srv-card-body"><h5>غرفة الرياض – شهادة عضوية</h5></div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a href="assets/my-images/certificate/certi3.jpg" target="_blank" class="srv-card-link wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
+                        <div class="col-xl-4 col-md-6">
+                            <a href="assets/my-images/certificate/certi3.jpg" title="الهيئة السعودية للمقاولين" class="srv-card-link popup-image wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
                                 <img width="724" height="1024" src="assets/my-images/certificate/certi3.webp" alt="شهادة عضوية الهيئة السعودية للمقاولين - شركة الطبقات المتعددة" loading="lazy">
                                 <div class="srv-card-body"><h5>الهيئة السعودية للمقاولين</h5></div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a href="assets/my-images/certificate/certi18.jpg" target="_blank" class="srv-card-link wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
+                        <div class="col-xl-4 col-md-6">
+                            <a href="assets/my-images/certificate/certi18.jpg" title="وزارة التجارة – السجل التجاري" class="srv-card-link popup-image wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
                                 <img width="768" height="543" src="assets/my-images/certificate/certi18.webp" alt="رمز التحقق QR لوزارة التجارة والسجل التجاري - شركة الطبقات المتعددة" loading="lazy">
                                 <div class="srv-card-body"><h5>وزارة التجارة – السجل التجاري</h5></div>
                             </a>
@@ -439,45 +436,45 @@
                     </div>
 
                     <h3 class="srv-block-title wow fadeIn" data-wow-delay=".1s">اعتمادات الموردين والمصنّعين المعتمدين</h3>
-                    <div class="row g-4" style="margin-bottom:50px;">
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a href="assets/my-images/certificate/certi4.jpg" target="_blank" class="srv-card-link wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
+                    <div class="row g-4 justify-content-center" style="margin-bottom:50px;">
+                        <div class="col-xl-4 col-md-6">
+                            <a href="assets/my-images/certificate/certi4.jpg" title="Henkel Polybit – عزل مائي" class="srv-card-link popup-image wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
                                 <img width="724" height="1024" src="assets/my-images/certificate/certi4.webp" alt="شهادة مُطبّق معتمد من Henkel Polybit لأنظمة العزل المائي" loading="lazy">
                                 <div class="srv-card-body"><h5>Henkel Polybit – عزل مائي</h5></div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a href="assets/my-images/certificate/certi5.jpg" target="_blank" class="srv-card-link wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1s">
+                        <div class="col-xl-4 col-md-6">
+                            <a href="assets/my-images/certificate/certi5.jpg" title="INSUWRAP – عزل PVC" class="srv-card-link popup-image wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1s">
                                 <img width="724" height="1024" src="assets/my-images/certificate/certi5.webp" alt="شهادة مُطبّق معتمد من INSUWRAP لأغشية العزل المائي بمادة PVC" loading="lazy">
                                 <div class="srv-card-body"><h5>INSUWRAP – عزل PVC</h5></div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a href="assets/my-images/certificate/certi6.jpg" target="_blank" class="srv-card-link wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
+                        <div class="col-xl-4 col-md-6">
+                            <a href="assets/my-images/certificate/certi6.jpg" title="Drizoro – مواد إصلاح إنشائي" class="srv-card-link popup-image wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
                                 <img width="724" height="1024" src="assets/my-images/certificate/certi6.webp" alt="شهادة مُطبّق معتمد من Drizoro لمواد الإصلاح الإنشائي" loading="lazy">
                                 <div class="srv-card-body"><h5>Drizoro – مواد إصلاح إنشائي</h5></div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a href="assets/my-images/certificate/certi7.jpg" target="_blank" class="srv-card-link wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
+                        <div class="col-xl-4 col-md-6">
+                            <a href="assets/my-images/certificate/certi7.jpg" title="DCP – عزل مائي وأرضيات" class="srv-card-link popup-image wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
                                 <img width="725" height="1024" src="assets/my-images/certificate/certi7.webp" alt="شهادة مُطبّق معتمد من DCP لأنظمة العزل المائي والأرضيات" loading="lazy">
                                 <div class="srv-card-body"><h5>DCP – عزل مائي وأرضيات</h5></div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a href="assets/my-images/certificate/certi8.jpg" target="_blank" class="srv-card-link wow fadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
+                        <div class="col-xl-4 col-md-6">
+                            <a href="assets/my-images/certificate/certi8.jpg" title="FOSROC – أنظمة متعددة" class="srv-card-link popup-image wow fadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
                                 <img width="724" height="1024" src="assets/my-images/certificate/certi8.webp" alt="شهادة مُطبّق معتمد من FOSROC لأنظمة الإصلاح والأرضيات الصناعية" loading="lazy">
                                 <div class="srv-card-body"><h5>FOSROC – أنظمة متعددة</h5></div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a href="assets/my-images/certificate/certi9.jpg" target="_blank" class="srv-card-link wow fadeInUp" data-wow-delay=".6s" data-wow-duration="1s">
+                        <div class="col-xl-4 col-md-6">
+                            <a href="assets/my-images/certificate/certi9.jpg" title="Al Taawon Confoam" class="srv-card-link popup-image wow fadeInUp" data-wow-delay=".6s" data-wow-duration="1s">
                                 <img width="724" height="1024" src="assets/my-images/certificate/certi9.webp" alt="شهادة مُطبّق معتمد من Al Taawon Confoam للخرسانة الرغوية" loading="lazy">
                                 <div class="srv-card-body"><h5>Al Taawon Confoam</h5></div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a href="assets/my-images/certificate/certi10.jpg" target="_blank" class="srv-card-link wow fadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
+                        <div class="col-xl-4 col-md-6">
+                            <a href="assets/my-images/certificate/certi10.jpg" title="Bitumat – عزل بيتوميني" class="srv-card-link popup-image wow fadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
                                 <img width="768" height="994" src="assets/my-images/certificate/certi10.webp" alt="شهادة مُطبّق معتمد من Bitumat للعزل المائي بالبيتومين على مستوى المملكة" loading="lazy">
                                 <div class="srv-card-body"><h5>Bitumat – عزل بيتوميني</h5></div>
                             </a>
@@ -485,45 +482,45 @@
                     </div>
 
                     <h3 class="srv-block-title wow fadeIn" data-wow-delay=".1s">شهادات ومستندات المشاريع المنفَّذة</h3>
-                    <div class="row g-4">
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a href="assets/my-images/certificate/certi11.jpg" target="_blank" class="srv-card-link wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-xl-4 col-md-6">
+                            <a href="assets/my-images/certificate/certi11.jpg" title="اعتماد سند جوانب الحفر" class="srv-card-link popup-image wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
                                 <img width="725" height="1024" src="assets/my-images/certificate/certi11.webp" alt="اعتماد أعمال سند جوانب الحفر بشبك حديد - مشروع برج العجلان المكتبي" loading="lazy">
                                 <div class="srv-card-body"><h5>اعتماد سند جوانب الحفر</h5></div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a href="assets/my-images/certificate/certi12.jpg" target="_blank" class="srv-card-link wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1s">
+                        <div class="col-xl-4 col-md-6">
+                            <a href="assets/my-images/certificate/certi12.jpg" title="اعتماد مواد عزل مائي وحراري" class="srv-card-link popup-image wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1s">
                                 <img width="729" height="1024" src="assets/my-images/certificate/certi12.webp" alt="اعتماد مواد العزل المائي والحراري - مشروع مول العثيم" loading="lazy">
                                 <div class="srv-card-body"><h5>اعتماد مواد عزل مائي وحراري</h5></div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a href="assets/my-images/certificate/certi13.jpg" target="_blank" class="srv-card-link wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
+                        <div class="col-xl-4 col-md-6">
+                            <a href="assets/my-images/certificate/certi13.jpg" title="إصلاح جدران بالشوت كريت – الزامل" class="srv-card-link popup-image wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
                                 <img width="724" height="1024" src="assets/my-images/certificate/certi13.webp" alt="عرض سعر أعمال إصلاح وضبط جدران المصعد بالشوت كريت - مجموعة الزامل" loading="lazy">
                                 <div class="srv-card-body"><h5>إصلاح جدران بالشوت كريت – الزامل</h5></div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a href="assets/my-images/certificate/certi14.jpg" target="_blank" class="srv-card-link wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
+                        <div class="col-xl-4 col-md-6">
+                            <a href="assets/my-images/certificate/certi14.jpg" title="عزل PVC – مشروع Huawei NEOM" class="srv-card-link popup-image wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
                                 <img width="768" height="994" src="assets/my-images/certificate/certi14.webp" alt="أمر شراء مواد عزل مائي بمادة PVC - مشروع Huawei NEOM Data Center" loading="lazy">
                                 <div class="srv-card-body"><h5>عزل PVC – مشروع Huawei NEOM</h5></div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a href="assets/my-images/certificate/certi15.jpg" target="_blank" class="srv-card-link wow fadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
+                        <div class="col-xl-4 col-md-6">
+                            <a href="assets/my-images/certificate/certi15.jpg" title="عقد شوت كريت – سحارى سنتر" class="srv-card-link popup-image wow fadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
                                 <img width="576" height="1024" src="assets/my-images/certificate/certi15.webp" alt="عقد تنفيذ أعمال شوت كريت وقصارة للقبو - مشروع سحارى سنتر" loading="lazy">
                                 <div class="srv-card-body"><h5>عقد شوت كريت – سحارى سنتر</h5></div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a href="assets/my-images/certificate/certi16.jpg" target="_blank" class="srv-card-link wow fadeInUp" data-wow-delay=".6s" data-wow-duration="1s">
+                        <div class="col-xl-4 col-md-6">
+                            <a href="assets/my-images/certificate/certi16.jpg" title="لفات عزل PVC – مؤسسة سعدان" class="srv-card-link popup-image wow fadeInUp" data-wow-delay=".6s" data-wow-duration="1s">
                                 <img width="716" height="1024" src="assets/my-images/certificate/certi16.webp" alt="أمر شراء لفات عزل مائي بمادة PVC - مؤسسة سعدان" loading="lazy">
                                 <div class="srv-card-body"><h5>لفات عزل PVC – مؤسسة سعدان</h5></div>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a href="assets/my-images/certificate/certi17.jpg" target="_blank" class="srv-card-link wow fadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
+                        <div class="col-xl-4 col-md-6">
+                            <a href="assets/my-images/certificate/certi17.jpg" title="إنجاز أرضيات إيبوكسي 60,000م²" class="srv-card-link popup-image wow fadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
                                 <img width="768" height="981" src="assets/my-images/certificate/certi17.webp" alt="شهادة إنجاز أعمال تشطيب أرضيات بمادة الإيبوكسي بمساحة 60 ألف متر مربع" loading="lazy">
                                 <div class="srv-card-body"><h5>إنجاز أرضيات إيبوكسي 60,000م²</h5></div>
                             </a>
@@ -686,6 +683,7 @@
 <script src="assets/js/vendor/bootstrap.bundle.min.js" defer></script>
 <script src="assets/js/plugins/meanmenu.min.js" defer></script>
 <script src="assets/js/plugins/wow.min.js" defer></script>
+<script src="assets/js/vendor/magnific-popup.min.js" defer></script>
 <script src="assets/js/main.js?v=20261018" defer>
         </script>
     </body>

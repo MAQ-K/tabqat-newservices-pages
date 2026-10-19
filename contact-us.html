@@ -43,6 +43,7 @@
         <script>!function(){var t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="dark"&&t!=="light")t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";var d=document.documentElement;d.setAttribute("data-theme",t);d.setAttribute("data-bs-theme",t)}()</script>
         <link rel="stylesheet" href="assets/css/theme-auto.css?v=1">
         <link rel="stylesheet" href="assets/css/theme.css?v=1">
+        <link rel="stylesheet" href="assets/css/home-sections.css?v=1">
         <script src="assets/js/theme.js?v=1" defer></script>
     </head>
     <body class="rs-smoother-yes rtl">
@@ -173,9 +174,6 @@
                                 <a href="projects.html">بعض مشاريعنا</a>
                             </li>
                             <li>
-                                <a href="blogs.html">المدونة</a>
-                            </li>
-                            <li>
                                 <a href="contact-us.html">تواصل معنا</a>
                             </li>
                         </ul>
@@ -266,7 +264,6 @@
                         </li>
                         <li><a href="certificates.html">الشهادات</a></li>
                         <li><a href="projects.html">بعض مشاريعنا</a></li>
-                        <li><a href="blogs.html">المدونة</a></li>
                         <li><a href="contact-us.html">تواصل معنا</a></li>
                     </ul>
                 </div>
@@ -398,47 +395,88 @@
                 </div>
             </section>
             <!-- breadcrumb area end -->
-            <!-- contact form area start -->
-            <section style="margin-top: 0px !important;" class="rs-contact-form-area rs-contact-ten section-space-bottom">
+            <!-- contact info start -->
+            <section class="hs-stats-sec" aria-label="بيانات التواصل">
                 <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-xl-12">
-                            <div class="rs-contact-form wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1s">
-                                <h3 class="rs-contact-form-title">تواصل معنا</h3>
-                                <p class="descrip">يسعدنا استقبال استفساراتكم واقتراحاتكم في أي وقت.</p>
+                    <div class="hs-cinfos">
+                        <div class="hs-cinfo wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
+                            <i class="ri-phone-line" aria-hidden="true"></i>
+                            <h3>اتصل بنا</h3>
+                            <a href="tel:+966581032502" dir="ltr">0581032502</a>
+                        </div>
+                        <div class="hs-cinfo wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1s">
+                            <i class="ri-whatsapp-line" aria-hidden="true"></i>
+                            <h3>واتساب</h3>
+                            <a href="https://wa.me/966581032502" target="_blank" rel="noopener" dir="ltr">+966 58 103 2502</a>
+                        </div>
+                        <div class="hs-cinfo wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
+                            <i class="ri-mail-line" aria-hidden="true"></i>
+                            <h3>البريد الإلكتروني</h3>
+                            <a href="mailto:Info@tabqat.com.sa">Info@tabqat.com.sa</a>
+                        </div>
+                        <div class="hs-cinfo wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
+                            <i class="ri-time-line" aria-hidden="true"></i>
+                            <h3>ساعات العمل</h3>
+                            <span>السبت – الخميس، 8 ص – 5 م</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- contact info end -->
+            <!-- contact form area start -->
+            <section class="rs-contact-form-area section-space hs-contact">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-lg-7">
+                            <div class="hs-contact__form wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1s">
+                                <div class="rs-section-title-wrapper wow fadeIn" data-wow-delay=".2s" data-wow-duration="1s">
+                    <span class="rs-section-subtitle has-theme-orange justify-content-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#3fada2"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#3fada2"></path></svg>
+                        تواصل معنا
+                    </span>
+                    <h2 class="rs-section-title rs-split-text-enable split-in-fade">اطلب معاينة مجانية أو أرسل استفسارك</h2>
+                                    <p class="descrip mt-15">اكتب بياناتك ووصفًا مختصرًا للمشكلة، وسيتواصل معك فريقنا لتحديد موعد المعاينة.</p>
+                </div>
                                 <form id="contact-form" action="assets/mailer.php" method="POST">
-                                    <div class="row g-5">
-                                        <div class="col-md-4">
-                                            <div class="rs-contact-input">
-                                                <input id="name" name="name" type="text" placeholder="الاسم">
-                                            </div>
+                                    <div class="row g-4">
+                                        <div class="col-md-6">
+                                            <label class="hs-field"><span>الاسم</span><input id="name" name="name" type="text" autocomplete="name" required></label>
                                         </div>
-                                        <div class="col-md-4">
-                                            <div class="rs-contact-input">
-                                                <input id="email" name="email" type="email" placeholder="الإيميل">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="rs-contact-input">
-                                                <input id="phone" name="phone" type="text" placeholder="رقم الهاتف">
-                                            </div>
+                                        <div class="col-md-6">
+                                            <label class="hs-field"><span>رقم الهاتف</span><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" required></label>
                                         </div>
                                         <div class="col-md-12">
-                                            <div class="rs-contact-input">
-                                                <textarea id="message" name="message" placeholder="وصف الرسالة">
-                                                </textarea>
-                                            </div>
+                                            <label class="hs-field"><span>البريد الإلكتروني</span><input id="email" name="email" type="email" autocomplete="email" dir="ltr"></label>
                                         </div>
                                         <div class="col-md-12">
-                                            <div class="rs-contact-btn">
-                                                <button type="submit" class="rs-btn has-theme-orange">إرسال !</button>
-                                            </div>
+                                            <label class="hs-field"><span>وصف المشكلة أو الخدمة المطلوبة</span><textarea id="message" name="message" rows="5" required></textarea></label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button type="submit" class="rs-btn has-theme-red has-icon has-bg has-skew">إرسال الطلب
+                                            <span class="icon-box">
+                <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+                <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z"></path></svg>
+            </span>
+                                            </button>
                                         </div>
                                     </div>
                                 </form>
-                                <div id="form-messages">
+                                <div id="form-messages" class="ajax-response" role="status" aria-live="polite">
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <aside class="hs-contact__side wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
+                                <iframe title="موقع شركة الطبقات المتعددة على الخريطة" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=24.673195,46.7305639&amp;z=15&amp;output=embed&amp;hl=ar"></iframe>
+                                <div class="hs-contact__addr">
+                                    <i class="ri-map-pin-line" aria-hidden="true"></i>
+                                    <div>
+                                        <h3>مقرنا في الرياض</h3>
+                                        <a href="https://maps.google.com/?cid=2026902718499016625" target="_blank" rel="noopener">عمارة المتنبي رقم 1، الدور الأول، مكتب 12، شارع عرفات، حي الملز، الرياض</a>
+                                    </div>
+                                </div>
+                                <a class="hs-contact__wa" href="https://wa.me/966581032502?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D9%85%D8%B9%D8%A7%D9%8A%D9%86%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9" target="_blank" rel="noopener"><i class="ri-whatsapp-line" aria-hidden="true"></i> أرسل صور المشكلة على واتساب</a>
+                            </aside>
                         </div>
                     </div>
                 </div>
