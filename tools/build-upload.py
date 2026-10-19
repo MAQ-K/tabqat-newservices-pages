@@ -28,7 +28,7 @@ from urllib.parse import unquote, urlparse
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "upload")
 SITE = "tabqat.com.sa"
-EXTRA = ["robots.txt", "sitemap.xml"]          # served as-is
+EXTRA = ["robots.txt", "sitemap.xml", "favicon.ico", "favicon-96x96.png"]   # served as-is
 FRAGMENTS = ["components/header-home.html", "components/header-inner.html",
              "components/offcanvas.html", "components/footer.html"]
 MAX_W = 1920
@@ -239,6 +239,58 @@ def minify_css(src):
     return "".join(out)
 
 
+# ---------------------------------------------------------------- address (upload copy only)
+ADDRESS = "عمارة المتنبي، رقم 1 الدور الأول، الملز، مكتب رقم 12، 2324 شارع عرفات، الرياض 11461، المملكة العربية السعودية"
+STREET = "عمارة المتنبي، رقم 1 الدور الأول، الملز، مكتب رقم 12، 2324 شارع عرفات"
+PLACE_URL = "https://maps.google.com/?cid=2026902718499016625"           # the company's Google listing
+OFFICE_LL = "24.673195,46.7305639"
+MAP_EMBED = ("https://www.google.com/maps?q=" + "+".join(ADDRESS.replace("،", "").split())
+             + "&amp;ll=" + OFFICE_LL + "&amp;z=16&amp;output=embed&amp;hl=ar")
+OLD_ADDR = re.compile(r"عمارة المتنبي رقم 1، الدور الأول، مكتب 12، شارع عرفات(?:، حي الملز)?(?:، الرياض)?")
+OLD_MAP = "https://www.google.com/maps?q=24.673195,46.7305639&amp;z=15&amp;output=embed&amp;hl=ar"
+OLD_OFFCANVAS = re.compile(r'href="https://www\.google\.com/maps\?q=المملكة\+العربية\+السعودية\+-\+الرياض"([^>]*)>المملكة العربية السعودية - الرياض</a>')
+LDJSON = re.compile(r'(<script type="application/ld\+json">)(.*?)(</script>)', re.S)
+
+
+def fix_address_json(node):
+    if isinstance(node, dict):
+        if node.get("@type") == "PostalAddress":
+            node["streetAddress"] = STREET
+            node["addressLocality"] = "الرياض"
+            node["postalCode"] = "11461"
+            node["addressCountry"] = "SA"
+        for v in node.values():
+            fix_address_json(v)
+    elif isinstance(node, list):
+        for v in node:
+            fix_address_json(v)
+
+
+def set_address(path):
+    """Put the company address (text, map, structured data) into one upload HTML file."""
+    import json
+    with io.open(path, encoding="utf-8", newline="") as fh:
+        s = fh.read()
+    o = s
+    s = s.replace(OLD_MAP, MAP_EMBED)
+    s = OLD_OFFCANVAS.sub(lambda m: f'href="{PLACE_URL}"{m.group(1)}>{ADDRESS}</a>', s)
+
+    def ld(m):
+        try:
+            data = json.loads(m.group(2))
+        except ValueError:
+            return m.group(0)
+        fix_address_json(data)
+        return m.group(1) + "\n" + json.dumps(data, ensure_ascii=False, indent=2) + "\n" + m.group(3)
+    s = LDJSON.sub(ld, s)
+    s = OLD_ADDR.sub(ADDRESS, s)          # visible text (footer, contact page); JSON already rewritten
+    if s != o:
+        with io.open(path, "w", encoding="utf-8", newline="") as fh:
+            fh.write(s)
+        return 1
+    return 0
+
+
 HTACCESS = """# Compression and browser caching (Apache / LiteSpeed). Ignored by other servers.
 <IfModule mod_brotli.c>
   AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/plain text/xml application/javascript application/json image/svg+xml
@@ -287,11 +339,13 @@ def main():
             saved_css += before - os.path.getsize(dst)
     with io.open(os.path.join(OUT, ".htaccess"), "w", encoding="utf-8", newline="\n") as fh:
         fh.write(HTACCESS)
+    addr = sum(set_address(os.path.join(OUT, f)) for f in files if f.endswith(".html"))
 
     final = sum(os.path.getsize(os.path.join(d, x)) for d, _, fs in os.walk(OUT) for x in fs)
     mb = lambda b: f"{b / 1048576:.1f} MB"
     print(f"live pages: {len(pages)}   files copied: {len(files)}")
     print(f"copied {mb(total)}  ->  images -{mb(saved_img)}, css -{mb(saved_css)}  =  {mb(final)}")
+    print(f"address updated in {addr} html files")
     if missing:
         print("\nreferenced but missing (fix in the source):")
         for r, by in sorted(missing.items()):
