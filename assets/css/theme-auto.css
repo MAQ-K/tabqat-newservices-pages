@@ -516,12 +516,12 @@ html[data-theme="dark"] .wp-faq details{border-bottom:1px solid rgba(255,255,255
 html[data-theme="dark"] .wp-faq summary{color:#f3f7f9}
 html[data-theme="dark"] .wp-faq summary:hover{color:#3fada2}
 html[data-theme="dark"] .wp-faq-body{color:#c3ced5}
-html[data-theme="dark"] .wp-prob,html[data-theme="dark"] .wp-mistake,html[data-theme="dark"] .wp-factor,html[data-theme="dark"] .wp-ramp-step,html[data-theme="dark"] .wp-price-note{background:linear-gradient(to bottom,rgba(14,25,35,0.95),hsla(195,40%,22%,0.75) 55%,hsla(195,40%,22%,0.6))}
-html[data-theme="dark"] .wp-prob::before,html[data-theme="dark"] .wp-ramp-step::before{background:linear-gradient(to bottom,rgba(14,25,35,0.55),rgba(255,255,255,.22) 45%,transparent)}
-html[data-theme="dark"] .wp-mistake{background:linear-gradient(to bottom,hsla(6,40%,22%,0.95),hsla(6,40%,22%,0.6))}
-html[data-theme="dark"] .wp-card-panel{background:linear-gradient(to bottom,rgba(14,25,35,0.95),hsla(195,40%,22%,0.75) 55%,hsla(195,40%,22%,0.6))}
-html[data-theme="dark"] .wp-card:hover .wp-card-panel,html[data-theme="dark"] .wp-card:focus-visible .wp-card-panel{background:linear-gradient(to bottom,#0e1923,rgba(14,25,35,0.94))}
-html[data-theme="dark"] .wp-faq details{background:linear-gradient(to bottom,rgba(14,25,35,0.95),hsla(195,40%,22%,0.75) 55%,hsla(195,40%,22%,0.6))}
+html[data-theme="dark"] .wp-prob,html[data-theme="dark"] .wp-mistake,html[data-theme="dark"] .wp-factor,html[data-theme="dark"] .wp-ramp-step,html[data-theme="dark"] .wp-price-note{background:rgba(255,255,255,.04)}
+html[data-theme="dark"] .wp-prob::before,html[data-theme="dark"] .wp-ramp-step::before{background:transparent}
+html[data-theme="dark"] .wp-mistake{background:hsla(6,40%,22%,.55)}
+html[data-theme="dark"] .wp-card-panel{background:rgba(255,255,255,.04)}
+html[data-theme="dark"] .wp-card:hover .wp-card-panel,html[data-theme="dark"] .wp-card:focus-visible .wp-card-panel{background:#0e1923}
+html[data-theme="dark"] .wp-faq details{background:rgba(255,255,255,.04)}
 html[data-theme="dark"] .wp-navsvc-points .wp-use::before{background:#0e1923}
 html[data-theme="dark"] .wp-stats-sec{background:#0e1923}
 html[data-theme="dark"] .wp-stats{border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)}
@@ -545,14 +545,14 @@ html[data-theme="dark"] .wp-projects .category-project-card{border-color:rgba(25
 html[data-theme="dark"] .wp-projects .category-project-card:hover,html[data-theme="dark"] .wp-projects .category-project-card:focus-visible{border-color:rgba(255,255,255,.1)}
 html[data-theme="dark"] .wp-scope{color:#c3ced5}
 html[data-theme="dark"] .rs-header-one .rs-theme-social a:hover{color:#f3f7f9}
-html[data-theme="dark"] .wp-apps-list li{background:linear-gradient(to bottom,rgba(14,25,35,0.95),hsla(195,40%,22%,0.75) 55%,hsla(195,40%,22%,0.6));color:#f3f7f9}
-html[data-theme="dark"] .wp-rev{background:linear-gradient(to bottom,rgba(14,25,35,0.95),hsla(195,40%,22%,0.75) 55%,hsla(195,40%,22%,0.6))}
+html[data-theme="dark"] .wp-apps-list li{background:rgba(255,255,255,.04);color:#f3f7f9}
+html[data-theme="dark"] .wp-rev{background:rgba(255,255,255,.04)}
 html[data-theme="dark"] .wp-rev figcaption{border-top-color:rgba(255,255,255,.1)}
 html[data-theme="dark"] .wp-rev-av{color:#3fada2}
 html[data-theme="dark"] .wp-scope .category-section-heading p{color:#c3ced5}
 html[data-theme="dark"] .wp-scope .category-projects-all{color:#3fada2}
 html[data-theme="dark"] .wp-projects .category-section-heading h2{color:#f3f7f9}
-html[data-theme="dark"] .wp-projects .category-project-card{background:linear-gradient(to bottom,rgba(14,25,35,0.95),hsla(195,40%,22%,0.75) 55%,hsla(195,40%,22%,0.6))}
+html[data-theme="dark"] .wp-projects .category-project-card{background:rgba(255,255,255,.04)}
 html[data-theme="dark"] .wp-projects .category-project-card__body strong{color:#f3f7f9}
 html[data-theme="dark"] .wp-projects .category-project-card__body > span:not(.category-project-card__link){color:#c3ced5}
 html[data-theme="dark"] .wp-projects .category-project-card__link{color:#3fada2}
@@ -560,7 +560,7 @@ html[data-theme="dark"] .wp-navsvc .wp-navsvc-head-text h2{color:#f3f7f9}
 html[data-theme="dark"] .wp-navsvc .wp-nav-btn{color:#f3f7f9}
 html[data-theme="dark"] .wp-scope .wp-lead a,html[data-theme="dark"] .wp-scope .wp-faq-body a{color:#3fada2}
 html[data-theme="dark"] .wp-final .wp-cta-note{color:#c3ced5}
-html[data-theme="dark"] .wp-tablewrap{background:linear-gradient(to bottom,rgba(14,25,35,0.95),hsla(195,40%,22%,0.75) 55%,hsla(195,40%,22%,0.6))}
+html[data-theme="dark"] .wp-tablewrap{background:rgba(255,255,255,.04)}
 html[data-theme="dark"] .wp-table{color:#c3ced5}
 html[data-theme="dark"] .wp-table th,html[data-theme="dark"] .wp-table td{border-bottom:1px solid rgba(255,255,255,.1)}
 html[data-theme="dark"] .wp-table thead th{background:#16232f;color:#f3f7f9}
@@ -571,10 +571,10 @@ html[data-theme="dark"] .wp-callout strong{color:#f3f7f9}
 html[data-theme="dark"] .wp-ol{color:#c3ced5}
 html[data-theme="dark"] .wp-badges li i{color:#3fada2}
 html[data-theme="dark"] .wp-scope .wp-sec .wp-lead{color:#c3ced5}
-html[data-theme="dark"] .wp-scope .wp-sec .wp-choose-item{background:linear-gradient(to bottom,rgba(14,25,35,0.95),hsla(195,40%,22%,0.75) 55%,hsla(195,40%,22%,0.6))}
+html[data-theme="dark"] .wp-scope .wp-sec .wp-choose-item{background:rgba(255,255,255,.04)}
 html[data-theme="dark"] .wp-scope .wp-sec .wp-choose-icon i{color:#3fada2}
-html[data-theme="dark"] .wp-sec .wp-benefits:not(.wp-apps-list) li{background:linear-gradient(to bottom,rgba(14,25,35,0.95),hsla(195,40%,22%,0.75) 55%,hsla(195,40%,22%,0.6))}
-html[data-theme="dark"] .wp-split-text{background:linear-gradient(to bottom,rgba(14,25,35,0.95),hsla(195,40%,22%,0.75) 55%,hsla(195,40%,22%,0.6))}
+html[data-theme="dark"] .wp-sec .wp-benefits:not(.wp-apps-list) li{background:rgba(255,255,255,.04)}
+html[data-theme="dark"] .wp-split-text{background:var(--wp-fill,rgba(255,255,255,.04))}
 html[data-theme="dark"] .wp-split-text .wp-h3 ~ .wp-h3{border-top:1px solid rgba(255,255,255,.1)}
 
 /* ---- assets/css/plugins/nice-select.css ---- */

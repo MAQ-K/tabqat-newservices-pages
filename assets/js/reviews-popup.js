@@ -91,13 +91,13 @@
 
 // .tq-stats counters count up once when they scroll into view.
 (function () {
-    var els = document.querySelectorAll('.tq-stats [data-count-to]');
+    var els = document.querySelectorAll('.tq-stats [data-tq-count]');
     if (!els.length || !('IntersectionObserver' in window)) return;
     var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (en) {
             if (!en.isIntersecting) return;
             io.unobserve(en.target);
-            var el = en.target, to = parseInt(el.getAttribute('data-count-to'), 10) || 0,
+            var el = en.target, to = parseInt(el.getAttribute('data-tq-count'), 10) || 0,
                 pre = el.getAttribute('data-prefix') || '', t0 = null;
             (function step(t) {
                 if (t0 === null) t0 = t;

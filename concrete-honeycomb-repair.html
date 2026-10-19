@@ -154,8 +154,9 @@
         <link rel="stylesheet" href="assets/css/vendor/odometer.min.css" media="print" onload="this.media='all'">
         <link rel="stylesheet" href="assets/css/vendor/spacing.css">
         <link rel="stylesheet" href="assets/css/vendor/remixicon.css">
-        <link rel="stylesheet" href="assets/css/main.css?v=20261015">
-            <link rel="stylesheet" href="assets/css/wp-scope.css?v=20261012">
+        <link rel="stylesheet" href="assets/css/main.css?v=20261022">
+            <link rel="stylesheet" href="assets/css/wp-scope.css?v=20261024">
+            <link rel="stylesheet" href="assets/css/sp-page.css?v=20261015">
         <!-- font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -169,10 +170,10 @@
             <!-- End Google Tag Manager (noscript) -->
         <!-- theme: light / dark -->
         <script>!function(){var t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="dark"&&t!=="light")t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";var d=document.documentElement;d.setAttribute("data-theme",t);d.setAttribute("data-bs-theme",t)}()</script>
-        <link rel="stylesheet" href="assets/css/theme-auto.css?v=1">
+        <link rel="stylesheet" href="assets/css/theme-auto.css?v=2">
         <link rel="stylesheet" href="assets/css/theme.css?v=1">
         <script src="assets/js/theme.js?v=1" defer></script>
-            <link rel="stylesheet" href="assets/css/services.css?v=20261020">
+            <link rel="stylesheet" href="assets/css/services.css?v=20261024">
 </head>
         <body class="rs-smoother-yes rtl">
             <!-- preloader start -->
@@ -248,10 +249,10 @@
                                         <a href="epoxy-flooring-coating.html">دهانات إيبوكسية</a>
                                     </li>
                                     <li>
-                                        <a href="concrete-repair-injection.html">حقن وإصلاح الخرسانة</a>
+                                        <a href="structural-strengthening.html">خدمات التدعيم</a>
                                     </li>
                                     <li>
-                                        <a href="structural-strengthening.html">خدمات التدعيم</a>
+                                        <a href="concrete-repair-injection.html">حقن وإصلاح الخرسانة</a>
                                     </li>
                                     <li>
                                         <a href="concrete-honeycomb-repair.html">معالجة التعشيش</a>
@@ -364,8 +365,8 @@
                             <ul class="offcanvas-submenu collapse" id="offcanvasServicesMenu">
                                 <li><a href="waterproofing-thermal-insulation.html">عزل مائي و حراري</a></li>
                                 <li><a href="epoxy-flooring-coating.html">دهانات إيبوكسية</a></li>
-                                <li><a href="concrete-repair-injection.html">حقن وإصلاح الخرسانة</a></li>
                                 <li><a href="structural-strengthening.html">خدمات التدعيم</a></li>
+<li><a href="concrete-repair-injection.html">حقن وإصلاح الخرسانة</a></li>
                                 <li><a href="concrete-honeycomb-repair.html">معالجة التعشيش</a></li>
                                 <li><a href="terrazzo-flooring.html">أرضيات تيرازو</a></li>
                                 <li><a href="microcement-flooring.html">مايكروسمنت</a></li>
@@ -483,7 +484,7 @@
 </div>
 <!-- Offcanvas area end -->
 </div>
-<main id="hc-main">
+<main id="sp-main">
     <!-- Page-only layout helpers; everything else comes from wp-scope.css -->
     <style>
     .wp-hero .wp-cta-row{justify-content:center;margin:0 0 18px;}
@@ -496,20 +497,20 @@
     .wp-split-text:has(> .wp-cta){justify-content:center;gap:18px;}
     .wp-split-text:has(> .wp-cta) .wp-h3,.wp-split-text:has(> .wp-cta) .wp-lead{margin:0;}
     .wp-split-text > .wp-cta{align-self:flex-start;margin-top:4px;}
-    #hc-main .wp-split{margin-bottom:32px;}
-    #hc-main .wp-split-text .wp-benefits{display:flex;flex-direction:column;gap:10px;}
-    #hc-main .wp-sec .wp-h2{margin-bottom:22px;}
-    #hc-main .wp-sec .wp-h2 + .wp-lead{margin-top:-8px;}
+    #sp-main .wp-split{margin-bottom:32px;}
+    #sp-main .wp-split-text .wp-benefits{display:flex;flex-direction:column;gap:10px;}
+    #sp-main .wp-sec .wp-h2{margin-bottom:22px;}
+    #sp-main .wp-sec .wp-h2 + .wp-lead{margin-top:-8px;}
     /* steps: numbered rows with a gap between them */
     .hc-steps{list-style:none;margin:0;padding:0;counter-reset:hc;display:flex;flex-direction:column;gap:14px;}
     .hc-steps li{counter-increment:hc;display:flex;align-items:flex-start;gap:16px;padding:16px 20px;border:1px solid var(--wp-bd);border-radius:var(--wp-r-md);background:var(--wp-fill);font-size:15.5px;line-height:1.8;color:var(--wp-ink);}
     .hc-steps li::before{content:counter(hc);flex:0 0 auto;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(63,173,162,.14);color:var(--wp-teal);font-weight:800;}
     .hc-steps b{display:block;color:var(--wp-navy);font-weight:800;}
     /* calmer surfaces (the page is dark in every theme): flat table, flat boxes */
-    #hc-main .wp-scope{--wp-fill:rgba(255,255,255,.035);}
-    #hc-main .wp-tablewrap,html[data-theme="dark"] #hc-main .wp-tablewrap{background:rgba(255,255,255,.03);}
-    #hc-main .wp-final .wp-cta-row{background:rgba(63,173,162,.07);}
-    html[data-theme="dark"] #hc-main .wp-split-text,html[data-theme="dark"] #hc-main .wp-choose-item,html[data-theme="dark"] #hc-main .wp-benefits li,html[data-theme="dark"] #hc-main .wp-faq details{background:var(--wp-fill);}
+    #sp-main .wp-scope{--wp-fill:rgba(255,255,255,.035);}
+    #sp-main .wp-tablewrap,html[data-theme="dark"] #sp-main .wp-tablewrap{background:rgba(255,255,255,.03);}
+    #sp-main .wp-final .wp-cta-row{background:rgba(63,173,162,.07);}
+    html[data-theme="dark"] #sp-main .wp-split-text,html[data-theme="dark"] #sp-main .wp-choose-item,html[data-theme="dark"] #sp-main .wp-benefits li,html[data-theme="dark"] #sp-main .wp-faq details{background:var(--wp-fill);}
     .hc-ask{padding:18px 22px;border:1px solid var(--wp-bd);border-radius:var(--wp-r-md);background:var(--wp-fill);justify-content:space-between;}
     @media (max-width:575px){.wp-split-text > .wp-cta,.hc-ask .wp-cta{align-self:stretch;justify-content:center;width:100%;}}
     /* degrees table: clean rows, start-aligned text, severity pill in the first column */
@@ -603,7 +604,7 @@
     </section>
 
     <!-- ========== By element: columns / slabs / walls ========== -->
-    <section class="wp-scope wp-sec" aria-labelledby="hc-elements-heading">
+    <section class="wp-scope wp-sec svc-split-fill" aria-labelledby="hc-elements-heading">
         <div class="container">
             <h2 class="wp-h2" id="hc-elements-heading">معالجة التعشيش في الأعمدة والأسقف والجدران</h2>
 <div class="wp-split" id="columns"><figure class="wp-split-media"><img src="assets/my-images/our-services/honeycomb/column-honeycomb-grout-repair.webp" alt="معالجة تعشيش عمود خرساني بالجراوت" width="800" height="600" loading="lazy" decoding="async"></figure><div class="wp-split-text"><h3 class="wp-h3">معالجة تعشيش الأعمدة الخرسانية</h3>
@@ -712,7 +713,7 @@
         </ul>
     </div>
 </section>
-<script src="assets/js/reviews-popup.js?v=2" defer></script>
+<script src="assets/js/reviews-popup.js?v=3" defer></script>
 <!-- reviews:end -->
 
     <section class="wp-scope wp-sec" aria-labelledby="wp-faq-heading">
