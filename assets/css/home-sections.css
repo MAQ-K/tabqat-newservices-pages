@@ -330,6 +330,13 @@ html[data-theme="dark"] {
 .hs-certs-page .srv-card-link:hover::after,
 .hs-certs-page .srv-card-link:focus-visible::after { opacity: 1; transform: none; }
 .hs-certs-page .srv-card-body h5 { font-size: 16px; }
+/* one row per category: 4 visible, the rest scroll / drag */
+.hs-certcat-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
+.hs-certcat-head .srv-block-title { margin-bottom: 0; }
+.hs-certrow { grid-auto-columns: calc((100% - 3 * 24px) / 4); column-gap: 24px; margin-bottom: 50px; padding: 4px 0 18px; }
+.hs-certrow .srv-card-link:hover { transform: translateY(-4px); }
+@media (max-width: 991px) { .hs-certrow { grid-auto-columns: calc((100% - 24px) / 2); } }
+@media (max-width: 575px) { .hs-certrow { grid-auto-columns: 80%; column-gap: 16px; } }
 html[data-theme="dark"] .hs-certs-page .srv-card-link img,
 html[data-theme="dark"] .hs-cert img { background: #0e1923; }
 
