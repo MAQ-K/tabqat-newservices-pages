@@ -10,7 +10,8 @@
 .wp-hero .wp-cta-row{justify-content:center;margin:0 0 18px;}
 
 /* trust bar: four items */
-@media (min-width:768px){.wp-stats.sp-stats{grid-template-columns:repeat(4,minmax(0,1fr));max-width:1100px;}}
+/* one column per item (3 or 4), so removing a stat never leaves a gap */
+@media (min-width:768px){.wp-stats.sp-stats{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);max-width:1100px;}}
 @media (min-width:576px) and (max-width:767px){.wp-stats.sp-stats{grid-template-columns:repeat(2,minmax(0,1fr));}}
 .sp-stats .sp-stat-text{font-size:22px;line-height:1.6;}
 

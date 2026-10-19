@@ -295,7 +295,7 @@ html[data-theme="dark"] .svc-tokens .wp-cta--ghost{border-color:rgba(63,173,162,
 
 /* ---- service-page start (concrete-repair-injection.html): hero CTA + 4-item stats strip ---- */
 .wp-hero .wp-cta-row{justify-content:center;margin:0 0 18px;}
-@media (min-width:768px){.wp-stats.sp-stats{grid-template-columns:repeat(4,minmax(0,1fr));max-width:1100px;}}
+@media (min-width:768px){.wp-stats.sp-stats{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);max-width:1100px;}}
 @media (min-width:576px) and (max-width:767px){.wp-stats.sp-stats{grid-template-columns:repeat(2,minmax(0,1fr));}}
 .sp-stats .sp-stat-text,.tq-stats .sp-stat-text{font-size:22px;line-height:1.6;}
 /* same strip on pages without the wp-stats styles (epoxy) */

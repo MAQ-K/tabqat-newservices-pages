@@ -2,16 +2,12 @@
  * Light / dark theme toggle.
  * The initial theme is applied by a tiny inline script in each page's <head> (before first
  * paint, so there is no flash); this file adds the toggle button and handles switching.
- * Choice is saved in localStorage; with no saved choice the OS preference is followed.
+ * Choice is saved in localStorage; with no saved choice the site opens in dark.
  */
 (function () {
     var root = document.documentElement;
     var KEY = 'theme';
-    var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
 
-    function saved() {
-        try { var t = localStorage.getItem(KEY); return t === 'dark' || t === 'light' ? t : null; } catch (e) { return null; }
-    }
     function current() { return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'; }
 
     function apply(theme) {
@@ -63,9 +59,4 @@
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount);
     else mount();
 
-    // Follow OS changes until the visitor picks a theme themselves.
-    if (mq) {
-        var onChange = function (e) { if (!saved()) apply(e.matches ? 'dark' : 'light'); };
-        if (mq.addEventListener) mq.addEventListener('change', onChange); else if (mq.addListener) mq.addListener(onChange);
-    }
 })();

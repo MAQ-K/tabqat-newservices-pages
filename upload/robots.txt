@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+# Disallow crawling of the old backup folder (not intended for visitors or search engines)
+Disallow: /Backup-web-V2/
+
+Sitemap: https://tabqat.com.sa/sitemap.xml
